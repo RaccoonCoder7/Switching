@@ -1,0 +1,1985 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &114720
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 437214}
+  - component: {fileID: 11420486}
+  - component: {fileID: 3388248}
+  - component: {fileID: 2359602}
+  - component: {fileID: 6437474}
+  m_Layer: 0
+  m_Name: Cube Hard Mineral 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &437214
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114720}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: -0.0107, z: -0.009}
+  m_LocalScale: {x: 0.45, y: 0.45, z: 0.6}
+  m_Children: []
+  m_Father: {fileID: 419558}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11420486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2679576dc9fc0684282b38710ed39058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showSection_ManagerSettings: 0
+  showSection_ManagerSettings_depthQuality: 0
+  showSection_ManagerSettings_depthTextures: 0
+  showSection_ManagerSettings_depthCamera: 0
+  showSection_Manager_depthNormalTech: 0
+  material_back: {fileID: 2100000, guid: 3a1d1d080cd28274b921830ce5e87167, type: 2}
+  material_front: {fileID: 2100000, guid: 66aceb47c1053fc4db75f5ad078b4887, type: 2}
+  getCurrentMaterials: 1
+  materials: []
+  presetName: Amber Cube 1
+  manager: {fileID: 0}
+  zFightRadius: 0.001
+  enableExtinction_front: 1
+  enableExtinction_back: 0
+  enableExtinction_both: 0
+  extinctionAppearance: 1
+  capExtinction_front: 1
+  capExtinction_back: 0
+  lastFaceEdited_Extinction: 0
+  texture_extinction_front: {fileID: 0}
+  texture_extinction_back: {fileID: 0}
+  extinction_front: {r: 0, g: 0.35900003, b: 1, a: 0.534}
+  extinction_back: {r: 0, g: 0.35900003, b: 1, a: 0.534}
+  extinctionFlipped_front: {r: 1, g: 0.641, b: 0, a: 0.534}
+  extinctionFlipped_back: {r: 1, g: 0.641, b: 0, a: 0.534}
+  extinctionMagnitude_front: {x: 4, y: 1.25, z: 0.5}
+  extinctionMagnitude_back: {x: 4, y: 1.25, z: 0.4}
+  enableAberration_front: 1
+  enableAberration_back: 0
+  enableAberration_both: 0
+  capAberration_front: 1
+  capAberration_back: 1
+  lastFaceEdited_Aberration: 0
+  texture_aberration_front: {fileID: 0}
+  texture_aberration_back: {fileID: 0}
+  aberration_front: {r: 0.5147059, g: 0.14524697, b: 0, a: 1}
+  aberration_back: {r: 0.1, g: 0.033, b: 0.00666, a: 1}
+  aberrationMagnitude_front: {x: 0.01, y: 0, z: 0.1}
+  aberrationMagnitude_back: {x: 0.01, y: 0, z: 0.1}
+  enableFog_front: 1
+  enableFog_back: 0
+  enableFog_both: 0
+  lastFaceEdited_Fog: 0
+  fogMagnitude_front: 1
+  fogMagnitude_back: 1
+  fogNear_front: {r: 0.6397059, g: 0.19766912, b: 0, a: 0.7607843}
+  fogNear_back: {r: 0, g: 1, b: 0, a: 0}
+  fogFar_front: {r: 1, g: 0.653, b: 0, a: 0.45490196}
+  fogFar_back: {r: 0, g: 0, b: 1, a: 0.5}
+  enableDistortion_front: 1
+  enableDistortion_back: 1
+  texture_distortion: {fileID: 2800000, guid: 7f3d80ab650830543b27aa512e04dee2, type: 3}
+  distortion_front: {x: 0.1, y: -0.1, z: 1, w: 1}
+  distortion_back: {x: 0.1, y: 0.1, z: 1, w: 1}
+  distortion_front_shaderCopy: {x: 0.1, y: -0.1, z: 1, w: 1}
+  distortion_back_shaderCopy: {x: 0.1, y: 0.1, z: 1, w: 1}
+  distortionEdgeBend_front: -0.1
+  distortionEdgeBend_back: 0
+  distortionDepthFade_front: 0.1
+  distortionDepthFade_back: 0.1
+  bumpBack: 0.2
+  bumpFront: -0.2
+  depthMultiplier: 1
+  depthOffset: 0
+  enableDoubleDepth_front: 1
+  enableDoubleDepth_back: 1
+  flipDepth: 0
+  depthTextureID: -1
+  ignoredDepth: []
+  opacity: 2
+  colour_albedo: {r: 1, g: 1, b: 1, a: 0}
+  texture_albedo: {fileID: 2800000, guid: 22bf31a02e2bc33428a4c263fd084b02, type: 3}
+  colour_albedoTexture: {r: 0.875, g: 0.45941854, b: 0, a: 1}
+  texture_gloss_front: {fileID: 2800000, guid: 6db5b9e67115c6743987b82abc2ba5f1, type: 3}
+  texture_gloss_back: {fileID: 2800000, guid: 6db5b9e67115c6743987b82abc2ba5f1, type: 3}
+  glossiness_front: 0.3
+  glossiness_back: 0.3
+  texture_metal_front: {fileID: 2800000, guid: 6db5b9e67115c6743987b82abc2ba5f1, type: 3}
+  texture_metal_back: {fileID: 2800000, guid: 6db5b9e67115c6743987b82abc2ba5f1, type: 3}
+  metallic_front: 0.1
+  metallic_back: 0
+  texture_glow_front: {fileID: 2800000, guid: 6db5b9e67115c6743987b82abc2ba5f1, type: 3}
+  texture_glow_back: {fileID: 2800000, guid: 6db5b9e67115c6743987b82abc2ba5f1, type: 3}
+  glow_front: 100
+  glow_back: 50
+  showSection_AboutDoubleDepth: 0
+  ShowSection_Gloss_Front: 0
+  ShowSection_Metal_Front: 0
+  ShowSection_Glow_Front: 0
+  ShowSection_Gloss_Back: 0
+  ShowSection_Metal_Back: 0
+  ShowSection_Glow_Back: 0
+  showTextures_Albedo: 0
+  showTextures_Distortion: 0
+  showTextures_Extinction: 0
+  showTextures_Aberration: 0
+  showTextures_Glossiness: 1
+  showTextures_Metallic: 1
+  showTextures_Glow: 1
+  changedTexture_Extinction: 0
+  changedTexture_Glow: 0
+  changedTexture_Metallic: 0
+  changedTexture_Glossiness: 0
+  changedTexture_Aberration: 0
+  linkTextures_Extinction: 1
+  linkTextures_Glow: 1
+  linkTextures_Metallic: 1
+  linkTextures_Glossiness: 1
+  linkTextures_Aberration: 1
+  showSection_Texture_Dimensions: 0
+  textureDimensions:
+  - {x: 2048, y: 2048}
+  depthQuality_front: 0
+  depthQuality_back: 0
+  depthQuality_other: 0
+  otherDepthIndex: 0
+  showSection_Textures: 1
+  showSection_Surface: 0
+  showSection_Depth: 0
+  showSection_Fog: 0
+  showSection_Aberration: 0
+  showSection_Extinction: 0
+  showSection_Physics: 0
+  showSection_Distortion: 0
+  showSection_Albedo: 0
+  showSection_Materials: 0
+  showSection_RenderOrder: 0
+  showSection_AboutRenderOrder: 0
+  showSection_Presets: 1
+  showSection_SharedGlass: 0
+  showSection_Shader: 0
+  showList_IgnoredDepth_Depth: 0
+  showList_IgnoredDepth_Manager: 0
+  scroll_IgnoredDepth: {x: 0, y: 0}
+  VersionStringFormatted: 1.1.2
+--- !u!33 &3388248
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114720}
+  m_Mesh: {fileID: 4300000, guid: 13bdf3a5770e1e24fa7607e6187adae0, type: 3}
+--- !u!23 &2359602
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114720}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 3a1d1d080cd28274b921830ce5e87167, type: 2}
+  - {fileID: 2100000, guid: 66aceb47c1053fc4db75f5ad078b4887, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!64 &6437474
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114720}
+  m_Material: {fileID: 13400000, guid: 8cc99172641f11d46a859ba38a7bbb1f, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 13bdf3a5770e1e24fa7607e6187adae0, type: 3}
+--- !u!1 &117688
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 410780}
+  - component: {fileID: 3311018}
+  - component: {fileID: 2320446}
+  - component: {fileID: 11483138}
+  - component: {fileID: 11193128}
+  m_Layer: 0
+  m_Name: box_top
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &410780
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117688}
+  m_LocalRotation: {x: 0, y: 0, z: -3.3087225e-24, w: 1}
+  m_LocalPosition: {x: 2.646978e-25, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 419558}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &3311018
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117688}
+  m_Mesh: {fileID: 4300002, guid: 7ac8dddd3c95ad24f9f0a8a4c5287751, type: 3}
+--- !u!23 &2320446
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117688}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5ef9ec4ccfadbf64f8c31462c2a5031c, type: 2}
+  - {fileID: 2100000, guid: 713da9ed161a7c94f957c228ddab1792, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!114 &11483138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2679576dc9fc0684282b38710ed39058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showSection_ManagerSettings: 0
+  showSection_ManagerSettings_depthQuality: 1
+  showSection_ManagerSettings_depthTextures: 0
+  showSection_ManagerSettings_depthCamera: 0
+  showSection_Manager_depthNormalTech: 0
+  material_back: {fileID: 2100000, guid: 5ef9ec4ccfadbf64f8c31462c2a5031c, type: 2}
+  material_front: {fileID: 2100000, guid: 713da9ed161a7c94f957c228ddab1792, type: 2}
+  getCurrentMaterials: 1
+  materials:
+  - {fileID: 2100000, guid: 5ef9ec4ccfadbf64f8c31462c2a5031c, type: 2}
+  - {fileID: 2100000, guid: 713da9ed161a7c94f957c228ddab1792, type: 2}
+  presetName: Strange Plastic Box
+  manager: {fileID: 0}
+  zFightRadius: 0.01
+  enableExtinction_front: 1
+  enableExtinction_back: 0
+  enableExtinction_both: 1
+  extinctionAppearance: 1
+  capExtinction_front: 1
+  capExtinction_back: 1
+  lastFaceEdited_Extinction: 0
+  texture_extinction_front: {fileID: 0}
+  texture_extinction_back: {fileID: 0}
+  extinction_front: {r: 0, g: 0.8235294, b: 1, a: 1}
+  extinction_back: {r: 0, g: 0.8235294, b: 1, a: 1}
+  extinctionFlipped_front: {r: 1, g: 0.1764706, b: 0, a: 1}
+  extinctionFlipped_back: {r: 1, g: 0.1764706, b: 0, a: 1}
+  extinctionMagnitude_front: {x: 1, y: -0.2, z: 2}
+  extinctionMagnitude_back: {x: 1, y: -0.2, z: 2}
+  enableAberration_front: 1
+  enableAberration_back: 0
+  enableAberration_both: 0
+  capAberration_front: 1
+  capAberration_back: 1
+  lastFaceEdited_Aberration: 0
+  texture_aberration_front: {fileID: 0}
+  texture_aberration_back: {fileID: 0}
+  aberration_front: {r: 1, g: 0.2821941, b: 0, a: 1}
+  aberration_back: {r: 0.1, g: 0.033, b: 0.00666, a: 1}
+  aberrationMagnitude_front: {x: 0.1, y: 0, z: 1}
+  aberrationMagnitude_back: {x: 0.01, y: 0, z: 0.1}
+  enableFog_front: 1
+  enableFog_back: 0
+  enableFog_both: 1
+  lastFaceEdited_Fog: 0
+  fogMagnitude_front: 2
+  fogMagnitude_back: 2
+  fogNear_front: {r: 0, g: 1, b: 0.21379304, a: 0}
+  fogNear_back: {r: 0, g: 1, b: 0.21379304, a: 0}
+  fogFar_front: {r: 0.11724138, g: 0, b: 1, a: 1}
+  fogFar_back: {r: 0.11724138, g: 0, b: 1, a: 1}
+  enableDistortion_front: 1
+  enableDistortion_back: 1
+  texture_distortion: {fileID: 2800000, guid: 7f3d80ab650830543b27aa512e04dee2, type: 3}
+  distortion_front: {x: 0.25, y: 0.1, z: 1, w: 1}
+  distortion_back: {x: -0.25, y: -0.1, z: 1, w: 1}
+  distortion_front_shaderCopy: {x: 0.25, y: 0.1, z: 1, w: 1}
+  distortion_back_shaderCopy: {x: -0.25, y: -0.1, z: 1, w: 1}
+  distortionEdgeBend_front: 0
+  distortionEdgeBend_back: 0
+  distortionDepthFade_front: 5
+  distortionDepthFade_back: 1
+  bumpBack: 0.01
+  bumpFront: 0.01
+  depthMultiplier: 1
+  depthOffset: 0
+  enableDoubleDepth_front: 1
+  enableDoubleDepth_back: 1
+  flipDepth: 0
+  depthTextureID: 3
+  ignoredDepth: []
+  opacity: 1
+  colour_albedo: {r: 1, g: 1, b: 1, a: 0}
+  texture_albedo: {fileID: 2800000, guid: 22bf31a02e2bc33428a4c263fd084b02, type: 3}
+  colour_albedoTexture: {r: 1, g: 0, b: 0, a: 0.5764706}
+  texture_gloss_front: {fileID: 2800000, guid: 6db5b9e67115c6743987b82abc2ba5f1, type: 3}
+  texture_gloss_back: {fileID: 2800000, guid: 6db5b9e67115c6743987b82abc2ba5f1, type: 3}
+  glossiness_front: 0.2
+  glossiness_back: 0.133
+  texture_metal_front: {fileID: 2800000, guid: 6db5b9e67115c6743987b82abc2ba5f1, type: 3}
+  texture_metal_back: {fileID: 2800000, guid: 6db5b9e67115c6743987b82abc2ba5f1, type: 3}
+  metallic_front: 0
+  metallic_back: 0.242
+  texture_glow_front: {fileID: 2800000, guid: 6db5b9e67115c6743987b82abc2ba5f1, type: 3}
+  texture_glow_back: {fileID: 2800000, guid: 6db5b9e67115c6743987b82abc2ba5f1, type: 3}
+  glow_front: 100
+  glow_back: 100
+  showSection_AboutDoubleDepth: 0
+  ShowSection_Gloss_Front: 0
+  ShowSection_Metal_Front: 0
+  ShowSection_Glow_Front: 0
+  ShowSection_Gloss_Back: 0
+  ShowSection_Metal_Back: 0
+  ShowSection_Glow_Back: 0
+  showTextures_Albedo: 0
+  showTextures_Distortion: 0
+  showTextures_Extinction: 0
+  showTextures_Aberration: 0
+  showTextures_Glossiness: 0
+  showTextures_Metallic: 0
+  showTextures_Glow: 0
+  changedTexture_Extinction: 0
+  changedTexture_Glow: 0
+  changedTexture_Metallic: 0
+  changedTexture_Glossiness: 0
+  changedTexture_Aberration: 0
+  linkTextures_Extinction: 1
+  linkTextures_Glow: 1
+  linkTextures_Metallic: 1
+  linkTextures_Glossiness: 1
+  linkTextures_Aberration: 1
+  showSection_Texture_Dimensions: 0
+  textureDimensions:
+  - {x: 512, y: 512}
+  depthQuality_front: 1
+  depthQuality_back: 1
+  depthQuality_other: 0
+  otherDepthIndex: 0
+  showSection_Textures: 0
+  showSection_Surface: 0
+  showSection_Depth: 0
+  showSection_Fog: 0
+  showSection_Aberration: 0
+  showSection_Extinction: 0
+  showSection_Physics: 0
+  showSection_Distortion: 1
+  showSection_Albedo: 0
+  showSection_Materials: 0
+  showSection_RenderOrder: 0
+  showSection_AboutRenderOrder: 0
+  showSection_Presets: 1
+  showSection_SharedGlass: 0
+  showSection_Shader: 0
+  showList_IgnoredDepth_Depth: 0
+  showList_IgnoredDepth_Manager: 0
+  scroll_IgnoredDepth: {x: 0, y: 0}
+  VersionStringFormatted: 1.1.2
+--- !u!111 &11193128
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117688}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: c23e944bedc2e75458f3f44f017739b1, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: c23e944bedc2e75458f3f44f017739b1, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!1 &129742
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 471174}
+  - component: {fileID: 11454720}
+  - component: {fileID: 3309060}
+  - component: {fileID: 2329430}
+  m_Layer: 0
+  m_Name: Rock 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &471174
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129742}
+  m_LocalRotation: {x: 0.018749803, y: 0.3440069, z: 0.051091436, w: 0.9373886}
+  m_LocalPosition: {x: 0.0041, y: -0.01372, z: -0.00472}
+  m_LocalScale: {x: 0.3, y: 0.3399999, z: 0.21999994}
+  m_Children: []
+  m_Father: {fileID: 419558}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11454720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2679576dc9fc0684282b38710ed39058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showSection_ManagerSettings: 1
+  showSection_ManagerSettings_depthQuality: 1
+  showSection_ManagerSettings_depthTextures: 0
+  showSection_ManagerSettings_depthCamera: 0
+  showSection_Manager_depthNormalTech: 0
+  material_back: {fileID: 2100000, guid: bfa1c2dcfe81c4543b064280962d8fbc, type: 2}
+  material_front: {fileID: 2100000, guid: efa125d48ca6182409460865b477ab97, type: 2}
+  getCurrentMaterials: 1
+  materials:
+  - {fileID: 2100000, guid: bfa1c2dcfe81c4543b064280962d8fbc, type: 2}
+  - {fileID: 2100000, guid: efa125d48ca6182409460865b477ab97, type: 2}
+  presetName: Amber Rock
+  manager: {fileID: 0}
+  zFightRadius: 0.001
+  enableExtinction_front: 1
+  enableExtinction_back: 0
+  enableExtinction_both: 0
+  extinctionAppearance: 1
+  capExtinction_front: 1
+  capExtinction_back: 0
+  lastFaceEdited_Extinction: 0
+  texture_extinction_front: {fileID: 0}
+  texture_extinction_back: {fileID: 0}
+  extinction_front: {r: 0, g: 0.40796018, b: 1, a: 1}
+  extinction_back: {r: 0.100000024, g: 0.023000002, b: 0.005559981, a: 1}
+  extinctionFlipped_front: {r: 1, g: 0.5920398, b: 0, a: 1}
+  extinctionFlipped_back: {r: 0.9, g: 0.977, b: 0.99444, a: 1}
+  extinctionMagnitude_front: {x: 1, y: 0.4, z: 3}
+  extinctionMagnitude_back: {x: 1, y: 0, z: 1}
+  enableAberration_front: 1
+  enableAberration_back: 0
+  enableAberration_both: 0
+  capAberration_front: 1
+  capAberration_back: 1
+  lastFaceEdited_Aberration: 0
+  texture_aberration_front: {fileID: 0}
+  texture_aberration_back: {fileID: 0}
+  aberration_front: {r: 0.2205882, g: 0.091764696, b: 0, a: 1}
+  aberration_back: {r: 0.2205882, g: 0.091764696, b: 0, a: 1}
+  aberrationMagnitude_front: {x: 0.01, y: 0, z: 0.1}
+  aberrationMagnitude_back: {x: 0.01, y: 0, z: 0.1}
+  enableFog_front: 0
+  enableFog_back: 0
+  enableFog_both: 0
+  lastFaceEdited_Fog: 0
+  fogMagnitude_front: 1
+  fogMagnitude_back: 1
+  fogNear_front: {r: 1, g: 1, b: 0, a: 0}
+  fogNear_back: {r: 1, g: 1, b: 0, a: 0}
+  fogFar_front: {r: 0.66176474, g: 0.3696755, b: 0, a: 0.3882353}
+  fogFar_back: {r: 0.58823526, g: 0.32860038, b: 0, a: 0.478}
+  enableDistortion_front: 0
+  enableDistortion_back: 1
+  texture_distortion: {fileID: 2800000, guid: 2f3a7c91725220d4da6bafd8848b5ffa, type: 3}
+  distortion_front: {x: 0, y: 0, z: 1, w: 1}
+  distortion_back: {x: 0.1, y: -0.1, z: 1, w: 1}
+  distortion_front_shaderCopy: {x: 0, y: 0, z: 1, w: 1}
+  distortion_back_shaderCopy: {x: 0.1, y: -0.1, z: 1, w: 1}
+  distortionEdgeBend_front: 0
+  distortionEdgeBend_back: 0
+  distortionDepthFade_front: 0
+  distortionDepthFade_back: 0
+  bumpBack: -1
+  bumpFront: 1
+  depthMultiplier: 1
+  depthOffset: 0
+  enableDoubleDepth_front: 0
+  enableDoubleDepth_back: 0
+  flipDepth: 0
+  depthTextureID: 2
+  ignoredDepth: []
+  opacity: 0
+  colour_albedo: {r: 1, g: 1, b: 1, a: 0}
+  texture_albedo: {fileID: 0}
+  colour_albedoTexture: {r: 1, g: 1, b: 1, a: 0}
+  texture_gloss_front: {fileID: 2800000, guid: 2f3a7c91725220d4da6bafd8848b5ffa, type: 3}
+  texture_gloss_back: {fileID: 2800000, guid: 2f3a7c91725220d4da6bafd8848b5ffa, type: 3}
+  glossiness_front: 0.9
+  glossiness_back: 0.5
+  texture_metal_front: {fileID: 0}
+  texture_metal_back: {fileID: 0}
+  metallic_front: 0.333
+  metallic_back: 0
+  texture_glow_front: {fileID: 2800000, guid: 2f3a7c91725220d4da6bafd8848b5ffa, type: 3}
+  texture_glow_back: {fileID: 2800000, guid: 2f3a7c91725220d4da6bafd8848b5ffa, type: 3}
+  glow_front: 0
+  glow_back: 40
+  showSection_AboutDoubleDepth: 0
+  ShowSection_Gloss_Front: 0
+  ShowSection_Metal_Front: 0
+  ShowSection_Glow_Front: 0
+  ShowSection_Gloss_Back: 0
+  ShowSection_Metal_Back: 0
+  ShowSection_Glow_Back: 0
+  showTextures_Albedo: 0
+  showTextures_Distortion: 0
+  showTextures_Extinction: 0
+  showTextures_Aberration: 0
+  showTextures_Glossiness: 0
+  showTextures_Metallic: 0
+  showTextures_Glow: 0
+  changedTexture_Extinction: 0
+  changedTexture_Glow: 0
+  changedTexture_Metallic: 0
+  changedTexture_Glossiness: 0
+  changedTexture_Aberration: 0
+  linkTextures_Extinction: 1
+  linkTextures_Glow: 1
+  linkTextures_Metallic: 1
+  linkTextures_Glossiness: 1
+  linkTextures_Aberration: 1
+  showSection_Texture_Dimensions: 0
+  textureDimensions:
+  - {x: 512, y: 512}
+  depthQuality_front: 0
+  depthQuality_back: 0
+  depthQuality_other: 0
+  otherDepthIndex: 0
+  showSection_Textures: 0
+  showSection_Surface: 0
+  showSection_Depth: 0
+  showSection_Fog: 0
+  showSection_Aberration: 0
+  showSection_Extinction: 0
+  showSection_Physics: 0
+  showSection_Distortion: 0
+  showSection_Albedo: 0
+  showSection_Materials: 0
+  showSection_RenderOrder: 1
+  showSection_AboutRenderOrder: 0
+  showSection_Presets: 1
+  showSection_SharedGlass: 0
+  showSection_Shader: 0
+  showList_IgnoredDepth_Depth: 0
+  showList_IgnoredDepth_Manager: 0
+  scroll_IgnoredDepth: {x: 0, y: 0}
+  VersionStringFormatted: 1.1.2
+--- !u!33 &3309060
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129742}
+  m_Mesh: {fileID: 4300000, guid: ea41982e8394bfc43be9fa830fac88c1, type: 3}
+--- !u!23 &2329430
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129742}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: bfa1c2dcfe81c4543b064280962d8fbc, type: 2}
+  - {fileID: 2100000, guid: efa125d48ca6182409460865b477ab97, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &139462
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 408336}
+  - component: {fileID: 11412070}
+  - component: {fileID: 3329202}
+  - component: {fileID: 2319172}
+  m_Layer: 0
+  m_Name: Rock 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &408336
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139462}
+  m_LocalRotation: {x: 0.018749803, y: 0.3440069, z: 0.051091436, w: 0.9373886}
+  m_LocalPosition: {x: 0.0041, y: -0.01372, z: -0.00472}
+  m_LocalScale: {x: 0.3, y: 0.3399999, z: 0.21999994}
+  m_Children: []
+  m_Father: {fileID: 419558}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11412070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2679576dc9fc0684282b38710ed39058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showSection_ManagerSettings: 0
+  showSection_ManagerSettings_depthQuality: 0
+  showSection_ManagerSettings_depthTextures: 0
+  showSection_ManagerSettings_depthCamera: 0
+  showSection_Manager_depthNormalTech: 0
+  material_back: {fileID: 2100000, guid: bfa1c2dcfe81c4543b064280962d8fbc, type: 2}
+  material_front: {fileID: 2100000, guid: efa125d48ca6182409460865b477ab97, type: 2}
+  getCurrentMaterials: 1
+  materials:
+  - {fileID: 2100000, guid: bfa1c2dcfe81c4543b064280962d8fbc, type: 2}
+  - {fileID: 2100000, guid: efa125d48ca6182409460865b477ab97, type: 2}
+  presetName: Amber Rock
+  manager: {fileID: 0}
+  zFightRadius: 0.001
+  enableExtinction_front: 1
+  enableExtinction_back: 0
+  enableExtinction_both: 0
+  extinctionAppearance: 1
+  capExtinction_front: 1
+  capExtinction_back: 0
+  lastFaceEdited_Extinction: 0
+  texture_extinction_front: {fileID: 0}
+  texture_extinction_back: {fileID: 0}
+  extinction_front: {r: 0, g: 0.40796018, b: 1, a: 1}
+  extinction_back: {r: 0.100000024, g: 0.023000002, b: 0.005559981, a: 1}
+  extinctionFlipped_front: {r: 1, g: 0.5920398, b: 0, a: 1}
+  extinctionFlipped_back: {r: 0.9, g: 0.977, b: 0.99444, a: 1}
+  extinctionMagnitude_front: {x: 1, y: 0.4, z: 3}
+  extinctionMagnitude_back: {x: 1, y: 0, z: 1}
+  enableAberration_front: 1
+  enableAberration_back: 0
+  enableAberration_both: 0
+  capAberration_front: 1
+  capAberration_back: 1
+  lastFaceEdited_Aberration: 0
+  texture_aberration_front: {fileID: 0}
+  texture_aberration_back: {fileID: 0}
+  aberration_front: {r: 0.2205882, g: 0.091764696, b: 0, a: 1}
+  aberration_back: {r: 0.2205882, g: 0.091764696, b: 0, a: 1}
+  aberrationMagnitude_front: {x: 0.01, y: 0, z: 0.1}
+  aberrationMagnitude_back: {x: 0.01, y: 0, z: 0.1}
+  enableFog_front: 0
+  enableFog_back: 0
+  enableFog_both: 0
+  lastFaceEdited_Fog: 0
+  fogMagnitude_front: 1
+  fogMagnitude_back: 1
+  fogNear_front: {r: 1, g: 1, b: 0, a: 0}
+  fogNear_back: {r: 1, g: 1, b: 0, a: 0}
+  fogFar_front: {r: 0.66176474, g: 0.3696755, b: 0, a: 0.3882353}
+  fogFar_back: {r: 0.58823526, g: 0.32860038, b: 0, a: 0.478}
+  enableDistortion_front: 0
+  enableDistortion_back: 1
+  texture_distortion: {fileID: 2800000, guid: 2f3a7c91725220d4da6bafd8848b5ffa, type: 3}
+  distortion_front: {x: 0, y: 0, z: 1, w: 1}
+  distortion_back: {x: 0.1, y: -0.1, z: 1, w: 1}
+  distortion_front_shaderCopy: {x: 0, y: 0, z: 1, w: 1}
+  distortion_back_shaderCopy: {x: 0.1, y: -0.1, z: 1, w: 1}
+  distortionEdgeBend_front: 0
+  distortionEdgeBend_back: 0
+  distortionDepthFade_front: 0
+  distortionDepthFade_back: 0
+  bumpBack: -1
+  bumpFront: 1
+  depthMultiplier: 1
+  depthOffset: 0
+  enableDoubleDepth_front: 0
+  enableDoubleDepth_back: 0
+  flipDepth: 0
+  depthTextureID: 2
+  ignoredDepth: []
+  opacity: 0
+  colour_albedo: {r: 1, g: 1, b: 1, a: 0}
+  texture_albedo: {fileID: 0}
+  colour_albedoTexture: {r: 1, g: 1, b: 1, a: 0}
+  texture_gloss_front: {fileID: 2800000, guid: 2f3a7c91725220d4da6bafd8848b5ffa, type: 3}
+  texture_gloss_back: {fileID: 2800000, guid: 2f3a7c91725220d4da6bafd8848b5ffa, type: 3}
+  glossiness_front: 0.9
+  glossiness_back: 0.5
+  texture_metal_front: {fileID: 0}
+  texture_metal_back: {fileID: 0}
+  metallic_front: 0.333
+  metallic_back: 0
+  texture_glow_front: {fileID: 2800000, guid: 2f3a7c91725220d4da6bafd8848b5ffa, type: 3}
+  texture_glow_back: {fileID: 2800000, guid: 2f3a7c91725220d4da6bafd8848b5ffa, type: 3}
+  glow_front: 0
+  glow_back: 40
+  showSection_AboutDoubleDepth: 0
+  ShowSection_Gloss_Front: 0
+  ShowSection_Metal_Front: 0
+  ShowSection_Glow_Front: 0
+  ShowSection_Gloss_Back: 0
+  ShowSection_Metal_Back: 0
+  ShowSection_Glow_Back: 0
+  showTextures_Albedo: 0
+  showTextures_Distortion: 0
+  showTextures_Extinction: 0
+  showTextures_Aberration: 0
+  showTextures_Glossiness: 0
+  showTextures_Metallic: 0
+  showTextures_Glow: 0
+  changedTexture_Extinction: 0
+  changedTexture_Glow: 0
+  changedTexture_Metallic: 0
+  changedTexture_Glossiness: 0
+  changedTexture_Aberration: 0
+  linkTextures_Extinction: 1
+  linkTextures_Glow: 1
+  linkTextures_Metallic: 1
+  linkTextures_Glossiness: 1
+  linkTextures_Aberration: 1
+  showSection_Texture_Dimensions: 0
+  textureDimensions:
+  - {x: 512, y: 512}
+  depthQuality_front: 0
+  depthQuality_back: 0
+  depthQuality_other: 0
+  otherDepthIndex: 0
+  showSection_Textures: 0
+  showSection_Surface: 0
+  showSection_Depth: 0
+  showSection_Fog: 0
+  showSection_Aberration: 0
+  showSection_Extinction: 0
+  showSection_Physics: 0
+  showSection_Distortion: 0
+  showSection_Albedo: 0
+  showSection_Materials: 0
+  showSection_RenderOrder: 1
+  showSection_AboutRenderOrder: 0
+  showSection_Presets: 1
+  showSection_SharedGlass: 0
+  showSection_Shader: 0
+  showList_IgnoredDepth_Depth: 0
+  showList_IgnoredDepth_Manager: 0
+  scroll_IgnoredDepth: {x: 0, y: 0}
+  VersionStringFormatted: 1.1.2
+--- !u!33 &3329202
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139462}
+  m_Mesh: {fileID: 4300000, guid: ea41982e8394bfc43be9fa830fac88c1, type: 3}
+--- !u!23 &2319172
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139462}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: bfa1c2dcfe81c4543b064280962d8fbc, type: 2}
+  - {fileID: 2100000, guid: efa125d48ca6182409460865b477ab97, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &139826
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 484572}
+  - component: {fileID: 11455640}
+  - component: {fileID: 3393422}
+  - component: {fileID: 2339224}
+  m_Layer: 0
+  m_Name: Rock 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &484572
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139826}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.00416, y: -0.00795, z: -0.00584}
+  m_LocalScale: {x: 0.31011936, y: 0.45, z: 0.36000317}
+  m_Children: []
+  m_Father: {fileID: 419558}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11455640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2679576dc9fc0684282b38710ed39058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showSection_ManagerSettings: 0
+  showSection_ManagerSettings_depthQuality: 0
+  showSection_ManagerSettings_depthTextures: 0
+  showSection_ManagerSettings_depthCamera: 0
+  showSection_Manager_depthNormalTech: 0
+  material_back: {fileID: 2100000, guid: cf2367c85a9eec547a9315c23421aff3, type: 2}
+  material_front: {fileID: 2100000, guid: 57d063ea596030c45aac24d265ba9a46, type: 2}
+  getCurrentMaterials: 1
+  materials:
+  - {fileID: 2100000, guid: cf2367c85a9eec547a9315c23421aff3, type: 2}
+  - {fileID: 2100000, guid: 57d063ea596030c45aac24d265ba9a46, type: 2}
+  presetName: Ruby Gem
+  manager: {fileID: 0}
+  zFightRadius: 0.01
+  enableExtinction_front: 1
+  enableExtinction_back: 0
+  enableExtinction_both: 0
+  extinctionAppearance: 1
+  capExtinction_front: 1
+  capExtinction_back: 0
+  lastFaceEdited_Extinction: 0
+  texture_extinction_front: {fileID: 0}
+  texture_extinction_back: {fileID: 0}
+  extinction_front: {r: 0, g: 0.40796018, b: 1, a: 1}
+  extinction_back: {r: 0.100000024, g: 0.023000002, b: 0.005559981, a: 1}
+  extinctionFlipped_front: {r: 1, g: 0.5920398, b: 0, a: 1}
+  extinctionFlipped_back: {r: 0.9, g: 0.977, b: 0.99444, a: 1}
+  extinctionMagnitude_front: {x: 1.5, y: 0.4, z: 2}
+  extinctionMagnitude_back: {x: 1, y: 0, z: 1}
+  enableAberration_front: 1
+  enableAberration_back: 0
+  enableAberration_both: 0
+  capAberration_front: 1
+  capAberration_back: 1
+  lastFaceEdited_Aberration: 0
+  texture_aberration_front: {fileID: 0}
+  texture_aberration_back: {fileID: 0}
+  aberration_front: {r: 0.2205882, g: 0.091764696, b: 0, a: 1}
+  aberration_back: {r: 0.2205882, g: 0.091764696, b: 0, a: 1}
+  aberrationMagnitude_front: {x: 0.01, y: 0, z: 0.1}
+  aberrationMagnitude_back: {x: 0.01, y: 0, z: 0.1}
+  enableFog_front: 0
+  enableFog_back: 0
+  enableFog_both: 0
+  lastFaceEdited_Fog: 0
+  fogMagnitude_front: 1
+  fogMagnitude_back: 1
+  fogNear_front: {r: 1, g: 1, b: 0, a: 0}
+  fogNear_back: {r: 1, g: 1, b: 0, a: 0}
+  fogFar_front: {r: 0.66176474, g: 0.3696755, b: 0, a: 0.3882353}
+  fogFar_back: {r: 0.58823526, g: 0.32860038, b: 0, a: 0.478}
+  enableDistortion_front: 0
+  enableDistortion_back: 1
+  texture_distortion: {fileID: 2800000, guid: 2f3a7c91725220d4da6bafd8848b5ffa, type: 3}
+  distortion_front: {x: 0, y: 0, z: 1, w: 1}
+  distortion_back: {x: 0.1, y: -0.1, z: 1, w: 1}
+  distortion_front_shaderCopy: {x: 0, y: 0, z: 1, w: 1}
+  distortion_back_shaderCopy: {x: 0.1, y: -0.1, z: 1, w: 1}
+  distortionEdgeBend_front: 0
+  distortionEdgeBend_back: 0
+  distortionDepthFade_front: 0
+  distortionDepthFade_back: 0
+  bumpBack: -1
+  bumpFront: 1
+  depthMultiplier: 1
+  depthOffset: 0
+  enableDoubleDepth_front: 1
+  enableDoubleDepth_back: 1
+  flipDepth: 0
+  depthTextureID: 0
+  ignoredDepth: []
+  opacity: 0
+  colour_albedo: {r: 1, g: 1, b: 1, a: 0}
+  texture_albedo: {fileID: 0}
+  colour_albedoTexture: {r: 1, g: 1, b: 1, a: 0}
+  texture_gloss_front: {fileID: 2800000, guid: 2f3a7c91725220d4da6bafd8848b5ffa, type: 3}
+  texture_gloss_back: {fileID: 2800000, guid: 2f3a7c91725220d4da6bafd8848b5ffa, type: 3}
+  glossiness_front: 0.9
+  glossiness_back: 0.5
+  texture_metal_front: {fileID: 0}
+  texture_metal_back: {fileID: 0}
+  metallic_front: 0.333
+  metallic_back: 0
+  texture_glow_front: {fileID: 2800000, guid: 2f3a7c91725220d4da6bafd8848b5ffa, type: 3}
+  texture_glow_back: {fileID: 2800000, guid: 2f3a7c91725220d4da6bafd8848b5ffa, type: 3}
+  glow_front: 0
+  glow_back: 40
+  showSection_AboutDoubleDepth: 0
+  ShowSection_Gloss_Front: 0
+  ShowSection_Metal_Front: 0
+  ShowSection_Glow_Front: 0
+  ShowSection_Gloss_Back: 0
+  ShowSection_Metal_Back: 0
+  ShowSection_Glow_Back: 0
+  showTextures_Albedo: 0
+  showTextures_Distortion: 0
+  showTextures_Extinction: 0
+  showTextures_Aberration: 0
+  showTextures_Glossiness: 0
+  showTextures_Metallic: 0
+  showTextures_Glow: 0
+  changedTexture_Extinction: 0
+  changedTexture_Glow: 0
+  changedTexture_Metallic: 0
+  changedTexture_Glossiness: 0
+  changedTexture_Aberration: 0
+  linkTextures_Extinction: 1
+  linkTextures_Glow: 1
+  linkTextures_Metallic: 1
+  linkTextures_Glossiness: 1
+  linkTextures_Aberration: 1
+  showSection_Texture_Dimensions: 0
+  textureDimensions:
+  - {x: 2048, y: 2048}
+  depthQuality_front: 0
+  depthQuality_back: 0
+  depthQuality_other: 0
+  otherDepthIndex: 0
+  showSection_Textures: 1
+  showSection_Surface: 0
+  showSection_Depth: 0
+  showSection_Fog: 0
+  showSection_Aberration: 0
+  showSection_Extinction: 0
+  showSection_Physics: 0
+  showSection_Distortion: 0
+  showSection_Albedo: 0
+  showSection_Materials: 0
+  showSection_RenderOrder: 0
+  showSection_AboutRenderOrder: 0
+  showSection_Presets: 1
+  showSection_SharedGlass: 0
+  showSection_Shader: 0
+  showList_IgnoredDepth_Depth: 0
+  showList_IgnoredDepth_Manager: 0
+  scroll_IgnoredDepth: {x: 0, y: 0}
+  VersionStringFormatted: 1.1.2
+--- !u!33 &3393422
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139826}
+  m_Mesh: {fileID: 4300000, guid: c245b4eb382e39c4ca5d879733b33593, type: 3}
+--- !u!23 &2339224
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139826}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: cf2367c85a9eec547a9315c23421aff3, type: 2}
+  - {fileID: 2100000, guid: 57d063ea596030c45aac24d265ba9a46, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &164668
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 400180}
+  - component: {fileID: 11434146}
+  - component: {fileID: 3351572}
+  - component: {fileID: 2393538}
+  - component: {fileID: 6482066}
+  m_Layer: 0
+  m_Name: Cube Hard Mineral 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &400180
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164668}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: -0.0107, z: -0.009}
+  m_LocalScale: {x: 0.45, y: 0.45, z: 0.6}
+  m_Children: []
+  m_Father: {fileID: 419558}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11434146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2679576dc9fc0684282b38710ed39058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showSection_ManagerSettings: 0
+  showSection_ManagerSettings_depthQuality: 0
+  showSection_ManagerSettings_depthTextures: 0
+  showSection_ManagerSettings_depthCamera: 0
+  showSection_Manager_depthNormalTech: 0
+  material_back: {fileID: 2100000, guid: 3a1d1d080cd28274b921830ce5e87167, type: 2}
+  material_front: {fileID: 2100000, guid: 66aceb47c1053fc4db75f5ad078b4887, type: 2}
+  getCurrentMaterials: 1
+  materials: []
+  presetName: Amber Cube 1
+  manager: {fileID: 0}
+  zFightRadius: 0.001
+  enableExtinction_front: 1
+  enableExtinction_back: 0
+  enableExtinction_both: 0
+  extinctionAppearance: 1
+  capExtinction_front: 1
+  capExtinction_back: 0
+  lastFaceEdited_Extinction: 0
+  texture_extinction_front: {fileID: 0}
+  texture_extinction_back: {fileID: 0}
+  extinction_front: {r: 0, g: 0.35900003, b: 1, a: 0.534}
+  extinction_back: {r: 0, g: 0.35900003, b: 1, a: 0.534}
+  extinctionFlipped_front: {r: 1, g: 0.641, b: 0, a: 0.534}
+  extinctionFlipped_back: {r: 1, g: 0.641, b: 0, a: 0.534}
+  extinctionMagnitude_front: {x: 4, y: 1.25, z: 0.5}
+  extinctionMagnitude_back: {x: 4, y: 1.25, z: 0.4}
+  enableAberration_front: 1
+  enableAberration_back: 0
+  enableAberration_both: 0
+  capAberration_front: 1
+  capAberration_back: 1
+  lastFaceEdited_Aberration: 0
+  texture_aberration_front: {fileID: 0}
+  texture_aberration_back: {fileID: 0}
+  aberration_front: {r: 0.5147059, g: 0.14524697, b: 0, a: 1}
+  aberration_back: {r: 0.1, g: 0.033, b: 0.00666, a: 1}
+  aberrationMagnitude_front: {x: 0.01, y: 0, z: 0.1}
+  aberrationMagnitude_back: {x: 0.01, y: 0, z: 0.1}
+  enableFog_front: 1
+  enableFog_back: 0
+  enableFog_both: 0
+  lastFaceEdited_Fog: 0
+  fogMagnitude_front: 1
+  fogMagnitude_back: 1
+  fogNear_front: {r: 0.6397059, g: 0.19766912, b: 0, a: 0.7607843}
+  fogNear_back: {r: 0, g: 1, b: 0, a: 0}
+  fogFar_front: {r: 1, g: 0.653, b: 0, a: 0.45490196}
+  fogFar_back: {r: 0, g: 0, b: 1, a: 0.5}
+  enableDistortion_front: 1
+  enableDistortion_back: 1
+  texture_distortion: {fileID: 2800000, guid: 7f3d80ab650830543b27aa512e04dee2, type: 3}
+  distortion_front: {x: 0.1, y: -0.1, z: 1, w: 1}
+  distortion_back: {x: 0.1, y: 0.1, z: 1, w: 1}
+  distortion_front_shaderCopy: {x: 0.1, y: -0.1, z: 1, w: 1}
+  distortion_back_shaderCopy: {x: 0.1, y: 0.1, z: 1, w: 1}
+  distortionEdgeBend_front: -0.1
+  distortionEdgeBend_back: 0
+  distortionDepthFade_front: 0.1
+  distortionDepthFade_back: 0.1
+  bumpBack: 0.2
+  bumpFront: -0.2
+  depthMultiplier: 1
+  depthOffset: 0
+  enableDoubleDepth_front: 1
+  enableDoubleDepth_back: 1
+  flipDepth: 0
+  depthTextureID: -1
+  ignoredDepth: []
+  opacity: 2
+  colour_albedo: {r: 1, g: 1, b: 1, a: 0}
+  texture_albedo: {fileID: 2800000, guid: 22bf31a02e2bc33428a4c263fd084b02, type: 3}
+  colour_albedoTexture: {r: 0.875, g: 0.45941854, b: 0, a: 1}
+  texture_gloss_front: {fileID: 2800000, guid: 6db5b9e67115c6743987b82abc2ba5f1, type: 3}
+  texture_gloss_back: {fileID: 2800000, guid: 6db5b9e67115c6743987b82abc2ba5f1, type: 3}
+  glossiness_front: 0.3
+  glossiness_back: 0.3
+  texture_metal_front: {fileID: 2800000, guid: 6db5b9e67115c6743987b82abc2ba5f1, type: 3}
+  texture_metal_back: {fileID: 2800000, guid: 6db5b9e67115c6743987b82abc2ba5f1, type: 3}
+  metallic_front: 0.1
+  metallic_back: 0
+  texture_glow_front: {fileID: 2800000, guid: 6db5b9e67115c6743987b82abc2ba5f1, type: 3}
+  texture_glow_back: {fileID: 2800000, guid: 6db5b9e67115c6743987b82abc2ba5f1, type: 3}
+  glow_front: 100
+  glow_back: 50
+  showSection_AboutDoubleDepth: 0
+  ShowSection_Gloss_Front: 0
+  ShowSection_Metal_Front: 0
+  ShowSection_Glow_Front: 0
+  ShowSection_Gloss_Back: 0
+  ShowSection_Metal_Back: 0
+  ShowSection_Glow_Back: 0
+  showTextures_Albedo: 0
+  showTextures_Distortion: 0
+  showTextures_Extinction: 0
+  showTextures_Aberration: 0
+  showTextures_Glossiness: 1
+  showTextures_Metallic: 1
+  showTextures_Glow: 1
+  changedTexture_Extinction: 0
+  changedTexture_Glow: 0
+  changedTexture_Metallic: 0
+  changedTexture_Glossiness: 0
+  changedTexture_Aberration: 0
+  linkTextures_Extinction: 1
+  linkTextures_Glow: 1
+  linkTextures_Metallic: 1
+  linkTextures_Glossiness: 1
+  linkTextures_Aberration: 1
+  showSection_Texture_Dimensions: 0
+  textureDimensions:
+  - {x: 2048, y: 2048}
+  depthQuality_front: 0
+  depthQuality_back: 0
+  depthQuality_other: 0
+  otherDepthIndex: 0
+  showSection_Textures: 1
+  showSection_Surface: 0
+  showSection_Depth: 0
+  showSection_Fog: 0
+  showSection_Aberration: 0
+  showSection_Extinction: 0
+  showSection_Physics: 0
+  showSection_Distortion: 0
+  showSection_Albedo: 0
+  showSection_Materials: 0
+  showSection_RenderOrder: 0
+  showSection_AboutRenderOrder: 0
+  showSection_Presets: 1
+  showSection_SharedGlass: 0
+  showSection_Shader: 0
+  showList_IgnoredDepth_Depth: 0
+  showList_IgnoredDepth_Manager: 0
+  scroll_IgnoredDepth: {x: 0, y: 0}
+  VersionStringFormatted: 1.1.2
+--- !u!33 &3351572
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164668}
+  m_Mesh: {fileID: 4300000, guid: 13bdf3a5770e1e24fa7607e6187adae0, type: 3}
+--- !u!23 &2393538
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164668}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 3a1d1d080cd28274b921830ce5e87167, type: 2}
+  - {fileID: 2100000, guid: 66aceb47c1053fc4db75f5ad078b4887, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!64 &6482066
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164668}
+  m_Material: {fileID: 13400000, guid: 8cc99172641f11d46a859ba38a7bbb1f, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 13bdf3a5770e1e24fa7607e6187adae0, type: 3}
+--- !u!1 &169426
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 412584}
+  - component: {fileID: 11470284}
+  - component: {fileID: 3364714}
+  - component: {fileID: 2343272}
+  m_Layer: 0
+  m_Name: Rock 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &412584
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169426}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.00416, y: -0.00795, z: -0.00584}
+  m_LocalScale: {x: 0.31011936, y: 0.45, z: 0.36000317}
+  m_Children: []
+  m_Father: {fileID: 419558}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11470284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2679576dc9fc0684282b38710ed39058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showSection_ManagerSettings: 1
+  showSection_ManagerSettings_depthQuality: 1
+  showSection_ManagerSettings_depthTextures: 0
+  showSection_ManagerSettings_depthCamera: 0
+  showSection_Manager_depthNormalTech: 0
+  material_back: {fileID: 2100000, guid: 2bf47f25a9aab7f4b933f86d8771b515, type: 2}
+  material_front: {fileID: 2100000, guid: 24faa33f7107ca64fb38e1d26649e1cd, type: 2}
+  getCurrentMaterials: 1
+  materials:
+  - {fileID: 2100000, guid: 2bf47f25a9aab7f4b933f86d8771b515, type: 2}
+  - {fileID: 2100000, guid: 24faa33f7107ca64fb38e1d26649e1cd, type: 2}
+  presetName: Frosted Logo
+  manager: {fileID: 0}
+  zFightRadius: 0.01
+  enableExtinction_front: 1
+  enableExtinction_back: 0
+  enableExtinction_both: 0
+  extinctionAppearance: 1
+  capExtinction_front: 1
+  capExtinction_back: 0
+  lastFaceEdited_Extinction: 0
+  texture_extinction_front: {fileID: 0}
+  texture_extinction_back: {fileID: 0}
+  extinction_front: {r: 0, g: 0.40796018, b: 1, a: 1}
+  extinction_back: {r: 0.100000024, g: 0.023000002, b: 0.005559981, a: 1}
+  extinctionFlipped_front: {r: 1, g: 0.5920398, b: 0, a: 1}
+  extinctionFlipped_back: {r: 0.9, g: 0.977, b: 0.99444, a: 1}
+  extinctionMagnitude_front: {x: 1.5, y: 0.4, z: 2}
+  extinctionMagnitude_back: {x: 1, y: 0, z: 1}
+  enableAberration_front: 1
+  enableAberration_back: 0
+  enableAberration_both: 0
+  capAberration_front: 1
+  capAberration_back: 1
+  lastFaceEdited_Aberration: 0
+  texture_aberration_front: {fileID: 0}
+  texture_aberration_back: {fileID: 0}
+  aberration_front: {r: 0.2205882, g: 0.091764696, b: 0, a: 1}
+  aberration_back: {r: 0.2205882, g: 0.091764696, b: 0, a: 1}
+  aberrationMagnitude_front: {x: 0.01, y: 0, z: 0.1}
+  aberrationMagnitude_back: {x: 0.01, y: 0, z: 0.1}
+  enableFog_front: 0
+  enableFog_back: 0
+  enableFog_both: 0
+  lastFaceEdited_Fog: 0
+  fogMagnitude_front: 1
+  fogMagnitude_back: 1
+  fogNear_front: {r: 1, g: 1, b: 0, a: 0}
+  fogNear_back: {r: 1, g: 1, b: 0, a: 0}
+  fogFar_front: {r: 0.66176474, g: 0.3696755, b: 0, a: 0.3882353}
+  fogFar_back: {r: 0.58823526, g: 0.32860038, b: 0, a: 0.478}
+  enableDistortion_front: 0
+  enableDistortion_back: 1
+  texture_distortion: {fileID: 2800000, guid: 2f3a7c91725220d4da6bafd8848b5ffa, type: 3}
+  distortion_front: {x: 0, y: 0, z: 1, w: 1}
+  distortion_back: {x: 0.1, y: -0.1, z: 1, w: 1}
+  distortion_front_shaderCopy: {x: 0, y: 0, z: 1, w: 1}
+  distortion_back_shaderCopy: {x: 0.1, y: -0.1, z: 1, w: 1}
+  distortionEdgeBend_front: 0
+  distortionEdgeBend_back: 0
+  distortionDepthFade_front: 0
+  distortionDepthFade_back: 0
+  bumpBack: -1
+  bumpFront: 1
+  depthMultiplier: 1
+  depthOffset: 0
+  enableDoubleDepth_front: 1
+  enableDoubleDepth_back: 1
+  flipDepth: 0
+  depthTextureID: 0
+  ignoredDepth: []
+  opacity: 0
+  colour_albedo: {r: 1, g: 1, b: 1, a: 0}
+  texture_albedo: {fileID: 0}
+  colour_albedoTexture: {r: 1, g: 1, b: 1, a: 0}
+  texture_gloss_front: {fileID: 2800000, guid: 2f3a7c91725220d4da6bafd8848b5ffa, type: 3}
+  texture_gloss_back: {fileID: 2800000, guid: 2f3a7c91725220d4da6bafd8848b5ffa, type: 3}
+  glossiness_front: 0.9
+  glossiness_back: 0.5
+  texture_metal_front: {fileID: 0}
+  texture_metal_back: {fileID: 0}
+  metallic_front: 0.333
+  metallic_back: 0
+  texture_glow_front: {fileID: 2800000, guid: 2f3a7c91725220d4da6bafd8848b5ffa, type: 3}
+  texture_glow_back: {fileID: 2800000, guid: 2f3a7c91725220d4da6bafd8848b5ffa, type: 3}
+  glow_front: 0
+  glow_back: 40
+  showSection_AboutDoubleDepth: 0
+  ShowSection_Gloss_Front: 0
+  ShowSection_Metal_Front: 0
+  ShowSection_Glow_Front: 0
+  ShowSection_Gloss_Back: 0
+  ShowSection_Metal_Back: 0
+  ShowSection_Glow_Back: 0
+  showTextures_Albedo: 0
+  showTextures_Distortion: 0
+  showTextures_Extinction: 0
+  showTextures_Aberration: 0
+  showTextures_Glossiness: 0
+  showTextures_Metallic: 0
+  showTextures_Glow: 0
+  changedTexture_Extinction: 0
+  changedTexture_Glow: 0
+  changedTexture_Metallic: 0
+  changedTexture_Glossiness: 0
+  changedTexture_Aberration: 0
+  linkTextures_Extinction: 1
+  linkTextures_Glow: 1
+  linkTextures_Metallic: 1
+  linkTextures_Glossiness: 1
+  linkTextures_Aberration: 1
+  showSection_Texture_Dimensions: 0
+  textureDimensions:
+  - {x: 2048, y: 2048}
+  depthQuality_front: 0
+  depthQuality_back: 0
+  depthQuality_other: 0
+  otherDepthIndex: 0
+  showSection_Textures: 1
+  showSection_Surface: 0
+  showSection_Depth: 0
+  showSection_Fog: 0
+  showSection_Aberration: 0
+  showSection_Extinction: 0
+  showSection_Physics: 0
+  showSection_Distortion: 0
+  showSection_Albedo: 0
+  showSection_Materials: 0
+  showSection_RenderOrder: 0
+  showSection_AboutRenderOrder: 0
+  showSection_Presets: 1
+  showSection_SharedGlass: 0
+  showSection_Shader: 0
+  showList_IgnoredDepth_Depth: 0
+  showList_IgnoredDepth_Manager: 0
+  scroll_IgnoredDepth: {x: 0, y: 0}
+  VersionStringFormatted: 1.1.2
+--- !u!33 &3364714
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169426}
+  m_Mesh: {fileID: 4300000, guid: c245b4eb382e39c4ca5d879733b33593, type: 3}
+--- !u!23 &2343272
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169426}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 2bf47f25a9aab7f4b933f86d8771b515, type: 2}
+  - {fileID: 2100000, guid: 24faa33f7107ca64fb38e1d26649e1cd, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &181464
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 406514}
+  - component: {fileID: 3368518}
+  - component: {fileID: 2378770}
+  - component: {fileID: 11425980}
+  m_Layer: 0
+  m_Name: box_bottom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &406514
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181464}
+  m_LocalRotation: {x: 0, y: 0, z: -3.3087225e-24, w: 1}
+  m_LocalPosition: {x: -1.1703953e-18, y: -0.01075, z: -0.00090000004}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 419558}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &3368518
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181464}
+  m_Mesh: {fileID: 4300000, guid: 7ac8dddd3c95ad24f9f0a8a4c5287751, type: 3}
+--- !u!23 &2378770
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181464}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5ef9ec4ccfadbf64f8c31462c2a5031c, type: 2}
+  - {fileID: 2100000, guid: 713da9ed161a7c94f957c228ddab1792, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!114 &11425980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2679576dc9fc0684282b38710ed39058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showSection_ManagerSettings: 1
+  showSection_ManagerSettings_depthQuality: 1
+  showSection_ManagerSettings_depthTextures: 0
+  showSection_ManagerSettings_depthCamera: 0
+  showSection_Manager_depthNormalTech: 0
+  material_back: {fileID: 2100000, guid: 5ef9ec4ccfadbf64f8c31462c2a5031c, type: 2}
+  material_front: {fileID: 2100000, guid: 713da9ed161a7c94f957c228ddab1792, type: 2}
+  getCurrentMaterials: 1
+  materials:
+  - {fileID: 2100000, guid: 5ef9ec4ccfadbf64f8c31462c2a5031c, type: 2}
+  - {fileID: 2100000, guid: 713da9ed161a7c94f957c228ddab1792, type: 2}
+  presetName: Strange Plastic Box
+  manager: {fileID: 0}
+  zFightRadius: 0.01
+  enableExtinction_front: 0
+  enableExtinction_back: 0
+  enableExtinction_both: 1
+  extinctionAppearance: 1
+  capExtinction_front: 1
+  capExtinction_back: 1
+  lastFaceEdited_Extinction: 0
+  texture_extinction_front: {fileID: 0}
+  texture_extinction_back: {fileID: 0}
+  extinction_front: {r: 0.49264705, g: 0.91046715, b: 1, a: 1}
+  extinction_back: {r: 0.49264705, g: 0.91046715, b: 1, a: 1}
+  extinctionFlipped_front: {r: 0.50735295, g: 0.089532875, b: 0, a: 1}
+  extinctionFlipped_back: {r: 0.50735295, g: 0.089532875, b: 0, a: 1}
+  extinctionMagnitude_front: {x: 1, y: -0.25, z: 1}
+  extinctionMagnitude_back: {x: 1, y: -0.25, z: 1}
+  enableAberration_front: 0
+  enableAberration_back: 0
+  enableAberration_both: 1
+  capAberration_front: 1
+  capAberration_back: 1
+  lastFaceEdited_Aberration: 0
+  texture_aberration_front: {fileID: 0}
+  texture_aberration_back: {fileID: 0}
+  aberration_front: {r: 1, g: 0.2821941, b: 0, a: 1}
+  aberration_back: {r: 1, g: 0.2821941, b: 0, a: 1}
+  aberrationMagnitude_front: {x: 0.1, y: 0, z: 1}
+  aberrationMagnitude_back: {x: 0.1, y: 0, z: 1}
+  enableFog_front: 0
+  enableFog_back: 0
+  enableFog_both: 1
+  lastFaceEdited_Fog: 0
+  fogMagnitude_front: 1
+  fogMagnitude_back: 1
+  fogNear_front: {r: 1, g: 0.8896551, b: 0, a: 0}
+  fogNear_back: {r: 1, g: 0.8896551, b: 0, a: 0}
+  fogFar_front: {r: 0.11724138, g: 0, b: 1, a: 0.22745098}
+  fogFar_back: {r: 0.11724138, g: 0, b: 1, a: 0.22745098}
+  enableDistortion_front: 1
+  enableDistortion_back: 1
+  texture_distortion: {fileID: 2800000, guid: 7f3d80ab650830543b27aa512e04dee2, type: 3}
+  distortion_front: {x: 0.2, y: 0.1, z: 1, w: 1}
+  distortion_back: {x: -0.2, y: -0.1, z: 1, w: 1}
+  distortion_front_shaderCopy: {x: 0.2, y: 0.1, z: 1, w: 1}
+  distortion_back_shaderCopy: {x: -0.2, y: -0.1, z: 1, w: 1}
+  distortionEdgeBend_front: 0
+  distortionEdgeBend_back: 0
+  distortionDepthFade_front: 5
+  distortionDepthFade_back: 1
+  bumpBack: -0.1
+  bumpFront: 0.1
+  depthMultiplier: 1
+  depthOffset: 0
+  enableDoubleDepth_front: 1
+  enableDoubleDepth_back: 1
+  flipDepth: 0
+  depthTextureID: 3
+  ignoredDepth: []
+  opacity: 1
+  colour_albedo: {r: 1, g: 1, b: 1, a: 0}
+  texture_albedo: {fileID: 2800000, guid: 22bf31a02e2bc33428a4c263fd084b02, type: 3}
+  colour_albedoTexture: {r: 1, g: 0, b: 0, a: 0.61960787}
+  texture_gloss_front: {fileID: 2800000, guid: 6db5b9e67115c6743987b82abc2ba5f1, type: 3}
+  texture_gloss_back: {fileID: 0}
+  glossiness_front: 0.691
+  glossiness_back: 0
+  texture_metal_front: {fileID: 2800000, guid: 6db5b9e67115c6743987b82abc2ba5f1, type: 3}
+  texture_metal_back: {fileID: 0}
+  metallic_front: 1
+  metallic_back: 0
+  texture_glow_front: {fileID: 2800000, guid: 6db5b9e67115c6743987b82abc2ba5f1, type: 3}
+  texture_glow_back: {fileID: 0}
+  glow_front: 100
+  glow_back: 0
+  showSection_AboutDoubleDepth: 0
+  ShowSection_Gloss_Front: 0
+  ShowSection_Metal_Front: 0
+  ShowSection_Glow_Front: 0
+  ShowSection_Gloss_Back: 0
+  ShowSection_Metal_Back: 0
+  ShowSection_Glow_Back: 0
+  showTextures_Albedo: 0
+  showTextures_Distortion: 0
+  showTextures_Extinction: 0
+  showTextures_Aberration: 0
+  showTextures_Glossiness: 0
+  showTextures_Metallic: 0
+  showTextures_Glow: 0
+  changedTexture_Extinction: 0
+  changedTexture_Glow: 0
+  changedTexture_Metallic: 0
+  changedTexture_Glossiness: 0
+  changedTexture_Aberration: 0
+  linkTextures_Extinction: 1
+  linkTextures_Glow: 1
+  linkTextures_Metallic: 1
+  linkTextures_Glossiness: 1
+  linkTextures_Aberration: 1
+  showSection_Texture_Dimensions: 0
+  textureDimensions:
+  - {x: 512, y: 512}
+  depthQuality_front: 1
+  depthQuality_back: 1
+  depthQuality_other: 0
+  otherDepthIndex: 0
+  showSection_Textures: 0
+  showSection_Surface: 0
+  showSection_Depth: 0
+  showSection_Fog: 0
+  showSection_Aberration: 0
+  showSection_Extinction: 0
+  showSection_Physics: 0
+  showSection_Distortion: 0
+  showSection_Albedo: 0
+  showSection_Materials: 0
+  showSection_RenderOrder: 0
+  showSection_AboutRenderOrder: 0
+  showSection_Presets: 1
+  showSection_SharedGlass: 0
+  showSection_Shader: 0
+  showList_IgnoredDepth_Depth: 0
+  showList_IgnoredDepth_Manager: 0
+  scroll_IgnoredDepth: {x: 0, y: 0}
+  VersionStringFormatted: 1.1.2
+--- !u!1 &184920
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 431046}
+  - component: {fileID: 3327412}
+  - component: {fileID: 2396434}
+  m_Layer: 0
+  m_Name: box_hinge_pin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &431046
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184920}
+  m_LocalRotation: {x: -2.3396204e-24, y: -0.70710677, z: -2.3396202e-24, w: 0.7071068}
+  m_LocalPosition: {x: 2.646978e-25, y: 0, z: 0}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 0.76}
+  m_Children: []
+  m_Father: {fileID: 419558}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &3327412
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184920}
+  m_Mesh: {fileID: 4300004, guid: 7ac8dddd3c95ad24f9f0a8a4c5287751, type: 3}
+--- !u!23 &2396434
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184920}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 25451bbc8d9c42040aa1c243643fe6cc, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &187772
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 419558}
+  m_Layer: 0
+  m_Name: Box Hinged Weird
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &419558
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187772}
+  m_LocalRotation: {x: -0.00000011520229, y: -0.70710695, z: -0.7071066, w: 0.00000011520235}
+  m_LocalPosition: {x: 0, y: 1.01, z: 3.04}
+  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_Children:
+  - {fileID: 406514}
+  - {fileID: 431046}
+  - {fileID: 410780}
+  - {fileID: 437214}
+  - {fileID: 412584}
+  - {fileID: 471174}
+  - {fileID: 400180}
+  - {fileID: 484572}
+  - {fileID: 408336}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

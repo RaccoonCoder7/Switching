@@ -1,0 +1,276 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &178708
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 496272}
+  - component: {fileID: 3368926}
+  - component: {fileID: 2320498}
+  - component: {fileID: 11451506}
+  - component: {fileID: 5451948}
+  - component: {fileID: 6443234}
+  - component: {fileID: 13541220}
+  m_Layer: 0
+  m_Name: Goblet Purple Plastic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &496272
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178708}
+  m_LocalRotation: {x: -0.7071068, y: -0.000000007450581, z: 0, w: 0.70710677}
+  m_LocalPosition: {x: 0, y: 1.05, z: -0}
+  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &3368926
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178708}
+  m_Mesh: {fileID: 4300000, guid: 3365ea49d13da994494ee2b7f0342dc6, type: 3}
+--- !u!23 &2320498
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178708}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 22e0da531236e4cf488969c2c7a70d90, type: 2}
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!114 &11451506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2679576dc9fc0684282b38710ed39058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showSection_ManagerSettings: 1
+  showSection_ManagerSettings_depthQuality: 1
+  showSection_ManagerSettings_depthTextures: 0
+  showSection_ManagerSettings_depthCamera: 0
+  showSection_Manager_depthNormalTech: 0
+  material_back: {fileID: 2100000, guid: 22e0da531236e4cf488969c2c7a70d90, type: 2}
+  material_front: {fileID: 2100000, guid: 6acd6c26e8bac46699f5268549ca0ad6, type: 2}
+  getCurrentMaterials: 1
+  materials:
+  - {fileID: 2100000, guid: 22e0da531236e4cf488969c2c7a70d90, type: 2}
+  - {fileID: 0}
+  presetName: Cloudy Purple Plastic
+  manager: {fileID: 0}
+  zFightRadius: 0.001
+  enableExtinction_front: 1
+  enableExtinction_back: 1
+  enableExtinction_both: 0
+  extinctionAppearance: 1
+  capExtinction_front: 1
+  capExtinction_back: 1
+  lastFaceEdited_Extinction: 0
+  texture_extinction_front: {fileID: 0}
+  texture_extinction_back: {fileID: 0}
+  extinction_front: {r: 0.43058825, g: 1, b: 0.19117647, a: 1}
+  extinction_back: {r: 0.43058825, g: 1, b: 0.19117647, a: 1}
+  extinctionFlipped_front: {r: 0.56941175, g: 0, b: 0.8088235, a: 1}
+  extinctionFlipped_back: {r: 0.56941175, g: 0, b: 0.8088235, a: 1}
+  extinctionMagnitude_front: {x: 1, y: 0, z: 4}
+  extinctionMagnitude_back: {x: 1, y: 1, z: 0}
+  enableAberration_front: 1
+  enableAberration_back: 0
+  enableAberration_both: 0
+  capAberration_front: 1
+  capAberration_back: 1
+  lastFaceEdited_Aberration: 0
+  texture_aberration_front: {fileID: 0}
+  texture_aberration_back: {fileID: 0}
+  aberration_front: {r: 0, g: 1, b: 0.17241383, a: 1}
+  aberration_back: {r: 0.1, g: 0.033, b: 0.00666, a: 1}
+  aberrationMagnitude_front: {x: 0.01, y: 0, z: 0.1}
+  aberrationMagnitude_back: {x: 0.01, y: 0, z: 0.1}
+  enableFog_front: 1
+  enableFog_back: 1
+  enableFog_both: 0
+  lastFaceEdited_Fog: 0
+  fogMagnitude_front: 1
+  fogMagnitude_back: 1
+  fogNear_front: {r: 1, g: 1, b: 1, a: 0}
+  fogNear_back: {r: 1, g: 1, b: 1, a: 0}
+  fogFar_front: {r: 0.62352943, g: 0, b: 1, a: 1}
+  fogFar_back: {r: 0.62352943, g: 0, b: 1, a: 1}
+  enableDistortion_front: 0
+  enableDistortion_back: 1
+  texture_distortion: {fileID: 0}
+  distortion_front: {x: 0, y: 0, z: 1, w: 1}
+  distortion_back: {x: 0, y: 0.1, z: 1, w: 1}
+  distortion_front_shaderCopy: {x: 0, y: 0, z: 1, w: 1}
+  distortion_back_shaderCopy: {x: 0, y: 0.1, z: 1, w: 1}
+  distortionEdgeBend_front: 0
+  distortionEdgeBend_back: 0.1
+  distortionDepthFade_front: 0
+  distortionDepthFade_back: 0.1
+  bumpBack: 0
+  bumpFront: 0
+  depthMultiplier: 1
+  depthOffset: 0
+  enableDoubleDepth_front: 1
+  enableDoubleDepth_back: 1
+  flipDepth: 0
+  depthTextureID: 0
+  ignoredDepth:
+  - {fileID: 0}
+  opacity: 0
+  colour_albedo: {r: 0, g: 0, b: 0, a: 0}
+  texture_albedo: {fileID: 0}
+  colour_albedoTexture: {r: 1, g: 1, b: 1, a: 0}
+  texture_gloss_front: {fileID: 0}
+  texture_gloss_back: {fileID: 0}
+  glossiness_front: 0.3
+  glossiness_back: 0.3
+  texture_metal_front: {fileID: 0}
+  texture_metal_back: {fileID: 0}
+  metallic_front: 0.4
+  metallic_back: 0.4
+  texture_glow_front: {fileID: 0}
+  texture_glow_back: {fileID: 0}
+  glow_front: 0
+  glow_back: 0
+  showSection_AboutDoubleDepth: 0
+  ShowSection_Gloss_Front: 0
+  ShowSection_Metal_Front: 0
+  ShowSection_Glow_Front: 0
+  ShowSection_Gloss_Back: 0
+  ShowSection_Metal_Back: 0
+  ShowSection_Glow_Back: 0
+  showTextures_Albedo: 0
+  showTextures_Distortion: 0
+  showTextures_Extinction: 0
+  showTextures_Aberration: 0
+  showTextures_Glossiness: 0
+  showTextures_Metallic: 0
+  showTextures_Glow: 0
+  changedTexture_Extinction: 0
+  changedTexture_Glow: 0
+  changedTexture_Metallic: 0
+  changedTexture_Glossiness: 0
+  changedTexture_Aberration: 0
+  linkTextures_Extinction: 1
+  linkTextures_Glow: 1
+  linkTextures_Metallic: 1
+  linkTextures_Glossiness: 1
+  linkTextures_Aberration: 1
+  showSection_Texture_Dimensions: 0
+  textureDimensions: []
+  depthQuality_front: 1
+  depthQuality_back: 1
+  depthQuality_other: 1
+  otherDepthIndex: 0
+  showSection_Textures: 0
+  showSection_Surface: 0
+  showSection_Depth: 0
+  showSection_Fog: 0
+  showSection_Aberration: 0
+  showSection_Extinction: 0
+  showSection_Physics: 0
+  showSection_Distortion: 0
+  showSection_Albedo: 0
+  showSection_Materials: 0
+  showSection_RenderOrder: 0
+  showSection_AboutRenderOrder: 0
+  showSection_Presets: 0
+  showSection_SharedGlass: 0
+  showSection_Shader: 0
+  showList_IgnoredDepth_Depth: 0
+  showList_IgnoredDepth_Manager: 1
+  scroll_IgnoredDepth: {x: 0, y: 0}
+  VersionStringFormatted: 1.1.2
+--- !u!54 &5451948
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178708}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!64 &6443234
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178708}
+  m_Material: {fileID: 13400000, guid: 8cc99172641f11d46a859ba38a7bbb1f, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 3365ea49d13da994494ee2b7f0342dc6, type: 3}
+--- !u!135 &13541220
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178708}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: -1}

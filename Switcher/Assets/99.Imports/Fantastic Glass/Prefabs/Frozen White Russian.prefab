@@ -1,0 +1,1471 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100908
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 428366}
+  - component: {fileID: 3313232}
+  - component: {fileID: 2320770}
+  - component: {fileID: 11458190}
+  m_Layer: 0
+  m_Name: Milky Ice Cube 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &428366
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100908}
+  m_LocalRotation: {x: 0.7769533, y: -0.04501407, z: 0.3117088, w: 0.5451193}
+  m_LocalPosition: {x: 0.206, y: 0.735, z: 0.201}
+  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_Children: []
+  m_Father: {fileID: 423506}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &3313232
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100908}
+  m_Mesh: {fileID: 4300000, guid: ea41982e8394bfc43be9fa830fac88c1, type: 3}
+--- !u!23 &2320770
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100908}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 1752ed2bd6f67564399eae4013c17d65, type: 2}
+  - {fileID: 2100000, guid: 577f40a55d1b65e49a7ee575a2ffa6fc, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!114 &11458190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2679576dc9fc0684282b38710ed39058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showSection_ManagerSettings: 0
+  showSection_ManagerSettings_depthQuality: 0
+  showSection_ManagerSettings_depthTextures: 0
+  showSection_ManagerSettings_depthCamera: 0
+  showSection_Manager_depthNormalTech: 0
+  material_back: {fileID: 2100000, guid: 1752ed2bd6f67564399eae4013c17d65, type: 2}
+  material_front: {fileID: 2100000, guid: 577f40a55d1b65e49a7ee575a2ffa6fc, type: 2}
+  getCurrentMaterials: 1
+  materials: []
+  presetName: Milky Ice Cube
+  manager: {fileID: 0}
+  zFightRadius: 0.001
+  enableExtinction_front: 1
+  enableExtinction_back: 0
+  enableExtinction_both: 0
+  extinctionAppearance: 1
+  capExtinction_front: 1
+  capExtinction_back: 0
+  lastFaceEdited_Extinction: 0
+  texture_extinction_front: {fileID: 0}
+  texture_extinction_back: {fileID: 0}
+  extinction_front: {r: 0.100000024, g: 0.023000002, b: 0.005559981, a: 1}
+  extinction_back: {r: 0.100000024, g: 0.023000002, b: 0.005559981, a: 1}
+  extinctionFlipped_front: {r: 0.9, g: 0.977, b: 0.99444, a: 1}
+  extinctionFlipped_back: {r: 0.9, g: 0.977, b: 0.99444, a: 1}
+  extinctionMagnitude_front: {x: 1, y: 0, z: 1}
+  extinctionMagnitude_back: {x: 2, y: 0, z: 1}
+  enableAberration_front: 1
+  enableAberration_back: 0
+  enableAberration_both: 0
+  capAberration_front: 1
+  capAberration_back: 1
+  lastFaceEdited_Aberration: 0
+  texture_aberration_front: {fileID: 2800000, guid: 2f3a7c91725220d4da6bafd8848b5ffa,
+    type: 3}
+  texture_aberration_back: {fileID: 0}
+  aberration_front: {r: 0.1397059, g: 0.046797838, b: 0.010272494, a: 1}
+  aberration_back: {r: 0.1, g: 0.033, b: 0.00666, a: 1}
+  aberrationMagnitude_front: {x: 0.01, y: 0, z: 0.1}
+  aberrationMagnitude_back: {x: 0.01, y: 0, z: 0.1}
+  enableFog_front: 1
+  enableFog_back: 0
+  enableFog_both: 0
+  lastFaceEdited_Fog: 0
+  fogMagnitude_front: 1
+  fogMagnitude_back: 2
+  fogNear_front: {r: 1, g: 1, b: 1, a: 0}
+  fogNear_back: {r: 1, g: 1, b: 1, a: 0.678}
+  fogFar_front: {r: 1, g: 1, b: 1, a: 0.39215687}
+  fogFar_back: {r: 1, g: 1, b: 1, a: 0}
+  enableDistortion_front: 0
+  enableDistortion_back: 1
+  texture_distortion: {fileID: 2800000, guid: 2f3a7c91725220d4da6bafd8848b5ffa, type: 3}
+  distortion_front: {x: -0.5, y: -0.2, z: 1, w: 1}
+  distortion_back: {x: 0.1, y: 0.1, z: 1, w: 1}
+  distortion_front_shaderCopy: {x: 0, y: 0, z: 0, w: 0}
+  distortion_back_shaderCopy: {x: 0, y: 0, z: 0, w: 0}
+  distortionEdgeBend_front: 1
+  distortionEdgeBend_back: 0
+  distortionDepthFade_front: 10
+  distortionDepthFade_back: 0
+  bumpBack: -1
+  bumpFront: 1
+  depthMultiplier: 1
+  depthOffset: 0
+  enableDoubleDepth_front: 1
+  enableDoubleDepth_back: 1
+  flipDepth: 0
+  depthTextureID: 0
+  ignoredDepth: []
+  opacity: 0
+  colour_albedo: {r: 1, g: 1, b: 1, a: 0}
+  texture_albedo: {fileID: 0}
+  colour_albedoTexture: {r: 0, g: 0, b: 0, a: 0}
+  texture_gloss_front: {fileID: 0}
+  texture_gloss_back: {fileID: 0}
+  glossiness_front: 0.9
+  glossiness_back: 0
+  texture_metal_front: {fileID: 0}
+  texture_metal_back: {fileID: 0}
+  metallic_front: 0
+  metallic_back: 0
+  texture_glow_front: {fileID: 0}
+  texture_glow_back: {fileID: 0}
+  glow_front: 20
+  glow_back: 20
+  showSection_AboutDoubleDepth: 0
+  ShowSection_Gloss_Front: 0
+  ShowSection_Metal_Front: 0
+  ShowSection_Glow_Front: 0
+  ShowSection_Gloss_Back: 0
+  ShowSection_Metal_Back: 0
+  ShowSection_Glow_Back: 0
+  showTextures_Albedo: 0
+  showTextures_Distortion: 0
+  showTextures_Extinction: 0
+  showTextures_Aberration: 0
+  showTextures_Glossiness: 0
+  showTextures_Metallic: 0
+  showTextures_Glow: 0
+  changedTexture_Extinction: 0
+  changedTexture_Glow: 0
+  changedTexture_Metallic: 0
+  changedTexture_Glossiness: 0
+  changedTexture_Aberration: 0
+  linkTextures_Extinction: 1
+  linkTextures_Glow: 1
+  linkTextures_Metallic: 1
+  linkTextures_Glossiness: 1
+  linkTextures_Aberration: 1
+  showSection_Texture_Dimensions: 0
+  textureDimensions: []
+  depthQuality_front: 0
+  depthQuality_back: 0
+  depthQuality_other: 0
+  otherDepthIndex: 0
+  showSection_Textures: 0
+  showSection_Surface: 0
+  showSection_Depth: 0
+  showSection_Fog: 0
+  showSection_Aberration: 0
+  showSection_Extinction: 0
+  showSection_Physics: 0
+  showSection_Distortion: 0
+  showSection_Albedo: 0
+  showSection_Materials: 0
+  showSection_RenderOrder: 0
+  showSection_AboutRenderOrder: 0
+  showSection_Presets: 0
+  showSection_SharedGlass: 0
+  showSection_Shader: 0
+  showList_IgnoredDepth_Depth: 0
+  showList_IgnoredDepth_Manager: 0
+  scroll_IgnoredDepth: {x: 0, y: 0}
+  VersionStringFormatted: 1.1.2
+--- !u!1 &114028
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 402188}
+  - component: {fileID: 3358678}
+  - component: {fileID: 2367826}
+  m_Layer: 0
+  m_Name: straw
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &402188
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114028}
+  m_LocalRotation: {x: 0, y: 0, z: 0.21643963, w: 0.976296}
+  m_LocalPosition: {x: -0.281, y: 1, z: 0}
+  m_LocalScale: {x: 0.099999994, y: 1, z: 0.1}
+  m_Children: []
+  m_Father: {fileID: 423506}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &3358678
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114028}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &2367826
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114028}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 669aef0a5e3fe7a498bf37081710e263, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &123370
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 423876}
+  - component: {fileID: 3368386}
+  - component: {fileID: 2380146}
+  - component: {fileID: 11414000}
+  m_Layer: 0
+  m_Name: Milky Ice Cube 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &423876
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123370}
+  m_LocalRotation: {x: 0.7769533, y: -0.04501407, z: 0.3117088, w: 0.5451193}
+  m_LocalPosition: {x: 0.206, y: 0.856, z: -0.133}
+  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_Children: []
+  m_Father: {fileID: 423506}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &3368386
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123370}
+  m_Mesh: {fileID: 4300000, guid: ea41982e8394bfc43be9fa830fac88c1, type: 3}
+--- !u!23 &2380146
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123370}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 1752ed2bd6f67564399eae4013c17d65, type: 2}
+  - {fileID: 2100000, guid: 577f40a55d1b65e49a7ee575a2ffa6fc, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!114 &11414000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2679576dc9fc0684282b38710ed39058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showSection_ManagerSettings: 0
+  showSection_ManagerSettings_depthQuality: 0
+  showSection_ManagerSettings_depthTextures: 0
+  showSection_ManagerSettings_depthCamera: 0
+  showSection_Manager_depthNormalTech: 0
+  material_back: {fileID: 2100000, guid: 1752ed2bd6f67564399eae4013c17d65, type: 2}
+  material_front: {fileID: 2100000, guid: 577f40a55d1b65e49a7ee575a2ffa6fc, type: 2}
+  getCurrentMaterials: 1
+  materials: []
+  presetName: Milky Ice Cube
+  manager: {fileID: 0}
+  zFightRadius: 0.001
+  enableExtinction_front: 1
+  enableExtinction_back: 0
+  enableExtinction_both: 0
+  extinctionAppearance: 1
+  capExtinction_front: 1
+  capExtinction_back: 0
+  lastFaceEdited_Extinction: 0
+  texture_extinction_front: {fileID: 0}
+  texture_extinction_back: {fileID: 0}
+  extinction_front: {r: 0.100000024, g: 0.023000002, b: 0.005559981, a: 1}
+  extinction_back: {r: 0.100000024, g: 0.023000002, b: 0.005559981, a: 1}
+  extinctionFlipped_front: {r: 0.9, g: 0.977, b: 0.99444, a: 1}
+  extinctionFlipped_back: {r: 0.9, g: 0.977, b: 0.99444, a: 1}
+  extinctionMagnitude_front: {x: 1, y: 0, z: 1}
+  extinctionMagnitude_back: {x: 2, y: 0, z: 1}
+  enableAberration_front: 1
+  enableAberration_back: 0
+  enableAberration_both: 0
+  capAberration_front: 1
+  capAberration_back: 1
+  lastFaceEdited_Aberration: 0
+  texture_aberration_front: {fileID: 2800000, guid: 2f3a7c91725220d4da6bafd8848b5ffa,
+    type: 3}
+  texture_aberration_back: {fileID: 0}
+  aberration_front: {r: 0.1397059, g: 0.046797838, b: 0.010272494, a: 1}
+  aberration_back: {r: 0.1, g: 0.033, b: 0.00666, a: 1}
+  aberrationMagnitude_front: {x: 0.01, y: 0, z: 0.1}
+  aberrationMagnitude_back: {x: 0.01, y: 0, z: 0.1}
+  enableFog_front: 1
+  enableFog_back: 0
+  enableFog_both: 0
+  lastFaceEdited_Fog: 0
+  fogMagnitude_front: 1
+  fogMagnitude_back: 2
+  fogNear_front: {r: 1, g: 1, b: 1, a: 0}
+  fogNear_back: {r: 1, g: 1, b: 1, a: 0.678}
+  fogFar_front: {r: 1, g: 1, b: 1, a: 0.39215687}
+  fogFar_back: {r: 1, g: 1, b: 1, a: 0}
+  enableDistortion_front: 0
+  enableDistortion_back: 1
+  texture_distortion: {fileID: 2800000, guid: 2f3a7c91725220d4da6bafd8848b5ffa, type: 3}
+  distortion_front: {x: -0.5, y: -0.2, z: 1, w: 1}
+  distortion_back: {x: 0.1, y: 0.1, z: 1, w: 1}
+  distortion_front_shaderCopy: {x: 0, y: 0, z: 0, w: 0}
+  distortion_back_shaderCopy: {x: 0, y: 0, z: 0, w: 0}
+  distortionEdgeBend_front: 1
+  distortionEdgeBend_back: 0
+  distortionDepthFade_front: 10
+  distortionDepthFade_back: 0
+  bumpBack: -1
+  bumpFront: 1
+  depthMultiplier: 1
+  depthOffset: 0
+  enableDoubleDepth_front: 1
+  enableDoubleDepth_back: 1
+  flipDepth: 0
+  depthTextureID: 0
+  ignoredDepth: []
+  opacity: 0
+  colour_albedo: {r: 1, g: 1, b: 1, a: 0}
+  texture_albedo: {fileID: 0}
+  colour_albedoTexture: {r: 0, g: 0, b: 0, a: 0}
+  texture_gloss_front: {fileID: 0}
+  texture_gloss_back: {fileID: 0}
+  glossiness_front: 0.9
+  glossiness_back: 0
+  texture_metal_front: {fileID: 0}
+  texture_metal_back: {fileID: 0}
+  metallic_front: 0
+  metallic_back: 0
+  texture_glow_front: {fileID: 0}
+  texture_glow_back: {fileID: 0}
+  glow_front: 20
+  glow_back: 20
+  showSection_AboutDoubleDepth: 0
+  ShowSection_Gloss_Front: 0
+  ShowSection_Metal_Front: 0
+  ShowSection_Glow_Front: 0
+  ShowSection_Gloss_Back: 0
+  ShowSection_Metal_Back: 0
+  ShowSection_Glow_Back: 0
+  showTextures_Albedo: 0
+  showTextures_Distortion: 0
+  showTextures_Extinction: 0
+  showTextures_Aberration: 0
+  showTextures_Glossiness: 0
+  showTextures_Metallic: 0
+  showTextures_Glow: 0
+  changedTexture_Extinction: 0
+  changedTexture_Glow: 0
+  changedTexture_Metallic: 0
+  changedTexture_Glossiness: 0
+  changedTexture_Aberration: 0
+  linkTextures_Extinction: 1
+  linkTextures_Glow: 1
+  linkTextures_Metallic: 1
+  linkTextures_Glossiness: 1
+  linkTextures_Aberration: 1
+  showSection_Texture_Dimensions: 0
+  textureDimensions: []
+  depthQuality_front: 0
+  depthQuality_back: 0
+  depthQuality_other: 0
+  otherDepthIndex: 0
+  showSection_Textures: 0
+  showSection_Surface: 0
+  showSection_Depth: 0
+  showSection_Fog: 0
+  showSection_Aberration: 0
+  showSection_Extinction: 0
+  showSection_Physics: 0
+  showSection_Distortion: 0
+  showSection_Albedo: 0
+  showSection_Materials: 0
+  showSection_RenderOrder: 0
+  showSection_AboutRenderOrder: 0
+  showSection_Presets: 0
+  showSection_SharedGlass: 0
+  showSection_Shader: 0
+  showList_IgnoredDepth_Depth: 0
+  showList_IgnoredDepth_Manager: 0
+  scroll_IgnoredDepth: {x: 0, y: 0}
+  VersionStringFormatted: 1.1.2
+--- !u!1 &127958
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 470772}
+  - component: {fileID: 3306518}
+  - component: {fileID: 2385084}
+  - component: {fileID: 11413440}
+  m_Layer: 0
+  m_Name: Whiskey Glass
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &470772
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127958}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+  m_LocalPosition: {x: 0, y: 0.601, z: 0}
+  m_LocalScale: {x: 63, y: 63, z: 60}
+  m_Children: []
+  m_Father: {fileID: 423506}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &3306518
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127958}
+  m_Mesh: {fileID: 4300002, guid: a5e39ab16b1c415458a65bcd575b66fe, type: 3}
+--- !u!23 &2385084
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127958}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 2df324b40bf5dd6458f490b055bddf84, type: 2}
+  - {fileID: 2100000, guid: 8e7423d68f08a4e44a5e1c36f9031b9f, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!114 &11413440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2679576dc9fc0684282b38710ed39058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showSection_ManagerSettings: 0
+  showSection_ManagerSettings_depthQuality: 0
+  showSection_ManagerSettings_depthTextures: 0
+  showSection_ManagerSettings_depthCamera: 0
+  showSection_Manager_depthNormalTech: 0
+  material_back: {fileID: 2100000, guid: 2df324b40bf5dd6458f490b055bddf84, type: 2}
+  material_front: {fileID: 2100000, guid: 8e7423d68f08a4e44a5e1c36f9031b9f, type: 2}
+  getCurrentMaterials: 1
+  materials: []
+  presetName: Whisky Glass
+  manager: {fileID: 0}
+  zFightRadius: 0.001
+  enableExtinction_front: 1
+  enableExtinction_back: 0
+  enableExtinction_both: 1
+  extinctionAppearance: 1
+  capExtinction_front: 1
+  capExtinction_back: 1
+  lastFaceEdited_Extinction: 0
+  texture_extinction_front: {fileID: 0}
+  texture_extinction_back: {fileID: 0}
+  extinction_front: {r: 0.102941155, g: 0.15025055, b: 0.23486155, a: 1}
+  extinction_back: {r: 0.102941155, g: 0.15025055, b: 0.23486155, a: 1}
+  extinctionFlipped_front: {r: 0.89705884, g: 0.84974945, b: 0.76513845, a: 1}
+  extinctionFlipped_back: {r: 0.89705884, g: 0.84974945, b: 0.76513845, a: 1}
+  extinctionMagnitude_front: {x: 10, y: 2.5, z: 3}
+  extinctionMagnitude_back: {x: 10, y: 2.5, z: 3}
+  enableAberration_front: 1
+  enableAberration_back: 0
+  enableAberration_both: 1
+  capAberration_front: 1
+  capAberration_back: 1
+  lastFaceEdited_Aberration: 0
+  texture_aberration_front: {fileID: 0}
+  texture_aberration_back: {fileID: 0}
+  aberration_front: {r: 0.1397059, g: 0.046797838, b: 0.010272494, a: 1}
+  aberration_back: {r: 0.1397059, g: 0.046797838, b: 0.010272494, a: 1}
+  aberrationMagnitude_front: {x: 10, y: 0, z: 0.2}
+  aberrationMagnitude_back: {x: 10, y: 0, z: 0.2}
+  enableFog_front: 1
+  enableFog_back: 0
+  enableFog_both: 0
+  lastFaceEdited_Fog: 0
+  fogMagnitude_front: 1
+  fogMagnitude_back: 1
+  fogNear_front: {r: 0, g: 1, b: 0, a: 0}
+  fogNear_back: {r: 0, g: 1, b: 0, a: 0}
+  fogFar_front: {r: 0, g: 0, b: 1, a: 0.5}
+  fogFar_back: {r: 0, g: 0, b: 1, a: 0.5}
+  enableDistortion_front: 1
+  enableDistortion_back: 1
+  texture_distortion: {fileID: 0}
+  distortion_front: {x: 0, y: -0.1, z: 1, w: 1}
+  distortion_back: {x: 0, y: 0.1, z: 1, w: 1}
+  distortion_front_shaderCopy: {x: 0, y: -0.1, z: 1, w: 1}
+  distortion_back_shaderCopy: {x: 0, y: 0.1, z: 1, w: 1}
+  distortionEdgeBend_front: 0
+  distortionEdgeBend_back: 1
+  distortionDepthFade_front: 0
+  distortionDepthFade_back: 1
+  bumpBack: 0
+  bumpFront: 0
+  depthMultiplier: 1
+  depthOffset: 0
+  enableDoubleDepth_front: 0
+  enableDoubleDepth_back: 1
+  flipDepth: 0
+  depthTextureID: 2
+  ignoredDepth: []
+  opacity: 0
+  colour_albedo: {r: 1, g: 1, b: 1, a: 0}
+  texture_albedo: {fileID: 0}
+  colour_albedoTexture: {r: 1, g: 1, b: 1, a: 0}
+  texture_gloss_front: {fileID: 0}
+  texture_gloss_back: {fileID: 0}
+  glossiness_front: 0.8
+  glossiness_back: 0.8
+  texture_metal_front: {fileID: 0}
+  texture_metal_back: {fileID: 0}
+  metallic_front: 0
+  metallic_back: 0
+  texture_glow_front: {fileID: 0}
+  texture_glow_back: {fileID: 0}
+  glow_front: 4
+  glow_back: 7
+  showSection_AboutDoubleDepth: 0
+  ShowSection_Gloss_Front: 0
+  ShowSection_Metal_Front: 0
+  ShowSection_Glow_Front: 0
+  ShowSection_Gloss_Back: 0
+  ShowSection_Metal_Back: 0
+  ShowSection_Glow_Back: 0
+  showTextures_Albedo: 0
+  showTextures_Distortion: 0
+  showTextures_Extinction: 0
+  showTextures_Aberration: 0
+  showTextures_Glossiness: 0
+  showTextures_Metallic: 0
+  showTextures_Glow: 0
+  changedTexture_Extinction: 0
+  changedTexture_Glow: 0
+  changedTexture_Metallic: 0
+  changedTexture_Glossiness: 0
+  changedTexture_Aberration: 0
+  linkTextures_Extinction: 1
+  linkTextures_Glow: 1
+  linkTextures_Metallic: 1
+  linkTextures_Glossiness: 1
+  linkTextures_Aberration: 1
+  showSection_Texture_Dimensions: 0
+  textureDimensions: []
+  depthQuality_front: 0
+  depthQuality_back: 0
+  depthQuality_other: 0
+  otherDepthIndex: 0
+  showSection_Textures: 0
+  showSection_Surface: 0
+  showSection_Depth: 0
+  showSection_Fog: 0
+  showSection_Aberration: 0
+  showSection_Extinction: 0
+  showSection_Physics: 0
+  showSection_Distortion: 0
+  showSection_Albedo: 0
+  showSection_Materials: 1
+  showSection_RenderOrder: 0
+  showSection_AboutRenderOrder: 0
+  showSection_Presets: 1
+  showSection_SharedGlass: 0
+  showSection_Shader: 0
+  showList_IgnoredDepth_Depth: 0
+  showList_IgnoredDepth_Manager: 0
+  scroll_IgnoredDepth: {x: 0, y: 0}
+  VersionStringFormatted: 1.1.2
+--- !u!1 &152858
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 473258}
+  - component: {fileID: 3341218}
+  - component: {fileID: 2307812}
+  - component: {fileID: 11427492}
+  m_Layer: 0
+  m_Name: Milky Ice Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &473258
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152858}
+  m_LocalRotation: {x: 0.2948826, y: 0.6029318, z: -0.7167057, w: 0.18934225}
+  m_LocalPosition: {x: 0, y: 1.139, z: 0}
+  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_Children: []
+  m_Father: {fileID: 423506}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &3341218
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152858}
+  m_Mesh: {fileID: 4300000, guid: ea41982e8394bfc43be9fa830fac88c1, type: 3}
+--- !u!23 &2307812
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152858}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 1752ed2bd6f67564399eae4013c17d65, type: 2}
+  - {fileID: 2100000, guid: 577f40a55d1b65e49a7ee575a2ffa6fc, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!114 &11427492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2679576dc9fc0684282b38710ed39058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showSection_ManagerSettings: 0
+  showSection_ManagerSettings_depthQuality: 0
+  showSection_ManagerSettings_depthTextures: 0
+  showSection_ManagerSettings_depthCamera: 0
+  showSection_Manager_depthNormalTech: 0
+  material_back: {fileID: 2100000, guid: 1752ed2bd6f67564399eae4013c17d65, type: 2}
+  material_front: {fileID: 2100000, guid: 577f40a55d1b65e49a7ee575a2ffa6fc, type: 2}
+  getCurrentMaterials: 1
+  materials: []
+  presetName: Milky Ice Cube
+  manager: {fileID: 0}
+  zFightRadius: 0.001
+  enableExtinction_front: 1
+  enableExtinction_back: 0
+  enableExtinction_both: 0
+  extinctionAppearance: 1
+  capExtinction_front: 1
+  capExtinction_back: 0
+  lastFaceEdited_Extinction: 0
+  texture_extinction_front: {fileID: 0}
+  texture_extinction_back: {fileID: 0}
+  extinction_front: {r: 0.100000024, g: 0.023000002, b: 0.005559981, a: 1}
+  extinction_back: {r: 0.100000024, g: 0.023000002, b: 0.005559981, a: 1}
+  extinctionFlipped_front: {r: 0.9, g: 0.977, b: 0.99444, a: 1}
+  extinctionFlipped_back: {r: 0.9, g: 0.977, b: 0.99444, a: 1}
+  extinctionMagnitude_front: {x: 1, y: 0, z: 1}
+  extinctionMagnitude_back: {x: 2, y: 0, z: 1}
+  enableAberration_front: 1
+  enableAberration_back: 0
+  enableAberration_both: 0
+  capAberration_front: 1
+  capAberration_back: 1
+  lastFaceEdited_Aberration: 0
+  texture_aberration_front: {fileID: 2800000, guid: 2f3a7c91725220d4da6bafd8848b5ffa,
+    type: 3}
+  texture_aberration_back: {fileID: 0}
+  aberration_front: {r: 0.1397059, g: 0.046797838, b: 0.010272494, a: 1}
+  aberration_back: {r: 0.1, g: 0.033, b: 0.00666, a: 1}
+  aberrationMagnitude_front: {x: 0.01, y: 0, z: 0.1}
+  aberrationMagnitude_back: {x: 0.01, y: 0, z: 0.1}
+  enableFog_front: 1
+  enableFog_back: 0
+  enableFog_both: 0
+  lastFaceEdited_Fog: 0
+  fogMagnitude_front: 1
+  fogMagnitude_back: 2
+  fogNear_front: {r: 1, g: 1, b: 1, a: 0}
+  fogNear_back: {r: 1, g: 1, b: 1, a: 0.678}
+  fogFar_front: {r: 1, g: 1, b: 1, a: 0.39215687}
+  fogFar_back: {r: 1, g: 1, b: 1, a: 0}
+  enableDistortion_front: 0
+  enableDistortion_back: 1
+  texture_distortion: {fileID: 2800000, guid: 2f3a7c91725220d4da6bafd8848b5ffa, type: 3}
+  distortion_front: {x: -0.5, y: -0.2, z: 1, w: 1}
+  distortion_back: {x: 0.1, y: 0.1, z: 1, w: 1}
+  distortion_front_shaderCopy: {x: 0, y: 0, z: 0, w: 0}
+  distortion_back_shaderCopy: {x: 0, y: 0, z: 0, w: 0}
+  distortionEdgeBend_front: 1
+  distortionEdgeBend_back: 0
+  distortionDepthFade_front: 10
+  distortionDepthFade_back: 0
+  bumpBack: -1
+  bumpFront: 1
+  depthMultiplier: 1
+  depthOffset: 0
+  enableDoubleDepth_front: 1
+  enableDoubleDepth_back: 1
+  flipDepth: 0
+  depthTextureID: 0
+  ignoredDepth: []
+  opacity: 0
+  colour_albedo: {r: 1, g: 1, b: 1, a: 0}
+  texture_albedo: {fileID: 0}
+  colour_albedoTexture: {r: 0, g: 0, b: 0, a: 0}
+  texture_gloss_front: {fileID: 0}
+  texture_gloss_back: {fileID: 0}
+  glossiness_front: 0.9
+  glossiness_back: 0
+  texture_metal_front: {fileID: 0}
+  texture_metal_back: {fileID: 0}
+  metallic_front: 0
+  metallic_back: 0
+  texture_glow_front: {fileID: 0}
+  texture_glow_back: {fileID: 0}
+  glow_front: 20
+  glow_back: 20
+  showSection_AboutDoubleDepth: 0
+  ShowSection_Gloss_Front: 0
+  ShowSection_Metal_Front: 0
+  ShowSection_Glow_Front: 0
+  ShowSection_Gloss_Back: 0
+  ShowSection_Metal_Back: 0
+  ShowSection_Glow_Back: 0
+  showTextures_Albedo: 0
+  showTextures_Distortion: 0
+  showTextures_Extinction: 0
+  showTextures_Aberration: 0
+  showTextures_Glossiness: 0
+  showTextures_Metallic: 0
+  showTextures_Glow: 0
+  changedTexture_Extinction: 0
+  changedTexture_Glow: 0
+  changedTexture_Metallic: 0
+  changedTexture_Glossiness: 0
+  changedTexture_Aberration: 0
+  linkTextures_Extinction: 1
+  linkTextures_Glow: 1
+  linkTextures_Metallic: 1
+  linkTextures_Glossiness: 1
+  linkTextures_Aberration: 1
+  showSection_Texture_Dimensions: 0
+  textureDimensions: []
+  depthQuality_front: 0
+  depthQuality_back: 0
+  depthQuality_other: 0
+  otherDepthIndex: 0
+  showSection_Textures: 0
+  showSection_Surface: 0
+  showSection_Depth: 0
+  showSection_Fog: 0
+  showSection_Aberration: 0
+  showSection_Extinction: 0
+  showSection_Physics: 0
+  showSection_Distortion: 0
+  showSection_Albedo: 0
+  showSection_Materials: 0
+  showSection_RenderOrder: 0
+  showSection_AboutRenderOrder: 0
+  showSection_Presets: 0
+  showSection_SharedGlass: 0
+  showSection_Shader: 0
+  showList_IgnoredDepth_Depth: 0
+  showList_IgnoredDepth_Manager: 0
+  scroll_IgnoredDepth: {x: 0, y: 0}
+  VersionStringFormatted: 1.1.2
+--- !u!1 &174424
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 449390}
+  - component: {fileID: 11438642}
+  - component: {fileID: 3362886}
+  - component: {fileID: 2360056}
+  m_Layer: 0
+  m_Name: Frozen Milk Cylinder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &449390
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174424}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.624, z: 0}
+  m_LocalScale: {x: 1, y: 0.5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 423506}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11438642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2679576dc9fc0684282b38710ed39058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showSection_ManagerSettings: 1
+  showSection_ManagerSettings_depthQuality: 1
+  showSection_ManagerSettings_depthTextures: 0
+  showSection_ManagerSettings_depthCamera: 0
+  showSection_Manager_depthNormalTech: 0
+  material_back: {fileID: 2100000, guid: 562be6160b170464893d6799d8dc680d, type: 2}
+  material_front: {fileID: 2100000, guid: 217a381062a092f41b341f659894960a, type: 2}
+  getCurrentMaterials: 1
+  materials: []
+  presetName: Milk
+  manager: {fileID: 0}
+  zFightRadius: 0.001
+  enableExtinction_front: 1
+  enableExtinction_back: 0
+  enableExtinction_both: 0
+  extinctionAppearance: 1
+  capExtinction_front: 1
+  capExtinction_back: 0
+  lastFaceEdited_Extinction: 0
+  texture_extinction_front: {fileID: 0}
+  texture_extinction_back: {fileID: 0}
+  extinction_front: {r: 0.058823526, g: 0.07990962, b: 0.13494807, a: 1}
+  extinction_back: {r: 0.100000024, g: 0.023000002, b: 0.005559981, a: 1}
+  extinctionFlipped_front: {r: 0.9411765, g: 0.9200904, b: 0.8650519, a: 1}
+  extinctionFlipped_back: {r: 0.9, g: 0.977, b: 0.99444, a: 1}
+  extinctionMagnitude_front: {x: 50, y: 2, z: 0}
+  extinctionMagnitude_back: {x: 1, y: 0, z: 1}
+  enableAberration_front: 1
+  enableAberration_back: 0
+  enableAberration_both: 0
+  capAberration_front: 1
+  capAberration_back: 1
+  lastFaceEdited_Aberration: 0
+  texture_aberration_front: {fileID: 0}
+  texture_aberration_back: {fileID: 0}
+  aberration_front: {r: 0.1, g: 0.033, b: 0.00666, a: 1}
+  aberration_back: {r: 0.1, g: 0.033, b: 0.00666, a: 1}
+  aberrationMagnitude_front: {x: 0.01, y: 0, z: 0.1}
+  aberrationMagnitude_back: {x: 0.01, y: 0, z: 0.1}
+  enableFog_front: 1
+  enableFog_back: 1
+  enableFog_both: 0
+  lastFaceEdited_Fog: 0
+  fogMagnitude_front: 5
+  fogMagnitude_back: 1
+  fogNear_front: {r: 0.9264706, g: 0.9264706, b: 0.80384946, a: 0.7294118}
+  fogNear_back: {r: 1, g: 1, b: 1, a: 1}
+  fogFar_front: {r: 0.9852941, g: 0.9852941, b: 0.9418253, a: 1}
+  fogFar_back: {r: 1, g: 1, b: 1, a: 1}
+  enableDistortion_front: 1
+  enableDistortion_back: 0
+  texture_distortion: {fileID: 2800000, guid: 2f3a7c91725220d4da6bafd8848b5ffa, type: 3}
+  distortion_front: {x: 1, y: 0.1, z: 1, w: 1}
+  distortion_back: {x: 0.1, y: 0.1, z: 1, w: 1}
+  distortion_front_shaderCopy: {x: 1, y: 0.1, z: 1, w: 1}
+  distortion_back_shaderCopy: {x: 0.1, y: 0.1, z: 1, w: 1}
+  distortionEdgeBend_front: -0.5
+  distortionEdgeBend_back: 0
+  distortionDepthFade_front: 2
+  distortionDepthFade_back: 0
+  bumpBack: 0.1
+  bumpFront: -0.25
+  depthMultiplier: 1
+  depthOffset: 0
+  enableDoubleDepth_front: 1
+  enableDoubleDepth_back: 1
+  flipDepth: 0
+  depthTextureID: 1
+  ignoredDepth: []
+  opacity: 0
+  colour_albedo: {r: 1, g: 1, b: 1, a: 0}
+  texture_albedo: {fileID: 0}
+  colour_albedoTexture: {r: 1, g: 1, b: 1, a: 0}
+  texture_gloss_front: {fileID: 0}
+  texture_gloss_back: {fileID: 0}
+  glossiness_front: 0.85
+  glossiness_back: 0
+  texture_metal_front: {fileID: 0}
+  texture_metal_back: {fileID: 0}
+  metallic_front: 0
+  metallic_back: 0
+  texture_glow_front: {fileID: 0}
+  texture_glow_back: {fileID: 0}
+  glow_front: 0
+  glow_back: 0
+  showSection_AboutDoubleDepth: 0
+  ShowSection_Gloss_Front: 0
+  ShowSection_Metal_Front: 0
+  ShowSection_Glow_Front: 0
+  ShowSection_Gloss_Back: 0
+  ShowSection_Metal_Back: 0
+  ShowSection_Glow_Back: 0
+  showTextures_Albedo: 0
+  showTextures_Distortion: 0
+  showTextures_Extinction: 0
+  showTextures_Aberration: 0
+  showTextures_Glossiness: 0
+  showTextures_Metallic: 0
+  showTextures_Glow: 0
+  changedTexture_Extinction: 0
+  changedTexture_Glow: 0
+  changedTexture_Metallic: 0
+  changedTexture_Glossiness: 0
+  changedTexture_Aberration: 0
+  linkTextures_Extinction: 1
+  linkTextures_Glow: 1
+  linkTextures_Metallic: 1
+  linkTextures_Glossiness: 1
+  linkTextures_Aberration: 1
+  showSection_Texture_Dimensions: 0
+  textureDimensions:
+  - {x: 512, y: 512}
+  depthQuality_front: 1
+  depthQuality_back: 0
+  depthQuality_other: 1
+  otherDepthIndex: 0
+  showSection_Textures: 0
+  showSection_Surface: 0
+  showSection_Depth: 0
+  showSection_Fog: 0
+  showSection_Aberration: 0
+  showSection_Extinction: 0
+  showSection_Physics: 0
+  showSection_Distortion: 0
+  showSection_Albedo: 0
+  showSection_Materials: 0
+  showSection_RenderOrder: 0
+  showSection_AboutRenderOrder: 0
+  showSection_Presets: 1
+  showSection_SharedGlass: 0
+  showSection_Shader: 1
+  showList_IgnoredDepth_Depth: 0
+  showList_IgnoredDepth_Manager: 0
+  scroll_IgnoredDepth: {x: 0, y: 0}
+  VersionStringFormatted: 1.1.2
+--- !u!33 &3362886
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174424}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &2360056
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174424}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 562be6160b170464893d6799d8dc680d, type: 2}
+  - {fileID: 2100000, guid: 217a381062a092f41b341f659894960a, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &183508
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 402994}
+  - component: {fileID: 3336546}
+  - component: {fileID: 2351560}
+  - component: {fileID: 11427252}
+  m_Layer: 0
+  m_Name: Milky Ice Cube 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &402994
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183508}
+  m_LocalRotation: {x: 0.2948826, y: 0.6029318, z: -0.7167057, w: 0.18934225}
+  m_LocalPosition: {x: 0, y: 0.438, z: -0.219}
+  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_Children: []
+  m_Father: {fileID: 423506}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &3336546
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183508}
+  m_Mesh: {fileID: 4300000, guid: ea41982e8394bfc43be9fa830fac88c1, type: 3}
+--- !u!23 &2351560
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183508}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 1752ed2bd6f67564399eae4013c17d65, type: 2}
+  - {fileID: 2100000, guid: 577f40a55d1b65e49a7ee575a2ffa6fc, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!114 &11427252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2679576dc9fc0684282b38710ed39058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showSection_ManagerSettings: 0
+  showSection_ManagerSettings_depthQuality: 0
+  showSection_ManagerSettings_depthTextures: 0
+  showSection_ManagerSettings_depthCamera: 0
+  showSection_Manager_depthNormalTech: 0
+  material_back: {fileID: 2100000, guid: 1752ed2bd6f67564399eae4013c17d65, type: 2}
+  material_front: {fileID: 2100000, guid: 577f40a55d1b65e49a7ee575a2ffa6fc, type: 2}
+  getCurrentMaterials: 1
+  materials: []
+  presetName: Milky Ice Cube
+  manager: {fileID: 0}
+  zFightRadius: 0.001
+  enableExtinction_front: 1
+  enableExtinction_back: 0
+  enableExtinction_both: 0
+  extinctionAppearance: 1
+  capExtinction_front: 1
+  capExtinction_back: 0
+  lastFaceEdited_Extinction: 0
+  texture_extinction_front: {fileID: 0}
+  texture_extinction_back: {fileID: 0}
+  extinction_front: {r: 0.100000024, g: 0.023000002, b: 0.005559981, a: 1}
+  extinction_back: {r: 0.100000024, g: 0.023000002, b: 0.005559981, a: 1}
+  extinctionFlipped_front: {r: 0.9, g: 0.977, b: 0.99444, a: 1}
+  extinctionFlipped_back: {r: 0.9, g: 0.977, b: 0.99444, a: 1}
+  extinctionMagnitude_front: {x: 1, y: 0, z: 1}
+  extinctionMagnitude_back: {x: 2, y: 0, z: 1}
+  enableAberration_front: 1
+  enableAberration_back: 0
+  enableAberration_both: 0
+  capAberration_front: 1
+  capAberration_back: 1
+  lastFaceEdited_Aberration: 0
+  texture_aberration_front: {fileID: 2800000, guid: 2f3a7c91725220d4da6bafd8848b5ffa,
+    type: 3}
+  texture_aberration_back: {fileID: 0}
+  aberration_front: {r: 0.1397059, g: 0.046797838, b: 0.010272494, a: 1}
+  aberration_back: {r: 0.1, g: 0.033, b: 0.00666, a: 1}
+  aberrationMagnitude_front: {x: 0.01, y: 0, z: 0.1}
+  aberrationMagnitude_back: {x: 0.01, y: 0, z: 0.1}
+  enableFog_front: 1
+  enableFog_back: 0
+  enableFog_both: 0
+  lastFaceEdited_Fog: 0
+  fogMagnitude_front: 1
+  fogMagnitude_back: 2
+  fogNear_front: {r: 1, g: 1, b: 1, a: 0}
+  fogNear_back: {r: 1, g: 1, b: 1, a: 0.678}
+  fogFar_front: {r: 1, g: 1, b: 1, a: 0.39215687}
+  fogFar_back: {r: 1, g: 1, b: 1, a: 0}
+  enableDistortion_front: 0
+  enableDistortion_back: 1
+  texture_distortion: {fileID: 2800000, guid: 2f3a7c91725220d4da6bafd8848b5ffa, type: 3}
+  distortion_front: {x: -0.5, y: -0.2, z: 1, w: 1}
+  distortion_back: {x: 0.1, y: 0.1, z: 1, w: 1}
+  distortion_front_shaderCopy: {x: 0, y: 0, z: 0, w: 0}
+  distortion_back_shaderCopy: {x: 0, y: 0, z: 0, w: 0}
+  distortionEdgeBend_front: 1
+  distortionEdgeBend_back: 0
+  distortionDepthFade_front: 10
+  distortionDepthFade_back: 0
+  bumpBack: -1
+  bumpFront: 1
+  depthMultiplier: 1
+  depthOffset: 0
+  enableDoubleDepth_front: 1
+  enableDoubleDepth_back: 1
+  flipDepth: 0
+  depthTextureID: 0
+  ignoredDepth: []
+  opacity: 0
+  colour_albedo: {r: 1, g: 1, b: 1, a: 0}
+  texture_albedo: {fileID: 0}
+  colour_albedoTexture: {r: 0, g: 0, b: 0, a: 0}
+  texture_gloss_front: {fileID: 0}
+  texture_gloss_back: {fileID: 0}
+  glossiness_front: 0.9
+  glossiness_back: 0
+  texture_metal_front: {fileID: 0}
+  texture_metal_back: {fileID: 0}
+  metallic_front: 0
+  metallic_back: 0
+  texture_glow_front: {fileID: 0}
+  texture_glow_back: {fileID: 0}
+  glow_front: 20
+  glow_back: 20
+  showSection_AboutDoubleDepth: 0
+  ShowSection_Gloss_Front: 0
+  ShowSection_Metal_Front: 0
+  ShowSection_Glow_Front: 0
+  ShowSection_Gloss_Back: 0
+  ShowSection_Metal_Back: 0
+  ShowSection_Glow_Back: 0
+  showTextures_Albedo: 0
+  showTextures_Distortion: 0
+  showTextures_Extinction: 0
+  showTextures_Aberration: 0
+  showTextures_Glossiness: 0
+  showTextures_Metallic: 0
+  showTextures_Glow: 0
+  changedTexture_Extinction: 0
+  changedTexture_Glow: 0
+  changedTexture_Metallic: 0
+  changedTexture_Glossiness: 0
+  changedTexture_Aberration: 0
+  linkTextures_Extinction: 1
+  linkTextures_Glow: 1
+  linkTextures_Metallic: 1
+  linkTextures_Glossiness: 1
+  linkTextures_Aberration: 1
+  showSection_Texture_Dimensions: 0
+  textureDimensions: []
+  depthQuality_front: 0
+  depthQuality_back: 0
+  depthQuality_other: 0
+  otherDepthIndex: 0
+  showSection_Textures: 0
+  showSection_Surface: 0
+  showSection_Depth: 0
+  showSection_Fog: 0
+  showSection_Aberration: 0
+  showSection_Extinction: 0
+  showSection_Physics: 0
+  showSection_Distortion: 0
+  showSection_Albedo: 0
+  showSection_Materials: 0
+  showSection_RenderOrder: 0
+  showSection_AboutRenderOrder: 0
+  showSection_Presets: 0
+  showSection_SharedGlass: 0
+  showSection_Shader: 0
+  showList_IgnoredDepth_Depth: 0
+  showList_IgnoredDepth_Manager: 0
+  scroll_IgnoredDepth: {x: 0, y: 0}
+  VersionStringFormatted: 1.1.2
+--- !u!1 &199744
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 423506}
+  m_Layer: 0
+  m_Name: Frozen White Russian
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &423506
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199744}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 470772}
+  - {fileID: 449390}
+  - {fileID: 428366}
+  - {fileID: 423876}
+  - {fileID: 473258}
+  - {fileID: 402188}
+  - {fileID: 402994}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

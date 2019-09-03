@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<Glass_GlassManager_Settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" glassPresetName="Swamp" depthTechnique="DEPTH_CAM_CUSTOM" normalTechnique="NORMAL_CAM_CUSTOM" frontDepthTechnique="DEPTH_FRONT_SHADER_OFF" enable54Workaround="false" depthTextureAA="1" depthTextureAniso="16" depthTextureFilterMode="Trilinear" depthTextureClearMode="Skybox" depthQuality_Front="Simple" depthQuality_Back="Simple" depthQuality_Other="Simple" lastEdited="1478463683" />

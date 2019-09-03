@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Glass_Stained Glass Logo 2_back
+  m_Shader: {fileID: 4800000, guid: 12dce40df921bf548ba15698d0acb37a, type: 3}
+  m_ShaderKeywords: _CAPEXTINCTIONVALUES_ON _ENABLEABERRATION_ON _ENABLECOLOUREXTINCTION_ON
+    _ENABLEDISTORTION_ON _ENABLEFOG_ON _USECAMERANORMAL_ON
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3010
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AberrationTexture:
+        m_Texture: {fileID: 2800000, guid: ed0132ab068c6e94eb4b0d5b5f3c3556, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ColourExtinctionTexture:
+        m_Texture: {fileID: 2800000, guid: ed0132ab068c6e94eb4b0d5b5f3c3556, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DepthBack:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DepthFront:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DepthOther:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DistortionTexture:
+        m_Texture: {fileID: 2800000, guid: 88c97bb4454c29441bb4c0f0c179e57e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GlossinessTexture:
+        m_Texture: {fileID: 2800000, guid: 419d3f50b38498044ae77637fe9640e2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GlowTexture:
+        m_Texture: {fileID: 2800000, guid: 74133868bef8c0847ba7333b9dae131e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 74133868bef8c0847ba7333b9dae131e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicTexture:
+        m_Texture: {fileID: 2800000, guid: b7e6902cfd9830247be696b48a958166, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Alpha: 1
+    - _Blend_Dest: 10
+    - _Blend_Source: 5
+    - _BumpMagnitude: 0
+    - _CapAberrationValues: 1
+    - _CapExtinctionValues: 1
+    - _CullMode: 1
+    - _DepthBackDistance: 999.7
+    - _DepthFrontDistance: 999.7
+    - _DepthMagnitude: 1
+    - _DepthOffset: 0
+    - _DepthOtherDistance: 999.7
+    - _DisableBackFace: 0
+    - _DistortionDepthFade: 0
+    - _DistortionEdgeBend: 0
+    - _DoubleDepthPass: 1
+    - _EnableAberration: 1
+    - _EnableColourExtinction: 1
+    - _EnableDistortion: 1
+    - _EnableFog: 0
+    - _FlipUV_Depth: 0
+    - _FlipUV_Grab: 0
+    - _FogMagnitude: 1
+    - _GlassShader_DepthTechnique: 2
+    - _GlassShader_NormalTechnique: 2
+    - _Glossiness: 0.2
+    - _Glow: 100
+    - _Metallic: 0
+    - _Opacity: 0.25
+    - _UseCameraNormal: 1
+    - _ZWrite: 0
+    m_Colors:
+    - _Aberration: {r: 0.1397059, g: 0.046797838, b: 0.010272494, a: 1}
+    - _AberrationMagnitude: {r: 1, g: 0, b: 1, a: 0}
+    - _CameraNormal: {r: 0, g: 0, b: 1, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 0}
+    - _ColourExtinction: {r: 1, g: 1, b: 1, a: 1}
+    - _ColourExtinctionMagnitude: {r: 5, g: 0.5, b: 1, a: 0}
+    - _DepthColourFar: {r: 0, g: 0, b: 1, a: 0.5}
+    - _DepthColourNear: {r: 0, g: 1, b: 0, a: 0}
+    - _DistortionIntensity: {r: 0.1, g: 0.1, b: 1, a: 1}
+    - _MainTexIntensity: {r: 1, g: 1, b: 1, a: 1}
