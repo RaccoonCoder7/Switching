@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5133196316516214949}
   - component: {fileID: 5133196316516214955}
   - component: {fileID: 5133196316516214954}
+  - component: {fileID: 832791267}
   m_Layer: 0
   m_Name: glassWall
   m_TagString: Untagged
@@ -78,3 +79,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &832791267
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5133196316516214948}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.09143841, y: 1.6551573, z: 1.6193186}
+  m_Center: {x: 0.23868656, y: 0.45000005, z: -6.78388e-15}

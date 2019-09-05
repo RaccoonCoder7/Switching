@@ -5,11 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - BOSS
-  - MANASTONE
   - TURRET
   - MIRROR
   - LATTICE
   - MAGICCIRCLE
+  - RED
+  - BLUE
+  - YELLOW
   layers:
   - Default
   - TransparentFX
@@ -19,8 +21,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - MANASTONE
+  - MAGICCIRCLE
   - 
   - 
   - 

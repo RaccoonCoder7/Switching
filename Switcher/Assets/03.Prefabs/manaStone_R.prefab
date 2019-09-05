@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 6123190947602280038}
   - component: {fileID: 6940291045266842373}
   - component: {fileID: 1759096387}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: manaStone_R
-  m_TagString: MANASTONE
+  m_TagString: RED
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
