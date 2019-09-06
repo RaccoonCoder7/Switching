@@ -120,12 +120,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &90339775 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3899511430893291765, guid: 6afb40e118d7d064a857a91c586021cc,
-    type: 3}
-  m_PrefabInstance: {fileID: 296380548}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &182010757
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -232,8 +226,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 992198336}
-  m_Father: {fileID: 90339775}
-  m_RootOrder: 1
+  m_Father: {fileID: 296380549}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -542,6 +536,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6afb40e118d7d064a857a91c586021cc, type: 3}
+--- !u!4 &296380549 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3899511430893291763, guid: 6afb40e118d7d064a857a91c586021cc,
+    type: 3}
+  m_PrefabInstance: {fileID: 296380548}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &377447628
 GameObject:
   m_ObjectHideFlags: 0
