@@ -13,8 +13,11 @@ public class GameMgr : MonoBehaviour
     //StringReader sr;
     int stage;
     public GameObject ctnBtn;
+    public Material fadeMaterial;
     void Start()
     {
+        StartCoroutine("FadeIn");
+        //StartCoroutine("FadeOut");
         DontDestroyOnLoad(gameObject);
         stage = PlayerPrefs.GetInt("Stage");
         if (stage.Equals(0))
@@ -50,5 +53,26 @@ public class GameMgr : MonoBehaviour
         PlayerPrefs.SetInt("Stage", PlayerPrefs.GetInt("Stage")+1);
         stage = PlayerPrefs.GetInt("Stage");
         SceneManager.LoadScene("Stage" + stage);
+    }
+    IEnumerator FadeIn()
+    {
+        Color color = fadeMaterial.color;
+        while (color.a < 1f)
+        {
+            color.a += 0.03f;
+            fadeMaterial.color = color;
+            yield return new WaitForSeconds(0.1f);
+        }
+    }
+
+    IEnumerator FadeOut()
+    {
+        Color color = fadeMaterial.color;
+        while (color.a > 0f)
+        {
+            color.a -= 0.03f;
+            fadeMaterial.color = color;
+            yield return new WaitForSeconds(0.1f);
+        }
     }
 }
