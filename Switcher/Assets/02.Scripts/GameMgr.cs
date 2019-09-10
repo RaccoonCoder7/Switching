@@ -1,50 +1,72 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.IO;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameMgr : MonoBehaviour
 {
+    private static GameMgr _instance = null;
+
+    public static GameMgr Instance
+    {
+        get
+        {
+            _instance = FindObjectOfType(typeof(GameMgr)) as GameMgr;
+            return _instance;
+        }
+    }
 
 
-    //TextAsset saveData;
-    //StringReader sr;
-    int stage;
+
+    public static int stage;
     public GameObject ctnBtn;
     public GameObject screen;
+    public GameObject logo;
     public Material fadeMaterial;
+    AsyncOperation async;
+    bool canOpen = true;
     void Start()
-    {
-        StartCoroutine("FadeIn");
-        
+    {   
         DontDestroyOnLoad(gameObject);
         stage = PlayerPrefs.GetInt("Stage");
         if (stage.Equals(0))
         {
             ctnBtn.SetActive(false);
         }
-        //saveData = Resources.Load("SaveFile", typeof(TextAsset)) as TextAsset;
-        //sr = new StringReader(saveData.text);
-        //string savetext = sr.ReadLine();
-        //Debug.Log(savetext);
+
     }
 
 
      //새로하기 함수
     public void NewGame()
     {
-        SceneManager.LoadScene("Stage1");
         //PlayerPrefs Stage에 Stage1저장
         PlayerPrefs.SetInt("Stage", 1);
+        stage = 1;
+        StartCoroutine("Load");
+
+
     }
 
     //이어하기, 다시하기
     public void Continue()
     {
         //PlayerPrefs Stage 값 불러와 씬 로드
-        SceneManager.LoadScene("Stage"+stage);
+        StartCoroutine("Load");
+    }
+    IEnumerator Load()
+    {
+        async = SceneManager.LoadSceneAsync("Stage" + stage); // 열고 싶은 씬
+        async.allowSceneActivation = false;
+        while (!async.isDone)
+        {
+            //yield return true;
+            yield return StartCoroutine("FadeIn");
+
+                async.allowSceneActivation = true;
+        }
+        
     }
 
     //저장
@@ -53,7 +75,9 @@ public class GameMgr : MonoBehaviour
         //현재 씬 이름 저장
         PlayerPrefs.SetInt("Stage", PlayerPrefs.GetInt("Stage")+1);
         stage = PlayerPrefs.GetInt("Stage");
-        SceneManager.LoadScene("Stage" + stage);
+        Debug.Log(stage);
+        //StartCoroutine("Load");
+        Instance.StartCoroutine("Load");
     }
     IEnumerator FadeIn()
     {
@@ -65,7 +89,7 @@ public class GameMgr : MonoBehaviour
             fadeMaterial.color = color;
             yield return new WaitForSeconds(0.02f);
         }
-        StartCoroutine("FadeOut");
+        logo.SetActive(true);
     }
 
     IEnumerator FadeOut()
