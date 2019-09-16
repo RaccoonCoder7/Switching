@@ -21,9 +21,9 @@ public class TouchMgr : MonoBehaviour
     }
 
     public LineRenderer line;
-    public Demo2 fireArea;
     public GameObject translateBullet;
     public GameObject blur;
+    public GameObject[] ring;
 
     void Start()
     {
@@ -37,19 +37,31 @@ public class TouchMgr : MonoBehaviour
         line.enabled = false;
         playerTr = GameObject.Find("Player").transform;
         blur.SetActive(false);
+        for (int i = 0; i < ring.Length; i++)
+        {
+            ring[i].SetActive(false);
+        }
     }
 
     void Update()
     {
         if (OVRInput.GetDown(OVRInput.Button.One))
         {
-            if (mode.Equals(SkillMode.push))
+            switch (mode)
             {
-                mode = SkillMode.switching;
-            }
-            else
-            {
-                mode = mode + 1;
+                case SkillMode.switching:
+                    mode = SkillMode.pull;
+                    ring[0].SetActive(true);
+                    break;
+                case SkillMode.pull:
+                    mode = SkillMode.push;
+                    ring[0].SetActive(false);
+                    ring[1].SetActive(true);
+                    break;
+                case SkillMode.push:
+                    mode = SkillMode.switching;
+                    ring[1].SetActive(false);
+                    break;
             }
         }
 
@@ -74,9 +86,7 @@ public class TouchMgr : MonoBehaviour
         if (OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger))
         {
             ray = new Ray(line.transform.position, line.transform.forward);
-            // ray = cam.ScreenPointToRay(Input.mousePosition);
-            float radius = fireArea.m_Fxs[0].transform.localScale.x / 2;
-            if (Physics.Raycast(ray, out hit, radius - 1))
+            if (Physics.Raycast(ray, out hit, 12))
             {
                 if (!pointer.activeSelf)
                 {
@@ -84,7 +94,7 @@ public class TouchMgr : MonoBehaviour
                 }
                 float dist = hit.distance;
                 line.enabled = true;
-                line.SetPosition(1, new Vector3 (0, 0, dist));
+                line.SetPosition(1, new Vector3(0, 0, dist));
                 pointer.transform.position = hit.point;
                 pointer.transform.LookAt(cam.transform.position);
                 pointer.transform.position += pointer.transform.forward * 0.5f;
@@ -127,8 +137,7 @@ public class TouchMgr : MonoBehaviour
         if (OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger))
         {
             ray = new Ray(line.transform.position, line.transform.forward);
-            float radius = fireArea.m_Fxs[0].transform.localScale.x / 2;
-            if (Physics.Raycast(ray, out hit, radius))
+            if (Physics.Raycast(ray, out hit, 11))
             {
                 if (!pointer.activeSelf)
                 {
@@ -136,15 +145,17 @@ public class TouchMgr : MonoBehaviour
                 }
                 float dist = hit.distance;
                 line.enabled = true;
-                line.SetPosition(1, new Vector3 (0, 0, dist));
-                pointer.transform.position = hit.point;
-                pointer.transform.LookAt(cam.transform.position);
-                pointer.transform.position += pointer.transform.forward * 0.5f;
+                line.SetPosition(1, new Vector3(0, 0, dist));
 
                 if (hit.collider.gameObject.layer.Equals(manaStoneLayer))
                 {
+                    pointer.transform.position = hit.point;
+                    pointer.transform.LookAt(cam.transform.position);
+                    pointer.transform.position += pointer.transform.forward * 0.5f;
+
                     pullObjectRb = hit.collider.gameObject.GetComponent<Rigidbody>();
-                    if (dist < 2)
+                    float distance = Vector3.Distance(hit.point, playerTr.position);
+                    if (distance < 2.5f)
                     {
                         pullObjectRb.velocity = Vector3.zero;
                         return;
@@ -158,6 +169,10 @@ public class TouchMgr : MonoBehaviour
                 }
                 else
                 {
+                    if (pointer.activeSelf)
+                    {
+                        pointer.SetActive(false);
+                    }
                     nullifyPullObj();
                 }
             }
@@ -244,8 +259,8 @@ public class TouchMgr : MonoBehaviour
 
     private IEnumerator LerpAndTeleport(Transform objTr, Vector3 targetPos, Vector3 playerPos)
     {
-        int lerpFrame = 40;
-        float lerpSpeed = 0.5f;
+        int lerpFrame = 20;
+        float lerpSpeed = 0.3f;
         Transform originPlayerTr = playerTr;
         Transform originObjTr = objTr;
         blur.SetActive(true);
@@ -260,6 +275,7 @@ public class TouchMgr : MonoBehaviour
         playerTr.position = Vector3.Lerp(playerTr.position, targetPos, 0.8f);
         objTr.position = Vector3.Lerp(objTr.position, playerPos, 0.8f);
 
+        lerpFrame = 40;
         lerpSpeed = 5f;
         for (int i = 0; i < lerpFrame; i++)
         {

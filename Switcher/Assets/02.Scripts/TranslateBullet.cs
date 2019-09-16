@@ -65,7 +65,7 @@ public class TranslateBullet : MonoBehaviour
                 touchMgr.StartLerp(other.transform, targetPos, playerPos);
             }
             waitTime = 1f;
-            playerState.disableDmg(waitTime);
+            playerState.DisableDmg(waitTime);
         }
         if (!other.gameObject.layer.Equals(wireLayer))
         {
