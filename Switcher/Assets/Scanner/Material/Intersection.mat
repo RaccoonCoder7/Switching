@@ -33,6 +33,6 @@ Material:
     - _RimPower: 3
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _IntersectionColor: {r: 0.19755623, g: 0.6397059, b: 0.21890143, a: 1}
+    - _IntersectionColor: {r: 0.19755623, g: 0.6397059, b: 0.21890143, a: 0.2784314}
     - _MainColor: {r: 0.72794116, g: 0.11775517, b: 0.11775517, a: 0.2509804}
     - _RimColor: {r: 0, g: 0, b: 0, a: 0}

@@ -41,8 +41,6 @@ public class TranslateBullet : MonoBehaviour
             Vector3 incoming = transform.position - shootPos;
             Vector3 normal = other.contacts[0].normal;
             Vector3 direction = Vector3.Reflect(incoming, normal).normalized;
-            // Debug.DrawRay(transform.position, -incoming, Color.green, 100f);
-            // Debug.DrawRay(transform.position, direction, Color.red, 100f);
             rb.velocity = direction * 8f;
             return;
         }

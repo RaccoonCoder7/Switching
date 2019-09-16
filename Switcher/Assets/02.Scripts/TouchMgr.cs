@@ -14,6 +14,11 @@ public class TouchMgr : MonoBehaviour
     private int manaStoneLayer;
     private Rigidbody pullObjectRb;
     private Transform playerTr;
+    private SkillMode mode = SkillMode.switching;
+    private enum SkillMode
+    {
+        switching, pull, push
+    }
 
     public LineRenderer line;
     public Demo2 fireArea;
@@ -36,26 +41,50 @@ public class TouchMgr : MonoBehaviour
 
     void Update()
     {
-        float rotation = Input.GetAxis("Horizontal") * 50f;
-        rotation *= Time.deltaTime;
-        transform.Rotate(0, rotation, 0);
+        if (OVRInput.GetDown(OVRInput.Button.One))
+        {
+            if (mode.Equals(SkillMode.push))
+            {
+                mode = SkillMode.switching;
+            }
+            else
+            {
+                mode = mode + 1;
+            }
+        }
 
         if (!canFire) return;
 
-        if (Input.GetMouseButton(2))
+        switch (mode)
         {
-            ray = cam.ScreenPointToRay(Input.mousePosition);
+            case SkillMode.switching:
+                OnSwitching();
+                break;
+            case SkillMode.pull:
+                OnPull();
+                break;
+            case SkillMode.push:
+                OnPush();
+                break;
+        }
+    }
+
+    private void OnPush()
+    {
+        if (OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger))
+        {
+            ray = new Ray(line.transform.position, line.transform.forward);
+            // ray = cam.ScreenPointToRay(Input.mousePosition);
             float radius = fireArea.m_Fxs[0].transform.localScale.x / 2;
             if (Physics.Raycast(ray, out hit, radius - 1))
             {
-                Debug.Log("1");
                 if (!pointer.activeSelf)
                 {
                     pointer.SetActive(true);
                 }
                 float dist = hit.distance;
                 line.enabled = true;
-                line.SetPosition(1, new Vector3(0, 0, dist));
+                line.SetPosition(1, new Vector3 (0, 0, dist));
                 pointer.transform.position = hit.point;
                 pointer.transform.LookAt(cam.transform.position);
                 pointer.transform.position += pointer.transform.forward * 0.5f;
@@ -63,20 +92,12 @@ public class TouchMgr : MonoBehaviour
                 if (hit.collider.gameObject.layer.Equals(manaStoneLayer))
                 {
                     pullObjectRb = hit.collider.gameObject.GetComponent<Rigidbody>();
-                    // if (dist > 3.5)
-                    // {
-                    //     Debug.Log("2");
-                    //     pullObjectRb.velocity = Vector3.zero;
-                    //     return;
-                    // }
                     Vector3 targetPos = pullObjectRb.transform.position;
                     Vector3 direction = new Vector3(targetPos.x, 0, targetPos.z)
                                         - new Vector3(playerTr.position.x, 0, playerTr.position.z);
                     direction = direction.normalized;
                     float speed = 50 / (dist * dist);
                     pullObjectRb.velocity = direction * speed;
-                    Debug.Log("3");
-                    // bulletRb.velocity = direction * 8f;
                 }
                 else
                 {
@@ -93,16 +114,19 @@ public class TouchMgr : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButtonUp(2))
+        if (OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger))
         {
             pointer.SetActive(false);
             line.enabled = false;
             nullifyPullObj();
         }
+    }
 
-        if (Input.GetMouseButton(1))
+    private void OnPull()
+    {
+        if (OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger))
         {
-            ray = cam.ScreenPointToRay(Input.mousePosition);
+            ray = new Ray(line.transform.position, line.transform.forward);
             float radius = fireArea.m_Fxs[0].transform.localScale.x / 2;
             if (Physics.Raycast(ray, out hit, radius))
             {
@@ -112,7 +136,7 @@ public class TouchMgr : MonoBehaviour
                 }
                 float dist = hit.distance;
                 line.enabled = true;
-                line.SetPosition(1, new Vector3(0, 0, dist));
+                line.SetPosition(1, new Vector3 (0, 0, dist));
                 pointer.transform.position = hit.point;
                 pointer.transform.LookAt(cam.transform.position);
                 pointer.transform.position += pointer.transform.forward * 0.5f;
@@ -131,7 +155,6 @@ public class TouchMgr : MonoBehaviour
                     direction = direction.normalized;
                     float speed = 50 / (dist * dist);
                     pullObjectRb.velocity = direction * speed;
-                    // bulletRb.velocity = direction * 8f;
                 }
                 else
                 {
@@ -148,17 +171,19 @@ public class TouchMgr : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButtonUp(1))
+        if (OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger))
         {
             pointer.SetActive(false);
             line.enabled = false;
             nullifyPullObj();
         }
+    }
 
-
-        if (Input.GetMouseButton(0))
+    private void OnSwitching()
+    {
+        if (OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger))
         {
-            ray = cam.ScreenPointToRay(Input.mousePosition);
+            ray = new Ray(line.transform.position, line.transform.forward);
             if (Physics.Raycast(ray, out hit, Mathf.Infinity))
             {
                 if (!pointer.activeSelf)
@@ -178,14 +203,14 @@ public class TouchMgr : MonoBehaviour
                 }
             }
         }
-        if (Input.GetMouseButtonUp(0))
+        if (OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger))
         {
             translateBullet.SetActive(true);
-            translateBullet.transform.position = cam.transform.position;
-            Vector3 direction = pointer.transform.position - cam.transform.position;
+            translateBullet.transform.position = line.transform.position;
+            Vector3 direction = pointer.transform.position - line.transform.position;
             direction = direction.normalized;
             bulletRb.velocity = direction * 8f;
-            tb.shootPos = cam.transform.position;
+            tb.shootPos = line.transform.position;
             pointer.SetActive(false);
             tb.DoActiveFalse();
             canFire = false;
