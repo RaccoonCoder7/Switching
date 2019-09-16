@@ -23,18 +23,23 @@ public class GameMgr : MonoBehaviour
     public GameObject ctnBtn;
     public GameObject screen;
     public GameObject logo;
+    public Image screenImage;
     public Material fadeMaterial;
+    public Material blackMaterial;
+
     AsyncOperation async;
-    bool canOpen = true;
+    Color color;
     void Start()
     {   
         DontDestroyOnLoad(gameObject);
+        screen = GameObject.Find("FadeCanvas").transform.Find("FadePanel").gameObject;
+        screenImage = screen.GetComponent<Image>();
         stage = PlayerPrefs.GetInt("Stage");
+
         if (stage.Equals(0))
         {
             ctnBtn.SetActive(false);
         }
-
     }
 
 
@@ -55,8 +60,10 @@ public class GameMgr : MonoBehaviour
         //PlayerPrefs Stage 값 불러와 씬 로드
         StartCoroutine("Load");
     }
-    IEnumerator Load()
+    public IEnumerator Load()
     {
+        screenImage.material = fadeMaterial;
+        fadeMaterial = blackMaterial;
         async = SceneManager.LoadSceneAsync("Stage" + stage); // 열고 싶은 씬
         async.allowSceneActivation = false;
         while (!async.isDone)
@@ -79,9 +86,11 @@ public class GameMgr : MonoBehaviour
         //StartCoroutine("Load");
         Instance.StartCoroutine("Load");
     }
-    IEnumerator FadeIn()
+    public IEnumerator FadeIn()
     {
         screen.SetActive(true);
+        Debug.Log(screen);
+        Debug.Log(fadeMaterial);
         Color color = fadeMaterial.color;
         while (color.a < 1f)
         {
@@ -92,7 +101,7 @@ public class GameMgr : MonoBehaviour
         logo.SetActive(true);
     }
 
-    IEnumerator FadeOut()
+    public IEnumerator FadeOut()
     {
         Color color = fadeMaterial.color;
         while (color.a > 0f)
@@ -102,5 +111,22 @@ public class GameMgr : MonoBehaviour
             yield return new WaitForSeconds(0.02f);
         }
         screen.SetActive(false);
+        logo.SetActive(false);
+        Timer.canvasCheck = false;
+    }
+    public IEnumerator FadeInOut()
+    {
+        screen.SetActive(true);
+        Debug.Log(screen);
+        Debug.Log(fadeMaterial);
+        Color color = fadeMaterial.color;
+        while (color.a < 0.3f)
+        {
+            color.a += 0.03f;
+            fadeMaterial.color = color;
+            yield return new WaitForSeconds(0.02f);
+        }
+        StartCoroutine("FadeOut");
+        
     }
 }
