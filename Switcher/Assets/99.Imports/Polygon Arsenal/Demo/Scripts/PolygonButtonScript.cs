@@ -4,9 +4,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace PolygonArsenal
-{
-    public class PolygonButtonScript : MonoBehaviour
+public class PolygonButtonScript : MonoBehaviour
     {
         public GameObject Button;
         Text MyButtonText;
@@ -38,7 +36,7 @@ namespace PolygonArsenal
         public void getProjectileNames()            // Find and diplay the name of the currently selected projectile
         {
 
-            projectileScript = effectScript.projectiles[effectScript.currentProjectile].GetComponent<PolygonProjectileScript>();// Access the currently selected projectile's 'ProjectileScript'
+            projectileScript = effectScript.projectiles.GetComponent<PolygonProjectileScript>();// Access the currently selected projectile's 'ProjectileScript'
             projectileParticleName = projectileScript.projectileParticle.name;  // Assign the name of the currently selected projectile to projectileParticleName
         }
 
@@ -56,4 +54,3 @@ namespace PolygonArsenal
                 return false;
         }
     }
-}

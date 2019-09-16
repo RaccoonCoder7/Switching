@@ -1,9 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace PolygonArsenal
-{
-    public class PolygonProjectileScript : MonoBehaviour
+public class PolygonProjectileScript : MonoBehaviour
     {
         public GameObject impactParticle;
         public GameObject projectileParticle;
@@ -119,4 +117,3 @@ namespace PolygonArsenal
             }
         }*/
     }
-}

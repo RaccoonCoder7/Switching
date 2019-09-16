@@ -4,10 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - BOSS
-  - TURRET
   - MIRROR
-  - LATTICE
   - MAGICCIRCLE
   - RED
   - BLUE
@@ -24,8 +21,8 @@ TagManager:
   - MANASTONE
   - MAGICCIRCLE
   - MIRROR
-  - 
-  - 
+  - BOSS
+  - TURRET
   - 
   - 
   - 
