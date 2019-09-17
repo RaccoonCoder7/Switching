@@ -258,14 +258,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 467392, guid: 2216270888a4ced48b33b7b5641611e6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 467392, guid: 2216270888a4ced48b33b7b5641611e6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.06
-      objectReference: {fileID: 0}
     - target: {fileID: 161866, guid: 2216270888a4ced48b33b7b5641611e6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -273,6 +265,14 @@ PrefabInstance:
     - target: {fileID: 193360, guid: 2216270888a4ced48b33b7b5641611e6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 467392, guid: 2216270888a4ced48b33b7b5641611e6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 467392, guid: 2216270888a4ced48b33b7b5641611e6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.06
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2216270888a4ced48b33b7b5641611e6, type: 3}
@@ -578,6 +578,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TextCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6727509009565317812, guid: 0a9c5b7e31a33a04593767cf9d4f9779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 253098767137095373, guid: 0a9c5b7e31a33a04593767cf9d4f9779,
         type: 3}
