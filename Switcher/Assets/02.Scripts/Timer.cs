@@ -13,12 +13,15 @@ public class Timer : MonoBehaviour
     public Material fadeMaterial1;
     public Material fadeMaterial2;
     public static bool canvasCheck;
+    bool check;
 
     // Start is called before the first frame update
     void Start()
     {
         gameMgr = FindObjectOfType<GameMgr>();
         setTime = 70f;
+        //MoveUp();
+        //MoveDown();
     }
 
     // Update is called once per frame
@@ -60,5 +63,29 @@ public class Timer : MonoBehaviour
             canvasCheck = true;
         }
         text.text = string.Format("{0:00}:{1:00}",m,s);
+    }
+    public void MoveUp()
+    {
+        iTween.MoveBy(gameObject, iTween.Hash("x", 1.5f, "easeType", iTween.EaseType.easeOutBack));
+        check = false;
+    }
+    public void MoveDown()
+    {
+        iTween.MoveBy(gameObject, iTween.Hash("x", -1.5f, "easeType", iTween.EaseType.easeInBack));
+        check = true;
+    }
+    public void Move()
+    {
+        if (check)
+        {
+
+            MoveUp();
+        }
+        else
+        {
+            
+            MoveDown();
+
+        }
     }
 }

@@ -20,7 +20,8 @@ public class TouchMgr : MonoBehaviour
         switching, pull, push
     }
 
-    public LineRenderer line;
+    public LineRenderer laser;
+    public GameObject wind;
     public GameObject translateBullet;
     public GameObject blur;
     public GameObject[] ring;
@@ -34,7 +35,8 @@ public class TouchMgr : MonoBehaviour
         translateBullet.SetActive(false);
         pointer = GameObject.Find("Pointer");
         pointer.SetActive(false);
-        line.enabled = false;
+        laser.enabled = false;
+        wind.SetActive(false);
         playerTr = GameObject.Find("Player").transform;
         blur.SetActive(false);
         for (int i = 0; i < ring.Length; i++)
@@ -63,6 +65,7 @@ public class TouchMgr : MonoBehaviour
                     ring[1].SetActive(false);
                     break;
             }
+            return;
         }
 
         if (!canFire) return;
@@ -85,16 +88,18 @@ public class TouchMgr : MonoBehaviour
     {
         if (OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger))
         {
-            ray = new Ray(line.transform.position, line.transform.forward);
-            if (Physics.Raycast(ray, out hit, 12))
+            ray = new Ray(laser.transform.position, laser.transform.forward);
+            if (!wind.activeSelf)
+            {
+                wind.SetActive(true);
+            }
+            if (Physics.Raycast(ray, out hit, 11))
             {
                 if (!pointer.activeSelf)
                 {
                     pointer.SetActive(true);
                 }
                 float dist = hit.distance;
-                line.enabled = true;
-                line.SetPosition(1, new Vector3(0, 0, dist));
                 pointer.transform.position = hit.point;
                 pointer.transform.LookAt(cam.transform.position);
                 pointer.transform.position += pointer.transform.forward * 0.5f;
@@ -120,14 +125,21 @@ public class TouchMgr : MonoBehaviour
                 {
                     pointer.SetActive(false);
                 }
-                line.enabled = false;
+                laser.enabled = false;
+            }
+        }
+        else
+        {
+            if (wind.activeSelf)
+            {
+                wind.SetActive(false);
             }
         }
 
         if (OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger))
         {
             pointer.SetActive(false);
-            line.enabled = false;
+            laser.enabled = false;
             nullifyPullObj();
         }
     }
@@ -136,16 +148,16 @@ public class TouchMgr : MonoBehaviour
     {
         if (OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger))
         {
-            ray = new Ray(line.transform.position, line.transform.forward);
-            if (Physics.Raycast(ray, out hit, 11))
+            ray = new Ray(laser.transform.position, laser.transform.forward);
+            if (Physics.Raycast(ray, out hit, 12))
             {
                 if (!pointer.activeSelf)
                 {
                     pointer.SetActive(true);
                 }
                 float dist = hit.distance;
-                line.enabled = true;
-                line.SetPosition(1, new Vector3(0, 0, dist));
+                laser.enabled = true;
+                laser.SetPosition(1, new Vector3(0, 0, dist));
 
                 if (hit.collider.gameObject.layer.Equals(manaStoneLayer))
                 {
@@ -182,14 +194,14 @@ public class TouchMgr : MonoBehaviour
                 {
                     pointer.SetActive(false);
                 }
-                line.enabled = false;
+                laser.enabled = false;
             }
         }
 
         if (OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger))
         {
             pointer.SetActive(false);
-            line.enabled = false;
+            laser.enabled = false;
             nullifyPullObj();
         }
     }
@@ -198,7 +210,7 @@ public class TouchMgr : MonoBehaviour
     {
         if (OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger))
         {
-            ray = new Ray(line.transform.position, line.transform.forward);
+            ray = new Ray(laser.transform.position, laser.transform.forward);
             if (Physics.Raycast(ray, out hit, Mathf.Infinity))
             {
                 if (!pointer.activeSelf)
@@ -221,11 +233,11 @@ public class TouchMgr : MonoBehaviour
         if (OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger))
         {
             translateBullet.SetActive(true);
-            translateBullet.transform.position = line.transform.position;
-            Vector3 direction = pointer.transform.position - line.transform.position;
+            translateBullet.transform.position = laser.transform.position;
+            Vector3 direction = pointer.transform.position - laser.transform.position;
             direction = direction.normalized;
             bulletRb.velocity = direction * 8f;
-            tb.shootPos = line.transform.position;
+            tb.shootPos = laser.transform.position;
             pointer.SetActive(false);
             tb.DoActiveFalse();
             canFire = false;
