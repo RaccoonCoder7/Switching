@@ -1,168 +1,481 @@
 fileFormatVersion: 2
 guid: 605b5aaf831cdd048ad3eed7e980e2ee
-timeCreated: 1510837236
-licenseType: Store
 ModelImporter:
-  serializedVersion: 19
-  fileIDToRecycleName:
-    100000: Armature
-    100002: ArmCloth.L
-    100004: ArmCloth.R
-    100006: Chest
-    100008: Cloak.L
-    100010: Cloak.R
-    100012: Cloak2.L
-    100014: Cloak2.R
-    100016: CloakBack.L
-    100018: CloakBack.R
-    100020: CloakBack2.L
-    100022: CloakBack2.R
-    100024: Control
-    100026: Elbow.L
-    100028: Elbow.R
-    100030: Fingers1.L
-    100032: Fingers1.R
-    100034: Fingers2.L
-    100036: Fingers2.R
-    100038: Foot.L
-    100040: Foot.R
-    100042: FootIK.L
-    100044: FootIK.R
-    100046: Hand.L
-    100048: Hand.R
-    100050: HandIK.L
-    100052: HandIK.R
-    100054: Head
-    100056: Hips
-    100058: Knee.L
-    100060: Knee.R
-    100062: LowerArm.L
-    100064: LowerArm.R
-    100066: LowerLeg.L
-    100068: LowerLeg.R
-    100070: MageBlue
-    100072: MagePurple
-    100074: MageRed
-    100076: //RootNode
-    100078: MageYellow
-    100080: Spine
-    100082: Staff
-    100084: StaffBlue
-    100086: StaffPurple
-    100088: StaffRed
-    100090: StaffYellow
-    100092: Thumb1.L
-    100094: Thumb1.R
-    100096: Thumb2.L
-    100098: Thumb2.R
-    100100: Toes.L
-    100102: Toes.R
-    100104: UpperArm.L
-    100106: UpperArm.R
-    100108: UpperLeg.L
-    100110: UpperLeg.R
-    100112: Neck
-    100114: Shoulder.L
-    100116: Shoulder.R
-    400000: Armature
-    400002: ArmCloth.L
-    400004: ArmCloth.R
-    400006: Chest
-    400008: Cloak.L
-    400010: Cloak.R
-    400012: Cloak2.L
-    400014: Cloak2.R
-    400016: CloakBack.L
-    400018: CloakBack.R
-    400020: CloakBack2.L
-    400022: CloakBack2.R
-    400024: Control
-    400026: Elbow.L
-    400028: Elbow.R
-    400030: Fingers1.L
-    400032: Fingers1.R
-    400034: Fingers2.L
-    400036: Fingers2.R
-    400038: Foot.L
-    400040: Foot.R
-    400042: FootIK.L
-    400044: FootIK.R
-    400046: Hand.L
-    400048: Hand.R
-    400050: HandIK.L
-    400052: HandIK.R
-    400054: Head
-    400056: Hips
-    400058: Knee.L
-    400060: Knee.R
-    400062: LowerArm.L
-    400064: LowerArm.R
-    400066: LowerLeg.L
-    400068: LowerLeg.R
-    400070: MageBlue
-    400072: MagePurple
-    400074: MageRed
-    400076: //RootNode
-    400078: MageYellow
-    400080: Spine
-    400082: Staff
-    400084: StaffBlue
-    400086: StaffPurple
-    400088: StaffRed
-    400090: StaffYellow
-    400092: Thumb1.L
-    400094: Thumb1.R
-    400096: Thumb2.L
-    400098: Thumb2.R
-    400100: Toes.L
-    400102: Toes.R
-    400104: UpperArm.L
-    400106: UpperArm.R
-    400108: UpperLeg.L
-    400110: UpperLeg.R
-    400112: Neck
-    400114: Shoulder.L
-    400116: Shoulder.R
-    2300000: Staff
-    2300002: StaffBlue
-    2300004: StaffPurple
-    2300006: StaffRed
-    2300008: StaffYellow
-    3300000: Staff
-    3300002: StaffBlue
-    3300004: StaffPurple
-    3300006: StaffRed
-    3300008: StaffYellow
-    4300000: StaffYellow
-    4300002: StaffPurple
-    4300004: StaffBlue
-    4300006: StaffRed
-    4300008: Staff
-    4300010: MagePurple
-    4300012: MageYellow
-    4300014: MageBlue
-    4300016: MageRed
-    7400000: Idle
-    7400002: Walk
-    7400004: Levitate
-    7400006: Levitating
-    7400008: LevitateStart
-    7400010: Landing
-    7400012: Attack1
-    7400014: Attack2
-    7400016: Hit
-    7400018: Death1
-    7400020: Death2
-    7400022: Run
-    9500000: //RootNode
-    13700000: MageBlue
-    13700002: MagePurple
-    13700004: MageRed
-    13700006: MageYellow
+  serializedVersion: 25
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Armature
+  - first:
+      1: 100002
+    second: ArmCloth.L
+  - first:
+      1: 100004
+    second: ArmCloth.R
+  - first:
+      1: 100006
+    second: Chest
+  - first:
+      1: 100008
+    second: Cloak.L
+  - first:
+      1: 100010
+    second: Cloak.R
+  - first:
+      1: 100012
+    second: Cloak2.L
+  - first:
+      1: 100014
+    second: Cloak2.R
+  - first:
+      1: 100016
+    second: CloakBack.L
+  - first:
+      1: 100018
+    second: CloakBack.R
+  - first:
+      1: 100020
+    second: CloakBack2.L
+  - first:
+      1: 100022
+    second: CloakBack2.R
+  - first:
+      1: 100024
+    second: Control
+  - first:
+      1: 100026
+    second: Elbow.L
+  - first:
+      1: 100028
+    second: Elbow.R
+  - first:
+      1: 100030
+    second: Fingers1.L
+  - first:
+      1: 100032
+    second: Fingers1.R
+  - first:
+      1: 100034
+    second: Fingers2.L
+  - first:
+      1: 100036
+    second: Fingers2.R
+  - first:
+      1: 100038
+    second: Foot.L
+  - first:
+      1: 100040
+    second: Foot.R
+  - first:
+      1: 100042
+    second: FootIK.L
+  - first:
+      1: 100044
+    second: FootIK.R
+  - first:
+      1: 100046
+    second: Hand.L
+  - first:
+      1: 100048
+    second: Hand.R
+  - first:
+      1: 100050
+    second: HandIK.L
+  - first:
+      1: 100052
+    second: HandIK.R
+  - first:
+      1: 100054
+    second: Head
+  - first:
+      1: 100056
+    second: Hips
+  - first:
+      1: 100058
+    second: Knee.L
+  - first:
+      1: 100060
+    second: Knee.R
+  - first:
+      1: 100062
+    second: LowerArm.L
+  - first:
+      1: 100064
+    second: LowerArm.R
+  - first:
+      1: 100066
+    second: LowerLeg.L
+  - first:
+      1: 100068
+    second: LowerLeg.R
+  - first:
+      1: 100070
+    second: MageBlue
+  - first:
+      1: 100072
+    second: MagePurple
+  - first:
+      1: 100074
+    second: MageRed
+  - first:
+      1: 100076
+    second: //RootNode
+  - first:
+      1: 100078
+    second: MageYellow
+  - first:
+      1: 100080
+    second: Spine
+  - first:
+      1: 100082
+    second: Staff
+  - first:
+      1: 100084
+    second: StaffBlue
+  - first:
+      1: 100086
+    second: StaffPurple
+  - first:
+      1: 100088
+    second: StaffRed
+  - first:
+      1: 100090
+    second: StaffYellow
+  - first:
+      1: 100092
+    second: Thumb1.L
+  - first:
+      1: 100094
+    second: Thumb1.R
+  - first:
+      1: 100096
+    second: Thumb2.L
+  - first:
+      1: 100098
+    second: Thumb2.R
+  - first:
+      1: 100100
+    second: Toes.L
+  - first:
+      1: 100102
+    second: Toes.R
+  - first:
+      1: 100104
+    second: UpperArm.L
+  - first:
+      1: 100106
+    second: UpperArm.R
+  - first:
+      1: 100108
+    second: UpperLeg.L
+  - first:
+      1: 100110
+    second: UpperLeg.R
+  - first:
+      1: 100112
+    second: Neck
+  - first:
+      1: 100114
+    second: Shoulder.L
+  - first:
+      1: 100116
+    second: Shoulder.R
+  - first:
+      4: 400000
+    second: Armature
+  - first:
+      4: 400002
+    second: ArmCloth.L
+  - first:
+      4: 400004
+    second: ArmCloth.R
+  - first:
+      4: 400006
+    second: Chest
+  - first:
+      4: 400008
+    second: Cloak.L
+  - first:
+      4: 400010
+    second: Cloak.R
+  - first:
+      4: 400012
+    second: Cloak2.L
+  - first:
+      4: 400014
+    second: Cloak2.R
+  - first:
+      4: 400016
+    second: CloakBack.L
+  - first:
+      4: 400018
+    second: CloakBack.R
+  - first:
+      4: 400020
+    second: CloakBack2.L
+  - first:
+      4: 400022
+    second: CloakBack2.R
+  - first:
+      4: 400024
+    second: Control
+  - first:
+      4: 400026
+    second: Elbow.L
+  - first:
+      4: 400028
+    second: Elbow.R
+  - first:
+      4: 400030
+    second: Fingers1.L
+  - first:
+      4: 400032
+    second: Fingers1.R
+  - first:
+      4: 400034
+    second: Fingers2.L
+  - first:
+      4: 400036
+    second: Fingers2.R
+  - first:
+      4: 400038
+    second: Foot.L
+  - first:
+      4: 400040
+    second: Foot.R
+  - first:
+      4: 400042
+    second: FootIK.L
+  - first:
+      4: 400044
+    second: FootIK.R
+  - first:
+      4: 400046
+    second: Hand.L
+  - first:
+      4: 400048
+    second: Hand.R
+  - first:
+      4: 400050
+    second: HandIK.L
+  - first:
+      4: 400052
+    second: HandIK.R
+  - first:
+      4: 400054
+    second: Head
+  - first:
+      4: 400056
+    second: Hips
+  - first:
+      4: 400058
+    second: Knee.L
+  - first:
+      4: 400060
+    second: Knee.R
+  - first:
+      4: 400062
+    second: LowerArm.L
+  - first:
+      4: 400064
+    second: LowerArm.R
+  - first:
+      4: 400066
+    second: LowerLeg.L
+  - first:
+      4: 400068
+    second: LowerLeg.R
+  - first:
+      4: 400070
+    second: MageBlue
+  - first:
+      4: 400072
+    second: MagePurple
+  - first:
+      4: 400074
+    second: MageRed
+  - first:
+      4: 400076
+    second: //RootNode
+  - first:
+      4: 400078
+    second: MageYellow
+  - first:
+      4: 400080
+    second: Spine
+  - first:
+      4: 400082
+    second: Staff
+  - first:
+      4: 400084
+    second: StaffBlue
+  - first:
+      4: 400086
+    second: StaffPurple
+  - first:
+      4: 400088
+    second: StaffRed
+  - first:
+      4: 400090
+    second: StaffYellow
+  - first:
+      4: 400092
+    second: Thumb1.L
+  - first:
+      4: 400094
+    second: Thumb1.R
+  - first:
+      4: 400096
+    second: Thumb2.L
+  - first:
+      4: 400098
+    second: Thumb2.R
+  - first:
+      4: 400100
+    second: Toes.L
+  - first:
+      4: 400102
+    second: Toes.R
+  - first:
+      4: 400104
+    second: UpperArm.L
+  - first:
+      4: 400106
+    second: UpperArm.R
+  - first:
+      4: 400108
+    second: UpperLeg.L
+  - first:
+      4: 400110
+    second: UpperLeg.R
+  - first:
+      4: 400112
+    second: Neck
+  - first:
+      4: 400114
+    second: Shoulder.L
+  - first:
+      4: 400116
+    second: Shoulder.R
+  - first:
+      23: 2300000
+    second: Staff
+  - first:
+      23: 2300002
+    second: StaffBlue
+  - first:
+      23: 2300004
+    second: StaffPurple
+  - first:
+      23: 2300006
+    second: StaffRed
+  - first:
+      23: 2300008
+    second: StaffYellow
+  - first:
+      33: 3300000
+    second: Staff
+  - first:
+      33: 3300002
+    second: StaffBlue
+  - first:
+      33: 3300004
+    second: StaffPurple
+  - first:
+      33: 3300006
+    second: StaffRed
+  - first:
+      33: 3300008
+    second: StaffYellow
+  - first:
+      43: 4300000
+    second: StaffYellow
+  - first:
+      43: 4300002
+    second: StaffPurple
+  - first:
+      43: 4300004
+    second: StaffBlue
+  - first:
+      43: 4300006
+    second: StaffRed
+  - first:
+      43: 4300008
+    second: Staff
+  - first:
+      43: 4300010
+    second: MagePurple
+  - first:
+      43: 4300012
+    second: MageYellow
+  - first:
+      43: 4300014
+    second: MageBlue
+  - first:
+      43: 4300016
+    second: MageRed
+  - first:
+      74: 7400000
+    second: Idle
+  - first:
+      74: 7400002
+    second: Walk
+  - first:
+      74: 7400004
+    second: Levitate
+  - first:
+      74: 7400006
+    second: Levitating
+  - first:
+      74: 7400008
+    second: LevitateStart
+  - first:
+      74: 7400010
+    second: Landing
+  - first:
+      74: 7400012
+    second: Attack1
+  - first:
+      74: 7400014
+    second: Attack2
+  - first:
+      74: 7400016
+    second: Hit
+  - first:
+      74: 7400018
+    second: Death1
+  - first:
+      74: 7400020
+    second: Death2
+  - first:
+      74: 7400022
+    second: Run
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: MageBlue
+  - first:
+      137: 13700002
+    second: MagePurple
+  - first:
+      137: 13700004
+    second: MageRed
+  - first:
+      137: 13700006
+    second: MageYellow
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 80bfa067f9362264c99a5d78fecba87b, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -175,16 +488,20 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
       name: Idle
       takeName: Scene
+      internalID: 7400000
       firstFrame: 0
       lastFrame: 30
       wrapMode: 0
@@ -325,6 +642,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Walk
       takeName: Scene
+      internalID: 7400002
       firstFrame: 35
       lastFrame: 59
       wrapMode: 0
@@ -465,6 +783,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Levitate
       takeName: Scene
+      internalID: 7400004
       firstFrame: 65
       lastFrame: 108
       wrapMode: 0
@@ -605,6 +924,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Levitating
       takeName: Scene
+      internalID: 7400006
       firstFrame: 84
       lastFrame: 101
       wrapMode: 0
@@ -745,6 +1065,7 @@ ModelImporter:
     - serializedVersion: 16
       name: LevitateStart
       takeName: Scene
+      internalID: 7400008
       firstFrame: 65
       lastFrame: 84
       wrapMode: 0
@@ -885,6 +1206,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Landing
       takeName: Scene
+      internalID: 7400010
       firstFrame: 101
       lastFrame: 108
       wrapMode: 0
@@ -1025,6 +1347,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Attack1
       takeName: Scene
+      internalID: 7400012
       firstFrame: 108
       lastFrame: 130
       wrapMode: 0
@@ -1165,6 +1488,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Attack2
       takeName: Scene
+      internalID: 7400014
       firstFrame: 130
       lastFrame: 152
       wrapMode: 0
@@ -1305,6 +1629,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Hit
       takeName: Scene
+      internalID: 7400016
       firstFrame: 152
       lastFrame: 160
       wrapMode: 0
@@ -1313,7 +1638,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 1
       loopBlendOrientation: 1
       loopBlendPositionY: 1
@@ -1445,6 +1770,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Death1
       takeName: Scene
+      internalID: 7400018
       firstFrame: 160
       lastFrame: 173
       wrapMode: 0
@@ -1585,6 +1911,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Death2
       takeName: Scene
+      internalID: 7400020
       firstFrame: 180
       lastFrame: 193
       wrapMode: 0
@@ -1725,6 +2052,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Run
       takeName: Scene
+      internalID: 7400022
       firstFrame: 200
       lastFrame: 220
       wrapMode: 0
@@ -1868,13 +2196,22 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
@@ -1884,10 +2221,15 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 4
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human:
     - boneName: Hips
       humanName: Hips
@@ -2385,8 +2727,8 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: Control
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 0

@@ -17,9 +17,9 @@ public class LaserFire : MonoBehaviour
     public float stopTime = 1.0f;
     private float timer = 0.0f;
 
-    // 보스 애니메이션
-    private Animator animBoss;
-    private float resurrectionTime = 3.0f;
+    // 보스 상태
+    private BossState bossState;
+    private Animator bossAnim;
 
     void Start()
     {
@@ -28,7 +28,8 @@ public class LaserFire : MonoBehaviour
         beamEnd = Instantiate(beamEnd, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
         beam = Instantiate(beam, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
         line = beam.GetComponent<LineRenderer>();
-        animBoss = GameObject.Find("boss").GetComponent<Animator>();
+        bossState = GameObject.Find("Mage").GetComponent<BossState>();
+        bossAnim = GameObject.Find("boss").GetComponent<Animator>();
     }
 
     void Update()
@@ -46,7 +47,7 @@ public class LaserFire : MonoBehaviour
             }
 
             // boss가 죽어있을 경우에는 raycast가 충돌판정 안함
-            if (animBoss.GetBool("death"))
+            if (bossAnim.GetBool("death"))
             {
                 if (Physics.Raycast(transform.position, transform.forward, out hit, Mathf.Infinity,
                 ~(1 << LayerMask.NameToLayer("BOSS"))))
@@ -99,14 +100,11 @@ public class LaserFire : MonoBehaviour
         else if (hit.collider.gameObject.layer.Equals(LayerMask.NameToLayer("BOSS")))
         {
             // 보스 사망
-            animBoss.SetBool("death", true);
-            StartCoroutine("BossResurrection");
+            if (bossState.deathCount == 1)
+            {
+                bossState.deathCount = 2;
+            }
+            bossState.isDeath = true;
         }
-    }
-
-    private IEnumerator BossResurrection()
-    {
-        yield return new WaitForSeconds(resurrectionTime);
-        animBoss.SetBool("death", false);
     }
 }
