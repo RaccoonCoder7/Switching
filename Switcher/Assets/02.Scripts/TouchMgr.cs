@@ -9,9 +9,11 @@ public class TouchMgr : MonoBehaviour
     private Camera cam;
     private Rigidbody bulletRb;
     private GameObject pointer;
+    private Mirror mirror;
     private TranslateBullet tb;
     private bool canFire = true;
     private int manaStoneLayer;
+    private int mirrorLayer;
     private Rigidbody pullObjectRb;
     private Transform playerTr;
     private SkillMode mode = SkillMode.switching;
@@ -29,6 +31,7 @@ public class TouchMgr : MonoBehaviour
     void Start()
     {
         manaStoneLayer = LayerMask.NameToLayer("MANASTONE");
+        mirrorLayer = LayerMask.NameToLayer("MIRROR");
         cam = Camera.main;
         bulletRb = translateBullet.GetComponent<Rigidbody>();
         tb = translateBullet.GetComponent<TranslateBullet>();
@@ -57,14 +60,17 @@ public class TouchMgr : MonoBehaviour
                     break;
                 case SkillMode.pull:
                     mode = SkillMode.push;
+                    laser.enabled = false;
                     ring[0].SetActive(false);
                     ring[1].SetActive(true);
                     break;
                 case SkillMode.push:
                     mode = SkillMode.switching;
+                    wind.SetActive(false);
                     ring[1].SetActive(false);
                     break;
             }
+            nullifyPullObj();
             return;
         }
 
@@ -125,7 +131,6 @@ public class TouchMgr : MonoBehaviour
                 {
                     pointer.SetActive(false);
                 }
-                laser.enabled = false;
             }
         }
         else
@@ -139,7 +144,6 @@ public class TouchMgr : MonoBehaviour
         if (OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger))
         {
             pointer.SetActive(false);
-            laser.enabled = false;
             nullifyPullObj();
         }
     }
@@ -173,11 +177,28 @@ public class TouchMgr : MonoBehaviour
                         return;
                     }
                     Vector3 targetPos = pullObjectRb.transform.position;
-                    Vector3 direction = new Vector3(playerTr.position.x, 0, playerTr.position.z)
-                                        - new Vector3(targetPos.x, 0, targetPos.z);
+                    Vector3 direction = playerTr.position - targetPos;
                     direction = direction.normalized;
                     float speed = 50 / (dist * dist);
                     pullObjectRb.velocity = direction * speed;
+                }
+                else if (hit.collider.gameObject.layer.Equals(mirrorLayer))
+                {
+                    pointer.transform.position = hit.point;
+                    pointer.transform.LookAt(cam.transform.position);
+                    pointer.transform.position += pointer.transform.forward * 0.5f;
+
+                    Vector3 incoming = hit.point - laser.transform.position;
+                    Vector3 normal = hit.normal;
+                    Vector3 direction = Vector3.Reflect(incoming, normal).normalized;
+                    Debug.DrawRay(hit.point, -incoming, Color.green, 100f);
+                    Debug.DrawRay(hit.point, direction, Color.red, 100f);
+                    if (!mirror)
+                    {
+                        mirror = hit.collider.gameObject.GetComponent<Mirror>();
+                    }
+                    mirror.ReflectRay(hit.point, direction);
+                    return;
                 }
                 else
                 {
@@ -194,7 +215,8 @@ public class TouchMgr : MonoBehaviour
                 {
                     pointer.SetActive(false);
                 }
-                laser.enabled = false;
+                laser.SetPosition(1, new Vector3(0, 0, 12));
+                nullifyPullObj();
             }
         }
 
@@ -250,6 +272,11 @@ public class TouchMgr : MonoBehaviour
         {
             pullObjectRb.velocity = Vector3.zero;
             pullObjectRb = null;
+        }
+        if (mirror)
+        {
+            mirror.ReflectRayOff();
+            mirror = null;
         }
     }
 
