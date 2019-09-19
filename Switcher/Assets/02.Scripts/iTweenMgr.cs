@@ -38,7 +38,7 @@ public class iTweenMgr : MonoBehaviour
     {
             playing = true;
             Hashtable ht1 = new Hashtable();
-            ht1.Add("x", -0.3f);
+            ht1.Add("x", -0.32f);
             ht1.Add("time", 1f);
             ht1.Add("easetype", iTween.EaseType.easeInBack);
             ht1.Add("oncomplete", "CheckTriggerUp");
@@ -49,7 +49,7 @@ public class iTweenMgr : MonoBehaviour
     {
             playing = true;
             Hashtable ht1 = new Hashtable();
-            ht1.Add("x", 0.3f);
+            ht1.Add("x", 0.32f);
             ht1.Add("time", 1f);
             ht1.Add("easetype", iTween.EaseType.easeOutBack);
             ht1.Add("oncompletetarget", this.gameObject);
