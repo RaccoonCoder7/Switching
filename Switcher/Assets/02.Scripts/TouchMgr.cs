@@ -8,32 +8,46 @@ public class TouchMgr : MonoBehaviour
     private RaycastHit hit;
     private Camera cam;
     private Rigidbody bulletRb;
+    private Rigidbody bombRb;
+    private Rigidbody testBombRb;
     private GameObject pointer;
     private Mirror mirror;
     private TranslateBullet tb;
     private bool canFire = true;
+    private bool canFireTestBomb = true;
     private int manaStoneLayer;
     private int mirrorLayer;
     private Rigidbody pullObjectRb;
     private Transform playerTr;
+    private float coolTime;
     private SkillMode mode = SkillMode.switching;
     private enum SkillMode
     {
-        switching, pull, push
+        switching, pull, push, switchBomb
     }
 
     public LineRenderer laser;
     public GameObject wind;
     public GameObject translateBullet;
+    public GameObject translateBomb;
+    public GameObject testTranslateBomb;
     public GameObject blur;
     public GameObject[] ring;
+    public float bombSpeed = 500.0f;
 
     void Start()
     {
         manaStoneLayer = LayerMask.NameToLayer("MANASTONE");
         mirrorLayer = LayerMask.NameToLayer("MIRROR");
         cam = Camera.main;
+        translateBullet = Instantiate(translateBullet);
         bulletRb = translateBullet.GetComponent<Rigidbody>();
+        translateBomb = Instantiate(translateBomb);
+        bombRb = translateBomb.GetComponent<Rigidbody>();
+        translateBomb.SetActive(false);
+        testTranslateBomb = Instantiate(testTranslateBomb);
+        testBombRb = testTranslateBomb.GetComponent<Rigidbody>();
+        testTranslateBomb.SetActive(false);
         tb = translateBullet.GetComponent<TranslateBullet>();
         translateBullet.SetActive(false);
         pointer = GameObject.Find("Pointer");
@@ -65,9 +79,13 @@ public class TouchMgr : MonoBehaviour
                     ring[1].SetActive(true);
                     break;
                 case SkillMode.push:
-                    mode = SkillMode.switching;
+                    mode = SkillMode.switchBomb;
                     wind.SetActive(false);
                     ring[1].SetActive(false);
+                    pointer.SetActive(false);
+                    break;
+                case SkillMode.switchBomb:
+                    mode = SkillMode.switching;
                     break;
             }
             nullifyPullObj();
@@ -87,6 +105,32 @@ public class TouchMgr : MonoBehaviour
             case SkillMode.push:
                 OnPush();
                 break;
+            case SkillMode.switchBomb:
+                OnSwitchBomb();
+                break;
+        }
+    }
+
+    private void OnSwitchBomb()
+    {
+        if (OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger))
+        {
+            if (!canFireTestBomb) return;
+            testTranslateBomb.SetActive(true);
+            testTranslateBomb.transform.position = laser.transform.position;
+            testBombRb.velocity = Vector3.zero;
+            testBombRb.AddForce(laser.transform.forward * bombSpeed);
+            canFireTestBomb = false;
+        }
+
+        if (OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger))
+        {
+            testTranslateBomb.SetActive(false);
+            translateBomb.SetActive(true);
+            translateBomb.transform.position = laser.transform.position;
+            bombRb.velocity = Vector3.zero;
+            bombRb.AddForce(laser.transform.forward * bombSpeed);
+            canFire = false;
         }
     }
 
@@ -290,6 +334,16 @@ public class TouchMgr : MonoBehaviour
         canFire = true;
     }
 
+    public void EnableFireTestBomb(float waitTime)
+    {
+        Invoke("change2CanFireTestBomb", waitTime);
+    }
+
+    private void change2CanFireTestBomb()
+    {
+        canFireTestBomb = true;
+    }
+
     public void StartLerp(Transform objTr, Vector3 targetPos, Vector3 playerPos)
     {
         StopCoroutine("LerpAndTeleport");
@@ -325,6 +379,54 @@ public class TouchMgr : MonoBehaviour
 
         playerTr.position = targetPos;
         objTr.position = playerPos;
+        blur.SetActive(false);
+    }
+
+    public void StartLerpAll(List<Transform> objList, List<Vector3> objPosList, Vector3 farthestPos)
+    {
+        StartCoroutine(LerpAndTeleportAll(objList, objPosList, farthestPos));
+    }
+
+    private IEnumerator LerpAndTeleportAll(List<Transform> objList, List<Vector3> objPosList, Vector3 farthestPos)
+    {
+        int lerpFrame = 20;
+        float lerpSpeed = 0.3f;
+        Transform originPlayerTr = playerTr;
+        blur.SetActive(true);
+
+        for (int i = 0; i < lerpFrame; i++)
+        {
+            playerTr.position = Vector3.Lerp(playerTr.position, farthestPos, Time.deltaTime * lerpSpeed);
+            for (int j = 0; j < objList.Count; j++)
+            {
+                objList[j].position = Vector3.Lerp(objList[j].position, objPosList[j], Time.deltaTime * lerpSpeed);
+            }
+            yield return null;
+        }
+
+        playerTr.position = Vector3.Lerp(playerTr.position, farthestPos, 0.8f);
+        for (int i = 0; i < objList.Count; i++)
+        {
+            objList[i].position = Vector3.Lerp(objList[i].position, objPosList[i], 0.8f);
+        }
+
+        lerpFrame = 40;
+        lerpSpeed = 5f;
+        for (int i = 0; i < lerpFrame; i++)
+        {
+            playerTr.position = Vector3.Lerp(playerTr.position, farthestPos, Time.deltaTime * lerpSpeed);
+            for (int j = 0; j < objList.Count; j++)
+            {
+                objList[j].position = Vector3.Lerp(objList[j].position, objPosList[j], Time.deltaTime * lerpSpeed);
+            }
+            yield return null;
+        }
+
+        playerTr.position = farthestPos;
+        for (int i = 0; i < objList.Count; i++)
+        {
+            objList[i].position = objPosList[i];
+        }
         blur.SetActive(false);
     }
 }
