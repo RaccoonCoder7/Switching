@@ -9,9 +9,6 @@ TagManager:
   - RED
   - BLUE
   - YELLOW
-  - TURRET
-  - LATTICE
-  - GREEN
   layers:
   - Default
   - TransparentFX
