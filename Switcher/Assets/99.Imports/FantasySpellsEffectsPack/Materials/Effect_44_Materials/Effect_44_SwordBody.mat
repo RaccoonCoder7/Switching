@@ -4,8 +4,9 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: Effect_44_SwordBody
   m_Shader: {fileID: 4800000, guid: e63b0715cc2bc8242838908bf7c4cb23, type: 3}
   m_ShaderKeywords: _ISBLENDADD_ON
@@ -89,4 +90,4 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _TintColor: {r: 1.452206, g: 2.1764166, b: 2.5000002, a: 1}
+    - _TintColor: {r: 0.03341849, g: 1.6631294, b: 2.3615777, a: 1}

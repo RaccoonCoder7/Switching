@@ -6,17 +6,6 @@ using UnityEngine.UI;
 
 public class GameMgr : MonoBehaviour
 {
-    private static GameMgr _instance = null;
-
-    public static GameMgr Instance
-    {
-        get
-        {
-            _instance = FindObjectOfType(typeof(GameMgr)) as GameMgr;
-            return _instance;
-        }
-    }
-
 
 
     public static int stage;
@@ -50,8 +39,6 @@ public class GameMgr : MonoBehaviour
         PlayerPrefs.SetInt("Stage", 1);
         stage = 1;
         StartCoroutine("Load");
-
-
     }
 
     //이어하기, 다시하기
@@ -70,7 +57,6 @@ public class GameMgr : MonoBehaviour
         {
             //yield return true;
             yield return StartCoroutine("FadeIn");
-
                 async.allowSceneActivation = true;
         }
         
@@ -83,8 +69,7 @@ public class GameMgr : MonoBehaviour
         PlayerPrefs.SetInt("Stage", PlayerPrefs.GetInt("Stage")+1);
         stage = PlayerPrefs.GetInt("Stage");
         Debug.Log(stage);
-        //StartCoroutine("Load");
-        Instance.StartCoroutine("Load");
+        StartCoroutine("Load");
     }
     public IEnumerator FadeIn()
     {
@@ -127,6 +112,5 @@ public class GameMgr : MonoBehaviour
             yield return new WaitForSeconds(0.02f);
         }
         StartCoroutine("FadeOut");
-        
     }
 }

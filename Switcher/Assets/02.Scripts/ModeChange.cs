@@ -7,11 +7,11 @@ public class ModeChange : MonoBehaviour
 
     public void Switching()
     {
-        //TouchMgr.SkillMode = switching;
+
     }
     public void Pull()
     {
-        //TouchMgr.SkillMode = Switching
+
     }
     public void Push()
     {

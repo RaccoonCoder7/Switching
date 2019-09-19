@@ -16,12 +16,19 @@ public class Chat : MonoBehaviour
     string helperTextList;
     int textCount;
     int continueCnt;
+    State nowState;
+
+    enum State
+    {
+        Next,
+        Playing
+    }
     void Start()
     {
         helperTextList = "대화를 다시 보려면 트리거버튼, 스테이지를 다시 시작하려면 다시하기버튼을 누르세요";
-        gameMgr = new GameMgr();
+        gameMgr = FindObjectOfType<GameMgr>();
         continueCnt = 0;
-        TextSet();
+        TextSet("Stage1");
     }
 
     // Update is called once per frame
@@ -30,12 +37,11 @@ public class Chat : MonoBehaviour
         
     }
 
-    public void TextSet()
+    public void TextSet(string str)
     {
         textCount = 1;
         textList = new List<string>();
-        textData = Resources.Load(SceneManager.GetActiveScene().name+"Text", typeof(TextAsset)) as TextAsset;
-        Debug.Log(SceneManager.GetActiveScene().name + "Text");
+        textData = Resources.Load(str+"Text", typeof(TextAsset)) as TextAsset;
         sr = new StringReader(textData.text);
         textFile = sr.ReadLine();
         textList.Add(textFile);
@@ -48,23 +54,27 @@ public class Chat : MonoBehaviour
     }
     public void NextText()
     {
-        //불러온 텍스트중 false가 있으면 아래 실행
-        if (textList[textCount].Equals("false")){
-            //textCount++;
-            //text.text = textList[textCount];
-            gameObject.SetActive(false);
-            textCount++;
-        }
-        //불러온 텍스트중 clear가 있으면 아래 실행
-        else if (textList[textCount].Equals("clear")){
-            gameMgr.Clear();
-        }
-        else
+        if (nowState.Equals(State.Next))
         {
-            StartCoroutine(PlayLine(textList[textCount]));
-            //text.text = textList[textCount];
-            textCount++;
-            Debug.Log(textList[textCount]);
+            //불러온 텍스트중 false가 있으면 아래 실행
+            if (textList[textCount].Equals("false"))
+            {
+                //textCount++;
+                //text.text = textList[textCount];
+                gameObject.SetActive(false);
+                textCount++;
+            }
+            //불러온 텍스트중 clear가 있으면 아래 실행
+            else if (textList[textCount].Equals("clear"))
+            {
+                gameMgr.Clear();
+            }
+            else
+            {
+                StartCoroutine(PlayLine(textList[textCount]));
+                //text.text = textList[textCount];
+                textCount++;
+            }
         }
     }
 
@@ -83,17 +93,15 @@ public class Chat : MonoBehaviour
         textCount++;
         StartCoroutine(PlayLine(textList[textCount]));
     }
-
     IEnumerator PlayLine(string setText)
     {
+        nowState = State.Playing;
         for (int i = 0; i < setText.Length + 1; i += 1)
         {
             yield return new WaitForSeconds(0.02f);
             text.text = setText.Substring(0, i);
         }
+        yield return new WaitForSeconds(0.5f);
+        nowState = State.Next;
     }
-
-
-
-
 }
