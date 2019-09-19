@@ -34,7 +34,14 @@ public class Chat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger))
+        {
+            NextText();
+        }
+        if (OVRInput.GetUp(OVRInput.Button.SecondaryHandTrigger))
+        {
+            CallHelper();
+        }
     }
 
     public void TextSet(string str)

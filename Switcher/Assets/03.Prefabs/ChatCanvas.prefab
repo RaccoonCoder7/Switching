@@ -19757,7 +19757,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3710951904443216749
 Transform:
   m_ObjectHideFlags: 0
@@ -19780,7 +19780,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3708468559627583891}
   serializedVersion: 6
-  lengthInSec: 2.06
+  lengthInSec: 0.05
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 3

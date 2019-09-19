@@ -20,7 +20,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/01.Scenes/Test_ODK.unity
     guid: 8beb71dcd1ce0454bb3d380e5f459f4f
-  - enabled: 0
+  - enabled: 1
     path: Assets/01.Scenes/Stage2.unity
     guid: 9f842e6e282c9de49a9abe476522648d
   - enabled: 1

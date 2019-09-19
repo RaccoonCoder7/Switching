@@ -10,11 +10,18 @@ public class iTweenMgr : MonoBehaviour
     bool playing;
     bool triggerUp;
     bool triggerDown;
+    public GameObject chatCanvas;
+    Chat chat;
 
+    private void Start()
+    {
+        chat = FindObjectOfType<Chat>();
+    }
 
 
     private void Update()
     {
+        //전환패널
         if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
         {
             triggerUp = true;
@@ -32,6 +39,12 @@ public class iTweenMgr : MonoBehaviour
             {
                 MoveL();
             }
+        }
+        //조력자 소환
+        if (OVRInput.GetUp(OVRInput.Button.SecondaryHandTrigger))
+        {
+            chatCanvas.SetActive(true);
+            chat.CallHelper();
         }
 
     }

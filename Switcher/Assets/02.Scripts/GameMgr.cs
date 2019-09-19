@@ -105,7 +105,7 @@ public class GameMgr : MonoBehaviour
         Debug.Log(screen);
         Debug.Log(fadeMaterial);
         Color color = fadeMaterial.color;
-        while (color.a < 0.3f)
+        while (color.a < 0.4f)
         {
             color.a += 0.03f;
             fadeMaterial.color = color;
