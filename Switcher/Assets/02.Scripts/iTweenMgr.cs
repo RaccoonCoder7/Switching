@@ -18,19 +18,22 @@ public class iTweenMgr : MonoBehaviour
         if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
         {
             triggerUp = true;
-            if (playing.Equals(false))
-            {
+            triggerDown = false;
+            //마법
+            //if (!playing)
+            //{
                 MoveR();
-            }
+            //}
         }
         if (OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger))
         {
             triggerDown = true;
-            if (playing.Equals(false))
+            triggerUp = false;
+            if (!playing)
             {
                 MoveL();
             }
-            
+
         }
 
     }
@@ -38,7 +41,7 @@ public class iTweenMgr : MonoBehaviour
     {
             playing = true;
             Hashtable ht1 = new Hashtable();
-            ht1.Add("x", -0.3f);
+            ht1.Add("x", -0.32f);
             ht1.Add("time", 1f);
             ht1.Add("easetype", iTween.EaseType.easeInBack);
             ht1.Add("oncomplete", "CheckTriggerUp");
@@ -49,7 +52,7 @@ public class iTweenMgr : MonoBehaviour
     {
             playing = true;
             Hashtable ht1 = new Hashtable();
-            ht1.Add("x", 0.3f);
+            ht1.Add("x", 0.32f);
             ht1.Add("time", 1f);
             ht1.Add("easetype", iTween.EaseType.easeOutBack);
             ht1.Add("oncompletetarget", this.gameObject);
@@ -59,20 +62,22 @@ public class iTweenMgr : MonoBehaviour
 
     void CheckTriggerDown()
     {
-        playing = false;
+        
         if (triggerDown.Equals(true))
         {
             MoveL();
         }
+        playing = false;
         triggerDown = false;
-        
+
     }
     void CheckTriggerUp()
     {
-        playing = false;
+        
         if(triggerUp.Equals(true)){
             MoveR();
         }
+        playing = false;
         triggerUp = false;
     }
 
