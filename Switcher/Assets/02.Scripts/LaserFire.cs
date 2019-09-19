@@ -28,8 +28,11 @@ public class LaserFire : MonoBehaviour
         beamEnd = Instantiate(beamEnd, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
         beam = Instantiate(beam, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
         line = beam.GetComponent<LineRenderer>();
-        bossState = GameObject.Find("Mage").GetComponent<BossState>();
-        bossAnim = GameObject.Find("boss").GetComponent<Animator>();
+        if (GameObject.Find("boss"))
+        {
+            bossState = GameObject.Find("Mage").GetComponent<BossState>();
+            bossAnim = GameObject.Find("boss").GetComponent<Animator>();
+        }
     }
 
     void Update()
@@ -47,7 +50,7 @@ public class LaserFire : MonoBehaviour
             }
 
             // boss가 죽어있을 경우에는 raycast가 충돌판정 안함
-            if (bossAnim.GetBool("death"))
+            if (bossAnim && bossAnim.GetBool("death"))
             {
                 if (Physics.Raycast(transform.position, transform.forward, out hit, Mathf.Infinity,
                 ~(1 << LayerMask.NameToLayer("BOSS"))))
