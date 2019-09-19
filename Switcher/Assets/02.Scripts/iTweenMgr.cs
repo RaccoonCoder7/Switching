@@ -18,19 +18,20 @@ public class iTweenMgr : MonoBehaviour
         if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
         {
             triggerUp = true;
-            if (playing.Equals(false))
-            {
+            triggerDown = false;
+            //if (playing.Equals(false))
+            //{
                 MoveR();
-            }
+            //}
         }
         if (OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger))
         {
             triggerDown = true;
-            if (playing.Equals(false))
+            triggerUp = false;
+            if (!playing)
             {
                 MoveL();
             }
-            
         }
 
     }
@@ -60,7 +61,7 @@ public class iTweenMgr : MonoBehaviour
     void CheckTriggerDown()
     {
         playing = false;
-        if (triggerDown.Equals(true))
+        if (triggerDown)
         {
             MoveL();
         }
@@ -70,7 +71,7 @@ public class iTweenMgr : MonoBehaviour
     void CheckTriggerUp()
     {
         playing = false;
-        if(triggerUp.Equals(true)){
+        if(triggerUp){
             MoveR();
         }
         triggerUp = false;
