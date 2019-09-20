@@ -84,6 +84,8 @@ public class GameMgr : MonoBehaviour
             yield return new WaitForSeconds(0.02f);
         }
         logo.SetActive(true);
+        //color.a = 0f;
+        //fadeMaterial.color = color;
     }
 
     public IEnumerator FadeOut()
@@ -113,4 +115,39 @@ public class GameMgr : MonoBehaviour
         }
         StartCoroutine("FadeOut");
     }
+
+    public IEnumerator TestLoad()
+    {
+        screenImage.material = fadeMaterial;
+        fadeMaterial = blackMaterial;
+        async = SceneManager.LoadSceneAsync("Demo"); // 열고 싶은 씬
+        async.allowSceneActivation = false;
+        while (!async.isDone)
+        {
+            //yield return true;
+            yield return StartCoroutine("FadeIn");
+            async.allowSceneActivation = true;
+            Color color = fadeMaterial.color;
+            color.a = 0f;
+            fadeMaterial.color = color;
+        }
+    }
+
+    public IEnumerator TestClear()
+    {
+        screenImage.material = fadeMaterial;
+        fadeMaterial = blackMaterial;
+        async = SceneManager.LoadSceneAsync("StartScene"); // 열고 싶은 씬
+        async.allowSceneActivation = false;
+        while (!async.isDone)
+        {
+            //yield return true;
+            yield return StartCoroutine("FadeIn");
+            async.allowSceneActivation = true;
+            Color color = fadeMaterial.color;
+            color.a = 0f;
+            fadeMaterial.color = color;
+        }
+    }
+
 }
