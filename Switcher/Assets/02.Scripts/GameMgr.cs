@@ -24,6 +24,7 @@ public class GameMgr : MonoBehaviour
         screen = GameObject.Find("FadeCanvas").transform.Find("FadePanel").gameObject;
         screenImage = screen.GetComponent<Image>();
         stage = PlayerPrefs.GetInt("Stage");
+        Debug.Log(stage);
 
         if (stage.Equals(0))
         {

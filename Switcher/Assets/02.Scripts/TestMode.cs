@@ -33,7 +33,7 @@ public class TestMode : MonoBehaviour
             }
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("CONTINUE")))
             {
-                SceneManager.LoadScene("Demo");
+                //SceneManager.LoadScene("Demo");
             }
         }
     }
