@@ -32,12 +32,17 @@ public class BossState : MonoBehaviour
     private Renderer render;
     private GameObject bossObj;
 
+    private AudioSource audio;
+    public AudioClip bossRewindClip;
+    public AudioClip bossDieClip;
+
     void Start()
     {
         camTr = Camera.main.GetComponent<Transform>();
         bossObj = GameObject.Find("boss");
         anim = bossObj.GetComponent<Animator>();
-        render = gameObject.GetComponent<Renderer>();
+        render = GetComponent<Renderer>();
+        audio = GetComponent<AudioSource>();
     }
 
     void Update()

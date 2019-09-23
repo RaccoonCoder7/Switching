@@ -20,6 +20,7 @@ public class TouchMgr : MonoBehaviour
     private Rigidbody pullObjectRb;
     private Transform playerTr;
     private float coolTime;
+    private AudioSource audio;
 
     public SkillMode mode = SkillMode.switching;
     public enum SkillMode
@@ -33,6 +34,7 @@ public class TouchMgr : MonoBehaviour
     public GameObject testTranslateBomb;
     public GameObject blur;
     public GameObject[] ring;
+    public AudioClip[] shootClips;
     public float bombSpeed = 500.0f;
 
     void Start()
@@ -56,6 +58,7 @@ public class TouchMgr : MonoBehaviour
         wind.SetActive(false);
         playerTr = GameObject.Find("Player").transform;
         blur.SetActive(false);
+        audio = GetComponent<AudioSource>();
         for (int i = 0; i < ring.Length; i++)
         {
             ring[i].SetActive(false);
@@ -125,6 +128,7 @@ public class TouchMgr : MonoBehaviour
 
         if (OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger))
         {
+            audio.Play();
             testTranslateBomb.SetActive(false);
             translateBomb.SetActive(true);
             translateBomb.transform.position = laser.transform.position;
@@ -142,6 +146,10 @@ public class TouchMgr : MonoBehaviour
             if (!wind.activeSelf)
             {
                 wind.SetActive(true);
+            }
+            if (!audio.isPlaying)
+            {
+                audio.Play();
             }
             if (Physics.Raycast(ray, out hit, 11))
             {
@@ -187,6 +195,7 @@ public class TouchMgr : MonoBehaviour
 
         if (OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger))
         {
+            audio.Stop();
             pointer.SetActive(false);
             nullifyPullObj();
         }
@@ -196,6 +205,10 @@ public class TouchMgr : MonoBehaviour
     {
         if (OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger))
         {
+            if (!audio.isPlaying)
+            {
+                audio.Play();
+            }
             ray = new Ray(laser.transform.position, laser.transform.forward);
             if (Physics.Raycast(ray, out hit, 12))
             {
@@ -266,6 +279,7 @@ public class TouchMgr : MonoBehaviour
 
         if (OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger))
         {
+            audio.Stop();
             pointer.SetActive(false);
             laser.enabled = false;
             nullifyPullObj();
@@ -298,6 +312,7 @@ public class TouchMgr : MonoBehaviour
         }
         if (OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger))
         {
+            audio.Play();
             translateBullet.SetActive(true);
             translateBullet.transform.position = laser.transform.position;
             Vector3 direction = pointer.transform.position - laser.transform.position;
@@ -330,18 +345,26 @@ public class TouchMgr : MonoBehaviour
         switch (mode)
         {
             case SkillMode.switching:
+                audio.loop = false;
+                audio.clip = shootClips[0];
                 ring[0].SetActive(false);
                 ring[1].SetActive(false);
                 break;
             case SkillMode.pull:
+                audio.loop = true;
+                audio.clip = shootClips[1];
                 ring[0].SetActive(true);
                 ring[1].SetActive(false);
                 break;
             case SkillMode.push:
+                audio.loop = true;
+                audio.clip = shootClips[2];
                 ring[0].SetActive(false);
                 ring[1].SetActive(true);
                 break;
             case SkillMode.switchBomb:
+                audio.loop = false;
+                audio.clip = shootClips[3];
                 ring[0].SetActive(false);
                 ring[1].SetActive(false);
                 break;

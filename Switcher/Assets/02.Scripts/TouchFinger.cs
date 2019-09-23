@@ -7,6 +7,7 @@ public class TouchFinger : MonoBehaviour
     private int skillButtonLayer;
     private TouchMgr touchMgr;
     private Collider sphere;
+    private AudioSource audio;
 
     public ImageCtrl imageCtrl;
 
@@ -16,6 +17,7 @@ public class TouchFinger : MonoBehaviour
         touchMgr = GameObject.Find("Player").GetComponent<TouchMgr>();
         sphere = GetComponent<Collider>();
         sphere.enabled = false;
+        audio = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -34,6 +36,7 @@ public class TouchFinger : MonoBehaviour
     {
         if (other.gameObject.layer.Equals(skillButtonLayer))
         {
+            audio.Play();
             TouchMgr.SkillMode mode = TouchMgr.SkillMode.switching;
             string buttonName = other.gameObject.name;
             switch (buttonName)

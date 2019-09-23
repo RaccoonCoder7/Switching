@@ -13,6 +13,7 @@ public class TranslateBullet : MonoBehaviour
     private Ray ray;
     private RaycastHit hit;
     private Rigidbody rb;
+    private AudioSource audio;
 
     public float speed = 10.0f;
     public Vector3 shootPos;
@@ -32,6 +33,7 @@ public class TranslateBullet : MonoBehaviour
         playerState = playerTr.GetComponent<PlayerState>();
         ray = new Ray();
         rb = GetComponent<Rigidbody>();
+        audio = GetComponent<AudioSource>();
     }
 
     private void OnCollisionEnter(Collision other)
@@ -42,6 +44,7 @@ public class TranslateBullet : MonoBehaviour
             Vector3 normal = other.contacts[0].normal;
             Vector3 direction = Vector3.Reflect(incoming, normal).normalized;
             rb.velocity = direction * 8f;
+            audio.Play();
             return;
         }
 

@@ -5,15 +5,20 @@ using UnityEngine;
 public class PlayerState : MonoBehaviour
 {
     private bool canDmg = true;
+    private AudioSource audio;
+
+    public AudioClip[] stateClips;
     public GameObject barrier;
 
     void Start()
     {
+        audio = GetComponent<AudioSource>();
         barrier.SetActive(false);
     }
 
     public void DisableDmg(float waitTime)
     {
+        audio.PlayOneShot(stateClips[0]);
         canDmg = false;
         StartCoroutine(showBarrier(waitTime));
     }
