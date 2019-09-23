@@ -6,12 +6,16 @@ public class TranslateBomb : MonoBehaviour
 {
     private GameObject clone;
     private TouchMgr touchMgr;
+    private int skillButtonLayer;
+    private int touchFingerLayer;
 
     public GameObject bombArea;
     public bool isTestBomb = false;
 
     void Start()
     {
+        skillButtonLayer = LayerMask.NameToLayer("SKILLBUTTON");
+        touchFingerLayer = LayerMask.NameToLayer("TOUCHFINGER");
         clone = Instantiate(bombArea);
         Destroy(clone);
         if (isTestBomb)
@@ -22,6 +26,11 @@ public class TranslateBomb : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.layer.Equals(skillButtonLayer)
+            || other.gameObject.layer.Equals(touchFingerLayer))
+        {
+            return;
+        }
         GameObject area = Instantiate(bombArea, transform.position, transform.rotation);
         if (isTestBomb)
         {

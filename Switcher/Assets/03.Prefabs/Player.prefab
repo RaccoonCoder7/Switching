@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 89300521}
   - component: {fileID: 89300520}
   m_Layer: 5
-  m_Name: Image
+  m_Name: pushImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -272,6 +272,81 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 1, y: -2}
   m_UseGraphicAlpha: 1
+--- !u!1 &256825801
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 256825802}
+  - component: {fileID: 256825803}
+  - component: {fileID: 256825805}
+  - component: {fileID: 256825804}
+  m_Layer: 16
+  m_Name: TouchFinger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &256825802
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256825801}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.0385, y: 0, z: 0.0713}
+  m_LocalScale: {x: 0.04, y: 0.04, z: 0.04}
+  m_Children: []
+  m_Father: {fileID: 2161175058916674006}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &256825803
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256825801}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &256825805
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256825801}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &256825804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256825801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83a3d63c39cd8fa47982779d6f654b57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageCtrl: {fileID: 3162601952082178807}
 --- !u!1 &268657949
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,8 +359,9 @@ GameObject:
   - component: {fileID: 268657953}
   - component: {fileID: 268657952}
   - component: {fileID: 268657951}
-  m_Layer: 5
-  m_Name: Button (1)
+  - component: {fileID: 783860658}
+  m_Layer: 15
+  m_Name: switching
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -332,14 +408,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.57254905, g: 0.8156863, b: 0.3137255, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: debf8a15486f70d479957f5e2ca15eeb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 12f97ee8d0abc0242835cdf04bbaff3b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -393,6 +469,19 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!65 &783860658
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268657949}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 101, y: 93, z: 18}
+  m_Center: {x: 1.3, y: 3.5, z: -4.9}
 --- !u!1 &383526229
 GameObject:
   m_ObjectHideFlags: 0
@@ -601,8 +690,9 @@ GameObject:
   - component: {fileID: 449742514}
   - component: {fileID: 449742513}
   - component: {fileID: 449742512}
-  m_Layer: 5
-  m_Name: Button (2)
+  - component: {fileID: 348048908}
+  m_Layer: 15
+  m_Name: switchBomb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -649,14 +739,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.6037736, b: 0.27493256, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: debf8a15486f70d479957f5e2ca15eeb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 12f97ee8d0abc0242835cdf04bbaff3b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -710,6 +800,19 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!65 &348048908
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449742510}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 101, y: 93, z: 18}
+  m_Center: {x: 1.3, y: 3.5, z: -4.9}
 --- !u!1 &560191478
 GameObject:
   m_ObjectHideFlags: 0
@@ -960,8 +1063,9 @@ GameObject:
   - component: {fileID: 969549373}
   - component: {fileID: 969549372}
   - component: {fileID: 969549371}
-  m_Layer: 5
-  m_Name: Button (4)
+  - component: {fileID: 1802268517}
+  m_Layer: 15
+  m_Name: push
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1008,14 +1112,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8784314, g: 0, b: 0.05490196, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 3864a5745f24f9340bf5caeefac5cbe0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 12f97ee8d0abc0242835cdf04bbaff3b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1069,6 +1173,19 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!65 &1802268517
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969549369}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 101, y: 93, z: 18}
+  m_Center: {x: 1.3, y: 3.5, z: -4.9}
 --- !u!1 &1028339787
 GameObject:
   m_ObjectHideFlags: 0
@@ -1193,6 +1310,7 @@ GameObject:
   - component: {fileID: 1124691296}
   - component: {fileID: 1124691295}
   - component: {fileID: 1124691294}
+  - component: {fileID: 3162601952082178807}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -1278,6 +1396,30 @@ MonoBehaviour:
   fadeMaterial1: {fileID: 2100000, guid: 553005d8614a05d45895a06c7b0a611b, type: 2}
   fadeMaterial2: {fileID: 2100000, guid: 3f4c71479ca11af4785d316089e03716, type: 2}
   stick: {fileID: 0}
+--- !u!114 &3162601952082178807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124691292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c58c1568472696845a2dc2f3c85856b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonImages:
+  - {fileID: 268657952}
+  - {fileID: 1804333758}
+  - {fileID: 969549372}
+  - {fileID: 449742513}
+  panelSprites:
+  - {fileID: 21300000, guid: debf8a15486f70d479957f5e2ca15eeb, type: 3}
+  - {fileID: 21300000, guid: d2426e6ea0fb5ab4e8cc8e484b6d263f, type: 3}
+  - {fileID: 21300000, guid: 3864a5745f24f9340bf5caeefac5cbe0, type: 3}
+  - {fileID: 21300000, guid: 250c6fa0956bde04481abf5cfa94251f, type: 3}
+  inactivateSprite: {fileID: 21300000, guid: 12f97ee8d0abc0242835cdf04bbaff3b, type: 3}
+  lockSprite: {fileID: 21300000, guid: 03c24163d42ffdd439910c534bda7d96, type: 3}
 --- !u!1 &1157790322
 GameObject:
   m_ObjectHideFlags: 0
@@ -1291,7 +1433,7 @@ GameObject:
   - component: {fileID: 1157790325}
   - component: {fileID: 1157790324}
   m_Layer: 5
-  m_Name: Image
+  m_Name: pullImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1575,7 +1717,7 @@ GameObject:
   - component: {fileID: 1778390454}
   - component: {fileID: 1778390453}
   m_Layer: 5
-  m_Name: Image
+  m_Name: switchBombImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1762,8 +1904,9 @@ GameObject:
   - component: {fileID: 1804333759}
   - component: {fileID: 1804333758}
   - component: {fileID: 1804333757}
-  m_Layer: 5
-  m_Name: Button (3)
+  - component: {fileID: 2038197269}
+  m_Layer: 15
+  m_Name: pull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1810,14 +1953,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.4392157, b: 0.7529412, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: d2426e6ea0fb5ab4e8cc8e484b6d263f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 12f97ee8d0abc0242835cdf04bbaff3b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1871,6 +2014,19 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!65 &2038197269
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804333755}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 101, y: 93, z: 18}
+  m_Center: {x: 1.3, y: 3.5, z: -4.9}
 --- !u!1 &1967529459
 GameObject:
   m_ObjectHideFlags: 0
@@ -1884,7 +2040,7 @@ GameObject:
   - component: {fileID: 1967529462}
   - component: {fileID: 1967529461}
   m_Layer: 5
-  m_Name: Image
+  m_Name: switchingImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7085,6 +7241,7 @@ Transform:
   m_Children:
   - {fileID: 2157760724333624512}
   - {fileID: 3162601952438944418}
+  - {fileID: 256825802}
   m_Father: {fileID: 2161175058916697414}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7571,6 +7728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 779cd2cc02613bf4497e43e187da93e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mode: 0
   laser: {fileID: 6047744250249843909}
   wind: {fileID: 1766685513786234179}
   translateBullet: {fileID: 3370014469093324043, guid: 9921de114ace8594585c5e287d9294e1,

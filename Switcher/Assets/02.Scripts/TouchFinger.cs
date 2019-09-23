@@ -8,6 +8,8 @@ public class TouchFinger : MonoBehaviour
     private TouchMgr touchMgr;
     private Collider sphere;
 
+    public ImageCtrl imageCtrl;
+
     void Start()
     {
         skillButtonLayer = LayerMask.NameToLayer("SKILLBUTTON");
@@ -32,23 +34,25 @@ public class TouchFinger : MonoBehaviour
     {
         if (other.gameObject.layer.Equals(skillButtonLayer))
         {
+            TouchMgr.SkillMode mode = TouchMgr.SkillMode.switching;
             string buttonName = other.gameObject.name;
-
             switch (buttonName)
             {
                 case "switching":
-                    touchMgr.mode = TouchMgr.SkillMode.switching;
+                    mode = TouchMgr.SkillMode.switching;
                     break;
                 case "pull":
-                    touchMgr.mode = TouchMgr.SkillMode.pull;
+                    mode = TouchMgr.SkillMode.pull;
                     break;
                 case "push":
-                    touchMgr.mode = TouchMgr.SkillMode.push;
+                    mode = TouchMgr.SkillMode.push;
                     break;
                 case "switchBomb":
-                    touchMgr.mode = TouchMgr.SkillMode.switchBomb;
+                    mode = TouchMgr.SkillMode.switchBomb;
                     break;
             }
+            touchMgr.ChangeMode(mode);
+            imageCtrl.ChangeSprites(touchMgr.mode);
         }
     }
 }
