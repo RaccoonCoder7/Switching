@@ -20,12 +20,12 @@ public class TouchMgr : MonoBehaviour
     private Rigidbody pullObjectRb;
     private Transform playerTr;
     private float coolTime;
-    private SkillMode mode = SkillMode.switching;
-    private enum SkillMode
+
+    public SkillMode mode = SkillMode.switching;
+    public enum SkillMode
     {
         switching, pull, push, switchBomb
     }
-
     public LineRenderer laser;
     public GameObject wind;
     public GameObject translateBullet;
