@@ -14,10 +14,13 @@ public class MoveDoor : MonoBehaviour
     // 문의 이동이 다 되었는지 체크
     private bool check;
 
+    private AudioSource audio;
+
     void Start()
     {
         ht = new Hashtable();
         z = gameObject.transform.localPosition.x;
+        audio = GetComponent<AudioSource>();
     }
 
     // 문을 여는 메소드
@@ -35,6 +38,7 @@ public class MoveDoor : MonoBehaviour
         ht.Add("time", 0.3f);
         ht.Add("easetype", iTween.EaseType.linear);
         //htOpen.Add("oncomplete", "CheckTriggerUp");
+        audio.Play();
         iTween.MoveBy(gameObject, ht);
     }
 
@@ -47,6 +51,7 @@ public class MoveDoor : MonoBehaviour
         ht.Add("time", 0.3f);
         ht.Add("easetype", iTween.EaseType.linear);
         ht.Add("oncomplete", "CheckTriggerUp");
+        audio.Play();
         iTween.MoveBy(gameObject, ht);
     }
 
