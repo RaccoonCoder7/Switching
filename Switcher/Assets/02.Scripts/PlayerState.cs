@@ -10,11 +10,13 @@ public class PlayerState : MonoBehaviour
 
     public AudioClip[] stateClips;
     public GameObject barrier;
+    private GameMgr mgr;
 
     void Start()
     {
         audio = GetComponent<AudioSource>();
         barrier.SetActive(false);
+        mgr = GameObject.Find("GameMgr").GetComponent<GameMgr>();
     }
 
     public void DisableDmg(float waitTime)
@@ -34,6 +36,6 @@ public class PlayerState : MonoBehaviour
 
     public void PlayerDeath()
     {
-        SceneManager.LoadSceneAsync("Demo");
+        mgr.Continue();
     }
 }

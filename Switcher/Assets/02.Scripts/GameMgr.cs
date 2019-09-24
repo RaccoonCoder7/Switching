@@ -48,6 +48,7 @@ public class GameMgr : MonoBehaviour
         //PlayerPrefs Stage 값 불러와 씬 로드
         StartCoroutine("Load");
     }
+
     public IEnumerator Load()
     {
         screenImage.material = fadeMaterial;
@@ -150,5 +151,4 @@ public class GameMgr : MonoBehaviour
             fadeMaterial.color = color;
         }
     }
-
 }
