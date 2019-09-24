@@ -10,11 +10,13 @@ public class TestMode : MonoBehaviour
     public LineRenderer laser;
     GameMgr gameMgr;
 
+    private AudioSource audio;
+
     // Start is called before the first frame update
     void Start()
     {
         gameMgr = FindObjectOfType<GameMgr>();
-        Debug.Log(gameMgr);
+        audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -30,10 +32,12 @@ public class TestMode : MonoBehaviour
         {
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("START")))
             {
+                audio.Play();
                 gameMgr.StartCoroutine(gameMgr.TestLoad());
             }
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("CONTINUE")))
             {
+                audio.Play();
                 //SceneManager.LoadScene("Demo");
             }
         }

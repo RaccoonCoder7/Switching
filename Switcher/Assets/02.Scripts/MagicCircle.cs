@@ -17,10 +17,19 @@ public class MagicCircle : MonoBehaviour
 
     public MoveDoor door;
 
+    private AudioSource audio;
+    public AudioClip onClip;
+    public AudioClip offClip;
+
+    void Start()
+    {
+        audio = GetComponent<AudioSource>();
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         // 같은 마법진에 닿았는지 확인
-        if(collision.gameObject.tag == gameObject.tag)
+        if (collision.gameObject.tag == gameObject.tag)
         {
             inCount++;
             // 들어온 마나스톤이 하나일경우
@@ -30,6 +39,8 @@ public class MagicCircle : MonoBehaviour
                 manastone = collision.gameObject;
                 collisionEnterFl = true;
                 door.MoveOpen();
+                audio.clip = onClip;
+                audio.Play();
             }
         }
     }
@@ -50,6 +61,8 @@ public class MagicCircle : MonoBehaviour
             {
                 manastone = null;
                 door.MoveClose();
+                audio.clip = offClip;
+                audio.Play();
             }
         }
     }

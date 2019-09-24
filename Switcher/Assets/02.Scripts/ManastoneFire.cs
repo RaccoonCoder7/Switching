@@ -16,9 +16,11 @@ public class ManastoneFire : MonoBehaviour
     // 사용할 대포 마나스톤
     public GameObject cannonMCFix;
     private GameObject cannonMC;
+    private AudioSource audio;
     
     void Start()
     {
+        audio = GetComponent<AudioSource>();
         cannonMC = Instantiate(cannonMCFix, gameObject.transform);
         Destroy(cannonMC);
     }
@@ -36,6 +38,7 @@ public class ManastoneFire : MonoBehaviour
     {
         if (!cannonMC)
         {
+            audio.Play();
             cannonMC = Instantiate(cannonMCFix, gameObject.transform);
             rig = cannonMC.GetComponent<Rigidbody>();
             rig.AddRelativeForce(Vector3.up * 700.0f);

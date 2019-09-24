@@ -18,6 +18,8 @@ public class Chat : MonoBehaviour
     int continueCnt;
     State nowState;
 
+    AudioSource audio;
+
     enum State
     {
         Next,
@@ -63,6 +65,7 @@ public class Chat : MonoBehaviour
     {
         if (nowState.Equals(State.Next))
         {
+            audio.Play();
             //불러온 텍스트중 false가 있으면 아래 실행
             if (textList[textCount].Equals("false"))
             {
