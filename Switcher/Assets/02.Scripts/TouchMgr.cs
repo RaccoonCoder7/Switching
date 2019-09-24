@@ -39,6 +39,7 @@ public class TouchMgr : MonoBehaviour
 
     void Start()
     {
+        DontDestroyOnLoad(gameObject);
         manaStoneLayer = LayerMask.NameToLayer("MANASTONE");
         mirrorLayer = LayerMask.NameToLayer("MIRROR");
         cam = Camera.main;

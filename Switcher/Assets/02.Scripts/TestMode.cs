@@ -11,6 +11,7 @@ public class TestMode : MonoBehaviour
     GameMgr gameMgr;
 
     private AudioSource audio;
+    public AudioClip UISound;
 
     // Start is called before the first frame update
     void Start()
@@ -32,12 +33,12 @@ public class TestMode : MonoBehaviour
         {
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("START")))
             {
-                audio.Play();
+                audio.PlayOneShot(UISound);
                 gameMgr.StartCoroutine(gameMgr.TestLoad());
             }
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("CONTINUE")))
             {
-                audio.Play();
+                audio.PlayOneShot(UISound);
                 //SceneManager.LoadScene("Demo");
             }
         }
