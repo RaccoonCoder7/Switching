@@ -14,6 +14,7 @@ public class TestMode : MonoBehaviour
     void Start()
     {
         gameMgr = FindObjectOfType<GameMgr>();
+        Debug.Log(gameMgr);
     }
 
     // Update is called once per frame

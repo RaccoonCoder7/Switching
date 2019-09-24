@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 547909962268028026}
   - component: {fileID: 7017302475378979950}
   - component: {fileID: -6645615152448374517}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: TranslateBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}

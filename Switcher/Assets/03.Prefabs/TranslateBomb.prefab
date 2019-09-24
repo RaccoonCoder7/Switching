@@ -4833,7 +4833,7 @@ GameObject:
   - component: {fileID: 324789813900851300}
   - component: {fileID: 5871887549109641029}
   - component: {fileID: 1019661129908872029}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: TranslateBomb
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7686411227327230787}
   - component: {fileID: 7686411227327230786}
   - component: {fileID: 6005158752106871744}
-  - component: {fileID: 1096889276}
+  - component: {fileID: 637583494}
   m_Layer: 9
   m_Name: magicCircle_blue
   m_TagString: BLUE
@@ -92,7 +92,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 8.661475, y: 2.2204463e-16, z: 8.637671}
   m_Center: {x: 0.08777355, y: 0, z: 0.07361424}
---- !u!114 &1096889276
+--- !u!114 &637583494
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,4 +104,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5152690ab8b463146a502dc4fdf3c580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manaCannon: {fileID: 0}
+  manastone: {fileID: 0}
+  collisionEnterFl: 0
+  door: {fileID: 0}

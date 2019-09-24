@@ -99,7 +99,7 @@ public class GameMgr : MonoBehaviour
             yield return new WaitForSeconds(0.02f);
         }
         screen.SetActive(false);
-        logo.SetActive(false);
+        //logo.SetActive(false);
         Timer.canvasCheck = false;
     }
     public IEnumerator FadeInOut()

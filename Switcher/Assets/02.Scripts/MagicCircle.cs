@@ -15,6 +15,8 @@ public class MagicCircle : MonoBehaviour
     [HideInInspector]
     public bool collisionEnterFl = false;
 
+    public MoveDoor door;
+
     private void OnCollisionEnter(Collision collision)
     {
         // 같은 마법진에 닿았는지 확인
@@ -27,6 +29,7 @@ public class MagicCircle : MonoBehaviour
                 // 닿은 마나스톤을 저장
                 manastone = collision.gameObject;
                 collisionEnterFl = true;
+                door.MoveOpen();
             }
         }
     }
@@ -46,6 +49,7 @@ public class MagicCircle : MonoBehaviour
             if (inCount == 0)
             {
                 manastone = null;
+                door.MoveClose();
             }
         }
     }

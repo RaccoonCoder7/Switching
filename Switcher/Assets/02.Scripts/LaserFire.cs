@@ -21,6 +21,9 @@ public class LaserFire : MonoBehaviour
     private BossState bossState;
     private Animator bossAnim;
 
+    // 플레이어 상태
+    private PlayerState playerSt;
+
     void Start()
     {
         // 위치 초기화 및 생성
@@ -33,6 +36,8 @@ public class LaserFire : MonoBehaviour
             bossState = GameObject.Find("Mage").GetComponent<BossState>();
             bossAnim = GameObject.Find("boss").GetComponent<Animator>();
         }
+
+        playerSt = GameObject.Find("Player").GetComponent<PlayerState>();
     }
 
     void Update()
@@ -96,9 +101,10 @@ public class LaserFire : MonoBehaviour
         line.SetPosition(1, hit.point);
 
         // 플레이어의 경우 플레이어 사망
-        if (hit.collider.gameObject.layer.Equals(LayerMask.NameToLayer("Player")))
+        if (hit.collider.gameObject.layer.Equals(LayerMask.NameToLayer("PLAYER")))
         {
             // 플레이어 사망
+            playerSt.PlayerDeath();
         }
         else if (hit.collider.gameObject.layer.Equals(LayerMask.NameToLayer("BOSS")))
         {

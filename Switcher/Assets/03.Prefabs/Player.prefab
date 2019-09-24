@@ -7790,7 +7790,8 @@ GameObject:
   - component: {fileID: 3162601953509377409}
   - component: {fileID: 3162601952082178804}
   - component: {fileID: 3162601952082178803}
-  m_Layer: 0
+  - component: {fileID: 484252388}
+  m_Layer: 18
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7983,6 +7984,34 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!136 &484252388
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3162601953509377438}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.3569597
+  m_Height: 1.8274775
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.0487258, z: 0.1403867}
+--- !u!136 &484252390
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3163571883212569846}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.35117978
+  m_Height: 0.9667928
+  m_Direction: 2
+  m_Center: {x: 0.004157871, y: 6.628338e-16, z: 0.54664266}
 --- !u!1 &6047744249842925198
 GameObject:
   m_ObjectHideFlags: 0
@@ -8073,7 +8102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6047744250249843908}
   - component: {fileID: 6047744250249843909}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: laser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17966,6 +17995,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4065911621578666, guid: a60781ace6ae49347be6710ccaf6e9dd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 198134905934522710, guid: a60781ace6ae49347be6710ccaf6e9dd,
         type: 3}
       propertyPath: InitialModule.startLifetime.minMaxState
@@ -17974,10 +18007,6 @@ PrefabInstance:
     - target: {fileID: 198134905934522710, guid: a60781ace6ae49347be6710ccaf6e9dd,
         type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4065911621578666, guid: a60781ace6ae49347be6710ccaf6e9dd, type: 3}
-      propertyPath: m_LocalScale.y
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 198881570561303086, guid: a60781ace6ae49347be6710ccaf6e9dd,

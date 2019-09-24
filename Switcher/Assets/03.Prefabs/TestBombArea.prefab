@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1543311233120839675}
   - component: {fileID: 3820501815305094109}
   - component: {fileID: 9141705574333979287}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: TestBombArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}

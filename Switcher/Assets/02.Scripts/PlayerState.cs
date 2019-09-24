@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerState : MonoBehaviour
 {
@@ -29,5 +30,10 @@ public class PlayerState : MonoBehaviour
         yield return new WaitForSeconds(waitTime + 1f);
         barrier.SetActive(false);
         canDmg = true;
+    }
+
+    public void PlayerDeath()
+    {
+        SceneManager.LoadSceneAsync("Demo");
     }
 }
