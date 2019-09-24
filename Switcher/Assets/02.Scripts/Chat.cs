@@ -30,6 +30,7 @@ public class Chat : MonoBehaviour
         helperTextList = "대화를 다시 보려면 트리거버튼, 스테이지를 다시 시작하려면 다시하기버튼을 누르세요";
         gameMgr = FindObjectOfType<GameMgr>();
         continueCnt = 0;
+        audio = GetComponent<AudioSource>();
         TextSet("Stage1");
     }
 
