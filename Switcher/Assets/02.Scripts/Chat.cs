@@ -17,6 +17,7 @@ public class Chat : MonoBehaviour
     int textCount;
     int continueCnt;
     State nowState;
+    public bool helpCheck;
 
     AudioSource audio;
 
@@ -41,10 +42,10 @@ public class Chat : MonoBehaviour
         {
             NextText();
         }
-        if (OVRInput.GetUp(OVRInput.Button.SecondaryHandTrigger))
-        {
-            CallHelper();
-        }
+        //if (OVRInput.GetUp(OVRInput.Button.SecondaryHandTrigger))
+        //{
+        //    CallHelper();
+        //}
     }
 
     public void TextSet(string str)
@@ -94,6 +95,14 @@ public class Chat : MonoBehaviour
     {
         StartCoroutine(PlayLine(helperTextList));
         textCount = continueCnt;
+        helpCheck = true;
+    }
+    public void FadeHelper()
+    {
+        textCount = continueCnt;
+        gameObject.SetActive(false);
+        helpCheck = false;
+
     }
 
     //다음 대화를 진행할 때 부르는 메소드

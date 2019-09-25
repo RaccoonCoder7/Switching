@@ -13,8 +13,6 @@ public class Timer : MonoBehaviour
     public Material fadeMaterial1;
     public Material fadeMaterial2;
     public static bool canvasCheck;
-    
-    public GameObject stick;
 
     // Start is called before the first frame update
     void Start()
@@ -50,7 +48,7 @@ public class Timer : MonoBehaviour
 
 
         }
-        else if(text.text.Equals("00:50"))
+        else if(text.text.Equals("00:30"))
         {
             text.color = Color.red;
             gameMgr.screenImage.material = fadeMaterial2;

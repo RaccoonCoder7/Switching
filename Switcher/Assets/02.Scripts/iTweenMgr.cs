@@ -15,7 +15,7 @@ public class iTweenMgr : MonoBehaviour
 
     private void Start()
     {
-        //chat = FindObjectOfType<Chat>();
+        chat = FindObjectOfType<Chat>();
     }
 
 
@@ -44,8 +44,16 @@ public class iTweenMgr : MonoBehaviour
         //조력자 소환
         if (OVRInput.GetUp(OVRInput.Button.SecondaryHandTrigger))
         {
-            chatCanvas.SetActive(true);
-            chat.CallHelper();
+            if (!chat.helpCheck)
+            {
+                chatCanvas.SetActive(true);
+                chat.CallHelper();
+            }
+            else
+            {
+                chat.FadeHelper();
+            }
+            
         }
 
     }
