@@ -9,7 +9,10 @@ public class StageCtrl : MonoBehaviour
     private GameMgr gameMgr;
     private AudioSource audio;
     private Transform playerTr;
+    private Timer timer;
+    // private PlayerState ps;
 
+    public ImageCtrl imgCtrl;
     public GameObject[] Maps;
     public AudioClip[] BGMClips;
 
@@ -20,6 +23,8 @@ public class StageCtrl : MonoBehaviour
         gameMgr = GameObject.Find("GameMgr").GetComponent<GameMgr>();
         audio = GetComponent<AudioSource>();
         playerTr = GameObject.Find("Player").transform;
+        timer = imgCtrl.gameObject.GetComponent<Timer>();
+        // ps = playerTr.GetComponent<PlayerState>();
     }
 
     public void CreateStage(int stageNum)
@@ -29,12 +34,28 @@ public class StageCtrl : MonoBehaviour
         CreateMap();
         stage.skillSet = GetSkillSet();
         audio.clip = GetBGM();
+        StartStage();
+    }
+
+    public void ResetStage()
+    {
+        // 오브젝트위치
+        GameObject temp = stage.map;
+        Destroy(stage.map);
+        stage.map = Instantiate(temp);
+        
+        // 플레이어위치
+        playerTr = stage.playerTr;
+
+        // 스테이지시간
+        timer.ResetTime(stage.stageTime);
     }
 
     private void StartStage()
     {
         audio.Play();
-        // TODO: 스킬셋변경
+        imgCtrl.SetSkills(stage.skillSet);
+        timer.ResetTime(stage.stageTime);
         playerTr = stage.playerTr;
         StartCoroutine(gameMgr.FadeOut());
     }
@@ -49,6 +70,7 @@ public class StageCtrl : MonoBehaviour
         stage.map = Instantiate(Maps[stage.stageNum]);
         sd = stage.map.GetComponent<StageData>();
         stage.playerTr = sd.playerTr;
+        stage.stageTime = sd.stageTime;
     }
 
     private AudioClip GetBGM()

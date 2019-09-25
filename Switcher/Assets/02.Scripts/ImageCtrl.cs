@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ImageCtrl : MonoBehaviour
 {
-    private Image [] skillImages = new Image[4];
+    private Image[] skillImages = new Image[4];
     private int prevBtn = 0;
 
     public Image[] buttonImages;
@@ -23,9 +23,17 @@ public class ImageCtrl : MonoBehaviour
         ChangeSprites(0);
     }
 
+    public void SetSkills(int skillSet)
+    {
+        for(int i = skillSet; i > 0; i--){
+            skillImages[i].enabled = false;
+            buttonImages[i].sprite = lockSprite;
+        }
+    }
+
     public void ChangeSprites(TouchMgr.SkillMode modeNum)
     {
-        int index = (int) modeNum;
+        int index = (int)modeNum;
         buttonImages[prevBtn].sprite = inactivateSprite;
         buttonImages[index].sprite = panelSprites[index];
         prevBtn = index;

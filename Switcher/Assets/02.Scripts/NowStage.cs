@@ -9,4 +9,5 @@ public class NowStage
     public Transform playerTr;
     public AudioClip BGM;
     public int skillSet;
+    public int stageTime;
 }

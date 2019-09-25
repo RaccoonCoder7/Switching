@@ -121,7 +121,7 @@ public class OvrAvatar : MonoBehaviour
 
     // Material manager
     private OvrAvatarMaterialManager materialManager;
-    private bool waitingForCombinedMesh = false;
+    public bool waitingForCombinedMesh = false;
 
     // Global expressive system initialization
     private static bool doneExpressiveGlobalInit = false;

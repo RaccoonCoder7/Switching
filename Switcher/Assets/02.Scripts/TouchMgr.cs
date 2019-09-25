@@ -68,34 +68,6 @@ public class TouchMgr : MonoBehaviour
 
     void Update()
     {
-        // if (OVRInput.GetDown(OVRInput.Button.One))
-        // {
-        //     switch (mode)
-        //     {
-        //         case SkillMode.switching:
-        //             mode = SkillMode.pull;
-        //             ring[0].SetActive(true);
-        //             break;
-        //         case SkillMode.pull:
-        //             mode = SkillMode.push;
-        //             laser.enabled = false;
-        //             ring[0].SetActive(false);
-        //             ring[1].SetActive(true);
-        //             break;
-        //         case SkillMode.push:
-        //             mode = SkillMode.switchBomb;
-        //             wind.SetActive(false);
-        //             ring[1].SetActive(false);
-        //             pointer.SetActive(false);
-        //             break;
-        //         case SkillMode.switchBomb:
-        //             mode = SkillMode.switching;
-        //             break;
-        //     }
-        //     nullifyPullObj();
-        //     return;
-        // }
-
         if (!canFire) return;
 
         switch (mode)

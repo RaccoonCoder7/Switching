@@ -7,20 +7,28 @@ public class TestMode : MonoBehaviour
 {
     private Ray ray;
     private RaycastHit hit;
-    public LineRenderer laser;
-    GameMgr gameMgr;
-
+    private GameMgr gameMgr;
     private AudioSource audio;
+    private TestMode testMode;
+    private TouchMgr touchMgr;
+    private PlayerState playerState;
+    private StageCtrl sc;
+
+    public LineRenderer laser;
     public AudioClip UISound;
 
-    // Start is called before the first frame update
     void Start()
     {
         gameMgr = FindObjectOfType<GameMgr>();
         audio = GetComponent<AudioSource>();
+        touchMgr = GetComponent<TouchMgr>();
+        touchMgr.enabled = false;
+        playerState = GetComponent<PlayerState>();
+        playerState.enabled = false;
+        sc = FindObjectOfType<StageCtrl>();
+        testMode = this;
     }
 
-    // Update is called once per frame
     void Update()
     {
         ray = new Ray(laser.transform.position, laser.transform.forward);
@@ -33,14 +41,23 @@ public class TestMode : MonoBehaviour
         {
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("START")))
             {
-                audio.PlayOneShot(UISound);
-                gameMgr.NewGame();
+                StartGame(1);
             }
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("CONTINUE")))
             {
-                audio.PlayOneShot(UISound);
-                //SceneManager.LoadScene("Demo");
+                StartGame(gameMgr.GetPrevStageNum());
             }
         }
+    }
+
+    private void StartGame(int stageNum)
+    {
+        audio.PlayOneShot(UISound);
+        touchMgr.enabled = true;
+        playerState.enabled = true;
+        testMode.enabled = false;
+        sc.CreateStage(stageNum);
+        gameMgr.ChangeScreanImage();
+        gameMgr.StartCoroutine(gameMgr.FadeInOut());
     }
 }

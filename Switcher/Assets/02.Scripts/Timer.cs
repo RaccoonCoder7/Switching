@@ -7,60 +7,59 @@ public class Timer : MonoBehaviour
 {
     GameMgr gameMgr;
     public Text text;
-    public float setTime;
+    int leftTime = 0;
     int m;
     int s;
     public Material fadeMaterial1;
     public Material fadeMaterial2;
     public static bool canvasCheck;
+    public GameObject stick;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         gameMgr = FindObjectOfType<GameMgr>();
-        setTime = 70f;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ResetTime(int time)
     {
-        SetTime();
+        StopCoroutine("SetTime");
+        leftTime = time;
+        StartCoroutine("SetTime");
     }
-    void SetTime()
+
+    private IEnumerator SetTime()
     {
-        if(setTime > 0)
+        while (leftTime > 0)
         {
-            setTime -= Time.deltaTime;
-            m = Mathf.FloorToInt(setTime / 60);
-            s = Mathf.FloorToInt(setTime % 60);
-            
-        }
-        if (text.text.Equals("01:00"))
-        {
-            gameMgr.screenImage.material = fadeMaterial1;
-            gameMgr.fadeMaterial = fadeMaterial1;
-            Debug.Log(gameMgr.fadeMaterial);
-            if (canvasCheck==false)
-            {
-                gameMgr.StartCoroutine(gameMgr.FadeInOut());
-            }
-            canvasCheck = true;
+            int m = leftTime / 60;
+            int s = leftTime % 60;
+            text.text = string.Format("{0:00}:{1:00}", m, s);
 
-
-        }
-        else if(text.text.Equals("00:30"))
-        {
-            text.color = Color.red;
-            gameMgr.screenImage.material = fadeMaterial2;
-            gameMgr.fadeMaterial = fadeMaterial2;
-            if (canvasCheck == false)
+            if (text.text.Equals("01:00"))
             {
-                gameMgr.StartCoroutine(gameMgr.FadeInOut());
+                gameMgr.screenImage.material = fadeMaterial1;
+                gameMgr.fadeMaterial = fadeMaterial1;
+                if (canvasCheck == false)
+                {
+                    gameMgr.StartCoroutine(gameMgr.FadeInOut());
+                }
+                canvasCheck = true;
             }
-            canvasCheck = true;
+            else if (text.text.Equals("00:30"))
+            {
+                text.color = Color.red;
+                gameMgr.screenImage.material = fadeMaterial2;
+                gameMgr.fadeMaterial = fadeMaterial2;
+                if (canvasCheck == false)
+                {
+                    gameMgr.StartCoroutine(gameMgr.FadeInOut());
+                }
+                canvasCheck = true;
+            }
+
+            yield return new WaitForSeconds(1.0f);
+            leftTime--;
         }
-        text.text = string.Format("{0:00}:{1:00}",m,s);
     }
-    
-
 }

@@ -7,18 +7,16 @@ public class PlayerState : MonoBehaviour
 {
     private bool canDmg = true;
     private AudioSource audio;
+    private StageCtrl sc;
 
     public AudioClip[] stateClips;
     public GameObject barrier;
-    private GameMgr mgr;
-
-    private bool isDeath = false;
 
     void Start()
     {
         audio = GetComponent<AudioSource>();
         barrier.SetActive(false);
-        mgr = GameObject.Find("GameMgr").GetComponent<GameMgr>();
+        sc = FindObjectOfType<StageCtrl>();
     }
 
     public void DisableDmg(float waitTime)
@@ -38,10 +36,8 @@ public class PlayerState : MonoBehaviour
 
     public void PlayerDeath()
     {
-        if (!isDeath)
-        {
-            StartCoroutine(mgr.Load());
-            isDeath = true;
-        }
+        audio.PlayOneShot(stateClips[1]);
+        sc.ResetStage();
+        // mgr.Continue();
     }
 }

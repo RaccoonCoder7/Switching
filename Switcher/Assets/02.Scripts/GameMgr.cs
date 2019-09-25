@@ -24,6 +24,7 @@ public class GameMgr : MonoBehaviour
         screen = GameObject.Find("FadeCanvas").transform.Find("FadePanel").gameObject;
         screenImage = screen.GetComponent<Image>();
         stage = PlayerPrefs.GetInt("Stage");
+        Debug.Log(stage);
 
         if (stage.Equals(0))
         {
@@ -38,29 +39,12 @@ public class GameMgr : MonoBehaviour
         //PlayerPrefs Stage에 Stage1저장
         PlayerPrefs.SetInt("Stage", 1);
         stage = 1;
-        StartCoroutine("Load");
     }
 
     //이어하기, 다시하기
-    public void Continue()
+    public int GetPrevStageNum()
     {
-        //PlayerPrefs Stage 값 불러와 씬 로드
-        StartCoroutine("Load");
-    }
-
-    public IEnumerator Load()
-    {
-        screenImage.material = fadeMaterial;
-        fadeMaterial = blackMaterial;
-        async = SceneManager.LoadSceneAsync("Stage" + stage); // 열고 싶은 씬
-        async.allowSceneActivation = false;
-        while (!async.isDone)
-        {
-            //yield return true;
-            yield return StartCoroutine("FadeIn");
-                async.allowSceneActivation = true;
-        }
-        
+        return stage;
     }
 
     //저장
@@ -117,21 +101,10 @@ public class GameMgr : MonoBehaviour
         StartCoroutine("FadeOut");
     }
 
-    public IEnumerator TestLoad()
+    public void ChangeScreanImage()
     {
         screenImage.material = fadeMaterial;
         fadeMaterial = blackMaterial;
-        async = SceneManager.LoadSceneAsync("Stage1"); // 열고 싶은 씬
-        async.allowSceneActivation = false;
-        while (!async.isDone)
-        {
-            //yield return true;
-            yield return StartCoroutine("FadeIn");
-            async.allowSceneActivation = true;
-            Color color = fadeMaterial.color;
-            color.a = 0f;
-            fadeMaterial.color = color;
-        }
     }
 
     public IEnumerator TestClear()
