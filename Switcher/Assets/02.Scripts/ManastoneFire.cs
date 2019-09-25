@@ -14,15 +14,15 @@ public class ManastoneFire : MonoBehaviour
     public float DeathTime = 8.0f;
 
     // 사용할 대포 마나스톤
-    public GameObject cannonMCFix;
-    private GameObject cannonMC;
+    public GameObject cannonMSFix;
+    private GameObject cannonMS;
     private AudioSource audio;
     
     void Start()
     {
-        audio = GetComponent<AudioSource>();
-        cannonMC = Instantiate(cannonMCFix, gameObject.transform);
-        Destroy(cannonMC);
+        //audio = GetComponent<AudioSource>();
+        cannonMS = Instantiate(cannonMSFix, gameObject.transform);
+        Destroy(cannonMS);
     }
 
     private void Update()
@@ -36,11 +36,11 @@ public class ManastoneFire : MonoBehaviour
     // 마나스톤 활성화 및 발사
     public void Fire()
     {
-        if (!cannonMC)
+        if (!cannonMS)
         {
-            audio.Play();
-            cannonMC = Instantiate(cannonMCFix, gameObject.transform);
-            rig = cannonMC.GetComponent<Rigidbody>();
+            //audio.Play();
+            cannonMS = Instantiate(cannonMSFix, gameObject.transform);
+            rig = cannonMS.GetComponent<Rigidbody>();
             rig.AddRelativeForce(Vector3.up * 700.0f);
             StartCoroutine("ManastoneDestoryDelay");
         }
@@ -50,10 +50,10 @@ public class ManastoneFire : MonoBehaviour
     public IEnumerator ManastoneDestoryDelay()
     {
         yield return new WaitForSeconds(liveTime);
-        if (cannonMC)
+        if (cannonMS)
         {
-            Destroy(cannonMC);
-            cannonMC = null;
+            Destroy(cannonMS);
+            cannonMS = null;
         }
     }
 

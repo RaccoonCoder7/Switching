@@ -47,6 +47,11 @@ public class MagicCircle : MonoBehaviour
         collisionEnterFl = false;
     }
 
+    private void Update()
+    {
+        if (!manastone) inCount = 0;
+    }
+
     private void OnCollisionExit(Collision collision)
     {
         // 마나스톤이 마법진에서 나갈때
