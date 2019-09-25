@@ -34,7 +34,7 @@ public class TestMode : MonoBehaviour
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("START")))
             {
                 audio.PlayOneShot(UISound);
-                gameMgr.StartCoroutine(gameMgr.TestLoad());
+                gameMgr.NewGame();
             }
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("CONTINUE")))
             {

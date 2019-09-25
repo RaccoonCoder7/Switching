@@ -5,8 +5,8 @@ using UnityEngine;
 public class MoveDoor : MonoBehaviour
 {
     private Hashtable ht;
-
     public float moveDistance = 4.15f;
+    private AudioSource audio;
 
     // 해당 오브젝트의 초기 position z 값
     private float z;
@@ -14,13 +14,55 @@ public class MoveDoor : MonoBehaviour
     // 문의 이동이 다 되었는지 체크
     private bool check;
 
-    private AudioSource audio;
+    public MagicCircle[] mc;
+
+    private bool checkManstone = true;
 
     void Start()
     {
         ht = new Hashtable();
         z = gameObject.transform.localPosition.x;
         audio = GetComponent<AudioSource>();
+        if (mc.Length != 0)
+        {
+            StartCoroutine("MoveOpenCheck");
+        }
+    }
+
+    // 문이 열릴 조건을 갖췄는지 체크
+    IEnumerator MoveOpenCheck()
+    {
+        while (!checkManstone)
+        {
+            for (int i = 0; i < mc.Length; i++)
+            {
+                if (i == 0) checkManstone = true;
+
+                checkManstone = checkManstone && mc[i].manastone;
+            }
+            yield return null;
+        }
+
+        MoveOpen();
+        StartCoroutine("MoveCloseCheck");
+    }
+
+    // 문이 닫힐 조건을 갖췄는지 체크
+    IEnumerator MoveCloseCheck()
+    {
+        while (checkManstone)
+        {
+            for (int i = 0; i < mc.Length; i++)
+            {
+                if (i == 0) checkManstone = true;
+
+                checkManstone = checkManstone && mc[i].manastone;
+            }
+            yield return null;
+        }
+
+        MoveClose();
+        StartCoroutine("MoveOpenCheck");
     }
 
     // 문을 여는 메소드

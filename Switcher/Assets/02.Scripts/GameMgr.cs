@@ -122,7 +122,7 @@ public class GameMgr : MonoBehaviour
     {
         screenImage.material = fadeMaterial;
         fadeMaterial = blackMaterial;
-        async = SceneManager.LoadSceneAsync("Demo"); // 열고 싶은 씬
+        async = SceneManager.LoadSceneAsync("Stage1"); // 열고 싶은 씬
         async.allowSceneActivation = false;
         while (!async.isDone)
         {

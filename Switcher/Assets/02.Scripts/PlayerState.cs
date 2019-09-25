@@ -12,6 +12,8 @@ public class PlayerState : MonoBehaviour
     public GameObject barrier;
     private GameMgr mgr;
 
+    private bool isDeath = false;
+
     void Start()
     {
         audio = GetComponent<AudioSource>();
@@ -36,6 +38,10 @@ public class PlayerState : MonoBehaviour
 
     public void PlayerDeath()
     {
-        mgr.Continue();
+        if (!isDeath)
+        {
+            StartCoroutine(mgr.Load());
+            isDeath = true;
+        }
     }
 }

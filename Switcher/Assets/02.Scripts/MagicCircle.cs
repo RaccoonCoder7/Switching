@@ -15,8 +15,6 @@ public class MagicCircle : MonoBehaviour
     [HideInInspector]
     public bool collisionEnterFl = false;
 
-    public MoveDoor door;
-
     private AudioSource audio;
     public AudioClip onClip;
     public AudioClip offClip;
@@ -38,7 +36,6 @@ public class MagicCircle : MonoBehaviour
                 // 닿은 마나스톤을 저장
                 manastone = collision.gameObject;
                 collisionEnterFl = true;
-                door.MoveOpen();
                 audio.clip = onClip;
                 audio.Play();
             }
@@ -60,7 +57,6 @@ public class MagicCircle : MonoBehaviour
             if (inCount == 0)
             {
                 manastone = null;
-                door.MoveClose();
                 audio.clip = offClip;
                 audio.Play();
             }
