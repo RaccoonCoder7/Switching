@@ -29,22 +29,30 @@ public class StageCtrl : MonoBehaviour
         // ps = playerTr.GetComponent<PlayerState>();
     }
 
-    public IEnumerator CreateStageAsync(int stageNum)
+    public IEnumerator CreateStageAsync(int stageNum, bool isFirst)
     {
         stage.stageNum = stageNum;
+        Debug.Log("stageNum: " + stageNum);
         yield return StartCoroutine(gameMgr.FadeIn());
+        Debug.Log("1");
         // ShowLoadingScene();
-        async = SceneManager.LoadSceneAsync("LoadStage");
-        async.allowSceneActivation = true;
-        while (!async.isDone)
+        if (isFirst)
         {
-            yield return null;
+            async = SceneManager.LoadSceneAsync("LoadStage");
+            async.allowSceneActivation = true;
+            while (!async.isDone)
+            {
+                yield return null;
+            }
         }
         yield return new WaitForSeconds(2.0f);
-        CreateMap();
+        Debug.Log("2");
+        CreateMap(isFirst);
         stage.skillSet = GetSkillSet();
         audio.clip = GetBGM();
+        Debug.Log("3");
         StartStage();
+        Debug.Log("4");
     }
 
     public void ResetStage()
@@ -61,6 +69,16 @@ public class StageCtrl : MonoBehaviour
         timer.ResetTime(stage.stageTime);
     }
 
+    public IEnumerator ClearStage()
+    {
+        gameMgr.SaveClearData();
+        gameMgr.ChangeScreanImage();
+        // yield return StartCoroutine(gameMgr.FadeIn());
+        // 현재맵없애기
+        yield return StartCoroutine(CreateStageAsync(gameMgr.GetPrevStageNum(), false));
+        yield return StartCoroutine(gameMgr.FadeOut());
+    }
+
     private void StartStage()
     {
         audio.Play();
@@ -70,9 +88,13 @@ public class StageCtrl : MonoBehaviour
         playerTr.rotation = stage.playerTr.rotation;
     }
 
-    private void CreateMap()
+    private void CreateMap(bool isFirst)
     {
-        stage.map = Instantiate(Maps[stage.stageNum-1]);
+        if(!isFirst){
+            Debug.Log("destroyMap");
+            Destroy(stage.map);
+        }
+        stage.map = Instantiate(Maps[stage.stageNum - 1]);
         sd = stage.map.GetComponent<StageData>();
         stage.playerTr = sd.playerTr;
         stage.stageTime = sd.stageTime;

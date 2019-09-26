@@ -13,7 +13,7 @@ public class iTweenMgr : MonoBehaviour
     public GameObject chatCanvas;
     Chat chat;
 
-    private void Start()
+    private void Awake()
     {
         chat = FindObjectOfType<Chat>();
     }

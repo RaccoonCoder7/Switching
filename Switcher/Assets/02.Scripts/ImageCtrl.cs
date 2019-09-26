@@ -25,11 +25,33 @@ public class ImageCtrl : MonoBehaviour
 
     public void SetSkills(int skillSet)
     {
-        for(int i = 4 - skillSet; i > 0; i--){
-            skillImages[i].enabled = false;
-            buttonImages[i].sprite = lockSprite;
-            buttonImages[i].GetComponent<Collider>().enabled = false;
+        for (int i = 0; i < 4 - skillSet; i++)
+        {
+            int index = SwapNum(3 - i);
+            skillImages[index].enabled = false;
+            buttonImages[index].sprite = lockSprite;
+            buttonImages[index].GetComponent<Collider>().enabled = false;
         }
+        for (int i = 0; i < skillSet; i++)
+        {
+            int index = SwapNum(i);
+            skillImages[index].enabled = true;
+            buttonImages[index].sprite = panelSprites[i];
+            buttonImages[index].GetComponent<Collider>().enabled = true;
+        }
+    }
+
+    private int SwapNum(int num)
+    {
+        switch(num){
+            case 1:
+                return 3;
+            case 2:
+                return 1;
+            case 3:
+                return 2;
+        }
+        return 0;
     }
 
     public void ChangeSprites(TouchMgr.SkillMode modeNum)

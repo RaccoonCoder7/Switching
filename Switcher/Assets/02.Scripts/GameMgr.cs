@@ -40,20 +40,19 @@ public class GameMgr : MonoBehaviour
         stage = 1;
     }
 
-    //이어하기, 다시하기
     public int GetPrevStageNum()
     {
         return stage;
     }
 
     //저장
-    public void Clear()
+    public void SaveClearData()
     {
         //현재 씬 이름 저장
         PlayerPrefs.SetInt("Stage", PlayerPrefs.GetInt("Stage")+1);
         stage = PlayerPrefs.GetInt("Stage");
-        StartCoroutine("Load");
     }
+
     public IEnumerator FadeIn()
     {
         screen.SetActive(true);
@@ -97,7 +96,8 @@ public class GameMgr : MonoBehaviour
 
     public void ChangeScreanImage()
     {
-        screenImage.material = fadeMaterial;
+        Debug.Log("changed");
+        screenImage.material = blackMaterial;
         fadeMaterial = blackMaterial;
     }
 

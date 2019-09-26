@@ -62,18 +62,21 @@ public class TestMode : MonoBehaviour
         }
 
         // TODO: 테스트용 코드 지우기
-        // if (Input.GetMouseButtonUp(0))
-        // {
-        //     StartCoroutine(StartGame(1));
-        // }
+        if (Input.GetMouseButtonUp(0))
+        {
+            StartCoroutine(StartGame(1));
+        }
     }
 
     private IEnumerator StartGame(int stageNum)
     {
+        if (stageNum.Equals(1))
+        {
+            gameMgr.NewGame();
+        }
         audio.PlayOneShot(UISound);
         gameMgr.ChangeScreanImage();
-        // sc.CreateStageAsync(stageNum); // 이걸 기달
-        yield return StartCoroutine(sc.CreateStageAsync(stageNum));
+        yield return StartCoroutine(sc.CreateStageAsync(stageNum, true));
         touchMgr.enabled = true;
         playerState.enabled = true;
         chatCanvas.SetActive(true);

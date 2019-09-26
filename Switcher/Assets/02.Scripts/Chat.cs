@@ -10,13 +10,14 @@ public class Chat : MonoBehaviour
     GameMgr gameMgr;
     TextAsset textData;
     StringReader sr;
-    public Text text;
     List<string> textList;
     string textFile;
     string helperTextList;
     int textCount;
     int continueCnt;
     State nowState;
+    private StageCtrl sc;
+    public Text text;
     public bool helpCheck;
 
     AudioSource audio;
@@ -32,6 +33,7 @@ public class Chat : MonoBehaviour
         gameMgr = FindObjectOfType<GameMgr>();
         continueCnt = 0;
         audio = GetComponent<AudioSource>();
+        sc = FindObjectOfType<StageCtrl>();
         TextSet("Stage1");
     }
 
@@ -79,7 +81,8 @@ public class Chat : MonoBehaviour
             //불러온 텍스트중 clear가 있으면 아래 실행
             else if (textList[textCount].Equals("clear"))
             {
-                gameMgr.Clear();
+                // gameMgr.Clear();
+                sc.StartCoroutine(sc.ClearStage());
             }
             else
             {
