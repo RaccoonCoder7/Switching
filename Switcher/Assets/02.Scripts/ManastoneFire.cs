@@ -13,6 +13,9 @@ public class ManastoneFire : MonoBehaviour
     public float liveTime = 7.0f;
     public float DeathTime = 8.0f;
 
+    // 발사속도
+    public float speed = 700.0f;
+
     // 사용할 대포 마나스톤
     public GameObject cannonMSFix;
     private GameObject cannonMS;
@@ -20,7 +23,7 @@ public class ManastoneFire : MonoBehaviour
     
     void Start()
     {
-        audio = GetComponent<AudioSource>();
+        //audio = GetComponent<AudioSource>();
         cannonMS = Instantiate(cannonMSFix, gameObject.transform);
         Destroy(cannonMS);
     }
@@ -38,10 +41,10 @@ public class ManastoneFire : MonoBehaviour
     {
         if (!cannonMS)
         {
-            audio.Play();
+            //audio.Play();
             cannonMS = Instantiate(cannonMSFix, gameObject.transform);
             rig = cannonMS.GetComponent<Rigidbody>();
-            rig.AddRelativeForce(Vector3.up * 700.0f);
+            rig.AddRelativeForce(Vector3.up * speed);
             StartCoroutine("ManastoneDestoryDelay");
         }
     }

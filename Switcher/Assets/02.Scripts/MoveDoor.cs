@@ -11,17 +11,28 @@ public class MoveDoor : MonoBehaviour
     // 해당 오브젝트의 초기 position z 값
     private float z;
 
+    // 오브젝트 움직일 방향
+    public string xyz;
+
     // 문의 이동이 다 되었는지 체크
     private bool check;
 
     public MagicCircle[] mc;
 
-    private bool checkManstone = true;
+    private bool checkManstone = false;
 
     void Start()
     {
         ht = new Hashtable();
-        z = gameObject.transform.localPosition.x;
+        
+        if (xyz.Equals("y"))
+        {
+            z = gameObject.transform.localPosition.y;
+        }
+        else if (xyz.Equals("x") || xyz.Equals("z"))
+        {
+            z = gameObject.transform.localPosition.x;
+        }
         audio = GetComponent<AudioSource>();
         if (mc.Length != 0)
         {
@@ -71,16 +82,23 @@ public class MoveDoor : MonoBehaviour
         ht = new Hashtable();
         if (check)
         {
-            ht.Add("z", moveDistance-Mathf.Abs(z - transform.localPosition.x));
+            if (xyz.Equals("y"))
+            {
+                ht.Add(xyz, moveDistance - Mathf.Abs(z - transform.localPosition.y));
+            }
+            else if (xyz.Equals("x") || xyz.Equals("z"))
+            {
+                ht.Add(xyz, moveDistance - Mathf.Abs(z - transform.localPosition.x));
+            }
         }
         else
         {
-            ht.Add("z", moveDistance);
+            ht.Add(xyz, moveDistance);
         }
         ht.Add("time", 0.3f);
         ht.Add("easetype", iTween.EaseType.linear);
         //htOpen.Add("oncomplete", "CheckTriggerUp");
-        audio.Play();
+        //audio.Play();
         iTween.MoveBy(gameObject, ht);
     }
 
@@ -89,11 +107,18 @@ public class MoveDoor : MonoBehaviour
     {
         ht = new Hashtable();
         check = true;
-        ht.Add("z", -Mathf.Abs(z -transform.localPosition.x));
+        if (xyz.Equals("y"))
+        {
+            ht.Add(xyz, -Mathf.Abs(z - transform.localPosition.y));
+        }
+        else if (xyz.Equals("x") || xyz.Equals("z"))
+        {
+            ht.Add(xyz, -Mathf.Abs(z - transform.localPosition.x));
+        }
         ht.Add("time", 0.3f);
         ht.Add("easetype", iTween.EaseType.linear);
         ht.Add("oncomplete", "CheckTriggerUp");
-        audio.Play();
+        //audio.Play();
         iTween.MoveBy(gameObject, ht);
     }
 

@@ -37,6 +37,8 @@ public class TouchMgr : MonoBehaviour
     public AudioClip[] shootClips;
     public float bombSpeed = 500.0f;
 
+    public int laserRange = 12;
+
     void Start()
     {
         DontDestroyOnLoad(gameObject);
@@ -68,6 +70,34 @@ public class TouchMgr : MonoBehaviour
 
     void Update()
     {
+        // if (OVRInput.GetDown(OVRInput.Button.One))
+        // {
+        //     switch (mode)
+        //     {
+        //         case SkillMode.switching:
+        //             mode = SkillMode.pull;
+        //             ring[0].SetActive(true);
+        //             break;
+        //         case SkillMode.pull:
+        //             mode = SkillMode.push;
+        //             laser.enabled = false;
+        //             ring[0].SetActive(false);
+        //             ring[1].SetActive(true);
+        //             break;
+        //         case SkillMode.push:
+        //             mode = SkillMode.switchBomb;
+        //             wind.SetActive(false);
+        //             ring[1].SetActive(false);
+        //             pointer.SetActive(false);
+        //             break;
+        //         case SkillMode.switchBomb:
+        //             mode = SkillMode.switching;
+        //             break;
+        //     }
+        //     nullifyPullObj();
+        //     return;
+        // }
+
         if (!canFire) return;
 
         switch (mode)
@@ -124,7 +154,7 @@ public class TouchMgr : MonoBehaviour
             {
                 audio.Play();
             }
-            if (Physics.Raycast(ray, out hit, 11))
+            if (Physics.Raycast(ray, out hit, laserRange -1))
             {
                 if (!pointer.activeSelf)
                 {
@@ -142,7 +172,8 @@ public class TouchMgr : MonoBehaviour
                     Vector3 direction = new Vector3(targetPos.x, 0, targetPos.z)
                                         - new Vector3(playerTr.position.x, 0, playerTr.position.z);
                     direction = direction.normalized;
-                    float speed = 50 / (dist * dist);
+                    //float speed = 50 / (dist * dist);
+                    float speed = (dist * dist) / 10;
                     pullObjectRb.velocity = direction * speed;
                 }
                 else
@@ -183,7 +214,7 @@ public class TouchMgr : MonoBehaviour
                 audio.Play();
             }
             ray = new Ray(laser.transform.position, laser.transform.forward);
-            if (Physics.Raycast(ray, out hit, 12))
+            if (Physics.Raycast(ray, out hit, laserRange))
             {
                 if (!pointer.activeSelf)
                 {
@@ -209,7 +240,8 @@ public class TouchMgr : MonoBehaviour
                     Vector3 targetPos = pullObjectRb.transform.position;
                     Vector3 direction = playerTr.position - targetPos;
                     direction = direction.normalized;
-                    float speed = 50 / (dist * dist);
+                    //float speed = 50 / (dist * dist);
+                    float speed = (dist * dist) / 10;
                     pullObjectRb.velocity = direction * speed;
                 }
                 else if (hit.collider.gameObject.layer.Equals(mirrorLayer))
