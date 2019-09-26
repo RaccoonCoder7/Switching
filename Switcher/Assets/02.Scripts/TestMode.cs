@@ -13,6 +13,7 @@ public class TestMode : MonoBehaviour
     private TouchMgr touchMgr;
     private PlayerState playerState;
     private StageCtrl sc;
+    private GameObject chatCanvas;
 
     public LineRenderer laser;
     public AudioClip UISound;
@@ -23,6 +24,8 @@ public class TestMode : MonoBehaviour
         touchMgr.enabled = false;
         playerState = GetComponent<PlayerState>();
         playerState.enabled = false;
+        chatCanvas = transform.Find("ChatCanvas").gameObject;
+        chatCanvas.SetActive(false);
     }
 
     void Start()
@@ -73,6 +76,7 @@ public class TestMode : MonoBehaviour
         yield return StartCoroutine(sc.CreateStageAsync(stageNum));
         touchMgr.enabled = true;
         playerState.enabled = true;
+        chatCanvas.SetActive(true);
         yield return StartCoroutine(gameMgr.FadeOut());
         testMode.enabled = false;
     }

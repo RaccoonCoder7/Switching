@@ -44,9 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fbcf32758ac09940ade51e1c46044eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imgCtrl: {fileID: 0}
   Maps:
   - {fileID: 5157298692902050670, guid: 13888266d522d13478a24065b9d53ffe, type: 3}
-  - {fileID: 0}
+  - {fileID: 5329021429743128618, guid: c537287d89c73804e8ceb301eab8a095, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -66,7 +67,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e038bba54f71ef542b0a60b0497460b5, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

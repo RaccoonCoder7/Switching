@@ -7664,6 +7664,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a7b5a4f9cd0368f4f8c8f01c71f8c5a6, type: 3}
   - {fileID: 8300000, guid: 4135b81f06e543940ab7fe9e3edadd3d, type: 3}
   bombSpeed: 500
+  laserRange: 12
 --- !u!114 &3162601953509377408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17762,11 +17763,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ChatCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 6727509009565317812, guid: 0a9c5b7e31a33a04593767cf9d4f9779,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 253098767137095373, guid: 0a9c5b7e31a33a04593767cf9d4f9779,
         type: 3}
