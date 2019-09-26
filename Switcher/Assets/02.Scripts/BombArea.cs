@@ -12,6 +12,7 @@ public class BombArea : MonoBehaviour
     private float maxDistance;
     private List<Transform> objList = new List<Transform>();
     private List<Vector3> objPosList = new List<Vector3>();
+    private float diff = 0.82f;
 
     public enum teleportStyle
     {
@@ -34,7 +35,7 @@ public class BombArea : MonoBehaviour
         float waitTime = 0.2f;
         if (maxDistance != 0)
         {
-            farthestPos.y = playerTr.position.y;
+            farthestPos.y = farthestPos.y - diff;
             if (tpStyle.Equals(teleportStyle.teleport))
             {
                 for (int i = 0; i < objList.Count; i++)
@@ -73,7 +74,7 @@ public class BombArea : MonoBehaviour
             }
 
             playerPos += direction;
-            playerPos.y = targetPos.y;
+            playerPos.y = playerPos.y + diff/2;
 
             objList.Add(other.transform);
             objPosList.Add(playerPos);

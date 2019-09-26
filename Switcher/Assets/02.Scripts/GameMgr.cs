@@ -24,7 +24,6 @@ public class GameMgr : MonoBehaviour
         screen = GameObject.Find("FadeCanvas").transform.Find("FadePanel").gameObject;
         screenImage = screen.GetComponent<Image>();
         stage = PlayerPrefs.GetInt("Stage");
-        Debug.Log(stage);
 
         if (stage.Equals(0))
         {
@@ -53,14 +52,11 @@ public class GameMgr : MonoBehaviour
         //현재 씬 이름 저장
         PlayerPrefs.SetInt("Stage", PlayerPrefs.GetInt("Stage")+1);
         stage = PlayerPrefs.GetInt("Stage");
-        Debug.Log(stage);
         StartCoroutine("Load");
     }
     public IEnumerator FadeIn()
     {
         screen.SetActive(true);
-        Debug.Log(screen);
-        Debug.Log(fadeMaterial);
         Color color = fadeMaterial.color;
         while (color.a < 1f)
         {
@@ -83,14 +79,12 @@ public class GameMgr : MonoBehaviour
             yield return new WaitForSeconds(0.02f);
         }
         screen.SetActive(false);
-        //logo.SetActive(false);
+        logo.SetActive(false);
         Timer.canvasCheck = false;
     }
     public IEnumerator FadeInOut()
     {
         screen.SetActive(true);
-        Debug.Log(screen);
-        Debug.Log(fadeMaterial);
         Color color = fadeMaterial.color;
         while (color.a < 0.4f)
         {

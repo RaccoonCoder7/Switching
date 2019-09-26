@@ -14,6 +14,7 @@ public class TranslateBullet : MonoBehaviour
     private RaycastHit hit;
     private Rigidbody rb;
     private AudioSource audio;
+    private float diff = 0.82f;
 
     public float speed = 10.0f;
     public Vector3 shootPos;
@@ -55,8 +56,8 @@ public class TranslateBullet : MonoBehaviour
             Vector3 targetPos = other.transform.position;
             Vector3 playerPos = playerTr.transform.position;
             float targetPosY = targetPos.y;
-            targetPos.y = playerPos.y;
-            playerPos.y = targetPosY;
+            targetPos.y = targetPos.y - diff;
+            playerPos.y = playerPos.y + diff/2;
 
             if (tpStyle == teleportStyle.teleport)
             {

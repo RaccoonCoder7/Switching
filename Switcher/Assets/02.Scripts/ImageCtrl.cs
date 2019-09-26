@@ -25,9 +25,10 @@ public class ImageCtrl : MonoBehaviour
 
     public void SetSkills(int skillSet)
     {
-        for(int i = skillSet; i > 0; i--){
+        for(int i = 4 - skillSet; i > 0; i--){
             skillImages[i].enabled = false;
             buttonImages[i].sprite = lockSprite;
+            buttonImages[i].GetComponent<Collider>().enabled = false;
         }
     }
 

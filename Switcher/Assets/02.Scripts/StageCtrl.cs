@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StageCtrl : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class StageCtrl : MonoBehaviour
     private AudioSource audio;
     private Transform playerTr;
     private Timer timer;
+    private AsyncOperation async;
     // private PlayerState ps;
 
     public ImageCtrl imgCtrl;
@@ -27,10 +29,18 @@ public class StageCtrl : MonoBehaviour
         // ps = playerTr.GetComponent<PlayerState>();
     }
 
-    public void CreateStage(int stageNum)
+    public IEnumerator CreateStageAsync(int stageNum)
     {
         stage.stageNum = stageNum;
-        ShowLoadingScene();
+        yield return StartCoroutine(gameMgr.FadeIn());
+        // ShowLoadingScene();
+        async = SceneManager.LoadSceneAsync("LoadStage");
+        async.allowSceneActivation = true;
+        while (!async.isDone)
+        {
+            yield return null;
+        }
+        yield return new WaitForSeconds(2.0f);
         CreateMap();
         stage.skillSet = GetSkillSet();
         audio.clip = GetBGM();
@@ -43,7 +53,7 @@ public class StageCtrl : MonoBehaviour
         GameObject temp = stage.map;
         Destroy(stage.map);
         stage.map = Instantiate(temp);
-        
+
         // 플레이어위치
         playerTr = stage.playerTr;
 
@@ -56,18 +66,13 @@ public class StageCtrl : MonoBehaviour
         audio.Play();
         imgCtrl.SetSkills(stage.skillSet);
         timer.ResetTime(stage.stageTime);
-        playerTr = stage.playerTr;
-        StartCoroutine(gameMgr.FadeOut());
-    }
-
-    private void ShowLoadingScene()
-    {
-        StartCoroutine(gameMgr.FadeIn());
+        playerTr.position = stage.playerTr.position;
+        playerTr.rotation = stage.playerTr.rotation;
     }
 
     private void CreateMap()
     {
-        stage.map = Instantiate(Maps[stage.stageNum]);
+        stage.map = Instantiate(Maps[stage.stageNum-1]);
         sd = stage.map.GetComponent<StageData>();
         stage.playerTr = sd.playerTr;
         stage.stageTime = sd.stageTime;
@@ -81,9 +86,9 @@ public class StageCtrl : MonoBehaviour
         }
         if (stage.stageNum <= 3)
         {
-            return BGMClips[0];
+            return BGMClips[1];
         }
-        return BGMClips[1];
+        return BGMClips[2];
     }
 
     private int GetSkillSet()

@@ -17,6 +17,14 @@ public class TestMode : MonoBehaviour
     public LineRenderer laser;
     public AudioClip UISound;
 
+    void Awake()
+    {
+        touchMgr = GetComponent<TouchMgr>();
+        touchMgr.enabled = false;
+        playerState = GetComponent<PlayerState>();
+        playerState.enabled = false;
+    }
+
     void Start()
     {
         gameMgr = FindObjectOfType<GameMgr>();
@@ -27,6 +35,7 @@ public class TestMode : MonoBehaviour
         playerState.enabled = false;
         sc = FindObjectOfType<StageCtrl>();
         testMode = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     void Update()
@@ -41,23 +50,30 @@ public class TestMode : MonoBehaviour
         {
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("START")))
             {
-                StartGame(1);
+                StartCoroutine(StartGame(1));
             }
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("CONTINUE")))
             {
-                StartGame(gameMgr.GetPrevStageNum());
+                StartCoroutine(StartGame(gameMgr.GetPrevStageNum()));
             }
         }
+
+        // TODO: 테스트용 코드 지우기
+        // if (Input.GetMouseButtonUp(0))
+        // {
+        //     StartCoroutine(StartGame(1));
+        // }
     }
 
-    private void StartGame(int stageNum)
+    private IEnumerator StartGame(int stageNum)
     {
         audio.PlayOneShot(UISound);
+        gameMgr.ChangeScreanImage();
+        // sc.CreateStageAsync(stageNum); // 이걸 기달
+        yield return StartCoroutine(sc.CreateStageAsync(stageNum));
         touchMgr.enabled = true;
         playerState.enabled = true;
+        yield return StartCoroutine(gameMgr.FadeOut());
         testMode.enabled = false;
-        sc.CreateStage(stageNum);
-        gameMgr.ChangeScreanImage();
-        gameMgr.StartCoroutine(gameMgr.FadeInOut());
     }
 }

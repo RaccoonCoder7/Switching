@@ -21,6 +21,7 @@ public class TouchMgr : MonoBehaviour
     private Transform playerTr;
     private float coolTime;
     private AudioSource audio;
+    private Rigidbody rb;
 
     public SkillMode mode = SkillMode.switching;
     public enum SkillMode
@@ -41,7 +42,6 @@ public class TouchMgr : MonoBehaviour
 
     void Start()
     {
-        DontDestroyOnLoad(gameObject);
         manaStoneLayer = LayerMask.NameToLayer("MANASTONE");
         mirrorLayer = LayerMask.NameToLayer("MIRROR");
         cam = Camera.main;
@@ -62,10 +62,12 @@ public class TouchMgr : MonoBehaviour
         playerTr = GameObject.Find("Player").transform;
         blur.SetActive(false);
         audio = GetComponent<AudioSource>();
+        rb = GetComponent<Rigidbody>();
         for (int i = 0; i < ring.Length; i++)
         {
             ring[i].SetActive(false);
         }
+        ChangeMode(TouchMgr.SkillMode.switching);
     }
 
     void Update()
@@ -414,6 +416,7 @@ public class TouchMgr : MonoBehaviour
         Transform originPlayerTr = playerTr;
         Transform originObjTr = objTr;
         blur.SetActive(true);
+        rb.isKinematic = true;
 
         for (int i = 0; i < lerpFrame; i++)
         {
@@ -437,6 +440,7 @@ public class TouchMgr : MonoBehaviour
         playerTr.position = targetPos;
         objTr.position = playerPos;
         blur.SetActive(false);
+        rb.isKinematic = false;
     }
 
     public void StartLerpAll(List<Transform> objList, List<Vector3> objPosList, Vector3 farthestPos)
@@ -450,6 +454,7 @@ public class TouchMgr : MonoBehaviour
         float lerpSpeed = 0.3f;
         Transform originPlayerTr = playerTr;
         blur.SetActive(true);
+        rb.isKinematic = true;
 
         for (int i = 0; i < lerpFrame; i++)
         {
@@ -485,5 +490,6 @@ public class TouchMgr : MonoBehaviour
             objList[i].position = objPosList[i];
         }
         blur.SetActive(false);
+        rb.isKinematic = false;
     }
 }
