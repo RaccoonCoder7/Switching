@@ -36,8 +36,8 @@ public class MagicCircle : MonoBehaviour
                 // 닿은 마나스톤을 저장
                 manastone = collision.gameObject;
                 collisionEnterFl = true;
-                audio.clip = onClip;
-                audio.Play();
+                //audio.clip = onClip;
+                //audio.Play();
             }
         }
     }

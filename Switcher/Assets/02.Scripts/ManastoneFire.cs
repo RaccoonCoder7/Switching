@@ -23,7 +23,7 @@ public class ManastoneFire : MonoBehaviour
     
     void Start()
     {
-        //audio = GetComponent<AudioSource>();
+        audio = GetComponent<AudioSource>();
         cannonMS = Instantiate(cannonMSFix, gameObject.transform);
         Destroy(cannonMS);
     }
@@ -41,7 +41,7 @@ public class ManastoneFire : MonoBehaviour
     {
         if (!cannonMS)
         {
-            //audio.Play();
+            audio.Play();
             cannonMS = Instantiate(cannonMSFix, gameObject.transform);
             rig = cannonMS.GetComponent<Rigidbody>();
             rig.AddRelativeForce(Vector3.up * speed);

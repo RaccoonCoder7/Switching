@@ -98,7 +98,7 @@ public class MoveDoor : MonoBehaviour
         ht.Add("time", 0.3f);
         ht.Add("easetype", iTween.EaseType.linear);
         //htOpen.Add("oncomplete", "CheckTriggerUp");
-        //audio.Play();
+        audio.Play();
         iTween.MoveBy(gameObject, ht);
     }
 
@@ -118,7 +118,7 @@ public class MoveDoor : MonoBehaviour
         ht.Add("time", 0.3f);
         ht.Add("easetype", iTween.EaseType.linear);
         ht.Add("oncomplete", "CheckTriggerUp");
-        //audio.Play();
+        audio.Play();
         iTween.MoveBy(gameObject, ht);
     }
 

@@ -106,3 +106,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manastone: {fileID: 0}
   collisionEnterFl: 0
+  onClip: {fileID: 8300000, guid: efb153db377c5f144b1f943c449aea79, type: 3}
+  offClip: {fileID: 8300000, guid: 5778e574fd364f2469cde97efaef3966, type: 3}
