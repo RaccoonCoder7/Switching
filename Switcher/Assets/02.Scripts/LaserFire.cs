@@ -22,22 +22,20 @@ public class LaserFire : MonoBehaviour
     private Animator bossAnim;
 
     // 플레이어 상태
-    private PlayerState playerSt;
+    public PlayerState playerSt;
 
     void Start()
     {
         // 위치 초기화 및 생성
-        beamStart = Instantiate(beamStart, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
-        beamEnd = Instantiate(beamEnd, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
-        beam = Instantiate(beam, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+        beamStart = Instantiate(beamStart, new Vector3(0, 0, 0), Quaternion.identity, gameObject.transform.parent.parent) as GameObject;
+        beamEnd = Instantiate(beamEnd, new Vector3(0, 0, 0), Quaternion.identity, gameObject.transform.parent.parent) as GameObject;
+        beam = Instantiate(beam, new Vector3(0, 0, 0), Quaternion.identity, gameObject.transform.parent.parent) as GameObject;
         line = beam.GetComponent<LineRenderer>();
         if (GameObject.Find("boss"))
         {
             bossState = GameObject.Find("Mage").GetComponent<BossState>();
             bossAnim = GameObject.Find("boss").GetComponent<Animator>();
         }
-
-        playerSt = GameObject.Find("Player").GetComponent<PlayerState>();
     }
 
     void Update()
@@ -54,22 +52,24 @@ public class LaserFire : MonoBehaviour
                 timer = 0.0f;
             }
 
+            if (Physics.Raycast(transform.position, transform.forward, out hit, Mathf.Infinity))
+            {
+                ShootBeam();
+            }
+
             // boss가 죽어있을 경우에는 raycast가 충돌판정 안함
-            if (bossAnim && bossAnim.GetBool("death"))
-            {
-                if (Physics.Raycast(transform.position, transform.forward, out hit, Mathf.Infinity,
-                ~(1 << LayerMask.NameToLayer("BOSS"))))
-                {
-                    ShootBeam();
-                }
-            }
-            else
-            {
-                if (Physics.Raycast(transform.position, transform.forward, out hit, Mathf.Infinity))
-                {
-                    ShootBeam();
-                }
-            }
+            //if (bossAnim && bossAnim.GetBool("death"))
+            //{
+            //    if (Physics.Raycast(transform.position, transform.forward, out hit, Mathf.Infinity,
+            //    ~(1 << LayerMask.NameToLayer("BOSS"))))
+            //    {
+            //        ShootBeam();
+            //    }
+            //}
+            //else
+            //{
+
+            //}
         }
         else
         {
