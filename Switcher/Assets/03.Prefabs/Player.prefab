@@ -7677,6 +7677,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d721c931d5737a47afacf32f682054d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDead: 0
   stateClips:
   - {fileID: 8300000, guid: b21a95eac55641846a9633c80d6da27d, type: 3}
   - {fileID: 8300000, guid: 85903332a36180d4d840c23a3e4bde91, type: 3}

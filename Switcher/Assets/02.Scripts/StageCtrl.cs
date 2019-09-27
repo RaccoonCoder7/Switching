@@ -67,6 +67,7 @@ public class StageCtrl : MonoBehaviour
     public IEnumerator ResetStage(AudioClip clip)
     {
         // playerRb.isKinematic = true;
+        gameMgr.ChangeScreanImage();
         yield return StartCoroutine(gameMgr.FadeIn());
         // 오브젝트위치
         CreateMap(false);

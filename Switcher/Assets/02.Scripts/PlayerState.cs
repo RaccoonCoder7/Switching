@@ -24,13 +24,13 @@ public class PlayerState : MonoBehaviour
     {
         audio.PlayOneShot(stateClips[0]);
         canDmg = false;
-        StartCoroutine(showBarrier(waitTime));
+        StartCoroutine(ShowBarrier(waitTime));
     }
 
-    private IEnumerator showBarrier(float waitTime)
+    private IEnumerator ShowBarrier(float waitTime)
     {
         barrier.SetActive(true);
-        yield return new WaitForSeconds(waitTime + 1f);
+        yield return new WaitForSeconds(waitTime + 0.5f);
         barrier.SetActive(false);
         canDmg = true;
     }

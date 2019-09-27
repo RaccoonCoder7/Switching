@@ -47,7 +47,9 @@ MonoBehaviour:
   beamEnd: {fileID: 169912, guid: abdc56b0f94d9a04c800560ba0e246aa, type: 3}
   beam: {fileID: 191804, guid: a0110e851f5bca741b552c4d37384f5f, type: 3}
   shootTime: 1
-  stopTime: 10
+  stopTime: 5
+  playerSt: {fileID: 3162601953509377408, guid: a5e5289612409ec4aa0cc5e0f7ea81b0,
+    type: 3}
 --- !u!65 &1788232711
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -68,41 +70,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 100000, guid: a73bcc89d1e2a624995b3c0009db5e6a, type: 3}
-      propertyPath: m_Name
-      value: LaserTurret
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: a73bcc89d1e2a624995b3c0009db5e6a, type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a73bcc89d1e2a624995b3c0009db5e6a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.96
+      value: 8.825357
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a73bcc89d1e2a624995b3c0009db5e6a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.26
+      value: 0.07136428
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a73bcc89d1e2a624995b3c0009db5e6a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.13
+      value: 8.035006
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a73bcc89d1e2a624995b3c0009db5e6a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.00038799137
+      value: -0.0071023237
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a73bcc89d1e2a624995b3c0009db5e6a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.002393925
+      value: -0.7070711
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a73bcc89d1e2a624995b3c0009db5e6a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.010821694
+      value: 0.00817596
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a73bcc89d1e2a624995b3c0009db5e6a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9999385
+      value: 0.70705956
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a73bcc89d1e2a624995b3c0009db5e6a, type: 3}
       propertyPath: m_RootOrder
@@ -110,27 +104,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a73bcc89d1e2a624995b3c0009db5e6a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0.047000002
+      value: 0.087000005
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a73bcc89d1e2a624995b3c0009db5e6a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0.27400002
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a73bcc89d1e2a624995b3c0009db5e6a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -1.24
+      value: 1.238
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a73bcc89d1e2a624995b3c0009db5e6a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.6792
+      value: 0.67920035
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a73bcc89d1e2a624995b3c0009db5e6a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.6792
+      value: 0.6791999
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a73bcc89d1e2a624995b3c0009db5e6a, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.6792
+      value: 0.67920023
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a73bcc89d1e2a624995b3c0009db5e6a, type: 3}
+      propertyPath: m_Name
+      value: LaserTurret
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a73bcc89d1e2a624995b3c0009db5e6a, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a73bcc89d1e2a624995b3c0009db5e6a, type: 3}

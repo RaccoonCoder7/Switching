@@ -385,7 +385,7 @@ public class TouchMgr : MonoBehaviour
 
     public void EnableFire(float waitTime)
     {
-        Invoke("change2CanFire", waitTime);
+        Invoke("change2CanFire", waitTime + 0.5f);
     }
 
     private void change2CanFire()

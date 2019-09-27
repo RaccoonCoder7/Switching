@@ -22,7 +22,7 @@ public class LaserFire : MonoBehaviour
     private Animator bossAnim;
 
     // 플레이어 상태
-    public PlayerState playerSt;
+    private PlayerState playerSt;
 
     void Start()
     {
@@ -104,8 +104,15 @@ public class LaserFire : MonoBehaviour
         if (hit.collider.gameObject.layer.Equals(LayerMask.NameToLayer("PLAYER")))
         {
             // 플레이어 사망
+            if(!playerSt) {
+                Debug.Log("111");
+                playerSt = FindObjectOfType<PlayerState>();
+            }
+            Debug.Log(playerSt);
+            Debug.Log(playerSt.isDead);
             if (!playerSt.isDead)
             {
+                Debug.Log("222");
                 playerSt.PlayerDie();
             }
         }

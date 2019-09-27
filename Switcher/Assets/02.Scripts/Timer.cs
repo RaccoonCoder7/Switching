@@ -10,6 +10,8 @@ public class Timer : MonoBehaviour
     int leftTime = 0;
     int m;
     int s;
+    private PlayerState ps;
+
     public Material fadeMaterial1;
     public Material fadeMaterial2;
     public static bool canvasCheck;
@@ -61,5 +63,10 @@ public class Timer : MonoBehaviour
             yield return new WaitForSeconds(1.0f);
             leftTime--;
         }
+        if (!ps)
+        {
+            ps = FindObjectOfType<PlayerState>();
+        }
+        ps.PlayerDie();
     }
 }

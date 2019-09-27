@@ -112,8 +112,8 @@ public class Chat : MonoBehaviour
      public void NextChat()
     {
         continueCnt = textCount;
-        gameObject.SetActive(true);
         textCount++;
+        gameObject.SetActive(true);
         StartCoroutine(PlayLine(textList[textCount]));
     }
     IEnumerator PlayLine(string setText)
