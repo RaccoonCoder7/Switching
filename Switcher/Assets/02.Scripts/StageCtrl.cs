@@ -12,6 +12,8 @@ public class StageCtrl : MonoBehaviour
     private Transform playerTr;
     private Timer timer;
     private AsyncOperation async;
+    private PlayerState ps;
+    // private Rigidbody playerRb;
     // private PlayerState ps;
 
     public ImageCtrl imgCtrl;
@@ -26,6 +28,8 @@ public class StageCtrl : MonoBehaviour
         audio = GetComponent<AudioSource>();
         playerTr = GameObject.Find("Player").transform;
         timer = imgCtrl.gameObject.GetComponent<Timer>();
+        ps = playerTr.GetComponent<PlayerState>();
+        // playerRb = playerTr.GetComponent<Rigidbody>();
         // ps = playerTr.GetComponent<PlayerState>();
     }
 
@@ -49,24 +53,35 @@ public class StageCtrl : MonoBehaviour
         Debug.Log("2");
         CreateMap(isFirst);
         stage.skillSet = GetSkillSet();
-        audio.clip = GetBGM();
+        AudioClip clip = GetBGM();
+        if (!audio.clip.Equals(clip))
+        {
+            audio.Stop();
+            audio.clip = clip;
+        }
         Debug.Log("3");
         StartStage();
         Debug.Log("4");
     }
 
-    public void ResetStage()
+    public IEnumerator ResetStage(AudioClip clip)
     {
+        // playerRb.isKinematic = true;
+        yield return StartCoroutine(gameMgr.FadeIn());
         // 오브젝트위치
-        GameObject temp = stage.map;
-        Destroy(stage.map);
-        stage.map = Instantiate(temp);
+        CreateMap(false);
 
         // 플레이어위치
-        playerTr = stage.playerTr;
+        playerTr.position = stage.playerTr.position;
+        playerTr.rotation = stage.playerTr.rotation;
 
         // 스테이지시간
         timer.ResetTime(stage.stageTime);
+        yield return new WaitForSeconds(2.0f);
+        ps.isDead = false;
+        // playerRb.isKinematic = false;
+        audio.PlayOneShot(clip);
+        yield return StartCoroutine(gameMgr.FadeOut());
     }
 
     public IEnumerator ClearStage()
@@ -81,7 +96,10 @@ public class StageCtrl : MonoBehaviour
 
     private void StartStage()
     {
-        audio.Play();
+        if (!audio.isPlaying)
+        {
+            audio.Play();
+        }
         imgCtrl.SetSkills(stage.skillSet);
         timer.ResetTime(stage.stageTime);
         playerTr.position = stage.playerTr.position;
@@ -90,7 +108,8 @@ public class StageCtrl : MonoBehaviour
 
     private void CreateMap(bool isFirst)
     {
-        if(!isFirst){
+        if (!isFirst)
+        {
             Debug.Log("destroyMap");
             Destroy(stage.map);
         }

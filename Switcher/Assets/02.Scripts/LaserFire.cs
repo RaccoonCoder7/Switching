@@ -104,7 +104,10 @@ public class LaserFire : MonoBehaviour
         if (hit.collider.gameObject.layer.Equals(LayerMask.NameToLayer("PLAYER")))
         {
             // 플레이어 사망
-            playerSt.PlayerDeath();
+            if (!playerSt.isDead)
+            {
+                playerSt.PlayerDie();
+            }
         }
         else if (hit.collider.gameObject.layer.Equals(LayerMask.NameToLayer("BOSS")))
         {

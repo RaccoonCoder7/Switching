@@ -9,6 +9,7 @@ public class PlayerState : MonoBehaviour
     private AudioSource audio;
     private StageCtrl sc;
 
+    public bool isDead;
     public AudioClip[] stateClips;
     public GameObject barrier;
 
@@ -34,10 +35,11 @@ public class PlayerState : MonoBehaviour
         canDmg = true;
     }
 
-    public void PlayerDeath()
+    public void PlayerDie()
     {
+        isDead = true;
         audio.PlayOneShot(stateClips[1]);
-        sc.ResetStage();
+        sc.StartCoroutine(sc.ResetStage(stateClips[2]));
         // mgr.Continue();
     }
 }

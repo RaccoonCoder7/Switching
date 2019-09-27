@@ -36,9 +36,10 @@ public class ImageCtrl : MonoBehaviour
         {
             int index = SwapNum(i);
             skillImages[index].enabled = true;
-            buttonImages[index].sprite = panelSprites[i];
+            buttonImages[index].sprite = inactivateSprite;
             buttonImages[index].GetComponent<Collider>().enabled = true;
         }
+        ChangeSprites(0);
     }
 
     private int SwapNum(int num)
@@ -50,8 +51,9 @@ public class ImageCtrl : MonoBehaviour
                 return 1;
             case 3:
                 return 2;
+            default:
+                return 0;
         }
-        return 0;
     }
 
     public void ChangeSprites(TouchMgr.SkillMode modeNum)
