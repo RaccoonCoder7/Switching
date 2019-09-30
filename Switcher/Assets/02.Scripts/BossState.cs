@@ -7,7 +7,7 @@ public class BossState : MonoBehaviour
     private Transform camTr;
     private Vector3 targetPosition;
 
-    private float attackTime = 10.0f;
+    private float attackTime = 8.0f;
     private float timer = 0.0f;
 
     // 보스 알파값 줄어드는 시간
@@ -30,7 +30,6 @@ public class BossState : MonoBehaviour
     private float deathResetTime = 1.0f;
 
     private Renderer render;
-    private GameObject bossObj;
 
     private AudioSource audio;
     public AudioClip bossRewindClip;
@@ -39,8 +38,7 @@ public class BossState : MonoBehaviour
     void Start()
     {
         camTr = Camera.main.GetComponent<Transform>();
-        bossObj = GameObject.Find("boss");
-        anim = bossObj.GetComponent<Animator>();
+        anim = gameObject.transform.GetComponent<Animator>();
         render = GetComponent<Renderer>();
         audio = GetComponent<AudioSource>();
     }
@@ -81,7 +79,7 @@ public class BossState : MonoBehaviour
             }
             else
             {
-                Destroy(bossObj);
+                Destroy(gameObject);
             }
         }
     }

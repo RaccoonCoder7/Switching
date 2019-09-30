@@ -44,7 +44,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 100
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -83,11 +83,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1338523774056524366}
     m_Modifications:
-    - target: {fileID: 464944243962968040, guid: 90b254cd63aaa2c4597fa55966629dd3,
-        type: 3}
-      propertyPath: m_Name
-      value: yellowCrystal
-      objectReference: {fileID: 0}
     - target: {fileID: 85059927584468761, guid: 90b254cd63aaa2c4597fa55966629dd3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -152,6 +147,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 51.057423
+      objectReference: {fileID: 0}
+    - target: {fileID: 464944243962968040, guid: 90b254cd63aaa2c4597fa55966629dd3,
+        type: 3}
+      propertyPath: m_Name
+      value: yellowCrystal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90b254cd63aaa2c4597fa55966629dd3, type: 3}

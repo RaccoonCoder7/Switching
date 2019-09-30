@@ -5,6 +5,7 @@ using UnityEngine;
 public class TranslateBullet : MonoBehaviour
 {
     private int manaStoneLayer;
+    private int bossLayer;
     private int wireLayer;
     private int mirrorLayer;
     private Transform playerTr;
@@ -27,6 +28,7 @@ public class TranslateBullet : MonoBehaviour
     void Start()
     {
         manaStoneLayer = LayerMask.NameToLayer("MANASTONE");
+        bossLayer = LayerMask.NameToLayer("BOSS");
         wireLayer = LayerMask.NameToLayer("WIRE");
         mirrorLayer = LayerMask.NameToLayer("MIRROR");
         playerTr = GameObject.Find("Player").transform;
@@ -50,7 +52,8 @@ public class TranslateBullet : MonoBehaviour
         }
 
         float waitTime = 0f;
-        if (other.gameObject.layer.Equals(manaStoneLayer))
+        if (other.gameObject.layer.Equals(manaStoneLayer) 
+            || other.gameObject.layer.Equals(bossLayer))
         {
             other.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
             Vector3 targetPos = other.transform.position;

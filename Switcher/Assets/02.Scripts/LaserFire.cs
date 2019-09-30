@@ -27,9 +27,9 @@ public class LaserFire : MonoBehaviour
     void Start()
     {
         // 위치 초기화 및 생성
-        beamStart = Instantiate(beamStart, new Vector3(0, 0, 0), Quaternion.identity, gameObject.transform.parent.parent) as GameObject;
-        beamEnd = Instantiate(beamEnd, new Vector3(0, 0, 0), Quaternion.identity, gameObject.transform.parent.parent) as GameObject;
-        beam = Instantiate(beam, new Vector3(0, 0, 0), Quaternion.identity, gameObject.transform.parent.parent) as GameObject;
+        beamStart = Instantiate(beamStart, new Vector3(0, 0, 0), Quaternion.identity, gameObject.transform.parent) as GameObject;
+        beamEnd = Instantiate(beamEnd, new Vector3(0, 0, 0), Quaternion.identity, gameObject.transform.parent) as GameObject;
+        beam = Instantiate(beam, new Vector3(0, 0, 0), Quaternion.identity, gameObject.transform.parent) as GameObject;
         line = beam.GetComponent<LineRenderer>();
         if (GameObject.Find("boss"))
         {

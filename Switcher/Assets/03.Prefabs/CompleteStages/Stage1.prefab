@@ -116,9 +116,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTr: {fileID: 4221330166850147385}
-  stageTime: 70
+  stageTime: 100
   customBGM: {fileID: 0}
-  customSkillSet: 0
+  customSkillSet: 4
 --- !u!1 &5157298693724805240
 GameObject:
   m_ObjectHideFlags: 0

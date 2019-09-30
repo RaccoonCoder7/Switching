@@ -38,7 +38,9 @@ public class TouchMgr : MonoBehaviour
     public AudioClip[] shootClips;
     public float bombSpeed = 500.0f;
 
+    // 레이져 사거리(인력, 척력) 조정
     public int laserRange = 12;
+    public float trBullet = 8.0f;
 
     void Start()
     {
@@ -324,7 +326,8 @@ public class TouchMgr : MonoBehaviour
             translateBullet.transform.position = laser.transform.position;
             Vector3 direction = pointer.transform.position - laser.transform.position;
             direction = direction.normalized;
-            bulletRb.velocity = direction * 8f;
+            bulletRb.velocity = direction * trBullet;
+            //bulletRb.velocity = direction * 8f;
             tb.shootPos = laser.transform.position;
             pointer.SetActive(false);
             tb.DoActiveFalse();
