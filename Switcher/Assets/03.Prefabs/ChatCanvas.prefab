@@ -29348,7 +29348,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -1.2990036, y: 1.7600098}
+  m_AnchoredPosition: {x: -1.2990112, y: 1.7600098}
   m_SizeDelta: {x: 100, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &7413837588009475251
@@ -29546,7 +29546,7 @@ GameObject:
   - component: {fileID: 9030739482823136899}
   - component: {fileID: 6195596782614122662}
   - component: {fileID: 6303572633293827339}
-  m_Layer: 5
+  m_Layer: 19
   m_Name: Retry
   m_TagString: Untagged
   m_Icon: {fileID: 0}

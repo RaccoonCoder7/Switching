@@ -15,6 +15,7 @@ public class TestMode : MonoBehaviour
     private StageCtrl sc;
     private GameObject chatCanvas;
 
+
     public LineRenderer laser;
     public AudioClip UISound;
 
@@ -59,6 +60,10 @@ public class TestMode : MonoBehaviour
             {
                 StartCoroutine(StartGame(gameMgr.GetPrevStageNum()));
             }
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("RETRY")))
+            {
+                StartCoroutine(sc.ResetStage(null));
+            }
         }
 
         // TODO: 테스트용 코드 지우기
@@ -67,6 +72,7 @@ public class TestMode : MonoBehaviour
             StartCoroutine(StartGame(1));
         }
     }
+
 
     private IEnumerator StartGame(int stageNum)
     {

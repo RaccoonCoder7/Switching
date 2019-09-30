@@ -81,7 +81,10 @@ public class StageCtrl : MonoBehaviour
         yield return new WaitForSeconds(2.0f);
         ps.isDead = false;
         // playerRb.isKinematic = false;
-        audio.PlayOneShot(clip);
+        if (clip)
+        {
+            audio.PlayOneShot(clip);
+        }
         yield return StartCoroutine(gameMgr.FadeOut());
     }
 
