@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using MyDedlegate;
 
 public class StageCtrl : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class StageCtrl : MonoBehaviour
     private Timer timer;
     private AsyncOperation async;
     private PlayerState ps;
+    public Chat chat;
     // private Rigidbody playerRb;
     // private PlayerState ps;
 
@@ -49,11 +51,13 @@ public class StageCtrl : MonoBehaviour
                 yield return null;
             }
         }
+        chat.gameObject.SetActive(true);
         yield return new WaitForSeconds(2.0f);
         Debug.Log("2");
         CreateMap(isFirst);
         stage.skillSet = GetSkillSet();
         AudioClip clip = GetBGM();
+        chat.TextSet("Stage" + stageNum);
         if (!audio.clip.Equals(clip))
         {
             audio.Stop();
@@ -78,6 +82,12 @@ public class StageCtrl : MonoBehaviour
 
         // 스테이지시간
         timer.ResetTime(stage.stageTime);
+
+        // TODO: 조력자와의대화
+        if(!chat.gameObject.activeSelf){
+            chat.gameObject.SetActive(true);
+        }
+        chat.ResetText();
         yield return new WaitForSeconds(2.0f);
         ps.isDead = false;
         // playerRb.isKinematic = false;

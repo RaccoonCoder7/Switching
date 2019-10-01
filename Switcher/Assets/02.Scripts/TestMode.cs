@@ -14,6 +14,7 @@ public class TestMode : MonoBehaviour
     private PlayerState playerState;
     private StageCtrl sc;
     private GameObject chatCanvas;
+    private iTweenMgr iTween;
 
 
     public LineRenderer laser;
@@ -31,6 +32,7 @@ public class TestMode : MonoBehaviour
 
     void Start()
     {
+        iTween = FindObjectOfType<iTweenMgr>();
         gameMgr = FindObjectOfType<GameMgr>();
         audio = GetComponent<AudioSource>();
         touchMgr = GetComponent<TouchMgr>();
@@ -67,10 +69,10 @@ public class TestMode : MonoBehaviour
         }
 
         // TODO: 테스트용 코드 지우기
-        if (Input.GetMouseButtonUp(0))
-        {
-            StartCoroutine(StartGame(1));
-        }
+        // if (Input.GetMouseButtonUp(0))
+        // {
+        //     StartCoroutine(StartGame(1));
+        // }
     }
 
 
@@ -83,10 +85,11 @@ public class TestMode : MonoBehaviour
         audio.PlayOneShot(UISound);
         gameMgr.ChangeScreanImage();
         yield return StartCoroutine(sc.CreateStageAsync(stageNum, true));
+        // chatCanvas.SetActive(true);
         touchMgr.enabled = true;
         playerState.enabled = true;
-        chatCanvas.SetActive(true);
         yield return StartCoroutine(gameMgr.FadeOut());
+        iTween.isEnable = true;
         testMode.enabled = false;
     }
 }

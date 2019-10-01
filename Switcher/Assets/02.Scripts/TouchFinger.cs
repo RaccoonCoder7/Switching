@@ -36,6 +36,9 @@ public class TouchFinger : MonoBehaviour
     {
         if (other.gameObject.layer.Equals(skillButtonLayer))
         {
+            if(touchMgr.mode == TouchMgr.SkillMode.chat){
+                return;
+            }
             audio.Play();
             TouchMgr.SkillMode mode = TouchMgr.SkillMode.switching;
             string buttonName = other.gameObject.name;

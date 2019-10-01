@@ -23,10 +23,10 @@ public class TouchMgr : MonoBehaviour
     private AudioSource audio;
     private Rigidbody rb;
 
-    public SkillMode mode = SkillMode.switching;
+    public SkillMode mode = SkillMode.chat;
     public enum SkillMode
     {
-        switching, pull, push, switchBomb
+        switching, pull, push, switchBomb, chat
     }
     public LineRenderer laser;
     public GameObject wind;
@@ -73,39 +73,11 @@ public class TouchMgr : MonoBehaviour
         {
             ring[i].SetActive(false);
         }
-        ChangeMode(TouchMgr.SkillMode.switching);
+        ChangeMode(TouchMgr.SkillMode.chat);
     }
 
     void Update()
     {
-        // if (OVRInput.GetDown(OVRInput.Button.One))
-        // {
-        //     switch (mode)
-        //     {
-        //         case SkillMode.switching:
-        //             mode = SkillMode.pull;
-        //             ring[0].SetActive(true);
-        //             break;
-        //         case SkillMode.pull:
-        //             mode = SkillMode.push;
-        //             laser.enabled = false;
-        //             ring[0].SetActive(false);
-        //             ring[1].SetActive(true);
-        //             break;
-        //         case SkillMode.push:
-        //             mode = SkillMode.switchBomb;
-        //             wind.SetActive(false);
-        //             ring[1].SetActive(false);
-        //             pointer.SetActive(false);
-        //             break;
-        //         case SkillMode.switchBomb:
-        //             mode = SkillMode.switching;
-        //             break;
-        //     }
-        //     nullifyPullObj();
-        //     return;
-        // }
-
         if(slowTime > 0.0f)
         {
             slowTime -= Time.deltaTime;
@@ -129,6 +101,8 @@ public class TouchMgr : MonoBehaviour
             case SkillMode.switchBomb:
                 OnSwitchBomb();
                 break;
+            case SkillMode.chat:
+                return;
         }
     }
 
@@ -169,7 +143,7 @@ public class TouchMgr : MonoBehaviour
             {
                 audio.Play();
             }
-            if (Physics.Raycast(ray, out hit, laserRange -1))
+            if (Physics.Raycast(ray, out hit, laserRange - 1))
             {
                 if (!pointer.activeSelf)
                 {
@@ -386,6 +360,12 @@ public class TouchMgr : MonoBehaviour
             case SkillMode.switchBomb:
                 audio.loop = false;
                 audio.clip = shootClips[3];
+                ring[0].SetActive(false);
+                ring[1].SetActive(false);
+                break;
+            case SkillMode.chat:
+                audio.loop = false;
+                audio.clip = null;
                 ring[0].SetActive(false);
                 ring[1].SetActive(false);
                 break;

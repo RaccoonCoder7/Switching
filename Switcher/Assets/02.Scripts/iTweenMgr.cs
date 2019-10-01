@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MyDedlegate;
 
 public class iTweenMgr : MonoBehaviour
 {
@@ -13,14 +14,19 @@ public class iTweenMgr : MonoBehaviour
     public GameObject chatCanvas;
     Chat chat;
 
+    public bool isEnable;
+
     private void Awake()
     {
-        chat = FindObjectOfType<Chat>();
+        chat = chatCanvas.GetComponent<Chat>();
+        chatCanvas.SetActive(false);
     }
 
 
     private void Update()
     {
+        if(!isEnable) return;
+
         //전환패널
         if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
         {
@@ -28,9 +34,9 @@ public class iTweenMgr : MonoBehaviour
             triggerDown = false;
             //if (playing.Equals(false))
             //{
-                MoveR();
+            MoveR();
             //}
-            
+
         }
         if (OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger))
         {
@@ -53,31 +59,30 @@ public class iTweenMgr : MonoBehaviour
             {
                 chat.FadeHelper();
             }
-            
         }
 
     }
     public void MoveLeft()
     {
-            playing = true;
-            Hashtable ht1 = new Hashtable();
-            ht1.Add("x", -0.32f);
-            ht1.Add("time", 0.5f);
-            ht1.Add("easetype", iTween.EaseType.easeInBack);
-            ht1.Add("oncomplete", "CheckTriggerUp");
-            iTween.MoveBy(timerCanvas, ht1);
+        playing = true;
+        Hashtable ht1 = new Hashtable();
+        ht1.Add("x", -0.32f);
+        ht1.Add("time", 0.5f);
+        ht1.Add("easetype", iTween.EaseType.easeInBack);
+        ht1.Add("oncomplete", "CheckTriggerUp");
+        iTween.MoveBy(timerCanvas, ht1);
 
     }
     public void MoveRight()
     {
-            playing = true;
-            Hashtable ht1 = new Hashtable();
-            ht1.Add("x", 0.32f);
-            ht1.Add("time", 0.5f);
-            ht1.Add("easetype", iTween.EaseType.easeOutBack);
-            ht1.Add("oncompletetarget", this.gameObject);
-            ht1.Add("oncomplete", "CheckTriggerDown");
-            iTween.MoveBy(timerCanvas, ht1);
+        playing = true;
+        Hashtable ht1 = new Hashtable();
+        ht1.Add("x", 0.32f);
+        ht1.Add("time", 0.5f);
+        ht1.Add("easetype", iTween.EaseType.easeOutBack);
+        ht1.Add("oncompletetarget", this.gameObject);
+        ht1.Add("oncomplete", "CheckTriggerDown");
+        iTween.MoveBy(timerCanvas, ht1);
     }
 
     void CheckTriggerDown()
@@ -88,12 +93,13 @@ public class iTweenMgr : MonoBehaviour
             MoveL();
         }
         triggerDown = false;
-        
+
     }
     void CheckTriggerUp()
     {
         playing = false;
-        if(triggerUp){
+        if (triggerUp)
+        {
             MoveR();
         }
         triggerUp = false;
@@ -108,7 +114,7 @@ public class iTweenMgr : MonoBehaviour
 
     void MoveR()
     {
-        
+
         anim.SetBool("PanelUp", true);
     }
 }
