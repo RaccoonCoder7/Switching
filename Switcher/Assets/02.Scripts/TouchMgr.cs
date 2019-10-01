@@ -40,7 +40,11 @@ public class TouchMgr : MonoBehaviour
 
     // 레이져 사거리(인력, 척력) 조정
     public int laserRange = 12;
-    public float trBullet = 8.0f;
+    public float trBullet = 10.0f;
+
+    // 느려짐지속시간
+    [HideInInspector]
+    public float slowTime = 0.0f;
 
     void Start()
     {
@@ -101,6 +105,13 @@ public class TouchMgr : MonoBehaviour
         //     nullifyPullObj();
         //     return;
         // }
+
+        if(slowTime > 0.0f)
+        {
+            slowTime -= Time.deltaTime;
+            trBullet = 5.0f;
+            if (slowTime <= 0.1f) trBullet = 10.0f;
+        }
 
         if (!canFire) return;
 

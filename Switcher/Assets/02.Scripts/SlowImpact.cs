@@ -22,7 +22,7 @@ public class SlowImpact : MonoBehaviour
         else if (collision.collider.gameObject.layer.Equals(LayerMask.NameToLayer("PLAYER")))
         {
             // 플레이어 탄환 발사시간 조절(전이)
-            collision.gameObject.GetComponent<TouchMgr>().trBullet = 1.0f;
+            collision.gameObject.GetComponent<TouchMgr>().slowTime = 3.0f;
         }
     }
 }

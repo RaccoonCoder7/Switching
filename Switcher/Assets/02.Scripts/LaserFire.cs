@@ -18,6 +18,7 @@ public class LaserFire : MonoBehaviour
     private float timer = 0.0f;
 
     // 보스 상태
+    public GameObject boss;
     private BossState bossState;
     private Animator bossAnim;
 
@@ -31,11 +32,8 @@ public class LaserFire : MonoBehaviour
         beamEnd = Instantiate(beamEnd, new Vector3(0, 0, 0), Quaternion.identity, gameObject.transform.parent) as GameObject;
         beam = Instantiate(beam, new Vector3(0, 0, 0), Quaternion.identity, gameObject.transform.parent) as GameObject;
         line = beam.GetComponent<LineRenderer>();
-        if (GameObject.Find("boss"))
-        {
-            bossState = GameObject.Find("Mage").GetComponent<BossState>();
-            bossAnim = GameObject.Find("boss").GetComponent<Animator>();
-        }
+        bossState = boss.GetComponent<BossState>();
+        bossAnim = boss.GetComponent<Animator>();
     }
 
     void Update()
