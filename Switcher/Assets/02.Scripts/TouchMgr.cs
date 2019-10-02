@@ -13,7 +13,6 @@ public class TouchMgr : MonoBehaviour
     public GameObject pointer;
     private Mirror mirror;
     private TranslateBullet tb;
-    private bool canFire = true;
     private bool canFireTestBomb = true;
     private int manaStoneLayer;
     private int mirrorLayer;
@@ -28,6 +27,7 @@ public class TouchMgr : MonoBehaviour
     {
         switching, pull, push, switchBomb, chat
     }
+    public bool canFire = true;
     public LineRenderer laser;
     public GameObject wind;
     public GameObject translateBullet;

@@ -27,6 +27,7 @@ public class Timer : MonoBehaviour
     public void ResetTime(int time)
     {
         StopCoroutine("SetTime");
+        text.color = Color.white;
         leftTime = time;
     }
 
