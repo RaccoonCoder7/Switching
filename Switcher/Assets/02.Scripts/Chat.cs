@@ -41,23 +41,17 @@ namespace MyDedlegate
             gameMgr = FindObjectOfType<GameMgr>();
             audio = GetComponent<AudioSource>();
             sc = FindObjectOfType<StageCtrl>();
-            // touchMgr = FindObjectOfType<TouchMgr>();
-            // TextSet("Stage1");
         }
 
-        // Update is called once per frame
         void Update()
         {
             if (OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger))
             {
                 NextText();
             }
-            //if (OVRInput.GetUp(OVRInput.Button.SecondaryHandTrigger))
-            //{
-            //    CallHelper();
-            //}
         }
 
+        // 텍스트를 처음부터 다시 보여주도록 함
         public void ResetText()
         {
             continueCnt = 0;
@@ -66,93 +60,80 @@ namespace MyDedlegate
             NextText();
         }
 
+        // 텍스트를 리소스에서 로드하여 저장함
         public void TextSet(string str)
         {
-            Debug.Log("t1");
             continueCnt = 0;
             textCount = 1;
             textList = new List<string>();
             textData = Resources.Load(str + "Text", typeof(TextAsset)) as TextAsset;
-            Debug.Log("t2");
             sr = new StringReader(textData.text);
             textFile = sr.ReadLine();
             textList.Add(textFile);
-            Debug.Log("t3");
             StartCoroutine(PlayLine(textList[0]));
-            Debug.Log("t4");
             while (textFile != null)
             {
                 textFile = sr.ReadLine();
                 textList.Add(textFile);
             }
-            Debug.Log("t5");
-            // prevMode = touchMgr.mode;
-            // touchMgr.ChangeMode(TouchMgr.SkillMode.chat);
-            Debug.Log("t6");
         }
 
+        // 다음줄을 읽음.
         public void NextText()
         {
             if (nowState.Equals(State.Next))
             {
                 audio.Play();
+
                 //불러온 텍스트중 false가 있으면 아래 실행
                 if (textList[textCount].Equals("false"))
                 {
-                    //textCount++;
                     text.text = "";
                     textCount++;
-                    Debug.Log("PC: " + paragraphCnt);
                     chatEventList[paragraphCnt]();
-                    // paragraphCnt++;
-                    // touchMgr.ChangeMode(prevMode);
                     gameObject.SetActive(false);
                 }
                 //불러온 텍스트중 clear가 있으면 아래 실행
                 else if (textList[textCount].Equals("clear"))
                 {
-                    // gameMgr.Clear();
                     sc.StartCoroutine(sc.ClearStage());
                 }
                 else
                 {
                     StartCoroutine(PlayLine(textList[textCount]));
-                    //text.text = textList[textCount];
                     textCount++;
                 }
             }
         }
 
-        //조력자를 불렀을 때 사용하는 함수
+        // 조력자를 불렀을 때 사용하는 함수
         public void CallHelper()
         {
             prevMode = touchMgr.mode;
-            Debug.Log("before");
             touchMgr.ChangeMode(TouchMgr.SkillMode.chat);
-            Debug.Log("after");
             StartCoroutine(PlayLine(helperTextList));
             textCount = continueCnt;
             helpCheck = true;
         }
+
+        // 조력자를 없앰
         public void FadeHelper()
         {
             touchMgr.ChangeMode(prevMode);
             textCount = continueCnt;
             gameObject.SetActive(false);
             helpCheck = false;
-
         }
 
         //다음 대화를 진행할 때 부르는 메소드
         public void NextChat()
         {
             continueCnt = textCount;
-            Debug.Log("NextChat");
-            // gameObject.SetActive(true);
             StartCoroutine(PlayLine(textList[textCount]));
             paragraphCnt++;
             textCount++;
         }
+
         IEnumerator PlayLine(string setText)
         {
             nowState = State.Playing;

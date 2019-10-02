@@ -15,6 +15,7 @@ public class Mirror : MonoBehaviour
         laser.enabled = false;
     }
 
+    // 인력을 반사
     public void ReflectRay(Vector3 hitPos, Vector3 direction)
     {
         laser.SetPosition(0, hitPos);

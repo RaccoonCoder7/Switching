@@ -31,17 +31,12 @@ public class StageCtrl : MonoBehaviour
         playerTr = GameObject.Find("Player").transform;
         timer = imgCtrl.gameObject.GetComponent<Timer>();
         ps = playerTr.GetComponent<PlayerState>();
-        // playerRb = playerTr.GetComponent<Rigidbody>();
-        // ps = playerTr.GetComponent<PlayerState>();
     }
 
     public IEnumerator CreateStageAsync(int stageNum, bool isFirst)
     {
         stage.stageNum = stageNum;
-        Debug.Log("stageNum: " + stageNum);
-        yield return StartCoroutine(gameMgr.FadeIn());
-        Debug.Log("1");
-        // ShowLoadingScene();
+
         if (isFirst)
         {
             async = SceneManager.LoadSceneAsync("LoadStage");
@@ -51,28 +46,29 @@ public class StageCtrl : MonoBehaviour
                 yield return null;
             }
         }
+
         chat.gameObject.SetActive(true);
         yield return new WaitForSeconds(2.0f);
-        Debug.Log("2");
         CreateMap(isFirst);
         stage.skillSet = GetSkillSet();
         AudioClip clip = GetBGM();
         chat.TextSet("Stage" + stageNum);
+
         if (!audio.clip.Equals(clip))
         {
             audio.Stop();
             audio.clip = clip;
         }
-        Debug.Log("3");
+
         StartStage();
-        Debug.Log("4");
     }
 
     public IEnumerator ResetStage(AudioClip clip)
     {
-        // playerRb.isKinematic = true;
+
         gameMgr.ChangeScreanImage();
         yield return StartCoroutine(gameMgr.FadeIn());
+
         // 오브젝트위치
         CreateMap(false);
 
@@ -83,18 +79,19 @@ public class StageCtrl : MonoBehaviour
         // 스테이지시간
         timer.ResetTime(stage.stageTime);
 
-        // TODO: 조력자와의대화
+        // 조력자와의대화
         if(!chat.gameObject.activeSelf){
             chat.gameObject.SetActive(true);
         }
         chat.ResetText();
         yield return new WaitForSeconds(2.0f);
         ps.isDead = false;
-        // playerRb.isKinematic = false;
+
         if (clip)
         {
             audio.PlayOneShot(clip);
         }
+
         yield return StartCoroutine(gameMgr.FadeOut());
     }
 
@@ -102,7 +99,7 @@ public class StageCtrl : MonoBehaviour
     {
         gameMgr.SaveClearData();
         gameMgr.ChangeScreanImage();
-        // yield return StartCoroutine(gameMgr.FadeIn());
+
         // 현재맵없애기
         yield return StartCoroutine(CreateStageAsync(gameMgr.GetPrevStageNum(), false));
         yield return StartCoroutine(gameMgr.FadeOut());
@@ -124,7 +121,6 @@ public class StageCtrl : MonoBehaviour
     {
         if (!isFirst)
         {
-            Debug.Log("destroyMap");
             Destroy(stage.map);
         }
         stage.map = Instantiate(Maps[stage.stageNum - 1]);

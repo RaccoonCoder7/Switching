@@ -29,6 +29,7 @@ public class BombArea : MonoBehaviour
         StartCoroutine("Translation");
     }
 
+    // 전체 전이
     IEnumerator Translation()
     {
         yield return new WaitForSeconds(0.6f);

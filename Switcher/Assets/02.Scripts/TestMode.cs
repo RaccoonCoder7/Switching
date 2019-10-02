@@ -85,7 +85,6 @@ public class TestMode : MonoBehaviour
         audio.PlayOneShot(UISound);
         gameMgr.ChangeScreanImage();
         yield return StartCoroutine(sc.CreateStageAsync(stageNum, true));
-        // chatCanvas.SetActive(true);
         touchMgr.enabled = true;
         playerState.enabled = true;
         yield return StartCoroutine(gameMgr.FadeOut());

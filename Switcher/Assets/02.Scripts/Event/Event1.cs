@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using MyDedlegate; // 필수
 
-public class Event1 : EventMgr
+public class Event1 : EventMgr // EventMgr을 상속받을것.
 {
     private GameObject barrier;
     private TouchMgr touchMgr;
@@ -15,12 +15,14 @@ public class Event1 : EventMgr
 
     void Start()
     {
-        base.Start(); // 필수 
+        base.Start(); // Start를 사용할때엔 필수로 기입할 것.
         arrow = Instantiate(arrow);
         arrow.SetActive(false);
         GameObject player = GameObject.Find("Player");
         barrier = player.transform.Find("BeamupCylinderGreen").gameObject;
         touchMgr = player.GetComponent<TouchMgr>();
+
+        // Text에서 false가 나올 때 마다 EventList에 담긴 이벤트를 실행함.
         EventList[0] = new Deleg(EV1);
         EventList[1] = new Deleg(EV2);
         EventList[2] = new Deleg(EV3);
@@ -40,21 +42,18 @@ public class Event1 : EventMgr
         Vector3 pos = blueManastone.transform.position + new Vector3(0, 3, 0);
         arrow.transform.position = pos;
         arrow.transform.rotation = Quaternion.Euler(90, 0, 0);
-        // arrow.transform.Rotate(-90, -45, 90);
+
         touchMgr.ChangeMode(TouchMgr.SkillMode.switching);
+
         Event1a event1a = blueManastone.gameObject.GetComponent<Event1a>();
         event1a.isReady = true;
         event1a.arrow = arrow;
-        // CallChat();
-        // StartCoroutine("FadeInOutBarrier");
     }
 
     private void EV3()
     {
         arrow.SetActive(true);
         arrow.transform.position = frontDoor.transform.position + new Vector3(0, 3, 0);
-        // arrow.transform.Rotate(-90, 0, 0);
-        // arrow.transform.Rotate(0, -45, -90);
         arrow.transform.rotation = Quaternion.Euler(0, -45, -90);
         CallChat();
     }
@@ -62,8 +61,6 @@ public class Event1 : EventMgr
     private void EV4()
     {
         arrow.transform.position = redManastone.transform.position + new Vector3(0, 3, 0);
-        // arrow.transform.Rotate(0, 45, 90);
-        // arrow.transform.Rotate(90, 0, 90);
         arrow.transform.rotation = Quaternion.Euler(90, 0, 90);
         CallChat();
     }
@@ -71,7 +68,6 @@ public class Event1 : EventMgr
     private void EV5()
     {
         arrow.transform.position = connectLine.transform.position + new Vector3(0, 3, 0);
-        // arrow.transform.Rotate(90, -45, -90);
         CallChat();
     }
 
@@ -88,9 +84,4 @@ public class Event1 : EventMgr
         barrier.SetActive(false);
         CallChat();
     }
-
-    // void PrintName()
-    // {
-    //     Debug.Log("name: " + gameObject.name);
-    // }
 }

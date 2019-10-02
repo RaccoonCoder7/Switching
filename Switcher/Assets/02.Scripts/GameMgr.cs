@@ -96,7 +96,6 @@ public class GameMgr : MonoBehaviour
 
     public void ChangeScreanImage()
     {
-        Debug.Log("changed");
         screenImage.material = blackMaterial;
         fadeMaterial = blackMaterial;
     }

@@ -74,6 +74,7 @@ public class TranslateBullet : MonoBehaviour
             waitTime = 1f;
             playerState.DisableDmg(waitTime);
         }
+
         if (!other.gameObject.layer.Equals(wireLayer))
         {
             touchMgr.EnableFire(waitTime);
@@ -82,6 +83,7 @@ public class TranslateBullet : MonoBehaviour
         }
     }
 
+    // 전이능력을 비활성화
     public void DoActiveFalse()
     {
         StartCoroutine("ActiveFalseSelf");

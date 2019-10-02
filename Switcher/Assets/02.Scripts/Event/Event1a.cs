@@ -21,6 +21,7 @@ public class Event1a : EventMgr
     {
         if (!isReady) return;
 
+        // 능력에 닿았을 경우 CallChat 실행
         if (other.gameObject.layer.Equals(abilityLayer))
         {
             isReady = false;

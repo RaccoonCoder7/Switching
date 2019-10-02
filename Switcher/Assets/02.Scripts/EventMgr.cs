@@ -6,7 +6,7 @@ using MyDedlegate;
 public class EventMgr : MonoBehaviour
 {
     protected Chat chat;
-    protected Deleg[] EventList;
+    protected Deleg[] EventList; // 이벤트들을 담아둘 곳
 
     protected void Start()
     {
@@ -14,6 +14,7 @@ public class EventMgr : MonoBehaviour
         EventList = chat.chatEventList;
     }
 
+    // 이것을 호출하여 Chat의 NextChat을 실행시킴
     protected void CallChat()
     {
         StartCoroutine("WaitAndCallChat");

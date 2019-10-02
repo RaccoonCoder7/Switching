@@ -23,6 +23,7 @@ public class ImageCtrl : MonoBehaviour
         ChangeSprites(0);
     }
 
+    // 사용할 수 있는 스킬을 바꿈
     public void SetSkills(int skillSet)
     {
         for (int i = 0; i < 4 - skillSet; i++)
@@ -42,6 +43,7 @@ public class ImageCtrl : MonoBehaviour
         ChangeSprites(0);
     }
 
+    // 스테이지넘버를 스킬셋으로 활용하기 위해 숫자를 바꿔줌
     private int SwapNum(int num)
     {
         switch(num){
@@ -56,6 +58,7 @@ public class ImageCtrl : MonoBehaviour
         }
     }
 
+    // 패널의 스킬셋의 이미지를 바꿈
     public void ChangeSprites(TouchMgr.SkillMode modeNum)
     {
         int index = (int)modeNum;

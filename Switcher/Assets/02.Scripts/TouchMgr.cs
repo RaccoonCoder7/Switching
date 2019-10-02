@@ -161,7 +161,6 @@ public class TouchMgr : MonoBehaviour
                     Vector3 direction = new Vector3(targetPos.x, 0, targetPos.z)
                                         - new Vector3(playerTr.position.x, 0, playerTr.position.z);
                     direction = direction.normalized;
-                    //float speed = 50 / (dist * dist);
                     float speed = (dist * dist) / 10;
                     pullObjectRb.velocity = direction * speed;
                 }
@@ -229,7 +228,6 @@ public class TouchMgr : MonoBehaviour
                     Vector3 targetPos = pullObjectRb.transform.position;
                     Vector3 direction = playerTr.position - targetPos;
                     direction = direction.normalized;
-                    //float speed = 50 / (dist * dist);
                     float speed = (dist * dist) / 10;
                     pullObjectRb.velocity = direction * speed;
                 }
@@ -242,8 +240,6 @@ public class TouchMgr : MonoBehaviour
                     Vector3 incoming = hit.point - laser.transform.position;
                     Vector3 normal = hit.normal;
                     Vector3 direction = Vector3.Reflect(incoming, normal).normalized;
-                    Debug.DrawRay(hit.point, -incoming, Color.green, 100f);
-                    Debug.DrawRay(hit.point, direction, Color.red, 100f);
                     if (!mirror)
                     {
                         mirror = hit.collider.gameObject.GetComponent<Mirror>();

@@ -23,6 +23,7 @@ public class Timer : MonoBehaviour
         gameMgr = FindObjectOfType<GameMgr>();
     }
 
+    // 매개변수로 들어온 시간으로 패널의 시간을 재설정함
     public void ResetTime(int time)
     {
         StopCoroutine("SetTime");

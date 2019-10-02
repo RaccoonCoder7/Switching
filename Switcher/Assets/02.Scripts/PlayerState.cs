@@ -20,6 +20,7 @@ public class PlayerState : MonoBehaviour
         sc = FindObjectOfType<StageCtrl>();
     }
 
+    // 플레이어가 데미지를 받지 않도록 설정
     public void DisableDmg(float waitTime)
     {
         audio.PlayOneShot(stateClips[0]);
@@ -27,6 +28,7 @@ public class PlayerState : MonoBehaviour
         StartCoroutine(ShowBarrier(waitTime));
     }
 
+    // 배리어 생성
     private IEnumerator ShowBarrier(float waitTime)
     {
         barrier.SetActive(true);
@@ -35,6 +37,7 @@ public class PlayerState : MonoBehaviour
         canDmg = true;
     }
 
+    // 플레이어 죽기
     public void PlayerDie()
     {
         isDead = true;
