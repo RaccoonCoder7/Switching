@@ -6,6 +6,7 @@ public class Clear : MonoBehaviour
 {
     // private GameMgr mgr;
     private StageCtrl sc;
+    private bool clearDelay = true;
 
     private void Start()
     {
@@ -18,7 +19,17 @@ public class Clear : MonoBehaviour
         if (collision.gameObject.layer.Equals(LayerMask.NameToLayer("PLAYER")))
         {
             // StartCoroutine(mgr.TestClear());
-            sc.StartCoroutine(sc.ClearStage());
+            if (clearDelay)
+            {
+                sc.StartCoroutine(sc.ClearStage());
+                clearDelay = false;
+            }
         }
+    }
+
+    private IEnumerator SetTime()
+    {
+        yield return new WaitForSeconds(10.0f);
+        clearDelay = true;
     }
 }

@@ -32,8 +32,11 @@ public class LaserFire : MonoBehaviour
         beamEnd = Instantiate(beamEnd, new Vector3(0, 0, 0), Quaternion.identity, gameObject.transform.parent) as GameObject;
         beam = Instantiate(beam, new Vector3(0, 0, 0), Quaternion.identity, gameObject.transform.parent) as GameObject;
         line = beam.GetComponent<LineRenderer>();
-        bossState = boss.GetComponent<BossState>();
-        bossAnim = boss.GetComponent<Animator>();
+        if (boss)
+        {
+            bossState = boss.GetComponent<BossState>();
+            bossAnim = boss.GetComponent<Animator>();
+        }
         BeamActive(false);
     }
 

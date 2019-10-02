@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 772955581687541683}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.4699996, z: 0}
+  m_LocalPosition: {x: 0, y: 1.68, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1986525085148335476}
@@ -58,7 +58,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
@@ -13331,7 +13331,7 @@ PrefabInstance:
     - target: {fileID: 1461145716022597482, guid: 43224387693454748b2671d0b3bbae6c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.72
+      value: -0.92
       objectReference: {fileID: 0}
     - target: {fileID: 1461145716022597482, guid: 43224387693454748b2671d0b3bbae6c,
         type: 3}
