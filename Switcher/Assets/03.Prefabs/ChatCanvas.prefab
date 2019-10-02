@@ -29423,6 +29423,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46fafda449be31048bf9ea2eb8059cca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  laser: {fileID: 0}
+  touchMgr: {fileID: 0}
   text: {fileID: 8643874682203836382}
   helpCheck: 0
 --- !u!82 &-8506036988234361617
@@ -29546,6 +29548,7 @@ GameObject:
   - component: {fileID: 9030739482823136899}
   - component: {fileID: 6195596782614122662}
   - component: {fileID: 6303572633293827339}
+  - component: {fileID: 2958221060068371994}
   m_Layer: 19
   m_Name: Retry
   m_TagString: Untagged
@@ -29666,3 +29669,16 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!65 &2958221060068371994
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6930493926833618601}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.95, y: 4.3, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
