@@ -7,7 +7,7 @@ public class BossState : MonoBehaviour
     private Transform camTr;
     private Vector3 targetPosition;
 
-    private float attackTime = 8.0f;
+    private float attackTime =15.0f;
     private float timer = 0.0f;
 
     // 보스 알파값 줄어드는 시간
@@ -24,10 +24,10 @@ public class BossState : MonoBehaviour
     public int deathCount = 0;
 
     // 보스 부활시간
-    private float resurrectionTime = 2.0f;
+    private float resurrectionTime = 1.0f;
 
     // 죽음리셋 시간
-    private float deathResetTime = 1.0f;
+    private float deathResetTime = 5.0f;
 
     private Renderer render;
 
@@ -39,7 +39,7 @@ public class BossState : MonoBehaviour
     {
         camTr = Camera.main.GetComponent<Transform>();
         anim = gameObject.transform.GetComponent<Animator>();
-        render = GetComponent<Renderer>();
+        render = GameObject.Find("Mage").GetComponent<Renderer>();
         audio = GetComponent<AudioSource>();
     }
 

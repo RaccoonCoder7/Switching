@@ -34,6 +34,7 @@ public class LaserFire : MonoBehaviour
         line = beam.GetComponent<LineRenderer>();
         bossState = boss.GetComponent<BossState>();
         bossAnim = boss.GetComponent<Animator>();
+        BeamActive(false);
     }
 
     void Update()

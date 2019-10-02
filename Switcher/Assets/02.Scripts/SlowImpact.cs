@@ -16,8 +16,8 @@ public class SlowImpact : MonoBehaviour
         if (collision.collider.gameObject.layer.Equals(LayerMask.NameToLayer("TURRET")))
         {
             // 터렛 레이저 발사시간 조절
-            collision.gameObject.GetComponentInChildren<LaserFire>().stopTime = 15.0f;
-            collision.gameObject.GetComponentInChildren<LaserFire>().shootTime = 1.0f;
+            collision.gameObject.GetComponentInChildren<LaserFire>().stopTime = 16.0f;
+            collision.gameObject.GetComponentInChildren<LaserFire>().shootTime = 0.5f;
         }
         else if (collision.collider.gameObject.layer.Equals(LayerMask.NameToLayer("PLAYER")))
         {

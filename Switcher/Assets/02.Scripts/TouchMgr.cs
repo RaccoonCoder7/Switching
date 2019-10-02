@@ -10,7 +10,7 @@ public class TouchMgr : MonoBehaviour
     private Rigidbody bulletRb;
     private Rigidbody bombRb;
     private Rigidbody testBombRb;
-    private GameObject pointer;
+    public GameObject pointer;
     private Mirror mirror;
     private TranslateBullet tb;
     private bool canFire = true;
