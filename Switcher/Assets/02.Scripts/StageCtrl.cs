@@ -15,8 +15,6 @@ public class StageCtrl : MonoBehaviour
     private AsyncOperation async;
     private PlayerState ps;
     public Chat chat;
-    private TouchMgr tm;
-
     // private Rigidbody playerRb;
     // private PlayerState ps;
 
@@ -33,10 +31,6 @@ public class StageCtrl : MonoBehaviour
         playerTr = GameObject.Find("Player").transform;
         timer = imgCtrl.gameObject.GetComponent<Timer>();
         ps = playerTr.GetComponent<PlayerState>();
-        tm = playerTr.GetComponent<TouchMgr>();
-        // playerRb = playerTr.GetComponent<Rigidbody>();
-        // ps = playerTr.GetComponent<PlayerState>();
-
     }
 
     public IEnumerator CreateStageAsync(int stageNum, bool isFirst)
@@ -93,7 +87,6 @@ public class StageCtrl : MonoBehaviour
         chat.ResetText();
         yield return new WaitForSeconds(2.0f);
         ps.isDead = false;
-        tm.canFire = true;
 
         if (clip)
         {

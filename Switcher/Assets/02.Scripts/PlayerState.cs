@@ -8,7 +8,6 @@ public class PlayerState : MonoBehaviour
     private bool canDmg = true;
     private AudioSource audio;
     private StageCtrl sc;
-    private TouchMgr tm;
 
     public bool isDead;
     public AudioClip[] stateClips;
@@ -19,7 +18,6 @@ public class PlayerState : MonoBehaviour
         audio = GetComponent<AudioSource>();
         barrier.SetActive(false);
         sc = FindObjectOfType<StageCtrl>();
-        tm = FindObjectOfType<TouchMgr>();
     }
 
     // 플레이어가 데미지를 받지 않도록 설정
@@ -43,7 +41,6 @@ public class PlayerState : MonoBehaviour
     public void PlayerDie()
     {
         isDead = true;
-        tm.canFire = false;
         audio.PlayOneShot(stateClips[1]);
         OVRInput.SetControllerVibration(0.7f, 0.7f, OVRInput.Controller.RTouch);
         OVRInput.SetControllerVibration(0.7f, 0.7f, OVRInput.Controller.LTouch);

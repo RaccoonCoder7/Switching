@@ -11,10 +11,6 @@ namespace MyDedlegate
 
     public class Chat : MonoBehaviour
     {
-        private Ray ray;
-        private RaycastHit hit;
-        public LineRenderer laser;
-
         GameMgr gameMgr;
         TextAsset textData;
         StringReader sr;
@@ -49,24 +45,9 @@ namespace MyDedlegate
 
         void Update()
         {
-            ray = new Ray(laser.transform.position, laser.transform.forward);
-            if (Physics.Raycast(ray, out hit, 16.0f))
-            {
-                float dist = hit.distance;
-                laser.SetPosition(1, new Vector3(0, 0, dist));
-            }
-            laser.enabled = true;
             if (OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger))
             {
-                if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("RETRY")))
-                {
-                    laser.enabled = false;
-                    StartCoroutine(sc.ResetStage(null));
-                }
-                else
-                {
-                    NextText();
-                }
+                NextText();
             }
         }
 
