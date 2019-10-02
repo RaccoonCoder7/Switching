@@ -448,18 +448,6 @@ RectTransform:
   m_AnchoredPosition: {x: -1.7, y: 2.241}
   m_SizeDelta: {x: 500, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &505696769 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3162601953509377411, guid: a5e5289612409ec4aa0cc5e0f7ea81b0,
-    type: 3}
-  m_PrefabInstance: {fileID: 339286258322492863}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 779cd2cc02613bf4497e43e187da93e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &510423413 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 405920, guid: 8b5797a18349fb546be8acddc71151ff,
@@ -1799,20 +1787,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8183870336812259182, guid: a5e5289612409ec4aa0cc5e0f7ea81b0,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6727509008175141198, guid: a5e5289612409ec4aa0cc5e0f7ea81b0,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1637575469, guid: a5e5289612409ec4aa0cc5e0f7ea81b0, type: 3}
-      propertyPath: touchMgr
-      value: 
-      objectReference: {fileID: 505696769}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5e5289612409ec4aa0cc5e0f7ea81b0, type: 3}
 --- !u!1 &5133809086686695554
@@ -1900,14 +1874,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6737130693935950113, guid: 3eaad4eeaf6e76d4291a13f734a9167c,
         type: 3}
-      propertyPath: imgCtrl
-      value: 
-      objectReference: {fileID: 848703512}
-    - target: {fileID: 6737130693935950113, guid: 3eaad4eeaf6e76d4291a13f734a9167c,
-        type: 3}
       propertyPath: chat
       value: 
       objectReference: {fileID: 320940851}
+    - target: {fileID: 6737130693935950113, guid: 3eaad4eeaf6e76d4291a13f734a9167c,
+        type: 3}
+      propertyPath: imgCtrl
+      value: 
+      objectReference: {fileID: 848703512}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3eaad4eeaf6e76d4291a13f734a9167c, type: 3}
 --- !u!1001 &8760492087724629139

@@ -57,6 +57,7 @@ namespace MyDedlegate
             continueCnt = 0;
             textCount = 0;
             paragraphCnt = 0;
+            touchMgr.ChangeMode(TouchMgr.SkillMode.chat);
             NextText();
         }
 

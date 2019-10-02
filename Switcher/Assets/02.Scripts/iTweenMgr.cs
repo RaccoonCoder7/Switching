@@ -11,6 +11,7 @@ public class iTweenMgr : MonoBehaviour
     bool playing;
     bool triggerUp;
     bool triggerDown;
+    private StageCtrl sc;
     public GameObject chatCanvas;
     Chat chat;
 
@@ -22,6 +23,10 @@ public class iTweenMgr : MonoBehaviour
         chatCanvas.SetActive(false);
     }
 
+    private void Start(){
+        sc = FindObjectOfType<StageCtrl>();
+    }
+
 
     private void Update()
     {
@@ -30,6 +35,9 @@ public class iTweenMgr : MonoBehaviour
         //전환패널
         if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
         {
+            if(sc.GetStageNum().Equals(1)){
+                return;
+            }
             triggerUp = true;
             triggerDown = false;
             //if (playing.Equals(false))

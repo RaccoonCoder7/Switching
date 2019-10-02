@@ -84,6 +84,7 @@ public class TestMode : MonoBehaviour
         }
         audio.PlayOneShot(UISound);
         gameMgr.ChangeScreanImage();
+        yield return StartCoroutine(gameMgr.FadeIn());
         yield return StartCoroutine(sc.CreateStageAsync(stageNum, true));
         touchMgr.enabled = true;
         playerState.enabled = true;

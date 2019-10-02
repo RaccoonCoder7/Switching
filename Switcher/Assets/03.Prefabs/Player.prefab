@@ -845,6 +845,7 @@ MonoBehaviour:
   timerCanvas: {fileID: 1124691292}
   anim: {fileID: 560191481}
   chatCanvas: {fileID: 6727509008175141198}
+  isEnable: 0
 --- !u!1 &804719926
 GameObject:
   m_ObjectHideFlags: 0
@@ -7645,6 +7646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 779cd2cc02613bf4497e43e187da93e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointer: {fileID: 0}
   mode: 0
   laser: {fileID: 6047744250249843909}
   wind: {fileID: 1766685513786234179}
@@ -7666,6 +7668,7 @@ MonoBehaviour:
   bombSpeed: 720
   laserRange: 20
   trBullet: 10
+  slowTime: 0
 --- !u!114 &3162601953509377408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7817,7 +7820,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3162601953509377438}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f891542f74afaf9449a651320996e9f8, type: 3}
   m_Name: 
@@ -17766,11 +17769,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChatCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 6727509009565317812, guid: 0a9c5b7e31a33a04593767cf9d4f9779,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 253098767137095373, guid: 0a9c5b7e31a33a04593767cf9d4f9779,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17880,6 +17878,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1824517094}
+    - target: {fileID: 209649879, guid: 0a9c5b7e31a33a04593767cf9d4f9779, type: 3}
+      propertyPath: touchMgr
+      value: 
+      objectReference: {fileID: 3162601953509377411}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a9c5b7e31a33a04593767cf9d4f9779, type: 3}
 --- !u!1 &6727509008175141198 stripped

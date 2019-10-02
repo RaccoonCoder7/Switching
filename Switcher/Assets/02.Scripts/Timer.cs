@@ -28,6 +28,10 @@ public class Timer : MonoBehaviour
     {
         StopCoroutine("SetTime");
         leftTime = time;
+    }
+
+    public void StartTime()
+    {
         StartCoroutine("SetTime");
     }
 

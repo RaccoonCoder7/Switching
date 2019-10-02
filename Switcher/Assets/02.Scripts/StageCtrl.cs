@@ -80,7 +80,8 @@ public class StageCtrl : MonoBehaviour
         timer.ResetTime(stage.stageTime);
 
         // 조력자와의대화
-        if(!chat.gameObject.activeSelf){
+        if (!chat.gameObject.activeSelf)
+        {
             chat.gameObject.SetActive(true);
         }
         chat.ResetText();
@@ -99,10 +100,16 @@ public class StageCtrl : MonoBehaviour
     {
         gameMgr.SaveClearData();
         gameMgr.ChangeScreanImage();
+        yield return StartCoroutine(gameMgr.FadeIn());
 
         // 현재맵없애기
         yield return StartCoroutine(CreateStageAsync(gameMgr.GetPrevStageNum(), false));
         yield return StartCoroutine(gameMgr.FadeOut());
+    }
+
+    public int GetStageNum()
+    {
+        return stage.stageNum;
     }
 
     private void StartStage()
