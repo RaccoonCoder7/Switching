@@ -23,7 +23,7 @@ namespace MyDedlegate
         string helperTextList;
         int textCount;
         int continueCnt;
-        int paragraphCnt;
+        public int paragraphCnt;
         State nowState;
         private StageCtrl sc;
         public TouchMgr touchMgr;

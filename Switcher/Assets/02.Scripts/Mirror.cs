@@ -35,6 +35,9 @@ public class Mirror : MonoBehaviour
             Vector3 directionReverse = hitPos - targetPos;
             directionReverse = directionReverse.normalized;
             float dist = reflectHit.distance;
+            if(dist < 1f){
+                return;
+            }
             float speed = 50 / (dist * dist);
             pullObjectRb.velocity = directionReverse * speed;
         }

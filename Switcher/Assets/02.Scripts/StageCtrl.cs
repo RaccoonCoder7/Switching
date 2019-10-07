@@ -50,6 +50,7 @@ public class StageCtrl : MonoBehaviour
         }
 
         chat.gameObject.SetActive(true);
+        chat.ResetText();
         yield return new WaitForSeconds(2.0f);
         CreateMap(isFirst);
         stage.skillSet = GetSkillSet();
