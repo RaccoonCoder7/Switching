@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fbcf32758ac09940ade51e1c46044eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  touchMgr: {fileID: 0}
   chat: {fileID: 0}
   imgCtrl: {fileID: 0}
   Maps:

@@ -35,9 +35,9 @@ public class iTweenMgr : MonoBehaviour
         //전환패널
         if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
         {
-            if(sc.GetStageNum().Equals(1)){
-                return;
-            }
+            // if(sc.GetStageNum().Equals(1)){
+            //     return;
+            // }
             triggerUp = true;
             triggerDown = false;
             //if (playing.Equals(false))

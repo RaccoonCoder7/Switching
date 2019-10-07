@@ -87,6 +87,7 @@ public class TestMode : MonoBehaviour
         yield return StartCoroutine(gameMgr.FadeIn());
         yield return StartCoroutine(sc.CreateStageAsync(stageNum, true));
         touchMgr.enabled = true;
+        sc.touchMgr = touchMgr;
         playerState.enabled = true;
         yield return StartCoroutine(gameMgr.FadeOut());
         iTween.isEnable = true;
