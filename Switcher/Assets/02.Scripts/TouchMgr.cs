@@ -46,6 +46,9 @@ public class TouchMgr : MonoBehaviour
     [HideInInspector]
     public float slowTime = 0.0f;
 
+    // 슬로우 이펙트
+    public GameObject slowEffect;
+
     void Start()
     {
         manaStoneLayer = LayerMask.NameToLayer("MANASTONE");
@@ -69,6 +72,7 @@ public class TouchMgr : MonoBehaviour
         blur.SetActive(false);
         audio = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
+        slowEffect.SetActive(false);
         for (int i = 0; i < ring.Length; i++)
         {
             ring[i].SetActive(false);
@@ -81,8 +85,12 @@ public class TouchMgr : MonoBehaviour
         if(slowTime > 0.0f)
         {
             slowTime -= Time.deltaTime;
-            trBullet = 5.0f;
+            trBullet = 3.0f;
             if (slowTime <= 0.1f) trBullet = 10.0f;
+        }
+        else if(slowEffect.activeSelf)
+        {
+            slowEffect.SetActive(false);
         }
 
         if (!canFire) return;

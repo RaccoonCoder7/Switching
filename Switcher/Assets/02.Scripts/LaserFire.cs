@@ -24,6 +24,7 @@ public class LaserFire : MonoBehaviour
 
     // 플레이어 상태
     private PlayerState playerSt;
+    public GameObject slowEffect;
 
     void Start()
     {
@@ -32,6 +33,10 @@ public class LaserFire : MonoBehaviour
         beamEnd = Instantiate(beamEnd, new Vector3(0, 0, 0), Quaternion.identity, gameObject.transform.parent) as GameObject;
         beam = Instantiate(beam, new Vector3(0, 0, 0), Quaternion.identity, gameObject.transform.parent) as GameObject;
         line = beam.GetComponent<LineRenderer>();
+        if (slowEffect)
+        {
+            slowEffect.SetActive(false);
+        }
         if (boss)
         {
             bossState = boss.GetComponent<BossState>();
@@ -58,20 +63,6 @@ public class LaserFire : MonoBehaviour
             {
                 ShootBeam();
             }
-
-            // boss가 죽어있을 경우에는 raycast가 충돌판정 안함
-            //if (bossAnim && bossAnim.GetBool("death"))
-            //{
-            //    if (Physics.Raycast(transform.position, transform.forward, out hit, Mathf.Infinity,
-            //    ~(1 << LayerMask.NameToLayer("BOSS"))))
-            //    {
-            //        ShootBeam();
-            //    }
-            //}
-            //else
-            //{
-
-            //}
         }
         else
         {
@@ -107,14 +98,10 @@ public class LaserFire : MonoBehaviour
         {
             // 플레이어 사망
             if(!playerSt) {
-                Debug.Log("111");
                 playerSt = FindObjectOfType<PlayerState>();
             }
-            Debug.Log(playerSt);
-            Debug.Log(playerSt.isDead);
             if (!playerSt.isDead)
             {
-                Debug.Log("222");
                 playerSt.PlayerDie();
             }
         }

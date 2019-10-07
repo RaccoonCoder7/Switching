@@ -27,7 +27,8 @@ public class BossState : MonoBehaviour
     private float resurrectionTime = 1.0f;
 
     // 죽음리셋 시간
-    private float deathResetTime = 5.0f;
+    [HideInInspector]
+    public float deathResetTime = 5.0f;
 
     private Renderer render;
 
