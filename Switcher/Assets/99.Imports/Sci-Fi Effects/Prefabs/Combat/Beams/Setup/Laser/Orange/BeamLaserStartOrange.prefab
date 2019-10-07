@@ -103,9 +103,10 @@ GameObject:
   - component: {fileID: 19828478}
   - component: {fileID: 19974010}
   - component: {fileID: 8279212}
+  - component: {fileID: 3548733872536356409}
   m_Layer: 0
   m_Name: BeamLaserStartOrange
-  m_TagString: Untagged
+  m_TagString: LASER
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4925,6 +4926,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &3548733872536356409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 619dd29ba9c1de243993e8f2bea915a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: f3d930979df295f4d82480160a66913b, type: 2}
 --- !u!1 &158778
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ TagManager:
   - TURRET
   - LATTICE
   - GREEN
+  - LASER
   layers:
   - Default
   - TransparentFX
