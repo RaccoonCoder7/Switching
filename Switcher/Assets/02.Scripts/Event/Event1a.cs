@@ -5,7 +5,6 @@ using UnityEngine;
 public class Event1a : EventMgr
 {
     private int abilityLayer;
-    private TouchMgr touchMgr;
 
     public bool isReady;
     public GameObject arrow;
@@ -14,8 +13,6 @@ public class Event1a : EventMgr
     {
         base.Start();
         abilityLayer = LayerMask.NameToLayer("ABILITY");
-        GameObject player = GameObject.Find("Player");
-        touchMgr = player.GetComponent<TouchMgr>();
     }
     private void OnCollisionEnter(Collision other)
     {

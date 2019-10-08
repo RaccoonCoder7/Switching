@@ -1449,6 +1449,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8760492088220267370}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1883177152 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6930493926500406611, guid: a5e5289612409ec4aa0cc5e0f7ea81b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 339286258322492863}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1911179637 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 499240, guid: ef77650fcc7dfd64a8d614922d90c382,
@@ -1787,6 +1793,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6930493926500406611, guid: a5e5289612409ec4aa0cc5e0f7ea81b0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1124691294, guid: a5e5289612409ec4aa0cc5e0f7ea81b0, type: 3}
+      propertyPath: retryBtn
+      value: 
+      objectReference: {fileID: 1883177152}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5e5289612409ec4aa0cc5e0f7ea81b0, type: 3}
 --- !u!1 &5133809086686695554
@@ -1911,6 +1926,12 @@ PrefabInstance:
       propertyPath: touchMgr
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6737130693935950113, guid: 3eaad4eeaf6e76d4291a13f734a9167c,
+        type: 3}
+      propertyPath: Maps.Array.data[0]
+      value: 
+      objectReference: {fileID: 5157298692902050670, guid: 13888266d522d13478a24065b9d53ffe,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3eaad4eeaf6e76d4291a13f734a9167c, type: 3}
 --- !u!1001 &8760492087724629139

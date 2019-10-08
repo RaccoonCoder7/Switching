@@ -8,8 +8,18 @@ public class EventMgr : MonoBehaviour
     protected Chat chat;
     protected Deleg[] EventList; // 이벤트들을 담아둘 곳
 
+    protected GameObject barrier;
+    protected Timer timer;
+    protected TouchMgr touchMgr;
+
     protected void Start()
     {
+        GameObject player = GameObject.Find("Player");
+        barrier = player.transform.Find("BeamupCylinderGreen").gameObject;
+        timer = FindObjectOfType<Timer>();
+        touchMgr = player.GetComponent<TouchMgr>();
+        touchMgr.canFire = false;
+
         chat = FindObjectOfType<Chat>();
         EventList = chat.chatEventList;
     }

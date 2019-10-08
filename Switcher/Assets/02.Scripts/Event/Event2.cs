@@ -5,20 +5,12 @@ using MyDedlegate;
 
 public class Event2 : EventMgr
 {
-    private GameObject barrier;
-    private Timer timer;
-    private TouchMgr touchMgr;
     bool panelCheck;
     bool modeCheck;
     // Start is called before the first frame update
     void Start()
     {
         base.Start();
-        GameObject player = GameObject.Find("Player");
-        barrier = player.transform.Find("BeamupCylinderGreen").gameObject;
-        timer = FindObjectOfType<Timer>();
-        touchMgr = player.GetComponent<TouchMgr>();
-        touchMgr.mode.Equals(TouchMgr.SkillMode.chat);
 
         EventList[0] = new Deleg(EV1);
         EventList[1] = new Deleg(EV2);
@@ -59,6 +51,7 @@ public class Event2 : EventMgr
     {
         touchMgr.ChangeMode(TouchMgr.SkillMode.switchBomb);
         timer.StartTime();
+        touchMgr.canFire = true;
     }
 
     private IEnumerator FadeInOutBarrier()

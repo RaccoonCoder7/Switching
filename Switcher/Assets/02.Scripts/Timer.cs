@@ -22,6 +22,7 @@ public class Timer : MonoBehaviour
     public GameObject retryBtn;
 
 
+
     void Start()
     {
         gameMgr = FindObjectOfType<GameMgr>();
@@ -36,7 +37,7 @@ public class Timer : MonoBehaviour
 
     public void StartTime()
     {
-        //ChatFinish();
+        ChatFinish();
         StartCoroutine("SetTime");
     }
 

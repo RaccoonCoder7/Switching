@@ -163,7 +163,7 @@ namespace MyDedlegate
                 yield return new WaitForSeconds(0.02f);
                 text.text = setText.Substring(0, i);
             }
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.2f);
             nowState = State.Next;
         }
     }

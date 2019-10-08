@@ -20,10 +20,10 @@ public class Clear : MonoBehaviour
     {
         if (collision.gameObject.layer.Equals(LayerMask.NameToLayer("PLAYER")))
         {
-            //timer.ChatFinishReset();
             // StartCoroutine(mgr.TestClear());
             if (clearDelay)
             {
+                timer.ChatFinishReset();
                 sc.StartCoroutine(sc.ClearStage());
                 clearDelay = false;
             }

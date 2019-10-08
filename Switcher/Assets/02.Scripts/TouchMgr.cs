@@ -13,7 +13,7 @@ public class TouchMgr : MonoBehaviour
     public GameObject pointer;
     private Mirror mirror;
     private TranslateBullet tb;
-    private bool canFire = true;
+    public bool canFire = true;
     private bool canFireTestBomb = true;
     private int manaStoneLayer;
     private int mirrorLayer;
