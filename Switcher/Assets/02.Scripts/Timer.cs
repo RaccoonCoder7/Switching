@@ -17,6 +17,10 @@ public class Timer : MonoBehaviour
     public static bool canvasCheck;
     public GameObject stick;
 
+    public bool chatFinish;
+
+    public GameObject retryBtn;
+
 
     void Start()
     {
@@ -32,6 +36,7 @@ public class Timer : MonoBehaviour
 
     public void StartTime()
     {
+        //ChatFinish();
         StartCoroutine("SetTime");
     }
 
@@ -73,5 +78,16 @@ public class Timer : MonoBehaviour
             ps = FindObjectOfType<PlayerState>();
         }
         ps.PlayerDie();
+    }
+
+    public void ChatFinish()
+    {
+        retryBtn.SetActive(true);
+        chatFinish = true;
+    }
+    public void ChatFinishReset()
+    {
+        retryBtn.SetActive(false);
+        chatFinish = false;
     }
 }

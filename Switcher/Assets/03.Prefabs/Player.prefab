@@ -1287,6 +1287,8 @@ MonoBehaviour:
   fadeMaterial1: {fileID: 2100000, guid: 553005d8614a05d45895a06c7b0a611b, type: 2}
   fadeMaterial2: {fileID: 2100000, guid: 3f4c71479ca11af4785d316089e03716, type: 2}
   stick: {fileID: 0}
+  chatFinish: 0
+  retryBtn: {fileID: 0}
 --- !u!114 &3162601952082178807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1942,7 +1944,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1824517093}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.252, z: 4.122}
+  m_LocalPosition: {x: 0.139, y: -0.252, z: 4.122}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2161175058916637698}
@@ -7674,9 +7676,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ca2a086d076dd7a4f9cd9c175f774b6b, type: 3}
   - {fileID: 8300000, guid: a7b5a4f9cd0368f4f8c8f01c71f8c5a6, type: 3}
   - {fileID: 8300000, guid: 4135b81f06e543940ab7fe9e3edadd3d, type: 3}
-  bombSpeed: 720
+  bombSpeed: 600
   laserRange: 20
-  trBullet: 10
+  trBullet: 16
   slowTime: 0
   slowEffect: {fileID: 4480478199345854650}
 --- !u!114 &3162601953509377408

@@ -7,17 +7,20 @@ public class Clear : MonoBehaviour
     // private GameMgr mgr;
     private StageCtrl sc;
     private bool clearDelay = true;
+    Timer timer;
 
     private void Start()
     {
         // mgr = GameObject.Find("GameMgr").GetComponent<GameMgr>();
         sc = FindObjectOfType<StageCtrl>();
+        timer = FindObjectOfType<Timer>();
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.layer.Equals(LayerMask.NameToLayer("PLAYER")))
         {
+            //timer.ChatFinishReset();
             // StartCoroutine(mgr.TestClear());
             if (clearDelay)
             {

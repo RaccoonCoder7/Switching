@@ -14,11 +14,13 @@ public class iTweenMgr : MonoBehaviour
     private StageCtrl sc;
     public GameObject chatCanvas;
     Chat chat;
+    Timer timer;
 
     public bool isEnable;
 
     private void Awake()
     {
+        timer = FindObjectOfType<Timer>();
         chat = chatCanvas.GetComponent<Chat>();
         chatCanvas.SetActive(false);
     }
@@ -67,18 +69,22 @@ public class iTweenMgr : MonoBehaviour
             }
         }
         //조력자 소환
-        if (OVRInput.GetUp(OVRInput.Button.SecondaryHandTrigger))
+        if (timer.chatFinish)
         {
-            if (!chat.helpCheck)
+            if (OVRInput.GetUp(OVRInput.Button.SecondaryHandTrigger))
             {
-                chatCanvas.SetActive(true);
-                chat.CallHelper();
-            }
-            else
-            {
-                chat.FadeHelper();
+                if (!chat.helpCheck)
+                {
+                    chatCanvas.SetActive(true);
+                    chat.CallHelper();
+                }
+                else
+                {
+                    chat.FadeHelper();
+                }
             }
         }
+            
 
     }
     public void MoveLeft()
