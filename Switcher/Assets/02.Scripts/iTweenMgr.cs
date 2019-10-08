@@ -23,23 +23,34 @@ public class iTweenMgr : MonoBehaviour
         chatCanvas.SetActive(false);
     }
 
-    private void Start(){
+    private void Start()
+    {
         sc = FindObjectOfType<StageCtrl>();
     }
 
 
     private void Update()
     {
-        if(!isEnable) return;
+        if (!isEnable) return;
+        //if(triggerDown && triggerUp)
+        //{
+        //    timerCanvas.SetActive(false);
+        //}
+        //else
+        //{
+        //    timerCanvas.SetActive(true);
+        //}
 
         //전환패널
         if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
         {
-            // if(sc.GetStageNum().Equals(1)){
-            //     return;
-            // }
+            if (sc.GetStageNum().Equals(1))
+            {
+                return;
+            }
             triggerUp = true;
             triggerDown = false;
+
             //if (playing.Equals(false))
             //{
             MoveR();
@@ -122,7 +133,15 @@ public class iTweenMgr : MonoBehaviour
 
     void MoveR()
     {
-
         anim.SetBool("PanelUp", true);
+    }
+
+    void PanelFalse()
+    {
+        timerCanvas.SetActive(false);
+    }
+    void PanelTrue()
+    {
+        timerCanvas.SetActive(true);
     }
 }

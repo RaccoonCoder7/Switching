@@ -29,7 +29,7 @@ namespace MyDedlegate
         public TouchMgr touchMgr;
         private TouchMgr.SkillMode prevMode;
         public Text text;
-        public bool helpCheck;
+        public bool helpCheck = false;
         public Deleg[] chatEventList = new Deleg[6];
 
         AudioSource audio;
@@ -74,7 +74,7 @@ namespace MyDedlegate
         public void ResetText()
         {
             continueCnt = 0;
-            textCount = 0;
+            textCount = 1;
             paragraphCnt = 0;
             touchMgr.ChangeMode(TouchMgr.SkillMode.chat);
             NextText();
@@ -112,6 +112,7 @@ namespace MyDedlegate
                     textCount++;
                     chatEventList[paragraphCnt]();
                     gameObject.SetActive(false);
+                    helpCheck = false;
                 }
                 //불러온 텍스트중 clear가 있으면 아래 실행
                 else if (textList[textCount].Equals("clear"))

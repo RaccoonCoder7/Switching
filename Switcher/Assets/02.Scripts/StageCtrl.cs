@@ -50,7 +50,6 @@ public class StageCtrl : MonoBehaviour
         }
 
         chat.gameObject.SetActive(true);
-        chat.ResetText();
         yield return new WaitForSeconds(2.0f);
         CreateMap(isFirst);
         stage.skillSet = GetSkillSet();
@@ -115,6 +114,7 @@ public class StageCtrl : MonoBehaviour
 
         // 현재맵없애기
         yield return StartCoroutine(CreateStageAsync(gameMgr.GetPrevStageNum(), false));
+        chat.ResetText();
         yield return StartCoroutine(gameMgr.FadeOut());
     }
 
