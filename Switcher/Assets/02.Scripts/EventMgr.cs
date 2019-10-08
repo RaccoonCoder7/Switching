@@ -6,7 +6,7 @@ using MyDedlegate;
 public class EventMgr : MonoBehaviour
 {
     protected Chat chat;
-    protected BossChat bossChat;
+    
     protected Deleg[] EventList; // 이벤트들을 담아둘 곳
 
     protected GameObject barrier;
@@ -31,17 +31,7 @@ public class EventMgr : MonoBehaviour
         StartCoroutine("WaitAndCallChat");
     }
 
-    protected void CallBossChat()
-    {
-        StartCoroutine("WaitAndCallBossChat");
-    }
-
-    private IEnumerator WaitAndCallBossChat()
-    {
-        yield return new WaitForSeconds(0.1f);
-        bossChat.gameObject.SetActive(true);
-        bossChat.NextChat();
-    }
+    
 
     private IEnumerator WaitAndCallChat()
     {

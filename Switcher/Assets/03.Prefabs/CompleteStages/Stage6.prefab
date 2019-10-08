@@ -33741,6 +33741,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7999185594815667519}
   - component: {fileID: 7999185594815667518}
+  - component: {fileID: -6061500236872997092}
   m_Layer: 0
   m_Name: Stage6
   m_TagString: Untagged
@@ -33792,6 +33793,18 @@ MonoBehaviour:
   stageTime: 480
   customBGM: {fileID: 0}
   customSkillSet: 0
+--- !u!114 &-6061500236872997092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7999185594815667513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2357937a0f60ee840b83233ba6a54c97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7999185594818604219
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,11 +6,12 @@ using MyDedlegate;
 public class Event6 : EventMgr
 {
     bool modeCheck;
+    protected BossChat bossChat;
     // Start is called before the first frame update
     void Start()
     {
         base.Start();
-
+        bossChat = FindObjectOfType<BossChat>();
 
         EventList[0] = new Deleg(EV1);
         EventList[1] = new Deleg(EV2);
@@ -18,35 +19,31 @@ public class Event6 : EventMgr
     }
     private void Update()
     {
-        if (modeCheck && touchMgr.mode.Equals(TouchMgr.SkillMode.pull))
-        {
-            touchMgr.ChangeMode(TouchMgr.SkillMode.chat);
-            CallChat();
-            modeCheck = false;
-        }
+
     }
 
     private void EV1()
     {
-        StartCoroutine("FadeInOutBarrier");
+        CallChat();
     }
     private void EV2()
     {
-        touchMgr.ChangeMode(TouchMgr.SkillMode.switching);
-        modeCheck = true;
+        CallBossChat();
     }
     private void EV3()
     {
-        touchMgr.ChangeMode(TouchMgr.SkillMode.pull);
-        touchMgr.canFire = true;
-        timer.StartTime();
+        CallChat();
     }
 
-    private IEnumerator FadeInOutBarrier()
+    protected void CallBossChat()
     {
-        barrier.SetActive(true);
-        yield return new WaitForSeconds(2.0f);
-        barrier.SetActive(false);
-        CallChat();
+        StartCoroutine("WaitAndCallBossChat");
+    }
+
+    private IEnumerator WaitAndCallBossChat()
+    {
+        yield return new WaitForSeconds(0.1f);
+        bossChat.gameObject.SetActive(true);
+        bossChat.NextChat();
     }
 }
