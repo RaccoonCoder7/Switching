@@ -33789,7 +33789,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTr: {fileID: 7999185593898116468}
-  stageTime: 800
+  stageTime: 480
   customBGM: {fileID: 0}
   customSkillSet: 0
 --- !u!1 &7999185594818604219
