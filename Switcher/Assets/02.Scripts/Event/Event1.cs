@@ -77,9 +77,8 @@ public class Event1 : EventMgr // EventMgr을 상속받을것.
     private void EV6()
     {
         touchMgr.ChangeMode(TouchMgr.SkillMode.switching);
-        Debug.Log("a1");
         arrow.SetActive(false);
-        Debug.Log("a2");
+
         // 타이머시작
         timer.StartTime();
     }
