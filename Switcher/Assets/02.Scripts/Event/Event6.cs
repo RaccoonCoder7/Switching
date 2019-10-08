@@ -11,6 +11,7 @@ public class Event6 : EventMgr
     {
         base.Start();
 
+
         EventList[0] = new Deleg(EV1);
         EventList[1] = new Deleg(EV2);
         EventList[2] = new Deleg(EV3);
