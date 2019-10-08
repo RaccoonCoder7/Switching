@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using MyDedlegate;
 
-public class Event3 : EventMgr
+public class Event6 : EventMgr
 {
     bool modeCheck;
     // Start is called before the first frame update
