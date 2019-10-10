@@ -33805,6 +33805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2357937a0f60ee840b83233ba6a54c97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bossChatCanvas: {fileID: 4051044148086398331}
 --- !u!1 &7999185594818604219
 GameObject:
   m_ObjectHideFlags: 0
@@ -79476,17 +79477,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5583788516926776550, guid: f55aa0ef9d8a8e9489d22e6dd18b5fe6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7481681741119394188, guid: f55aa0ef9d8a8e9489d22e6dd18b5fe6,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f55aa0ef9d8a8e9489d22e6dd18b5fe6, type: 3}
---- !u!1 &7999185595253482326 stripped
+--- !u!1 &4051044148086398331 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1893616071685921483, guid: f55aa0ef9d8a8e9489d22e6dd18b5fe6,
+  m_CorrespondingSourceObject: {fileID: 5583788516926776550, guid: f55aa0ef9d8a8e9489d22e6dd18b5fe6,
     type: 3}
   m_PrefabInstance: {fileID: 8450346239665256861}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &7999185595253482312 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1893616071685921493, guid: f55aa0ef9d8a8e9489d22e6dd18b5fe6,
+    type: 3}
+  m_PrefabInstance: {fileID: 8450346239665256861}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7999185595253482326 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1893616071685921483, guid: f55aa0ef9d8a8e9489d22e6dd18b5fe6,
     type: 3}
   m_PrefabInstance: {fileID: 8450346239665256861}
   m_PrefabAsset: {fileID: 0}
