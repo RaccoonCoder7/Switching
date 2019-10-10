@@ -34,6 +34,7 @@ namespace MyDedlegate
         private TouchMgr.SkillMode prevMode;
         public Text text;
         public bool helpCheck = false;
+        public ImageCtrl imageCtrl;
         public Deleg[] chatEventList = new Deleg[6];
 
         AudioSource audio;
@@ -124,6 +125,7 @@ namespace MyDedlegate
             continueCnt = 0;
             textCount = 1;
             paragraphCnt = 0;
+            imageCtrl.ChangeSprites(TouchMgr.SkillMode.switching);
             touchMgr.ChangeMode(TouchMgr.SkillMode.chat);
             NextText();
         }
