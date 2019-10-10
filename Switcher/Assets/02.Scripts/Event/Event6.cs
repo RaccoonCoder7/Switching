@@ -34,6 +34,11 @@ public class Event6 : EventMgr
     {
         CallChat();
     }
+    private void EV4()
+    {
+        touchMgr.canFire = true;
+        timer.StartTime();
+    }
 
     protected void CallBossChat()
     {
