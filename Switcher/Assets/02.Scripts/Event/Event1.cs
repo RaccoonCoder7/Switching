@@ -39,7 +39,7 @@ public class Event1 : EventMgr // EventMgr을 상속받을것.
         Vector3 pos = blueManastone.transform.position + new Vector3(0, 3, 0);
         arrow.transform.position = pos;
         arrow.transform.rotation = Quaternion.Euler(90, 0, 0);
-
+        touchMgr.canFire = true;
         touchMgr.ChangeMode(TouchMgr.SkillMode.switching);
 
         Event1a event1a = blueManastone.gameObject.GetComponent<Event1a>();

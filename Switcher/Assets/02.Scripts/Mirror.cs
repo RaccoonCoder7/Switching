@@ -7,11 +7,13 @@ public class Mirror : MonoBehaviour
     private Ray reflectRay;
     private RaycastHit reflectHit;
     private Rigidbody pullObjectRb;
+    private int manaStoneLayer;
 
     public LineRenderer laser;
 
     void Start()
     {
+        manaStoneLayer = LayerMask.NameToLayer("MANASTONE");
         laser.enabled = false;
     }
 
@@ -28,22 +30,43 @@ public class Mirror : MonoBehaviour
         if (Physics.Raycast(reflectRay, out reflectHit, 12))
         {
             laser.SetPosition(1, reflectHit.point);
-            pullObjectRb = reflectHit.collider.gameObject.GetComponent<Rigidbody>();
-            float distance = Vector3.Distance(reflectHit.point, transform.position);
+            if (reflectHit.collider.gameObject.layer.Equals(manaStoneLayer))
+            {
+                if (!pullObjectRb)
+                {
+                    pullObjectRb = reflectHit.collider.gameObject.GetComponent<Rigidbody>();
+                }
+                float distance = Vector3.Distance(reflectHit.point, transform.position);
 
-            Vector3 targetPos = pullObjectRb.transform.position;
-            Vector3 directionReverse = hitPos - targetPos;
-            directionReverse = directionReverse.normalized;
-            float dist = reflectHit.distance;
-            if(dist < 1f){
-                return;
+                Vector3 targetPos = pullObjectRb.transform.position;
+                Vector3 directionReverse = hitPos - targetPos;
+                directionReverse = directionReverse.normalized;
+                float dist = reflectHit.distance;
+                if (dist < 1f)
+                {
+                    pullObjectRb.velocity = Vector3.zero;
+                    return;
+                }
+                float speed = 50 / (dist * dist);
+                pullObjectRb.velocity = directionReverse * speed;
             }
-            float speed = 50 / (dist * dist);
-            pullObjectRb.velocity = directionReverse * speed;
+            else
+            {
+                if (pullObjectRb)
+                {
+                    pullObjectRb.velocity = Vector3.zero;
+                    pullObjectRb = null;
+                }
+            }
         }
         else
         {
             laser.SetPosition(1, hitPos + direction * 12);
+            if (pullObjectRb)
+            {
+                pullObjectRb.velocity = Vector3.zero;
+                pullObjectRb = null;
+            }
         }
     }
 
