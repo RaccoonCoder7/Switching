@@ -18,10 +18,6 @@ public class Event1 : EventMgr // EventMgr을 상속받을것.
         arrow = Instantiate(arrow, transform);
         arrow.SetActive(false);
         rightController.SetActive(false);
-        GameObject player = GameObject.Find("Player");
-        barrier = player.transform.Find("BeamupCylinderGreen").gameObject;
-        touchMgr = player.GetComponent<TouchMgr>();
-        timer = FindObjectOfType<Timer>();
 
         // Text에서 false가 나올 때 마다 EventList에 담긴 이벤트를 실행함.
         EventList[0] = new Deleg(EV1);
