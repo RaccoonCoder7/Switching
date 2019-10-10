@@ -1288,7 +1288,7 @@ MonoBehaviour:
   fadeMaterial2: {fileID: 2100000, guid: 3f4c71479ca11af4785d316089e03716, type: 2}
   stick: {fileID: 0}
   chatFinish: 0
-  retryBtn: {fileID: 0}
+  retryBtn: {fileID: 6930493926500406611}
 --- !u!114 &3162601952082178807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7658,6 +7658,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointer: {fileID: 0}
+  canFire: 1
   mode: 0
   laser: {fileID: 6047744250249843909}
   wind: {fileID: 1766685513786234179}
@@ -27670,6 +27671,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 339286256654370414}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6930493926500406611 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6930493926833618601, guid: 0a9c5b7e31a33a04593767cf9d4f9779,
+    type: 3}
+  m_PrefabInstance: {fileID: 1843686394}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &339286256873784992
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27739,18 +27746,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: caa93ff0b0f7f0a4eb4f6186717c2dac, type: 3}
---- !u!23 &353014014509446138 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 23445357370520922, guid: caa93ff0b0f7f0a4eb4f6186717c2dac,
-    type: 3}
-  m_PrefabInstance: {fileID: 339286256873784992}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &340718365044529504 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4251268936376256, guid: caa93ff0b0f7f0a4eb4f6186717c2dac,
     type: 3}
   m_PrefabInstance: {fileID: 339286256873784992}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!1001 &339286257953116803
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27846,6 +27848,13 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6995173536366212091, guid: 78182bcd914206b4e8b12011e50a06ac,
     type: 3}
   m_PrefabInstance: {fileID: 339286257953116803}
+=======
+--- !u!23 &353014014509446138 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 23445357370520922, guid: caa93ff0b0f7f0a4eb4f6186717c2dac,
+    type: 3}
+  m_PrefabInstance: {fileID: 339286256873784992}
+>>>>>>> Stashed changes
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3162601952902493536
 PrefabInstance:
