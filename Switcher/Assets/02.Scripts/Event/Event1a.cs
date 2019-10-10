@@ -8,6 +8,7 @@ public class Event1a : EventMgr
 
     public bool isReady;
     public GameObject arrow;
+    public GameObject rightController;
 
     void Start()
     {
@@ -23,6 +24,7 @@ public class Event1a : EventMgr
         {
             isReady = false;
             arrow.SetActive(false);
+            rightController.SetActive(false);
             touchMgr.ChangeMode(TouchMgr.SkillMode.chat);
             CallChat();
         }

@@ -14,6 +14,10 @@ namespace MyDedlegate
         private Ray ray;
         private RaycastHit hit;
         public LineRenderer laser;
+        public GameObject[] controllers;
+        public Texture[] textures;
+        private MeshRenderer[] renderers = new MeshRenderer[2];
+        // private Renderer RightRend;
 
         GameMgr gameMgr;
         TextAsset textData;
@@ -45,6 +49,11 @@ namespace MyDedlegate
             gameMgr = FindObjectOfType<GameMgr>();
             audio = GetComponent<AudioSource>();
             sc = FindObjectOfType<StageCtrl>();
+            renderers[0] = controllers[0].GetComponent<MeshRenderer>();
+            renderers[1] = controllers[1].GetComponent<MeshRenderer>();
+            controllers[0].SetActive(false);
+            controllers[1].SetActive(false);
+            ShowController(1, 0);
         }
 
         void Update()
@@ -68,6 +77,45 @@ namespace MyDedlegate
                     NextText();
                 }
             }
+        }
+
+        // 첫 번째 파라미터: 컨트롤러. (0: 왼손, 1: 오른손)
+        // 두 번째 파라미터: 버튼. (0: 트리거, 1: 핸드)
+        public void ShowController(int ctrlNum, int btnNum)
+        {
+            if (ctrlNum < 0 || ctrlNum > 1 || btnNum < 0 || btnNum > 1) return;
+            controllers[ctrlNum].SetActive(true);
+            StartCoroutine(ControllerAnim(ctrlNum, btnNum));
+        }
+
+        // 첫 번째 파라미터: 컨트롤러. (0: 왼손, 1: 오른손)
+        public void HideController(int ctrlNum)
+        {
+            if (ctrlNum < 0 || ctrlNum > 1) return;
+            controllers[ctrlNum].SetActive(false);
+        }
+
+        // 첫 번째 파라미터: 컨트롤러. (0: 왼손, 1: 오른손)
+        // 두 번째 파라미터: 버튼. (0: 트리거, 1: 핸드, 2: 트리거&핸드)
+        private IEnumerator ControllerAnim(int ctrlNum, int btnNum)
+        {
+            while (renderers[ctrlNum])
+            {
+                renderers[ctrlNum].material.mainTexture = textures[btnNum];
+                yield return new WaitForSeconds(0.5f);
+                renderers[ctrlNum].material.mainTexture = textures[2];
+                yield return new WaitForSeconds(0.5f);
+            }
+        }
+
+        private void OnEnable()
+        {
+            ShowController(1, 0);
+        }
+
+        private void OnDisable()
+        {
+            StopCoroutine("ControllerAnim");
         }
 
         // 텍스트를 처음부터 다시 보여주도록 함

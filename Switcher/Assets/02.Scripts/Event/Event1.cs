@@ -5,7 +5,12 @@ using MyDedlegate; // 필수
 
 public class Event1 : EventMgr // EventMgr을 상속받을것.
 {
+    private GameObject barrier;
+    private TouchMgr touchMgr;
+    private Timer timer;
+
     public GameObject arrow;
+    public GameObject rightController;
     public Transform frontDoor;
     public Transform blueManastone;
     public Transform redManastone;
@@ -16,6 +21,11 @@ public class Event1 : EventMgr // EventMgr을 상속받을것.
         base.Start(); // Start를 사용할때엔 필수로 기입할 것.
         arrow = Instantiate(arrow, transform);
         arrow.SetActive(false);
+        rightController.SetActive(false);
+        GameObject player = GameObject.Find("Player");
+        barrier = player.transform.Find("BeamupCylinderGreen").gameObject;
+        touchMgr = player.GetComponent<TouchMgr>();
+        timer = FindObjectOfType<Timer>();
 
         // Text에서 false가 나올 때 마다 EventList에 담긴 이벤트를 실행함.
         EventList[0] = new Deleg(EV1);
@@ -39,11 +49,17 @@ public class Event1 : EventMgr // EventMgr을 상속받을것.
         arrow.transform.rotation = Quaternion.Euler(90, 0, 0);
 
         touchMgr.ChangeMode(TouchMgr.SkillMode.switching);
-        touchMgr.canFire = true;
 
         Event1a event1a = blueManastone.gameObject.GetComponent<Event1a>();
         event1a.isReady = true;
         event1a.arrow = arrow;
+        event1a.rightController = rightController;
+        rightController.SetActive(true);
+        Debug.Log("1");
+        ControllerAnim ca = rightController.GetComponent<ControllerAnim>();
+        Debug.Log("2");
+        StartCoroutine(ca.AnimateContrlloer());
+        Debug.Log("3");
     }
 
     private void EV3()
