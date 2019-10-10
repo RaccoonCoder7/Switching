@@ -5,10 +5,6 @@ using MyDedlegate; // 필수
 
 public class Event1 : EventMgr // EventMgr을 상속받을것.
 {
-    private GameObject barrier;
-    private TouchMgr touchMgr;
-    private Timer timer;
-
     public GameObject arrow;
     public GameObject rightController;
     public Transform frontDoor;
