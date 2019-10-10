@@ -381,6 +381,7 @@ GameObject:
   m_Component:
   - component: {fileID: 33500084923903733}
   - component: {fileID: 33500084923903732}
+  - component: {fileID: -2986048731915732121}
   m_Layer: 0
   m_Name: Stage5
   m_TagString: Untagged
@@ -525,6 +526,18 @@ MonoBehaviour:
   stageTime: 800
   customBGM: {fileID: 0}
   customSkillSet: 4
+--- !u!114 &-2986048731915732121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33500084923903734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7f0618375a6bb0489e365f0911c6fe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &33500085112141386
 GameObject:
   m_ObjectHideFlags: 0
@@ -25229,15 +25242,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2d71e74266f686459332f67e6cdb6cb, type: 3}
---- !u!4 &807001353076529118 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1660175795506527954, guid: b2d71e74266f686459332f67e6cdb6cb,
-    type: 3}
-  m_PrefabInstance: {fileID: 2033703313517373708}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &807001353076529115 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1660175795506527959, guid: b2d71e74266f686459332f67e6cdb6cb,
+    type: 3}
+  m_PrefabInstance: {fileID: 2033703313517373708}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &807001353076529118 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1660175795506527954, guid: b2d71e74266f686459332f67e6cdb6cb,
     type: 3}
   m_PrefabInstance: {fileID: 2033703313517373708}
   m_PrefabAsset: {fileID: 0}

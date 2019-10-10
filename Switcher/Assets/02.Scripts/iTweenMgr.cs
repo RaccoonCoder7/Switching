@@ -6,6 +6,7 @@ using MyDedlegate;
 public class iTweenMgr : MonoBehaviour
 {
     public GameObject timerCanvas;
+    public GameObject[] timerPanel;
     public Animator anim;
     float x;
     bool playing;
@@ -144,10 +145,16 @@ public class iTweenMgr : MonoBehaviour
 
     void PanelFalse()
     {
-        timerCanvas.SetActive(false);
+        for (int i = 0; i < timerPanel.Length; i++)
+        {
+            timerPanel[i].SetActive(false);
+        }
     }
     void PanelTrue()
     {
-        timerCanvas.SetActive(true);
+        for (int i = 0; i < timerPanel.Length; i++)
+        {
+            timerPanel[i].SetActive(true);
+        }
     }
 }
