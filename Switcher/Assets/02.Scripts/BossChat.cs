@@ -4,6 +4,7 @@ using UnityEngine;
 using System.IO;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using MyDedlegate;
 
 public class BossChat : MonoBehaviour
 {
@@ -12,12 +13,14 @@ public class BossChat : MonoBehaviour
     StringReader bossSr;
     List<string> bossTextList;
     string bossTextFile;
-    int bossTextCount;
+    public int bossTextCount;
     public Text bossText;
     bool bossCheck = false;
 
+    Chat chat;
 
-    int paragraphCnt;
+
+    public int paragraphCnt;
     State nowState;
     private StageCtrl sc;
     public TouchMgr touchMgr;
@@ -37,8 +40,13 @@ public class BossChat : MonoBehaviour
     {
         audio = GetComponent<AudioSource>();
         sc = FindObjectOfType<StageCtrl>();
-        BossTextSet();
+        chat = FindObjectOfType<Chat>();
     }
+    private void Start()
+    {
+        bossTextCount = 0;
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -76,8 +84,10 @@ public class BossChat : MonoBehaviour
                 //textCount++;
                 bossText.text = "";
                 bossTextCount++;
-                Debug.Log("PC: " + paragraphCnt);
-                //chatEventList[paragraphCnt]();
+                Debug.Log("PC: " + chat.paragraphCnt);
+                chat.gameObject.SetActive(true);
+                chat.NextChat();
+                chat.chatEventList[chat.paragraphCnt]();
                 // paragraphCnt++;
                 // touchMgr.ChangeMode(prevMode);
                 gameObject.SetActive(false);
@@ -101,7 +111,7 @@ public class BossChat : MonoBehaviour
     public void NextChat()
     {
         StartCoroutine(BossPlayLine(bossTextList[bossTextCount]));
-        paragraphCnt++;
+        chat.paragraphCnt++;
         bossTextCount++;
     }
 
