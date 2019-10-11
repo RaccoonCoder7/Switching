@@ -91,8 +91,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 8.661475, y: 2.2204463e-16, z: 8.637671}
-  m_Center: {x: 0.08777355, y: 0, z: 0.07361424}
+  m_Size: {x: 11.876626, y: 2.2204463e-16, z: 12.154328}
+  m_Center: {x: -0.024485454, y: 0, z: 0.24815969}
 --- !u!114 &637583494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,7 +107,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manastone: {fileID: 0}
   collisionEnterFl: 0
-  door: {fileID: 0}
   onClip: {fileID: 8300000, guid: efb153db377c5f144b1f943c449aea79, type: 3}
   offClip: {fileID: 8300000, guid: 5778e574fd364f2469cde97efaef3966, type: 3}
 --- !u!82 &1325295721783867873

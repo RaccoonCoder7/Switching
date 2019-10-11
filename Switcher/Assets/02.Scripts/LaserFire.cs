@@ -15,7 +15,8 @@ public class LaserFire : MonoBehaviour
     // 레이저 발사 시간대
     public float shootTime = 5.0f;
     public float stopTime = 1.0f;
-    private float timer = 0.0f;
+    [HideInInspector]
+    public float timer = 0.0f;
 
     // 보스 상태
     public GameObject boss;

@@ -47,7 +47,7 @@ public class Mirror : MonoBehaviour
                     pullObjectRb.velocity = Vector3.zero;
                     return;
                 }
-                float speed = 50 / (dist * dist);
+                float speed = 5.5f;
                 pullObjectRb.velocity = directionReverse * speed;
             }
             else

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7029011442708150453}
   - component: {fileID: 7378848484835275971}
   - component: {fileID: 5483028429621742334}
-  m_Layer: 8
+  m_Layer: 21
   m_Name: MS_Y_Cannon
   m_TagString: YELLOW
   m_Icon: {fileID: 0}

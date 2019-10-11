@@ -188,6 +188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   circleBar: {fileID: 475322212260153069}
   laser: {fileID: 7999185594581914022}
+  goCheck: 0
 --- !u!1 &7999185593769330688
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,7 +750,8 @@ MonoBehaviour:
   beamEnd: {fileID: 169912, guid: abdc56b0f94d9a04c800560ba0e246aa, type: 3}
   beam: {fileID: 191804, guid: a0110e851f5bca741b552c4d37384f5f, type: 3}
   shootTime: 0.5
-  stopTime: 15
+  stopTime: 9999
+  timer: 0
   boss: {fileID: 7999185595253482326}
   slowEffect: {fileID: 0}
 --- !u!1 &7999185593799843288
@@ -1236,6 +1238,7 @@ MonoBehaviour:
   beam: {fileID: 191804, guid: a0110e851f5bca741b552c4d37384f5f, type: 3}
   shootTime: 0.5
   stopTime: 9999
+  timer: 0
   boss: {fileID: 7999185595253482326}
   slowEffect: {fileID: 7999619506442487825}
 --- !u!1 &7999185593849185370
@@ -23011,6 +23014,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   circleBar: {fileID: 7999185594311101603}
   laser: {fileID: 7999185594564395402}
+  goCheck: 0
 --- !u!1 &7999185594352989983
 GameObject:
   m_ObjectHideFlags: 0
@@ -25774,7 +25778,8 @@ MonoBehaviour:
   beamEnd: {fileID: 169912, guid: abdc56b0f94d9a04c800560ba0e246aa, type: 3}
   beam: {fileID: 191804, guid: a0110e851f5bca741b552c4d37384f5f, type: 3}
   shootTime: 0.5
-  stopTime: 15
+  stopTime: 9999
+  timer: 0
   boss: {fileID: 7999185595253482326}
   slowEffect: {fileID: 0}
 --- !u!1 &7999185594565993312
@@ -25982,7 +25987,8 @@ MonoBehaviour:
   beamEnd: {fileID: 169912, guid: abdc56b0f94d9a04c800560ba0e246aa, type: 3}
   beam: {fileID: 191804, guid: a0110e851f5bca741b552c4d37384f5f, type: 3}
   shootTime: 0.5
-  stopTime: 15
+  stopTime: 9999
+  timer: 0
   boss: {fileID: 7999185595253482326}
   slowEffect: {fileID: 0}
 --- !u!1 &7999185594601153237
@@ -33806,6 +33812,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossChatCanvas: {fileID: 4051044148086398331}
+  bossSt: {fileID: 7999185595253482327}
+  laserFire:
+  - {fileID: 7999185594581914020}
+  - {fileID: 7999185595354923364}
+  - {fileID: 7999185594564395400}
+  - {fileID: 7999185593789079853}
+  circleBarLaser:
+  - {fileID: 475322213757903877}
+  - {fileID: 7999185595333439465}
+  - {fileID: 7999185594344276964}
+  - {fileID: 7999185595010320246}
 --- !u!1 &7999185594818604219
 GameObject:
   m_ObjectHideFlags: 0
@@ -36655,6 +36672,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   circleBar: {fileID: 7999185593948567916}
   laser: {fileID: 7999185593789079855}
+  goCheck: 0
 --- !u!1 &7999185595013504190
 GameObject:
   m_ObjectHideFlags: 0
@@ -56513,6 +56531,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   circleBar: {fileID: 7999185595718390213}
   laser: {fileID: 7999185595354923366}
+  goCheck: 0
 --- !u!1 &7999185595340079800
 GameObject:
   m_ObjectHideFlags: 0
@@ -56810,7 +56829,8 @@ MonoBehaviour:
   beamEnd: {fileID: 169912, guid: abdc56b0f94d9a04c800560ba0e246aa, type: 3}
   beam: {fileID: 191804, guid: a0110e851f5bca741b552c4d37384f5f, type: 3}
   shootTime: 0.5
-  stopTime: 15
+  stopTime: 9999
+  timer: 0
   boss: {fileID: 7999185595253482326}
   slowEffect: {fileID: 0}
 --- !u!1 &7999185595366768325
@@ -79398,15 +79418,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a95b3571a88f09446a7e4afeb8213ee5, type: 3}
---- !u!4 &8003618782887738575 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4484195725974893275, guid: a95b3571a88f09446a7e4afeb8213ee5,
-    type: 3}
-  m_PrefabInstance: {fileID: 5848347023881014804}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7999619506442487825 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4480478200462198277, guid: a95b3571a88f09446a7e4afeb8213ee5,
+    type: 3}
+  m_PrefabInstance: {fileID: 5848347023881014804}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8003618782887738575 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4484195725974893275, guid: a95b3571a88f09446a7e4afeb8213ee5,
     type: 3}
   m_PrefabInstance: {fileID: 5848347023881014804}
   m_PrefabAsset: {fileID: 0}
@@ -79421,6 +79441,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 5583788516926776550, guid: f55aa0ef9d8a8e9489d22e6dd18b5fe6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1893616071685921493, guid: f55aa0ef9d8a8e9489d22e6dd18b5fe6,
         type: 3}
@@ -79477,11 +79502,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5583788516926776550, guid: f55aa0ef9d8a8e9489d22e6dd18b5fe6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7481681741119394188, guid: f55aa0ef9d8a8e9489d22e6dd18b5fe6,
         type: 3}
       propertyPath: m_Text
@@ -79489,12 +79509,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f55aa0ef9d8a8e9489d22e6dd18b5fe6, type: 3}
---- !u!1 &4051044148086398331 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5583788516926776550, guid: f55aa0ef9d8a8e9489d22e6dd18b5fe6,
-    type: 3}
-  m_PrefabInstance: {fileID: 8450346239665256861}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7999185595253482312 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1893616071685921493, guid: f55aa0ef9d8a8e9489d22e6dd18b5fe6,
@@ -79504,6 +79518,24 @@ Transform:
 --- !u!1 &7999185595253482326 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1893616071685921483, guid: f55aa0ef9d8a8e9489d22e6dd18b5fe6,
+    type: 3}
+  m_PrefabInstance: {fileID: 8450346239665256861}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7999185595253482327 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1893616071685921482, guid: f55aa0ef9d8a8e9489d22e6dd18b5fe6,
+    type: 3}
+  m_PrefabInstance: {fileID: 8450346239665256861}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7999185595253482326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c34b06f4f9e68dc4c9f5478814c85413, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &4051044148086398331 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5583788516926776550, guid: f55aa0ef9d8a8e9489d22e6dd18b5fe6,
     type: 3}
   m_PrefabInstance: {fileID: 8450346239665256861}
   m_PrefabAsset: {fileID: 0}

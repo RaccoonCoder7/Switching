@@ -110,7 +110,7 @@ public class BossChat : MonoBehaviour
     public void NextChat()
     {
         StartCoroutine(BossPlayLine(bossTextList[bossTextCount]));
-        chat.paragraphCnt++;
+        //chat.paragraphCnt++;
         bossTextCount++;
     }
 

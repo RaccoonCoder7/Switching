@@ -8,7 +8,10 @@ public class Event6 : EventMgr
     bool modeCheck;
     protected BossChat bossChat;
     public GameObject bossChatCanvas;
-    // Start is called before the first frame update
+    public BossState bossSt;
+    public LaserFire[] laserFire; // stopTime 15
+    public CircleBarLaser[] circleBarLaser;
+    
     void Start()
     {
         base.Start();
@@ -44,6 +47,18 @@ public class Event6 : EventMgr
     private void EV5()
     {
         touchMgr.canFire = true;
+        bossSt.isChat = false;
+        for (int i = 0; i < laserFire.Length; i++)
+        {
+            laserFire[i].stopTime = 15;
+            laserFire[i].timer = 0.0f;
+        }
+
+        for (int i = 0; i < circleBarLaser.Length; i++)
+        {
+            circleBarLaser[i].goCheck = true;
+        }
+        touchMgr.ChangeMode(TouchMgr.SkillMode.switching);
         timer.StartTime();
     }
 

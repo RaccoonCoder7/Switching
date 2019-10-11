@@ -5925,11 +5925,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 637583494, guid: 7cee79868d04b0247a2fd99ca6b997f8, type: 3}
-      propertyPath: door
-      value: 
-      objectReference: {fileID: 2431494863270277721, guid: 13888266d522d13478a24065b9d53ffe,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cee79868d04b0247a2fd99ca6b997f8, type: 3}
 --- !u!4 &8158851556992560116 stripped
@@ -6092,22 +6087,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6990293109845066448, guid: 7ee1488be0b42cb4a80713128c110ec4,
+    - target: {fileID: 3513350553556392952, guid: 7ee1488be0b42cb4a80713128c110ec4,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 6990293109845066448, guid: 7ee1488be0b42cb4a80713128c110ec4,
+    - target: {fileID: 3513350553556392952, guid: 7ee1488be0b42cb4a80713128c110ec4,
         type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3513350553556392952, guid: 7ee1488be0b42cb4a80713128c110ec4,
+    - target: {fileID: 6990293109845066448, guid: 7ee1488be0b42cb4a80713128c110ec4,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 3513350553556392952, guid: 7ee1488be0b42cb4a80713128c110ec4,
+    - target: {fileID: 6990293109845066448, guid: 7ee1488be0b42cb4a80713128c110ec4,
         type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 0
@@ -6637,11 +6632,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2035168760, guid: d2233b2b034010444ae1271973c78a4f, type: 3}
-      propertyPath: door
-      value: 
-      objectReference: {fileID: 3828106775274569616, guid: 13888266d522d13478a24065b9d53ffe,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2233b2b034010444ae1271973c78a4f, type: 3}
 --- !u!4 &8292745773860363825 stripped
@@ -6917,7 +6907,7 @@ PrefabInstance:
     - target: {fileID: 3042439122120959561, guid: 9d0c382da32dacf41a459e1c5dbbfd58,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 12.14
+      value: 13.1
       objectReference: {fileID: 0}
     - target: {fileID: 3042439122120959561, guid: 9d0c382da32dacf41a459e1c5dbbfd58,
         type: 3}
@@ -13442,37 +13432,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.62361014
       objectReference: {fileID: 0}
-    - target: {fileID: 1267957136132181878, guid: 43224387693454748b2671d0b3bbae6c,
-        type: 3}
-      propertyPath: mc
-      value: 
-      objectReference: {fileID: 1986525085081624992}
-    - target: {fileID: 1267957136132181878, guid: 43224387693454748b2671d0b3bbae6c,
-        type: 3}
-      propertyPath: mc2
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267957136132181878, guid: 43224387693454748b2671d0b3bbae6c,
-        type: 3}
-      propertyPath: cannonMSFix
-      value: 
-      objectReference: {fileID: 4686700803246232650, guid: 0e70a39b85724df41be75d56ad67512e,
-        type: 3}
-    - target: {fileID: 1267957136132181878, guid: 43224387693454748b2671d0b3bbae6c,
-        type: 3}
-      propertyPath: speed
-      value: 700
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267957136132181878, guid: 43224387693454748b2671d0b3bbae6c,
-        type: 3}
-      propertyPath: liveTime
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1267957136132181878, guid: 43224387693454748b2671d0b3bbae6c,
-        type: 3}
-      propertyPath: DeathTime
-      value: 12
-      objectReference: {fileID: 0}
     - target: {fileID: 1461145716006787224, guid: 43224387693454748b2671d0b3bbae6c,
         type: 3}
       propertyPath: m_LocalRotation.y
@@ -13507,6 +13466,37 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1267957136132181878, guid: 43224387693454748b2671d0b3bbae6c,
+        type: 3}
+      propertyPath: mc
+      value: 
+      objectReference: {fileID: 1986525085081624992}
+    - target: {fileID: 1267957136132181878, guid: 43224387693454748b2671d0b3bbae6c,
+        type: 3}
+      propertyPath: mc2
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1267957136132181878, guid: 43224387693454748b2671d0b3bbae6c,
+        type: 3}
+      propertyPath: cannonMSFix
+      value: 
+      objectReference: {fileID: 4686700803246232650, guid: 0e70a39b85724df41be75d56ad67512e,
+        type: 3}
+    - target: {fileID: 1267957136132181878, guid: 43224387693454748b2671d0b3bbae6c,
+        type: 3}
+      propertyPath: speed
+      value: 700
+      objectReference: {fileID: 0}
+    - target: {fileID: 1267957136132181878, guid: 43224387693454748b2671d0b3bbae6c,
+        type: 3}
+      propertyPath: liveTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1267957136132181878, guid: 43224387693454748b2671d0b3bbae6c,
+        type: 3}
+      propertyPath: DeathTime
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43224387693454748b2671d0b3bbae6c, type: 3}

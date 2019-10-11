@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class CircleBarLaser : MonoBehaviour
 {
     public Image circleBar;
-    float selectedTime = 10.0f;
+    [HideInInspector]
+    public float selectedTime = 10.0f;
     float passedTime = 10.0f;
     float stopTime = 0.0f;
 
@@ -14,6 +15,8 @@ public class CircleBarLaser : MonoBehaviour
     private Transform camTr;
 
     public GameObject laser;
+
+    public bool goCheck = false;
 
     void Start()
     {
@@ -26,6 +29,8 @@ public class CircleBarLaser : MonoBehaviour
     
     void Update()
     {
+        if (!goCheck) return;
+
         if (selectedTime != laser.GetComponent<LaserFire>().stopTime)
         {
             selectedTime = laser.GetComponent<LaserFire>().stopTime;

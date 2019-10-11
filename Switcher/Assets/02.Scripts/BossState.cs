@@ -36,6 +36,10 @@ public class BossState : MonoBehaviour
     public AudioClip bossRewindClip;
     public AudioClip bossDieClip;
 
+    // 채팅일때 공격금지
+    [HideInInspector]
+    public bool isChat = true;
+
     void Start()
     {
         camTr = Camera.main.GetComponent<Transform>();
@@ -54,7 +58,7 @@ public class BossState : MonoBehaviour
         timer += Time.deltaTime;
 
         // 공격시간마다 공격
-        if (timer > attackTime && !isDeath && deathCount != 2)
+        if (timer > attackTime && !isDeath && deathCount != 2 && !isChat)
         {
             anim.SetTrigger("attack");
             StartCoroutine(slowFire.SlowFire());
