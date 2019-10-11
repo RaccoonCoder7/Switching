@@ -74,8 +74,10 @@ public class BombArea : MonoBehaviour
                 farthestPos = targetPos;
             }
 
+            float playerY = playerPos.y;
             playerPos += direction;
-            playerPos.y = playerPos.y + diff/2;
+            playerPos.y = playerY;
+            // playerPos.y = playerPos.y + diff/2;
 
             objList.Add(other.transform);
             objPosList.Add(playerPos);
