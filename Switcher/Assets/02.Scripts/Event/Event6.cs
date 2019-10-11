@@ -13,7 +13,7 @@ public class Event6 : EventMgr
     {
         base.Start();
         bossChat = bossChatCanvas.GetComponent<BossChat>();
-        bossChat.bossTextCount = 1;
+        bossChat.bossTextCount = 0;
         bossChat.paragraphCnt = 0;
         bossChatCanvas.SetActive(false);
         EventList[0] = new Deleg(EV1);
@@ -27,6 +27,7 @@ public class Event6 : EventMgr
     {
         bossChatCanvas.SetActive(true);
         bossChat.BossTextSet();
+        //CallBossChat();
     }
     private void EV2()
     {

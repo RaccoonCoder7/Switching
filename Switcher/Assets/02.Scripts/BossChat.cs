@@ -44,7 +44,6 @@ public class BossChat : MonoBehaviour
     }
     private void Start()
     {
-        bossTextCount = 0;
     }
 
 
@@ -123,7 +122,7 @@ public class BossChat : MonoBehaviour
             yield return new WaitForSeconds(0.02f);
             bossText.text = setText.Substring(0, i);
         }
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.2f);
         nowState = State.Next;
     }
 }
