@@ -5274,6 +5274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edef0d2c4226ce24c9a00f19cc4fe999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  touchMgr: {fileID: 0}
 --- !u!1 &5329021431101777304
 GameObject:
   m_ObjectHideFlags: 0
