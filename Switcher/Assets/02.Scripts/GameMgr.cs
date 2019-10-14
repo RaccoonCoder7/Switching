@@ -16,6 +16,7 @@ public class GameMgr : MonoBehaviour
     public Material fadeMaterial;
     public Material blackMaterial;
     public GameObject FinishText;
+    public GameObject player;
 
     AsyncOperation async;
     Color color;
@@ -114,7 +115,10 @@ public class GameMgr : MonoBehaviour
         }
         FinishText.SetActive(true);
         yield return new WaitForSeconds(4f);
+        player = GameObject.Find("Plyer");
         SceneManager.LoadScene("StartScene");
         StartCoroutine("FadeOut");
+        Destroy(player);
+        Destroy(gameObject);
     }
 }

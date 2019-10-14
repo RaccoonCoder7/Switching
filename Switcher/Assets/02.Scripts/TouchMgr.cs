@@ -101,6 +101,7 @@ public class TouchMgr : MonoBehaviour
                 OnSwitching();
                 break;
             case SkillMode.pull:
+                laser.SetColors(new Color(0, 138, 255), new Color(0, 138, 255));
                 OnPull();
                 break;
             case SkillMode.push:
@@ -110,6 +111,7 @@ public class TouchMgr : MonoBehaviour
                 OnSwitchBomb();
                 break;
             case SkillMode.chat:
+                laser.SetColors(Color.green, Color.green);
                 return;
         }
     }

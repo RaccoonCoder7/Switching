@@ -42,6 +42,7 @@ public class TestMode : MonoBehaviour
         sc = FindObjectOfType<StageCtrl>();
         testMode = this;
         DontDestroyOnLoad(gameObject);
+        laser.SetColors(Color.green, Color.green);
     }
 
     void Update()

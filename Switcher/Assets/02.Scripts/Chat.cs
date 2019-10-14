@@ -134,13 +134,14 @@ namespace MyDedlegate
         public void TextSet(string str)
         {
             continueCnt = 0;
-            textCount = 1;
+            textCount = 0;
             textList = new List<string>();
             textData = Resources.Load(str + "Text", typeof(TextAsset)) as TextAsset;
             sr = new StringReader(textData.text);
             textFile = sr.ReadLine();
             textList.Add(textFile);
-            StartCoroutine(PlayLine(textList[0]));
+            //StartCoroutine(PlayLine(textList[0]));
+            NextText();
             while (textFile != null)
             {
                 textFile = sr.ReadLine();
