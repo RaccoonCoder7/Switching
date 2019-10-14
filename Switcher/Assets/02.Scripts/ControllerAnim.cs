@@ -14,6 +14,7 @@ public class ControllerAnim : MonoBehaviour
         rend = GetComponent<MeshRenderer>();
     }
 
+    // 컨트롤러 깜빡깜빡
     public IEnumerator AnimateContrlloer()
     {
         while (!rend)
@@ -22,13 +23,10 @@ public class ControllerAnim : MonoBehaviour
         }
         while (true)
         {
-            Debug.Log("5");
             rend.material.mainTexture = highlightTexture;
             yield return new WaitForSeconds(0.5f);
-            Debug.Log("6");
             rend.material.mainTexture = defaultTexture;
             yield return new WaitForSeconds(0.5f);
-            Debug.Log("7");
         }
     }
 }

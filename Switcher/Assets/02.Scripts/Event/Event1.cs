@@ -47,11 +47,8 @@ public class Event1 : EventMgr // EventMgr을 상속받을것.
         event1a.arrow = arrow;
         event1a.rightController = rightController;
         rightController.SetActive(true);
-        Debug.Log("1");
         ControllerAnim ca = rightController.GetComponent<ControllerAnim>();
-        Debug.Log("2");
         StartCoroutine(ca.AnimateContrlloer());
-        Debug.Log("3");
     }
 
     private void EV3()

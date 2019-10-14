@@ -28,14 +28,8 @@ public class Mirror : MonoBehaviour
 
         reflectRay = new Ray(hitPos, direction);
         
-        //TODO: test code
-        if(Physics.Raycast(reflectRay, out reflectHit, 12)){
-            Debug.Log("layer: " + reflectHit.collider.gameObject.layer);
-            // reflectHit.collider.gameObject.layer;
-        }
         if (Physics.Raycast(reflectRay, out reflectHit, 12, manaStoneLayer))
         {
-            Debug.Log("1");
             laser.SetPosition(1, reflectHit.point);
 
             if (!pullObjectRb)
@@ -48,22 +42,18 @@ public class Mirror : MonoBehaviour
             Vector3 directionReverse = hitPos - targetPos;
             directionReverse = directionReverse.normalized;
 
-            Debug.Log("2");
             float dist = reflectHit.distance;
             if (dist < 1f)
             {
                 pullObjectRb.velocity = Vector3.zero;
                 return;
             }
-            Debug.Log("3");
 
             float speed = 4f;
             pullObjectRb.velocity = directionReverse * speed;
-            Debug.Log("4");
         }
         else
         {
-            Debug.Log("no");
             laser.SetPosition(1, hitPos + direction * 12);
             if (pullObjectRb)
             {
