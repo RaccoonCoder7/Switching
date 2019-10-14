@@ -79,9 +79,8 @@ public class BossState : MonoBehaviour
         // 보스 진짜 죽음
         if (deathCount == 2)
         {
-            if(timeA > 0)
+            if (timeA > 0)
             {
-                audio.PlayOneShot(bossDieClip);
                 timeA -= Time.deltaTime;
                 anim.SetBool("realDeath", true);
                 render.material.color = new Color(1, 1, 1, timeA);

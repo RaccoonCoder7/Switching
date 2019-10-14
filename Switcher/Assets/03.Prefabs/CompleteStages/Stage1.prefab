@@ -212,6 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6a9ed59d46b9744c87a43ae56cc1220, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  touchMgr: {fileID: 0}
   arrow: {fileID: 1763819126132240107, guid: 85c76d7fadf2b1349a47138cb98e1705, type: 3}
   rightController: {fileID: 7046139385449388737}
   frontDoor: {fileID: 7304941308994109720}
@@ -306,6 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c6e354c52264a4b9f89faa5ba0c01c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  touchMgr: {fileID: 0}
   isReady: 0
   arrow: {fileID: 0}
   rightController: {fileID: 0}

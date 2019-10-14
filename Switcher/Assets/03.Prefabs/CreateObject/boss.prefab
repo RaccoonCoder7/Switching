@@ -5724,9 +5724,10 @@ AudioSource:
   m_GameObject: {fileID: 1893616071685921483}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: f3d930979df295f4d82480160a66913b,
+    type: 2}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -5843,6 +5844,8 @@ MonoBehaviour:
   deathResetTime: 5
   bossRewindClip: {fileID: 8300000, guid: 17c5fa7e1839aa54f9ca60e923eb504d, type: 3}
   bossDieClip: {fileID: 8300000, guid: 85d10140ee32faf4ebaa8fa9b6e55dab, type: 3}
+  isChat: 1
+  ev: {fileID: 0}
 --- !u!1 &1893616071690418954
 GameObject:
   m_ObjectHideFlags: 0
@@ -16471,6 +16474,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131177464883897330, guid: 48fb55a19c1a4a7459dd7d0b4c2a7aa3,
+        type: 3}
+      propertyPath: m_Text
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48fb55a19c1a4a7459dd7d0b4c2a7aa3, type: 3}

@@ -17,7 +17,7 @@ public class SlowImpact : MonoBehaviour
         {
             // 터렛 레이저 발사시간 조절
             LaserFire laser = collision.gameObject.GetComponentInChildren<LaserFire>();
-            laser.stopTime = 16.0f;
+            laser.stopTime = 20.0f;
             laser.shootTime = 0.5f;
             laser.slowEffect.SetActive(true);
         }
