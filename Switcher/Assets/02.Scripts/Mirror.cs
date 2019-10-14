@@ -27,36 +27,33 @@ public class Mirror : MonoBehaviour
         }
 
         reflectRay = new Ray(hitPos, direction);
-        if (Physics.Raycast(reflectRay, out reflectHit, 12))
+        if (Physics.Raycast(reflectRay, out reflectHit, 12, manaStoneLayer))
         {
             laser.SetPosition(1, reflectHit.point);
-            if (reflectHit.collider.gameObject.layer.Equals(manaStoneLayer))
-            {
-                if (!pullObjectRb)
-                {
-                    pullObjectRb = reflectHit.collider.gameObject.GetComponent<Rigidbody>();
-                }
-                float distance = Vector3.Distance(reflectHit.point, transform.position);
 
-                Vector3 targetPos = pullObjectRb.transform.position;
-                Vector3 directionReverse = hitPos - targetPos;
-                directionReverse = directionReverse.normalized;
-                float dist = reflectHit.distance;
-                if (dist < 1f)
-                {
-                    pullObjectRb.velocity = Vector3.zero;
-                    return;
-                }
-                float speed = 5.5f;
-                pullObjectRb.velocity = directionReverse * speed;
-            }
-            else
+            if (!pullObjectRb)
             {
-                if (pullObjectRb)
-                {
-                    pullObjectRb.velocity = Vector3.zero;
-                    pullObjectRb = null;
-                }
+                pullObjectRb = reflectHit.collider.gameObject.GetComponent<Rigidbody>();
+            }
+
+            float distance = Vector3.Distance(reflectHit.point, transform.position);
+            Vector3 targetPos = pullObjectRb.transform.position;
+            Vector3 directionReverse = hitPos - targetPos;
+            directionReverse = directionReverse.normalized;
+
+            float dist = reflectHit.distance;
+            if (dist < 1f)
+            {
+                pullObjectRb.velocity = Vector3.zero;
+                return;
+            }
+
+            float speed = 4f;
+            pullObjectRb.velocity = directionReverse * speed;
+            if (pullObjectRb)
+            {
+                pullObjectRb.velocity = Vector3.zero;
+                pullObjectRb = null;
             }
         }
         else
