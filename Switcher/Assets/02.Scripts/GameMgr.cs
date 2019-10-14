@@ -15,6 +15,7 @@ public class GameMgr : MonoBehaviour
     public Image screenImage;
     public Material fadeMaterial;
     public Material blackMaterial;
+    public GameObject FinishText;
 
     AsyncOperation async;
     Color color;
@@ -79,6 +80,7 @@ public class GameMgr : MonoBehaviour
         }
         screen.SetActive(false);
         logo.SetActive(false);
+        FinishText.SetActive(false);
         Timer.canvasCheck = false;
     }
     public IEnumerator FadeInOut()
@@ -100,20 +102,19 @@ public class GameMgr : MonoBehaviour
         fadeMaterial = blackMaterial;
     }
 
-    public IEnumerator TestClear()
+    public IEnumerator FinishFadeInOut()
     {
-        screenImage.material = fadeMaterial;
-        fadeMaterial = blackMaterial;
-        async = SceneManager.LoadSceneAsync("StartScene"); // 열고 싶은 씬
-        async.allowSceneActivation = false;
-        while (!async.isDone)
+        screen.SetActive(true);
+        Color color = fadeMaterial.color;
+        while (color.a < 1f)
         {
-            //yield return true;
-            yield return StartCoroutine("FadeIn");
-            async.allowSceneActivation = true;
-            Color color = fadeMaterial.color;
-            color.a = 0f;
+            color.a += 0.03f;
             fadeMaterial.color = color;
+            yield return new WaitForSeconds(0.02f);
         }
+        FinishText.SetActive(true);
+        yield return new WaitForSeconds(4f);
+        SceneManager.LoadScene("StartScene");
+        StartCoroutine("FadeOut");
     }
 }

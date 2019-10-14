@@ -49,3 +49,4 @@ MonoBehaviour:
   screenImage: {fileID: 0}
   fadeMaterial: {fileID: 2100000, guid: b74ab8a129b62b745a4986520a365857, type: 2}
   blackMaterial: {fileID: 2100000, guid: b74ab8a129b62b745a4986520a365857, type: 2}
+  FinishText: {fileID: 0}

@@ -11,7 +11,7 @@ public class EventMgr : MonoBehaviour
 
     protected GameObject barrier;
     protected Timer timer;
-    protected TouchMgr touchMgr;
+    public TouchMgr touchMgr;
 
     protected void Start()
     {
@@ -26,7 +26,7 @@ public class EventMgr : MonoBehaviour
     }
 
     // 이것을 호출하여 Chat의 NextChat을 실행시킴
-    protected void CallChat()
+    public void CallChat()
     {
         StartCoroutine("WaitAndCallChat");
     }

@@ -123,7 +123,7 @@ namespace MyDedlegate
         public void ResetText()
         {
             continueCnt = 0;
-            textCount = 1;
+            textCount = 0;
             paragraphCnt = 0;
             imageCtrl.ChangeSprites(TouchMgr.SkillMode.switching);
             touchMgr.ChangeMode(TouchMgr.SkillMode.chat);

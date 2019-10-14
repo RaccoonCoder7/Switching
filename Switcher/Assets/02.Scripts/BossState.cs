@@ -40,12 +40,15 @@ public class BossState : MonoBehaviour
     [HideInInspector]
     public bool isChat = true;
 
+    public Event6 ev;
+
     void Start()
     {
         camTr = Camera.main.GetComponent<Transform>();
         anim = gameObject.transform.GetComponent<Animator>();
         render = transform.GetChild(1).GetComponent<Renderer>();
         audio = GetComponent<AudioSource>();
+        ev = FindObjectOfType<Event6>();
     }
 
     void Update()
@@ -85,6 +88,8 @@ public class BossState : MonoBehaviour
             }
             else
             {
+                ev.CallChat();
+                ev.touchMgr.ChangeMode(TouchMgr.SkillMode.chat);
                 Destroy(gameObject);
             }
         }

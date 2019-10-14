@@ -87,8 +87,12 @@ public class Timer : MonoBehaviour
 
     public void ChatFinish()
     {
-        retryBtn.SetActive(true);
-        chatFinish = true;
+        if (!PlayerPrefs.GetInt("Stage").Equals(6))
+        {
+            retryBtn.SetActive(true);
+            chatFinish = true;
+        }
+        
     }
     public void ChatFinishReset()
     {

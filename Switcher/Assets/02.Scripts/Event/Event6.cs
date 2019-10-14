@@ -11,11 +11,14 @@ public class Event6 : EventMgr
     public BossState bossSt;
     public LaserFire[] laserFire; // stopTime 15
     public CircleBarLaser[] circleBarLaser;
+    public bool clearCheck;
+    public GameMgr gameMgr;
     
     void Start()
     {
         base.Start();
         bossChat = bossChatCanvas.GetComponent<BossChat>();
+        gameMgr = FindObjectOfType<GameMgr>();
         bossChat.bossTextCount = 0;
         bossChat.paragraphCnt = 0;
         bossChatCanvas.SetActive(false);
@@ -24,6 +27,14 @@ public class Event6 : EventMgr
         EventList[2] = new Deleg(EV3);
         EventList[3] = new Deleg(EV4);
         EventList[4] = new Deleg(EV5);
+        EventList[5] = new Deleg(EV6);
+    }
+    private void Update()
+    {
+        if (clearCheck)
+        {
+
+        }
     }
 
     private void EV1()
@@ -60,6 +71,10 @@ public class Event6 : EventMgr
         }
         touchMgr.ChangeMode(TouchMgr.SkillMode.switching);
         timer.StartTime();
+    }
+    private void EV6()
+    {
+        gameMgr.StartCoroutine("FinishFadeInOut");
     }
 
     protected void CallBossChat()

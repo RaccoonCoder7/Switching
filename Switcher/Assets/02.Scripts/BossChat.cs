@@ -85,10 +85,9 @@ public class BossChat : MonoBehaviour
                 bossTextCount++;
                 Debug.Log("PC: " + chat.paragraphCnt);
                 chat.gameObject.SetActive(true);
-                chat.NextChat();
+                //chat.NextChat();
+                chat.paragraphCnt++;
                 chat.chatEventList[chat.paragraphCnt]();
-                // paragraphCnt++;
-                // touchMgr.ChangeMode(prevMode);
                 gameObject.SetActive(false);
             }
             //불러온 텍스트중 clear가 있으면 아래 실행
