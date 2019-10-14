@@ -187,6 +187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   circleBar: {fileID: 475322212260153069}
+  selectedTime: 10
   laser: {fileID: 7999185594581914022}
   goCheck: 0
 --- !u!1 &7999185593769330688
@@ -23013,6 +23014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   circleBar: {fileID: 7999185594311101603}
+  selectedTime: 10
   laser: {fileID: 7999185594564395402}
   goCheck: 0
 --- !u!1 &7999185594352989983
@@ -33797,7 +33799,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTr: {fileID: 7999185593898116468}
   stageTime: 480
-  customBGM: {fileID: 0}
+  customBGM: {fileID: 8300000, guid: 2829132179f7bba409824cb5a1a866d0, type: 3}
   customSkillSet: 0
 --- !u!114 &-6061500236872997092
 MonoBehaviour:
@@ -36671,6 +36673,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   circleBar: {fileID: 7999185593948567916}
+  selectedTime: 10
   laser: {fileID: 7999185593789079855}
   goCheck: 0
 --- !u!1 &7999185595013504190
@@ -56530,6 +56533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   circleBar: {fileID: 7999185595718390213}
+  selectedTime: 10
   laser: {fileID: 7999185595354923366}
   goCheck: 0
 --- !u!1 &7999185595340079800

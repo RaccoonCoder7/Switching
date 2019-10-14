@@ -21,11 +21,13 @@ public class Timer : MonoBehaviour
 
     public GameObject retryBtn;
 
-
+    private AudioSource audio;
+    public AudioClip[] stateClips;
 
     void Start()
     {
         gameMgr = FindObjectOfType<GameMgr>();
+        audio = GetComponent<AudioSource>();
     }
 
     // 매개변수로 들어온 시간으로 패널의 시간을 재설정함
@@ -55,6 +57,7 @@ public class Timer : MonoBehaviour
                 gameMgr.fadeMaterial = fadeMaterial1;
                 if (canvasCheck == false)
                 {
+                    audio.PlayOneShot(stateClips[0]);
                     gameMgr.StartCoroutine(gameMgr.FadeInOut());
                 }
                 canvasCheck = true;
@@ -66,6 +69,7 @@ public class Timer : MonoBehaviour
                 gameMgr.fadeMaterial = fadeMaterial2;
                 if (canvasCheck == false)
                 {
+                    audio.PlayOneShot(stateClips[1]);
                     gameMgr.StartCoroutine(gameMgr.FadeInOut());
                 }
                 canvasCheck = true;

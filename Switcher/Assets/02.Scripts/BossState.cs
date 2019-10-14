@@ -78,6 +78,7 @@ public class BossState : MonoBehaviour
         {
             if(timeA > 0)
             {
+                audio.PlayOneShot(bossDieClip);
                 timeA -= Time.deltaTime;
                 anim.SetBool("realDeath", true);
                 render.material.color = new Color(1, 1, 1, timeA);
@@ -93,6 +94,7 @@ public class BossState : MonoBehaviour
     private IEnumerator BossResurrection()
     {
         yield return new WaitForSeconds(resurrectionTime);
+        audio.PlayOneShot(bossRewindClip);
         anim.SetBool("death", false);
         deathCount = 1;
 

@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 2744074731811203107}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 20.718224, y: 0.902, z: -0.224}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_Children:
   - {fileID: 4249759821998369427}
   m_Father: {fileID: 0}
@@ -83,6 +83,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1338523774056524366}
     m_Modifications:
+    - target: {fileID: 464944243962968040, guid: 90b254cd63aaa2c4597fa55966629dd3,
+        type: 3}
+      propertyPath: m_Name
+      value: yellowCrystal
+      objectReference: {fileID: 0}
     - target: {fileID: 85059927584468761, guid: 90b254cd63aaa2c4597fa55966629dd3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -147,11 +152,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 51.057423
-      objectReference: {fileID: 0}
-    - target: {fileID: 464944243962968040, guid: 90b254cd63aaa2c4597fa55966629dd3,
-        type: 3}
-      propertyPath: m_Name
-      value: yellowCrystal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90b254cd63aaa2c4597fa55966629dd3, type: 3}
