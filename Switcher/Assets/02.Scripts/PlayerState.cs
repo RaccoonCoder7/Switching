@@ -42,8 +42,8 @@ public class PlayerState : MonoBehaviour
     {
         isDead = true;
         audio.PlayOneShot(stateClips[1]);
-        OVRInput.SetControllerVibration(0.7f, 0.7f, OVRInput.Controller.RTouch);
-        OVRInput.SetControllerVibration(0.7f, 0.7f, OVRInput.Controller.LTouch);
+        OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.RTouch);
+        OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.LTouch);
         sc.StartCoroutine(sc.ResetStage(stateClips[2]));
         // mgr.Continue();
     }
