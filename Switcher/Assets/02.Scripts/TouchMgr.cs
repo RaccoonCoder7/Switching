@@ -169,7 +169,7 @@ public class TouchMgr : MonoBehaviour
                     Vector3 direction = new Vector3(targetPos.x, 0, targetPos.z)
                                         - new Vector3(playerTr.position.x, 0, playerTr.position.z);
                     direction = direction.normalized;
-                    float speed = 5.5f;
+                    float speed = 4f;
                     pullObjectRb.velocity = direction * speed;
                 }
                 else
@@ -236,7 +236,7 @@ public class TouchMgr : MonoBehaviour
                     Vector3 targetPos = pullObjectRb.transform.position;
                     Vector3 direction = playerTr.position - targetPos;
                     direction = direction.normalized;
-                    float speed = 5.5f;
+                    float speed = 4f;
                     pullObjectRb.velocity = direction * speed;
                 }
                 else if (hit.collider.gameObject.layer.Equals(mirrorLayer))
