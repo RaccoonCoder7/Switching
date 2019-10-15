@@ -20,6 +20,12 @@ public class MagicCircle : MonoBehaviour
     public AudioClip offClip;
 
     public ParticleSystem particle;
+    public SpriteRenderer[] changeNaviStraight;
+    public SpriteRenderer[] changeNaviConer;
+    public Sprite greenNaviStraight;
+    public Sprite greenNaviConer;
+    public Sprite redNaviStraight;
+    public Sprite redNaviConer;
 
     void Start()
     {
@@ -41,6 +47,14 @@ public class MagicCircle : MonoBehaviour
                 //audio.clip = onClip;
                 //audio.Play();
                 particle.Play();
+                for (int i =0; i < changeNaviStraight.Length; i++)
+                {
+                    changeNaviStraight[i].sprite = greenNaviStraight;
+                }
+                for (int i = 0; i < changeNaviConer.Length; i++)
+                {
+                    changeNaviConer[i].sprite = greenNaviConer;
+                }
             }
         }
     }
@@ -56,6 +70,14 @@ public class MagicCircle : MonoBehaviour
         {
             inCount = 0;
             particle.Stop();
+            for (int i = 0; i < changeNaviStraight.Length; i++)
+            {
+                changeNaviStraight[i].sprite = redNaviStraight;
+            }
+            for (int i = 0; i < changeNaviConer.Length; i++)
+            {
+                changeNaviConer[i].sprite = redNaviConer;
+            }
         }
     }
 
@@ -72,6 +94,14 @@ public class MagicCircle : MonoBehaviour
                 audio.clip = offClip;
                 audio.Play();
                 particle.Stop();
+            }
+            for (int i = 0; i < changeNaviStraight.Length; i++)
+            {
+                changeNaviStraight[i].sprite = redNaviStraight;
+            }
+            for (int i = 0; i < changeNaviConer.Length; i++)
+            {
+                changeNaviConer[i].sprite = redNaviConer;
             }
         }
     }

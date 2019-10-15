@@ -110,6 +110,12 @@ MonoBehaviour:
   onClip: {fileID: 8300000, guid: efb153db377c5f144b1f943c449aea79, type: 3}
   offClip: {fileID: 8300000, guid: 5778e574fd364f2469cde97efaef3966, type: 3}
   particle: {fileID: 5262167064504446671}
+  changeNaviStraight: []
+  changeNaviConer: []
+  greenNaviStraight: {fileID: 21300000, guid: 4d6d30fc58bb4984bb3ebf12c68d77ca, type: 3}
+  greenNaviConer: {fileID: 21300000, guid: ccd60ebec3c8f4d418ab753b11b96489, type: 3}
+  redNaviStraight: {fileID: 21300000, guid: 03ec21dedf933944dbfee304554f14f7, type: 3}
+  redNaviConer: {fileID: 21300000, guid: d01f6600958ec5342af30604178cf3f2, type: 3}
 --- !u!1001 &5460298122298092345
 PrefabInstance:
   m_ObjectHideFlags: 0

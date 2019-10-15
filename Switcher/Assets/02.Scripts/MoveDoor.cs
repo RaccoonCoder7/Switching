@@ -24,6 +24,7 @@ public class MoveDoor : MonoBehaviour
     public MeshRenderer meshRenderer;
     public Material[] openTexture;
     public Material[] closeTexture;
+    public GameObject[] particle;
 
     void Start()
     {
@@ -107,6 +108,13 @@ public class MoveDoor : MonoBehaviour
         {
             meshRenderer.materials = openTexture;
         }
+        if (particle.Length > 0)
+        {
+            for (int i =0; i< particle.Length; i++)
+            {
+                particle[i].SetActive(!particle[i].activeSelf);
+            }
+        }
         iTween.MoveBy(gameObject, ht);
     }
 
@@ -130,6 +138,13 @@ public class MoveDoor : MonoBehaviour
         if (meshRenderer)
         {
             meshRenderer.materials = closeTexture;
+        }
+        if (particle.Length > 0)
+        {
+            for (int i = 0; i < particle.Length; i++)
+            {
+                particle[i].SetActive(!particle[i].activeSelf);
+            }
         }
         iTween.MoveBy(gameObject, ht);
     }

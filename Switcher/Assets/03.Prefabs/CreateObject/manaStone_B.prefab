@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3473196174105468462}
   - component: {fileID: 3473196174105468449}
   - component: {fileID: 1599356359}
-  m_Layer: 8
+  m_Layer: 21
   m_Name: manaStone_B
   m_TagString: BLUE
   m_Icon: {fileID: 0}
