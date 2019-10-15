@@ -19,6 +19,8 @@ public class MagicCircle : MonoBehaviour
     public AudioClip onClip;
     public AudioClip offClip;
 
+    public ParticleSystem particle;
+
     void Start()
     {
         audio = GetComponent<AudioSource>();
@@ -38,6 +40,7 @@ public class MagicCircle : MonoBehaviour
                 collisionEnterFl = true;
                 //audio.clip = onClip;
                 //audio.Play();
+                particle.Play();
             }
         }
     }
@@ -49,7 +52,11 @@ public class MagicCircle : MonoBehaviour
 
     private void Update()
     {
-        if (!manastone) inCount = 0;
+        if (!manastone)
+        {
+            inCount = 0;
+            particle.Stop();
+        }
     }
 
     private void OnCollisionExit(Collision collision)
@@ -64,6 +71,7 @@ public class MagicCircle : MonoBehaviour
                 manastone = null;
                 audio.clip = offClip;
                 audio.Play();
+                particle.Stop();
             }
         }
     }

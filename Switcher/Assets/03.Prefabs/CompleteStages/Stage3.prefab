@@ -186,6 +186,9 @@ MonoBehaviour:
   xyz: y
   mc:
   - {fileID: 1986525085081624992}
+  meshRenderer: {fileID: 0}
+  openTexture: []
+  closeTexture: []
 --- !u!82 &6624991344564435949
 AudioSource:
   m_ObjectHideFlags: 0
@@ -298,6 +301,9 @@ MonoBehaviour:
   xyz: y
   mc:
   - {fileID: 1986525085081624992}
+  meshRenderer: {fileID: 0}
+  openTexture: []
+  closeTexture: []
 --- !u!1 &1986525084318968694
 GameObject:
   m_ObjectHideFlags: 0
@@ -16179,15 +16185,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14aad3b03a5677e4d955ec644c1cf7bb, type: 3}
---- !u!1 &1336684127405658437 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7515064846568877460, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
-    type: 3}
-  m_PrefabInstance: {fileID: 8846763504156916945}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1336684127405967567 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7515064846569059358, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 8846763504156916945}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1336684127405658437 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7515064846568877460, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
     type: 3}
   m_PrefabInstance: {fileID: 8846763504156916945}
   m_PrefabAsset: {fileID: 0}
@@ -17115,12 +17121,27 @@ PrefabInstance:
     - target: {fileID: 7433912656711093510, guid: 5f0e4457d4841d24b95b20e3dc1ea019,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.12
+      value: -1.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 7433912656711093510, guid: 5f0e4457d4841d24b95b20e3dc1ea019,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.07
       objectReference: {fileID: 0}
     - target: {fileID: 73905087028786877, guid: 5f0e4457d4841d24b95b20e3dc1ea019,
         type: 3}
       propertyPath: mc.Array.size
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 73905087028786877, guid: 5f0e4457d4841d24b95b20e3dc1ea019,
+        type: 3}
+      propertyPath: openTexture.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 73905087028786877, guid: 5f0e4457d4841d24b95b20e3dc1ea019,
+        type: 3}
+      propertyPath: closeTexture.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 73905087028786877, guid: 5f0e4457d4841d24b95b20e3dc1ea019,
         type: 3}
@@ -17142,8 +17163,39 @@ PrefabInstance:
       propertyPath: xyz
       value: z
       objectReference: {fileID: 0}
+    - target: {fileID: 73905087028786877, guid: 5f0e4457d4841d24b95b20e3dc1ea019,
+        type: 3}
+      propertyPath: meshRenderer
+      value: 
+      objectReference: {fileID: 1986525084977734214}
+    - target: {fileID: 73905087028786877, guid: 5f0e4457d4841d24b95b20e3dc1ea019,
+        type: 3}
+      propertyPath: openTexture.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 10de6384af0c3b54e8166f9c3f936e88, type: 2}
+    - target: {fileID: 73905087028786877, guid: 5f0e4457d4841d24b95b20e3dc1ea019,
+        type: 3}
+      propertyPath: closeTexture.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 10de6384af0c3b54e8166f9c3f936e88, type: 2}
+    - target: {fileID: 73905087028786877, guid: 5f0e4457d4841d24b95b20e3dc1ea019,
+        type: 3}
+      propertyPath: openTexture.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: ef1a63a86ae03a946b0d884d0aa6b4b8, type: 2}
+    - target: {fileID: 73905087028786877, guid: 5f0e4457d4841d24b95b20e3dc1ea019,
+        type: 3}
+      propertyPath: closeTexture.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 040ab820ce8514445bb87a06cc3f444b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f0e4457d4841d24b95b20e3dc1ea019, type: 3}
+--- !u!23 &1986525084977734214 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7433912656713029036, guid: 5f0e4457d4841d24b95b20e3dc1ea019,
+    type: 3}
+  m_PrefabInstance: {fileID: 8987810632340944874}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6232888392688467488 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3081786914293991882, guid: 5f0e4457d4841d24b95b20e3dc1ea019,

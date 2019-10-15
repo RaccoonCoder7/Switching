@@ -21,6 +21,10 @@ public class MoveDoor : MonoBehaviour
 
     private bool checkManstone = false;
 
+    public MeshRenderer meshRenderer;
+    public Material[] openTexture;
+    public Material[] closeTexture;
+
     void Start()
     {
         ht = new Hashtable();
@@ -99,6 +103,10 @@ public class MoveDoor : MonoBehaviour
         ht.Add("easetype", iTween.EaseType.linear);
         //htOpen.Add("oncomplete", "CheckTriggerUp");
         audio.Play();
+        if (meshRenderer)
+        {
+            meshRenderer.materials = openTexture;
+        }
         iTween.MoveBy(gameObject, ht);
     }
 
@@ -119,6 +127,10 @@ public class MoveDoor : MonoBehaviour
         ht.Add("easetype", iTween.EaseType.linear);
         ht.Add("oncomplete", "CheckTriggerUp");
         audio.Play();
+        if (meshRenderer)
+        {
+            meshRenderer.materials = closeTexture;
+        }
         iTween.MoveBy(gameObject, ht);
     }
 
