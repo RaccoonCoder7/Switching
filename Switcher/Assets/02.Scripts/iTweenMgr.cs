@@ -8,6 +8,8 @@ public class iTweenMgr : MonoBehaviour
     public GameObject timerCanvas;
     public GameObject[] timerPanel;
     public Animator anim;
+    public GameObject buttonEffect;
+    public List<Transform> buttons = new List<Transform>();
     float x;
     bool playing;
     bool triggerUp;
@@ -18,6 +20,7 @@ public class iTweenMgr : MonoBehaviour
     Timer timer;
 
     public bool isEnable;
+    public bool useEffect;
 
     private void Awake()
     {
@@ -29,6 +32,10 @@ public class iTweenMgr : MonoBehaviour
     private void Start()
     {
         sc = FindObjectOfType<StageCtrl>();
+        buttons.Add(timerCanvas.transform.Find("switching"));
+        buttons.Add(timerCanvas.transform.Find("switchBomb"));
+        buttons.Add(timerCanvas.transform.Find("pull"));
+        buttons.Add(timerCanvas.transform.Find("push"));
     }
 
 
@@ -85,9 +92,8 @@ public class iTweenMgr : MonoBehaviour
                 }
             }
         }
-            
-
     }
+
     public void MoveLeft()
     {
         playing = true;
@@ -99,6 +105,7 @@ public class iTweenMgr : MonoBehaviour
         iTween.MoveBy(timerCanvas, ht1);
 
     }
+
     public void MoveRight()
     {
         playing = true;
@@ -111,9 +118,26 @@ public class iTweenMgr : MonoBehaviour
         iTween.MoveBy(timerCanvas, ht1);
     }
 
+    public void ForceCtrlEffect(bool b)
+    {
+        buttonEffect.SetActive(b);
+    }
+
+    public void ChangeEffectPos(int index)
+    {
+        Vector3 pos = new Vector3(buttons[index].position.x
+                                , buttons[index].position.y
+                                , buttonEffect.transform.position.z);
+        buttonEffect.transform.position = pos;
+    }
+
     void CheckTriggerDown()
     {
         playing = false;
+        if (useEffect)
+        {
+            buttonEffect.SetActive(true);
+        }
         if (triggerDown)
         {
             MoveL();
@@ -135,6 +159,10 @@ public class iTweenMgr : MonoBehaviour
 
     void MoveL()
     {
+        if (useEffect)
+        {
+            buttonEffect.SetActive(false);
+        }
         anim.SetBool("PanelUp", false);
     }
 
