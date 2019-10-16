@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 3473196174105468462}
   - component: {fileID: 3473196174105468449}
   - component: {fileID: 1599356359}
-  m_Layer: 21
+  - component: {fileID: 826967218494832000}
+  m_Layer: 8
   m_Name: manaStone_B
   m_TagString: BLUE
   m_Icon: {fileID: 0}
@@ -76,6 +77,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f351c807027867c478550cc3cb00814a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &826967218494832000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3473196174105468448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32c6e354c52264a4b9f89faa5ba0c01c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  touchMgr: {fileID: 0}
+  isReady: 0
+  arrow: {fileID: 0}
+  rightController: {fileID: 0}
 --- !u!1001 &3473196175088263991
 PrefabInstance:
   m_ObjectHideFlags: 0

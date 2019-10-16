@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6868948631151183004}
   - component: {fileID: 6393307530224945386}
   - component: {fileID: 8271099889510954711}
-  m_Layer: 8
+  m_Layer: 21
   m_Name: MS_B_Cannon
   m_TagString: BLUE
   m_Icon: {fileID: 0}
