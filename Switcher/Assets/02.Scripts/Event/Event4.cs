@@ -45,9 +45,10 @@ public class Event4 : EventMgr
 
     private IEnumerator FadeInOutBarrier()
     {
-        barrier.SetActive(true);
-        yield return new WaitForSeconds(2.0f);
-        barrier.SetActive(false);
+        ps.NewSkillSound();
+        barrier[3].SetActive(true);
+        yield return new WaitForSeconds(3.0f);
+        barrier[3].SetActive(false);
         CallChat();
     }
 }

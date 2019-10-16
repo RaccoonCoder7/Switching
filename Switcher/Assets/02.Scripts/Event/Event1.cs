@@ -83,9 +83,10 @@ public class Event1 : EventMgr // EventMgr을 상속받을것.
 
     private IEnumerator FadeInOutBarrier()
     {
-        barrier.SetActive(true);
-        yield return new WaitForSeconds(2.0f);
-        barrier.SetActive(false);
+        ps.NewSkillSound();
+        barrier[0].SetActive(true);
+        yield return new WaitForSeconds(3.0f);
+        barrier[0].SetActive(false);
         CallChat();
     }
 }

@@ -9,18 +9,26 @@ public class EventMgr : MonoBehaviour
 
     protected Deleg[] EventList; // 이벤트들을 담아둘 곳
 
-    protected GameObject barrier;
+    protected GameObject[] barrier = new GameObject[4];
+    protected GameObject barrier1;
     protected Timer timer;
     protected iTweenMgr iTween;
     public TouchMgr touchMgr;
+    protected PlayerState ps;
 
     protected void Start()
     {
+
         GameObject player = GameObject.Find("Player");
-        barrier = player.transform.Find("BeamupCylinderGreen").gameObject;
+        barrier[0] = player.transform.Find("SkillEffect1").gameObject;
+        barrier[1] = player.transform.Find("SkillEffect2").gameObject;
+        barrier[2] = player.transform.Find("SkillEffect3").gameObject;
+        barrier[3] = player.transform.Find("SkillEffect4").gameObject;
         timer = FindObjectOfType<Timer>();
         touchMgr = player.GetComponent<TouchMgr>();
+        ps = player.GetComponent<PlayerState>();
         touchMgr.canFire = false;
+        touchMgr.laser.SetColors(Color.green, Color.green);
 
         chat = FindObjectOfType<Chat>();
         EventList = chat.chatEventList;

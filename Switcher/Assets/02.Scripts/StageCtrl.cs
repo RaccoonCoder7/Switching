@@ -114,7 +114,7 @@ public class StageCtrl : MonoBehaviour
 
         // 현재맵없애기
         yield return StartCoroutine(CreateStageAsync(gameMgr.GetPrevStageNum(), false));
-        chat.ResetText();
+        //chat.ResetText();
         yield return StartCoroutine(gameMgr.FadeOut());
     }
 

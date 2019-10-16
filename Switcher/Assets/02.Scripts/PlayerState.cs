@@ -11,6 +11,7 @@ public class PlayerState : MonoBehaviour
 
     public bool isDead;
     public AudioClip[] stateClips;
+    public AudioClip newSkillClip;
     public GameObject barrier;
 
     void Start()
@@ -46,5 +47,10 @@ public class PlayerState : MonoBehaviour
         OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.LTouch);
         sc.StartCoroutine(sc.ResetStage(stateClips[2]));
         // mgr.Continue();
+    }
+
+    public void NewSkillSound()
+    {
+        audio.PlayOneShot(newSkillClip);
     }
 }

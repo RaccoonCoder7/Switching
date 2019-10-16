@@ -135,6 +135,9 @@ namespace MyDedlegate
         {
             continueCnt = 0;
             textCount = 0;
+            paragraphCnt = 0;
+            imageCtrl.ChangeSprites(TouchMgr.SkillMode.switching);
+            //touchMgr.ChangeMode(TouchMgr.SkillMode.chat);
             textList = new List<string>();
             textData = Resources.Load(str + "Text", typeof(TextAsset)) as TextAsset;
             sr = new StringReader(textData.text);
