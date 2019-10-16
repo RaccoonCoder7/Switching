@@ -21,6 +21,7 @@ public class Event4 : EventMgr
         {
             touchMgr.ChangeMode(TouchMgr.SkillMode.chat);
             CallChat();
+            OffPanelEffect();
             modeCheck = false;
         }
     }
@@ -33,6 +34,7 @@ public class Event4 : EventMgr
     {
         touchMgr.ChangeMode(TouchMgr.SkillMode.switching);
         modeCheck = true;
+        UsePanelEffect(3);
     }
     private void EV3()
     {

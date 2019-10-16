@@ -125,10 +125,10 @@ public class iTweenMgr : MonoBehaviour
 
     public void ChangeEffectPos(int index)
     {
-        Vector3 pos = new Vector3(buttons[index].position.x
-                                , buttons[index].position.y
-                                , buttonEffect.transform.position.z);
-        buttonEffect.transform.position = pos;
+        Vector3 pos = new Vector3(buttons[index].localPosition.x
+                                , buttons[index].localPosition.y
+                                , buttonEffect.transform.localPosition.z);
+        buttonEffect.transform.localPosition = pos;
     }
 
     void CheckTriggerDown()
