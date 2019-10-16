@@ -4870,6 +4870,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   shootPos: {x: 0, y: 0, z: 0}
+  explosion: {fileID: 1339485438278462, guid: 696d859b6f0b06345a0b34645dc6b05b, type: 3}
+  exlposionClip: {fileID: 8300000, guid: e6a095feb385bab4a9a2e245468d4c42, type: 3}
   tpStyle: 0
 --- !u!82 &-6645615152448374517
 AudioSource:

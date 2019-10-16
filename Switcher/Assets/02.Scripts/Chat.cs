@@ -36,6 +36,7 @@ namespace MyDedlegate
         public bool helpCheck = false;
         public ImageCtrl imageCtrl;
         public Deleg[] chatEventList = new Deleg[6];
+        public AudioClip chatClip;
 
         AudioSource audio;
 
@@ -216,6 +217,10 @@ namespace MyDedlegate
             {
                 yield return new WaitForSeconds(0.02f);
                 text.text = setText.Substring(0, i);
+                if (i % 3 == 0 && i > 1 && !setText.Substring(i - 1, 1).Equals(" "))
+                {
+                    audio.PlayOneShot(chatClip);
+                }
             }
             yield return new WaitForSeconds(0.2f);
             nowState = State.Next;

@@ -16475,6 +16475,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6030156457277159800, guid: 48fb55a19c1a4a7459dd7d0b4c2a7aa3,
+        type: 3}
+      propertyPath: bossChatClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b775712de45355542af2df9dd678c4c7, type: 3}
     - target: {fileID: 1131177464883897330, guid: 48fb55a19c1a4a7459dd7d0b4c2a7aa3,
         type: 3}
       propertyPath: m_Text

@@ -25,7 +25,7 @@ public class BossChat : MonoBehaviour
     private StageCtrl sc;
     public TouchMgr touchMgr;
     private TouchMgr.SkillMode prevMode;
-
+    public AudioClip bossChatClip;
 
 
     AudioSource audio;
@@ -120,6 +120,10 @@ public class BossChat : MonoBehaviour
         {
             yield return new WaitForSeconds(0.02f);
             bossText.text = setText.Substring(0, i);
+            if (i % 3 == 0 && i > 1 && !setText.Substring(i - 1, 1).Equals(" "))
+            {
+                audio.PlayOneShot(bossChatClip);
+            }
         }
         yield return new WaitForSeconds(0.2f);
         nowState = State.Next;

@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class TranslateBullet : MonoBehaviour
 {
-    private int manaStoneLayer; 
-    private int manaStoneLayerCannon; 
+    private int manaStoneLayer;
+    private int manaStoneLayerCannon;
     private int bossLayer;
-    private int wireLayer;
     private int mirrorLayer;
     private Transform playerTr;
     private TouchMgr touchMgr;
@@ -17,9 +16,12 @@ public class TranslateBullet : MonoBehaviour
     private Rigidbody rb;
     private AudioSource audio;
     private float diff = 0.82f;
+    private GameObject clone;
 
     public float speed = 10.0f;
     public Vector3 shootPos;
+    public GameObject explosion;
+    public AudioClip exlposionClip;
     public enum teleportStyle
     {
         teleport, lerp
@@ -31,7 +33,6 @@ public class TranslateBullet : MonoBehaviour
         manaStoneLayer = LayerMask.NameToLayer("MANASTONE");
         manaStoneLayerCannon = LayerMask.NameToLayer("MANASTONE_C");
         bossLayer = LayerMask.NameToLayer("BOSS");
-        wireLayer = LayerMask.NameToLayer("WIRE");
         mirrorLayer = LayerMask.NameToLayer("MIRROR");
         playerTr = GameObject.Find("Player").transform;
         touchMgr = playerTr.GetComponent<TouchMgr>();
@@ -39,6 +40,8 @@ public class TranslateBullet : MonoBehaviour
         ray = new Ray();
         rb = GetComponent<Rigidbody>();
         audio = GetComponent<AudioSource>();
+        clone = Instantiate(explosion);
+        Destroy(clone);
     }
 
     private void OnCollisionEnter(Collision other)
@@ -54,7 +57,7 @@ public class TranslateBullet : MonoBehaviour
         }
 
         float waitTime = 0f;
-        if (other.gameObject.layer.Equals(manaStoneLayer) 
+        if (other.gameObject.layer.Equals(manaStoneLayer)
             || other.gameObject.layer.Equals(bossLayer) || other.gameObject.layer.Equals(manaStoneLayerCannon))
         {
             other.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
@@ -62,7 +65,7 @@ public class TranslateBullet : MonoBehaviour
             Vector3 playerPos = playerTr.transform.position;
             float targetPosY = targetPos.y;
             targetPos.y = targetPos.y - diff;
-            playerPos.y = playerPos.y + diff/2;
+            playerPos.y = playerPos.y + diff / 2;
 
             if (tpStyle == teleportStyle.teleport)
             {
@@ -76,13 +79,17 @@ public class TranslateBullet : MonoBehaviour
             waitTime = 1f;
             playerState.DisableDmg(waitTime);
         }
-
-        if (!other.gameObject.layer.Equals(wireLayer))
+        else
         {
-            touchMgr.EnableFire(waitTime);
-            gameObject.SetActive(false);
-            StopCoroutine("activeFalseSelf");
+            audio.PlayOneShot(exlposionClip);
+            GameObject exp = Instantiate(explosion, transform.position, transform.rotation);
+            Destroy(exp, 0.5f);
         }
+
+        touchMgr.EnableFire(waitTime);
+        gameObject.SetActive(false);
+
+        StopCoroutine("activeFalseSelf");
     }
 
     // 전이능력을 비활성화
