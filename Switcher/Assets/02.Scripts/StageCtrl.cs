@@ -135,6 +135,7 @@ public class StageCtrl : MonoBehaviour
         playerTr.rotation = stage.playerTr.rotation;
     }
 
+
     private void CreateMap(bool isFirst)
     {
         if (!isFirst)

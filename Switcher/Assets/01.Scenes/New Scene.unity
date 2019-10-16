@@ -8632,6 +8632,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b21a95eac55641846a9633c80d6da27d, type: 3}
   - {fileID: 8300000, guid: 85903332a36180d4d840c23a3e4bde91, type: 3}
   - {fileID: 8300000, guid: 910997cdd9e1e99488aaac883e8f58b4, type: 3}
+  newSkillClip: {fileID: 0}
   barrier: {fileID: 3162601953286962777}
 --- !u!54 &3162601952688705209
 Rigidbody:
@@ -24173,6 +24174,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3162601952688705210}
     m_Modifications:
+    - target: {fileID: 1957075435711846, guid: 1b11f3eacf0dce144ae701d97e87fad9, type: 3}
+      propertyPath: m_Name
+      value: BeamupCylinderYellow
+      objectReference: {fileID: 0}
+    - target: {fileID: 1957075435711846, guid: 1b11f3eacf0dce144ae701d97e87fad9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4316525215219866, guid: 1b11f3eacf0dce144ae701d97e87fad9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -24228,14 +24237,6 @@ PrefabInstance:
     - target: {fileID: 4316525215219866, guid: 1b11f3eacf0dce144ae701d97e87fad9, type: 3}
       propertyPath: m_LocalScale.z
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1957075435711846, guid: 1b11f3eacf0dce144ae701d97e87fad9, type: 3}
-      propertyPath: m_Name
-      value: BeamupCylinderYellow
-      objectReference: {fileID: 0}
-    - target: {fileID: 1957075435711846, guid: 1b11f3eacf0dce144ae701d97e87fad9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4702659097829302, guid: 1b11f3eacf0dce144ae701d97e87fad9, type: 3}
       propertyPath: m_LocalScale.y
