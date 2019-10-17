@@ -15,10 +15,12 @@ public class EventMgr : MonoBehaviour
     protected iTweenMgr iTween;
     public TouchMgr touchMgr;
     protected PlayerState ps;
+    PlayerPosCheck pps;
 
     protected void Start()
     {
-
+        pps = FindObjectOfType<PlayerPosCheck>();
+        pps.StartCoroutine("WarningFadeOut");
         GameObject player = GameObject.Find("Player");
         barrier[0] = player.transform.Find("SkillEffect1").gameObject;
         barrier[1] = player.transform.Find("SkillEffect2").gameObject;

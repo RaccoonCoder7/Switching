@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 33500083722554514}
   - component: {fileID: 33500083722554512}
   - component: {fileID: 33500083722554513}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: conerWall2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -630,7 +630,7 @@ GameObject:
   - component: {fileID: 33500085410877957}
   - component: {fileID: 33500085410877979}
   - component: {fileID: 33500085410877956}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: conerWall2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -858,7 +858,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 717417746387860491}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: sideWall (39)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1219,7 +1219,7 @@ GameObject:
   - component: {fileID: 2122327201255621185}
   - component: {fileID: 2122327201252147171}
   - component: {fileID: 2122327201253596753}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: conerWall2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1295,7 +1295,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2122327201559742626}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: conerFloorWall (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1406,7 +1406,7 @@ GameObject:
   - component: {fileID: 2487463202725592034}
   - component: {fileID: 2487463202726970944}
   - component: {fileID: 2487463202727880690}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: conerWall2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1482,7 +1482,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2487463203084431617}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: conerFloorWallLight (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1519,7 +1519,7 @@ GameObject:
   - component: {fileID: 2487463203689449345}
   - component: {fileID: 2487463203692755491}
   - component: {fileID: 2487463203691355025}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: conerWall2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1595,7 +1595,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2487463204265938274}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: conerFloorWallLight (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1629,7 +1629,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2642584576420281236}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: conerFloorWall (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1659,7 +1659,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2740360279948763332}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: conerFloorWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1691,7 +1691,7 @@ GameObject:
   - component: {fileID: 3327448488429912723}
   - component: {fileID: 3327448488432860977}
   - component: {fileID: 3327448488431951491}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: conerWall2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1767,7 +1767,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3327448488889092208}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: conerFloorWallLight (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1799,7 +1799,7 @@ GameObject:
   - component: {fileID: 3434930015305619378}
   - component: {fileID: 3434930015306492432}
   - component: {fileID: 3434930015307647906}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: conerWall2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1875,7 +1875,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3434930015655812433}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: conerFloorWall (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1937,7 +1937,7 @@ GameObject:
   - component: {fileID: 3728352796061769814}
   - component: {fileID: 3728352796063129076}
   - component: {fileID: 3728352796064070726}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: conerWall2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2013,7 +2013,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3728352796680596149}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: conerFloorWallLight (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2201,7 +2201,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4337563628607969302}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: sideCeilingWall (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2326,7 +2326,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4387944353237585634}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: sideCeilingWall (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2449,7 +2449,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4840464587384526852}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: sideCeilingWall (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2633,7 +2633,7 @@ GameObject:
   - component: {fileID: 5651028273919872245}
   - component: {fileID: 5651028273918587223}
   - component: {fileID: 5651028273917710565}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: conerWall2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2709,7 +2709,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5651028274668455446}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: conerFloorWallLight (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2748,7 +2748,7 @@ GameObject:
   - component: {fileID: 6112456905414093109}
   - component: {fileID: 6112456905414857879}
   - component: {fileID: 6112456905415996709}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: conerWall2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2824,7 +2824,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6112456905915147222}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: conerFloorWallLight (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2856,7 +2856,7 @@ GameObject:
   - component: {fileID: 6769375372537389624}
   - component: {fileID: 6769375372538257306}
   - component: {fileID: 6769375372539428392}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: conerWall2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2932,7 +2932,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6769375372862417115}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: conerFloorWallLight (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3501,7 +3501,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7099608310200000614}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: sideWall (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3532,7 +3532,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7392720844856716737}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: conerFloorWall (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3562,7 +3562,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7475103073880635946}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: conerCeilingWall (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3688,7 +3688,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7475103074475921839}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: conerCeilingWall (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3876,7 +3876,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8044007211640076751}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: sideWall (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3907,7 +3907,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8044007211941196335}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: sideWall (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3937,7 +3937,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8044007211988646532}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: sideWall (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3967,7 +3967,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8044007212044069906}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: sideWall (38)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3998,7 +3998,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8044007212116891241}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: sideWall (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4029,7 +4029,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8044007212121217755}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: sideWall (41)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4059,7 +4059,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8044007212159497175}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: sideWall (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4090,7 +4090,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8044007212176003502}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: sideWall (40)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4121,7 +4121,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8044007212420313261}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: sideWall (42)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4154,7 +4154,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8044007212426694053}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: sideWall (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4184,7 +4184,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8044007212612482648}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: sideWall (44)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4296,7 +4296,7 @@ GameObject:
   - component: {fileID: 8448052712949941812}
   - component: {fileID: 8448052712949283734}
   - component: {fileID: 8448052712948046372}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: conerWall2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4372,7 +4372,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8448052713547861207}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: conerFloorWall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4402,7 +4402,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8482863870385638119}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: conerFloorWall (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9444,7 +9444,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8533289739425288074}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: conerCeilingWall (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9474,7 +9474,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8606927922466428251}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: conerFloorWallLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9506,7 +9506,7 @@ GameObject:
   - component: {fileID: 8606927923236249528}
   - component: {fileID: 8606927923235447322}
   - component: {fileID: 8606927923233948584}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: conerWall2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9582,7 +9582,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8634326344232316233}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: sideWall (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9614,6 +9614,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: conerWall1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7515064846568877460, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 7515064846569059358, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
         type: 3}
@@ -9765,6 +9770,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sideCeilingWall (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1513746391778122812, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 1513746391778122813, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9819,6 +9829,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513746391425005750, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cc0dad0f498ff5458d626aa613b9ff4, type: 3}
@@ -9902,6 +9917,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: conerFloor (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406471492913208334, guid: 28e9639031c28ad478531f59547571b0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 5406471492912885996, guid: 28e9639031c28ad478531f59547571b0,
         type: 3}
@@ -10053,6 +10073,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sideWall (45)
       objectReference: {fileID: 0}
+    - target: {fileID: 8058357926218137935, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 8058357926218137934, guid: 7ee1488be0b42cb4a80713128c110ec4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10108,6 +10133,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8058357927057879908, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 8058357926671410629, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 1881053370367961670, guid: 7ee1488be0b42cb4a80713128c110ec4,
         type: 3}
       propertyPath: m_LocalRotation.y
@@ -10162,6 +10197,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sideWall (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7515064846568877460, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 7515064846569059358, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
         type: 3}
@@ -10458,6 +10498,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 1.08
       objectReference: {fileID: 0}
+    - target: {fileID: 6825682488957237961, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 6825682488956900907, guid: 80fa2ace592c59741ba21822b7fee3e7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10472,6 +10517,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.035975
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622952674202556402, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80fa2ace592c59741ba21822b7fee3e7, type: 3}
@@ -10492,6 +10542,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: conerFloor (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406471492913208334, guid: 28e9639031c28ad478531f59547571b0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 5406471492912885996, guid: 28e9639031c28ad478531f59547571b0,
         type: 3}
@@ -10568,6 +10623,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sideWall (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8058357926218137935, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 8058357926218137934, guid: 7ee1488be0b42cb4a80713128c110ec4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10623,6 +10683,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8058357927057879908, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 8058357926671410629, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ee1488be0b42cb4a80713128c110ec4, type: 3}
 --- !u!4 &8044007212260912123 stripped
@@ -10642,6 +10712,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sideWall (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8058357926218137935, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 8058357926218137934, guid: 7ee1488be0b42cb4a80713128c110ec4,
         type: 3}
@@ -10697,6 +10772,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8058357927057879908, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 8058357926671410629, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ee1488be0b42cb4a80713128c110ec4, type: 3}
@@ -10772,6 +10857,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825682488957237961, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622952674202556402, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80fa2ace592c59741ba21822b7fee3e7, type: 3}
@@ -10868,6 +10963,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sideWall (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8058357926218137935, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 8058357926218137934, guid: 7ee1488be0b42cb4a80713128c110ec4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10922,6 +11022,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8058357927057879908, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 8058357926671410629, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ee1488be0b42cb4a80713128c110ec4, type: 3}
@@ -11112,6 +11222,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 270
       objectReference: {fileID: 0}
+    - target: {fileID: 6825682488957237961, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622952674202556402, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80fa2ace592c59741ba21822b7fee3e7, type: 3}
 --- !u!4 &6831597974096894285 stripped
@@ -11222,6 +11342,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 270
       objectReference: {fileID: 0}
+    - target: {fileID: 3622952674202556403, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825682488957237961, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622952674202556402, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80fa2ace592c59741ba21822b7fee3e7, type: 3}
 --- !u!4 &6831597974020852650 stripped
@@ -11241,6 +11376,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: conerFloor (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406471492913208334, guid: 28e9639031c28ad478531f59547571b0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 5406471492912885996, guid: 28e9639031c28ad478531f59547571b0,
         type: 3}
@@ -11452,6 +11592,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6825682488957237961, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622952674202556402, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80fa2ace592c59741ba21822b7fee3e7, type: 3}
 --- !u!4 &6831597974044314399 stripped
@@ -11526,6 +11676,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825682488957237961, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622952674202556402, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80fa2ace592c59741ba21822b7fee3e7, type: 3}
@@ -11626,6 +11786,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sideCeilingWall (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1513746391778122812, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 1513746391778122813, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11681,6 +11846,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1513746391425005750, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cc0dad0f498ff5458d626aa613b9ff4, type: 3}
 --- !u!4 &1546683507854700979 stripped
@@ -11700,6 +11870,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: conerFloor (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406471492913208334, guid: 28e9639031c28ad478531f59547571b0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 5406471492912885996, guid: 28e9639031c28ad478531f59547571b0,
         type: 3}
@@ -11851,6 +12026,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: conerCeilingWall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7479320655920930091, guid: 65e7a1f9ee042ce48b53a1faa070e505,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 7479320655920930090, guid: 65e7a1f9ee042ce48b53a1faa070e505,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11906,6 +12086,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7479320655302643267, guid: 65e7a1f9ee042ce48b53a1faa070e505,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479320656106289569, guid: 65e7a1f9ee042ce48b53a1faa070e505,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65e7a1f9ee042ce48b53a1faa070e505, type: 3}
 --- !u!4 &7475103075654912188 stripped
@@ -11925,6 +12115,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: conerWall1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7515064846568877460, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 7515064846569059358, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
         type: 3}
@@ -12001,6 +12196,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: conerFloor (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5406471492913208334, guid: 28e9639031c28ad478531f59547571b0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 5406471492912885996, guid: 28e9639031c28ad478531f59547571b0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12075,6 +12275,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: glassWall (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5133196316516214948, guid: c524a07b73db8a5478f2af75107d9b59,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 5133196316516214949, guid: c524a07b73db8a5478f2af75107d9b59,
         type: 3}
@@ -12160,6 +12365,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sideCeilingWall (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1513746391778122812, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 1513746391778122813, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12214,6 +12424,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513746391425005750, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cc0dad0f498ff5458d626aa613b9ff4, type: 3}
@@ -12324,6 +12539,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622952674202556403, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825682488957237961, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622952674202556402, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80fa2ace592c59741ba21822b7fee3e7, type: 3}
@@ -12510,6 +12740,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 270
       objectReference: {fileID: 0}
+    - target: {fileID: 3622952674202556403, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825682488957237961, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622952674202556402, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80fa2ace592c59741ba21822b7fee3e7, type: 3}
 --- !u!4 &6831597973627267467 stripped
@@ -12529,6 +12774,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: glassWall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5133196316516214948, guid: c524a07b73db8a5478f2af75107d9b59,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 5133196316516214949, guid: c524a07b73db8a5478f2af75107d9b59,
         type: 3}
@@ -12873,6 +13123,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: glassWall (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 5133196316516214948, guid: c524a07b73db8a5478f2af75107d9b59,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 5133196316516214949, guid: c524a07b73db8a5478f2af75107d9b59,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13012,6 +13267,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6825682488957237961, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622952674202556402, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80fa2ace592c59741ba21822b7fee3e7, type: 3}
 --- !u!4 &6831597973794482853 stripped
@@ -13122,6 +13387,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 270
       objectReference: {fileID: 0}
+    - target: {fileID: 3622952674202556403, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825682488957237961, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622952674202556402, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80fa2ace592c59741ba21822b7fee3e7, type: 3}
 --- !u!4 &6831597973848766952 stripped
@@ -13141,6 +13421,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sideCeilingWall (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513746391778122812, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 1513746391778122813, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
         type: 3}
@@ -13197,6 +13482,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1513746391425005750, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cc0dad0f498ff5458d626aa613b9ff4, type: 3}
 --- !u!4 &1546683507749373372 stripped
@@ -13216,6 +13506,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: glassWall (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5133196316516214948, guid: c524a07b73db8a5478f2af75107d9b59,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 5133196316516214949, guid: c524a07b73db8a5478f2af75107d9b59,
         type: 3}
@@ -13376,6 +13671,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sideCeilingWall (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 1513746391778122812, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 1513746391778122813, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13430,6 +13730,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513746391425005750, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cc0dad0f498ff5458d626aa613b9ff4, type: 3}
@@ -13506,6 +13811,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6825682488957237961, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622952674202556402, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80fa2ace592c59741ba21822b7fee3e7, type: 3}
 --- !u!4 &6831597973722449613 stripped
@@ -13525,6 +13840,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sideCeilingWall (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513746391778122812, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 1513746391778122813, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
         type: 3}
@@ -13580,6 +13900,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513746391425005750, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cc0dad0f498ff5458d626aa613b9ff4, type: 3}
@@ -13826,6 +14151,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: glassWall (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5133196316516214948, guid: c524a07b73db8a5478f2af75107d9b59,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 5133196316516214949, guid: c524a07b73db8a5478f2af75107d9b59,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13909,6 +14239,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: conerFloor (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406471492913208334, guid: 28e9639031c28ad478531f59547571b0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 5406471492912885996, guid: 28e9639031c28ad478531f59547571b0,
         type: 3}
@@ -14213,6 +14548,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6825682488957237961, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622952674202556402, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80fa2ace592c59741ba21822b7fee3e7, type: 3}
 --- !u!4 &6831597973360050365 stripped
@@ -14232,6 +14577,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sideWall (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8058357926218137935, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 8058357926218137934, guid: 7ee1488be0b42cb4a80713128c110ec4,
         type: 3}
@@ -14287,6 +14637,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8058357927057879908, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 8058357926671410629, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ee1488be0b42cb4a80713128c110ec4, type: 3}
@@ -14509,6 +14869,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sideCeilingWall (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1513746391778122812, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 1513746391778122813, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14564,6 +14929,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1513746391425005750, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cc0dad0f498ff5458d626aa613b9ff4, type: 3}
 --- !u!4 &1546683507505418922 stripped
@@ -14583,6 +14953,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sideWall (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8058357926218137935, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 8058357926218137934, guid: 7ee1488be0b42cb4a80713128c110ec4,
         type: 3}
@@ -14638,6 +15013,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8058357927057879908, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 8058357926671410629, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 1881053370367961670, guid: 7ee1488be0b42cb4a80713128c110ec4,
         type: 3}
@@ -14769,6 +15154,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sideCeilingWall (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 1513746391778122812, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 1513746391778122813, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14824,6 +15214,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1513746391425005750, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 5338186345376368267, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
         type: 3}
       propertyPath: m_Sprite
@@ -14860,6 +15255,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: conerCeilingWall (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479320655920930091, guid: 65e7a1f9ee042ce48b53a1faa070e505,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 7479320655920930090, guid: 65e7a1f9ee042ce48b53a1faa070e505,
         type: 3}
@@ -14916,6 +15316,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7479320655302643267, guid: 65e7a1f9ee042ce48b53a1faa070e505,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479320656106289569, guid: 65e7a1f9ee042ce48b53a1faa070e505,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65e7a1f9ee042ce48b53a1faa070e505, type: 3}
 --- !u!4 &7475103074756810325 stripped
@@ -14935,6 +15345,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sideWall (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8058357926218137935, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 8058357926218137934, guid: 7ee1488be0b42cb4a80713128c110ec4,
         type: 3}
@@ -14990,6 +15405,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8058357927057879908, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 8058357926671410629, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ee1488be0b42cb4a80713128c110ec4, type: 3}
@@ -15090,6 +15515,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sideWall (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 8058357926218137935, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 8058357926218137934, guid: 7ee1488be0b42cb4a80713128c110ec4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15145,6 +15575,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8058357927057879908, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 8058357926671410629, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ee1488be0b42cb4a80713128c110ec4, type: 3}
 --- !u!4 &8044007212949314885 stripped
@@ -15164,6 +15604,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: glassWall (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5133196316516214948, guid: c524a07b73db8a5478f2af75107d9b59,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 5133196316516214949, guid: c524a07b73db8a5478f2af75107d9b59,
         type: 3}
@@ -15249,6 +15694,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sideWall (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 8058357926218137935, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 8058357926218137934, guid: 7ee1488be0b42cb4a80713128c110ec4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15303,6 +15753,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8058357927057879908, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 8058357926671410629, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ee1488be0b42cb4a80713128c110ec4, type: 3}
@@ -15414,6 +15874,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 270
       objectReference: {fileID: 0}
+    - target: {fileID: 6825682488957237961, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622952674202556402, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80fa2ace592c59741ba21822b7fee3e7, type: 3}
 --- !u!4 &6831597973063031687 stripped
@@ -15433,6 +15903,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sideWall (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8058357926218137935, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 8058357926218137934, guid: 7ee1488be0b42cb4a80713128c110ec4,
         type: 3}
@@ -15489,6 +15964,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8058357927057879908, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 8058357926671410629, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ee1488be0b42cb4a80713128c110ec4, type: 3}
 --- !u!4 &8044007213026314721 stripped
@@ -15508,6 +15993,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: glassWall (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5133196316516214948, guid: c524a07b73db8a5478f2af75107d9b59,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 5133196316516214949, guid: c524a07b73db8a5478f2af75107d9b59,
         type: 3}
@@ -15763,6 +16253,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sideCeilingWall (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 1513746391778122812, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 1513746391778122813, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15818,6 +16313,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1513746391425005750, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 1513746391005037301, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -15847,6 +16347,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sideCeilingWall (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513746391778122812, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 1513746391778122813, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
         type: 3}
@@ -15902,6 +16407,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513746391425005750, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cc0dad0f498ff5458d626aa613b9ff4, type: 3}
@@ -16073,6 +16583,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sideCeilingWall
       objectReference: {fileID: 0}
+    - target: {fileID: 1513746391778122812, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 1513746391778122813, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16128,6 +16643,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1513746391425005750, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cc0dad0f498ff5458d626aa613b9ff4, type: 3}
 --- !u!4 &1546683507190368787 stripped
@@ -16147,6 +16667,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sideCeilingWall (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513746391778122812, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 1513746391778122813, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
         type: 3}
@@ -16203,6 +16728,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1513746391425005750, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cc0dad0f498ff5458d626aa613b9ff4, type: 3}
 --- !u!4 &1546683507234584385 stripped
@@ -16222,6 +16752,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sideCeilingWall (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513746391778122812, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 1513746391778122813, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
         type: 3}
@@ -16277,6 +16812,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513746391425005750, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cc0dad0f498ff5458d626aa613b9ff4, type: 3}
@@ -16377,6 +16917,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sideCeilingWall (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1513746391778122812, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 1513746391778122813, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16432,6 +16977,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1513746391425005750, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cc0dad0f498ff5458d626aa613b9ff4, type: 3}
 --- !u!4 &1546683507284403839 stripped
@@ -16451,6 +17001,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: glassWall (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5133196316516214948, guid: c524a07b73db8a5478f2af75107d9b59,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 5133196316516214949, guid: c524a07b73db8a5478f2af75107d9b59,
         type: 3}
@@ -16536,6 +17091,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: conerCeilingWall (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 7479320655920930091, guid: 65e7a1f9ee042ce48b53a1faa070e505,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 7479320655920930090, guid: 65e7a1f9ee042ce48b53a1faa070e505,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16591,6 +17151,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7479320655302643267, guid: 65e7a1f9ee042ce48b53a1faa070e505,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479320656106289569, guid: 65e7a1f9ee042ce48b53a1faa070e505,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65e7a1f9ee042ce48b53a1faa070e505, type: 3}
 --- !u!4 &7475103075051099032 stripped
@@ -16610,6 +17180,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sideWall (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8058357926218137935, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 8058357926218137934, guid: 7ee1488be0b42cb4a80713128c110ec4,
         type: 3}
@@ -16666,6 +17241,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8058357927057879908, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 8058357926671410629, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ee1488be0b42cb4a80713128c110ec4, type: 3}
 --- !u!4 &8044007213172857566 stripped
@@ -16685,6 +17270,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sideWall (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8058357926218137935, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 8058357926218137934, guid: 7ee1488be0b42cb4a80713128c110ec4,
         type: 3}
@@ -16740,6 +17330,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8058357927057879908, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 8058357926671410629, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ee1488be0b42cb4a80713128c110ec4, type: 3}
@@ -16836,6 +17436,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: conerCeilingWall
       objectReference: {fileID: 0}
+    - target: {fileID: 7479320655920930091, guid: 65e7a1f9ee042ce48b53a1faa070e505,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 7479320655920930090, guid: 65e7a1f9ee042ce48b53a1faa070e505,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16891,6 +17496,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7479320655302643267, guid: 65e7a1f9ee042ce48b53a1faa070e505,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479320656106289569, guid: 65e7a1f9ee042ce48b53a1faa070e505,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65e7a1f9ee042ce48b53a1faa070e505, type: 3}
 --- !u!4 &7475103074259031287 stripped
@@ -16911,6 +17526,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: glassWall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5133196316516214948, guid: c524a07b73db8a5478f2af75107d9b59,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 5133196316516214949, guid: c524a07b73db8a5478f2af75107d9b59,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16919,7 +17539,7 @@ PrefabInstance:
     - target: {fileID: 5133196316516214949, guid: c524a07b73db8a5478f2af75107d9b59,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -74.95
+      value: -75.459
       objectReference: {fileID: 0}
     - target: {fileID: 5133196316516214949, guid: c524a07b73db8a5478f2af75107d9b59,
         type: 3}
@@ -17007,6 +17627,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: glassWall (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5133196316516214948, guid: c524a07b73db8a5478f2af75107d9b59,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 5133196316516214949, guid: c524a07b73db8a5478f2af75107d9b59,
         type: 3}
@@ -17395,7 +18020,12 @@ PrefabInstance:
     - target: {fileID: 3622952674202556403, guid: 80fa2ace592c59741ba21822b7fee3e7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1
+      value: 0.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825682488957237961, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 6825682488956900907, guid: 80fa2ace592c59741ba21822b7fee3e7,
         type: 3}
@@ -17411,6 +18041,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.035975
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622952674202556402, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80fa2ace592c59741ba21822b7fee3e7, type: 3}
@@ -17431,6 +18066,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: conerFloorWall (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2090516293592992540, guid: 5f84065b520a1ef4993e56a532cf493b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 2090516293592992541, guid: 5f84065b520a1ef4993e56a532cf493b,
         type: 3}
@@ -17487,6 +18127,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2090516292822219063, guid: 5f84065b520a1ef4993e56a532cf493b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 2090516293129082996, guid: 5f84065b520a1ef4993e56a532cf493b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 2090516293409746838, guid: 5f84065b520a1ef4993e56a532cf493b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f84065b520a1ef4993e56a532cf493b, type: 3}
 --- !u!4 &2122327202024559726 stripped
@@ -17506,6 +18161,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sideWall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7515064846568877460, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 7515064846569059358, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
         type: 3}
@@ -17652,6 +18312,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: conerFloorWallLight (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 2518139724349801106, guid: 9064bf941f8123249b1ca529bafb57fd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 2518139724349801107, guid: 9064bf941f8123249b1ca529bafb57fd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17707,6 +18372,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2518139724166063640, guid: 9064bf941f8123249b1ca529bafb57fd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 2518139724652671161, guid: 9064bf941f8123249b1ca529bafb57fd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 2518139724964385274, guid: 9064bf941f8123249b1ca529bafb57fd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9064bf941f8123249b1ca529bafb57fd, type: 3}
 --- !u!4 &2487463202981655086 stripped
@@ -17726,6 +18406,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: conerFloorWall (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2090516293592992540, guid: 5f84065b520a1ef4993e56a532cf493b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 2090516293592992541, guid: 5f84065b520a1ef4993e56a532cf493b,
         type: 3}
@@ -17781,6 +18466,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2090516292822219063, guid: 5f84065b520a1ef4993e56a532cf493b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 2090516293129082996, guid: 5f84065b520a1ef4993e56a532cf493b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 2090516293409746838, guid: 5f84065b520a1ef4993e56a532cf493b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f84065b520a1ef4993e56a532cf493b, type: 3}
@@ -17875,7 +18575,12 @@ PrefabInstance:
     - target: {fileID: 3622952674202556403, guid: 80fa2ace592c59741ba21822b7fee3e7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1
+      value: 0.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825682488957237961, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 6825682488956900907, guid: 80fa2ace592c59741ba21822b7fee3e7,
         type: 3}
@@ -17891,6 +18596,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.035975
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622952674202556402, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 3131800315696767979, guid: 80fa2ace592c59741ba21822b7fee3e7,
         type: 3}
@@ -17933,6 +18643,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sideWall (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7515064846568877460, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 7515064846569059358, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
         type: 3}
@@ -18478,6 +19193,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: conerFloor (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5406471492913208334, guid: 28e9639031c28ad478531f59547571b0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 5406471492912885996, guid: 28e9639031c28ad478531f59547571b0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18608,6 +19328,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6825682488957237961, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622952674202556402, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80fa2ace592c59741ba21822b7fee3e7, type: 3}
 --- !u!4 &6831597972593109583 stripped
@@ -18627,6 +19357,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: conerWall1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7515064846568877460, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 7515064846569059358, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
         type: 3}
@@ -18703,6 +19438,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: conerCeilingWall (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7479320655920930091, guid: 65e7a1f9ee042ce48b53a1faa070e505,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 7479320655920930090, guid: 65e7a1f9ee042ce48b53a1faa070e505,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18772,6 +19512,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.115
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479320655302643267, guid: 65e7a1f9ee042ce48b53a1faa070e505,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479320656106289569, guid: 65e7a1f9ee042ce48b53a1faa070e505,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65e7a1f9ee042ce48b53a1faa070e505, type: 3}
@@ -18974,6 +19724,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6825682488957237961, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622952674202556402, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80fa2ace592c59741ba21822b7fee3e7, type: 3}
 --- !u!4 &6831597972536452316 stripped
@@ -19154,6 +19914,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sideCeilingWall (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 1513746391778122812, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 1513746391778122813, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19208,6 +19973,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513746391425005750, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cc0dad0f498ff5458d626aa613b9ff4, type: 3}
@@ -19369,6 +20139,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6825682488957237961, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622952674202556402, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80fa2ace592c59741ba21822b7fee3e7, type: 3}
 --- !u!4 &6831597972740960232 stripped
@@ -19479,6 +20259,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 270
       objectReference: {fileID: 0}
+    - target: {fileID: 6825682488957237961, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622952674202556402, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 3131800315696767979, guid: 80fa2ace592c59741ba21822b7fee3e7,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -19528,6 +20318,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sideWall (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8058357926218137935, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 8058357926218137934, guid: 7ee1488be0b42cb4a80713128c110ec4,
         type: 3}
@@ -19583,6 +20378,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8058357927057879908, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 8058357926671410629, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ee1488be0b42cb4a80713128c110ec4, type: 3}
@@ -19678,6 +20483,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: conerFloor (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406471492913208334, guid: 28e9639031c28ad478531f59547571b0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 5406471492912885996, guid: 28e9639031c28ad478531f59547571b0,
         type: 3}
@@ -19843,6 +20653,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622952674202556403, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825682488957237961, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622952674202556402, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 3131800315696767979, guid: 80fa2ace592c59741ba21822b7fee3e7,
         type: 3}
@@ -20060,6 +20885,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: glassWall (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5133196316516214948, guid: c524a07b73db8a5478f2af75107d9b59,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 5133196316516214949, guid: c524a07b73db8a5478f2af75107d9b59,
         type: 3}
@@ -20295,6 +21125,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: glassWall (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 5133196316516214948, guid: c524a07b73db8a5478f2af75107d9b59,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 5133196316516214949, guid: c524a07b73db8a5478f2af75107d9b59,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20469,6 +21304,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 270
       objectReference: {fileID: 0}
+    - target: {fileID: 3622952674202556403, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825682488957237961, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622952674202556402, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80fa2ace592c59741ba21822b7fee3e7, type: 3}
 --- !u!4 &6831597972705252754 stripped
@@ -20544,6 +21394,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6825682488957237961, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622952674202556402, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80fa2ace592c59741ba21822b7fee3e7, type: 3}
 --- !u!4 &6831597972694166878 stripped
@@ -20563,6 +21423,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: conerCeilingWall (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479320655920930091, guid: 65e7a1f9ee042ce48b53a1faa070e505,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 7479320655920930090, guid: 65e7a1f9ee042ce48b53a1faa070e505,
         type: 3}
@@ -20619,6 +21484,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7479320655302643267, guid: 65e7a1f9ee042ce48b53a1faa070e505,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479320656106289569, guid: 65e7a1f9ee042ce48b53a1faa070e505,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65e7a1f9ee042ce48b53a1faa070e505, type: 3}
 --- !u!4 &7475103074498119850 stripped
@@ -20638,6 +21513,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: conerFloorWall (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2090516293592992540, guid: 5f84065b520a1ef4993e56a532cf493b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 2090516293592992541, guid: 5f84065b520a1ef4993e56a532cf493b,
         type: 3}
@@ -20693,6 +21573,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2090516292822219063, guid: 5f84065b520a1ef4993e56a532cf493b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 2090516293129082996, guid: 5f84065b520a1ef4993e56a532cf493b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 2090516293409746838, guid: 5f84065b520a1ef4993e56a532cf493b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f84065b520a1ef4993e56a532cf493b, type: 3}
@@ -20799,6 +21694,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sideCeilingWall (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1513746391778122812, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 1513746391778122813, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20854,6 +21754,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1513746391425005750, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cc0dad0f498ff5458d626aa613b9ff4, type: 3}
 --- !u!4 &1546683508650993097 stripped
@@ -20873,6 +21778,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sideWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 8058357926218137935, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 8058357926218137934, guid: 7ee1488be0b42cb4a80713128c110ec4,
         type: 3}
@@ -20928,6 +21838,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8058357927057879908, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 8058357926671410629, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ee1488be0b42cb4a80713128c110ec4, type: 3}
@@ -21178,6 +22098,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: conerCeilingWall (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7479320655920930091, guid: 65e7a1f9ee042ce48b53a1faa070e505,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 7479320655920930090, guid: 65e7a1f9ee042ce48b53a1faa070e505,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21232,6 +22157,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479320655302643267, guid: 65e7a1f9ee042ce48b53a1faa070e505,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479320656106289569, guid: 65e7a1f9ee042ce48b53a1faa070e505,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65e7a1f9ee042ce48b53a1faa070e505, type: 3}
@@ -21308,6 +22243,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6825682488957237961, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622952674202556402, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80fa2ace592c59741ba21822b7fee3e7, type: 3}
 --- !u!4 &6831597972298863260 stripped
@@ -21327,6 +22272,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: conerFloor (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406471492913208334, guid: 28e9639031c28ad478531f59547571b0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 5406471492912885996, guid: 28e9639031c28ad478531f59547571b0,
         type: 3}
@@ -21403,6 +22353,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sideCeilingWall (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 1513746391778122812, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 1513746391778122813, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21458,6 +22413,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1513746391425005750, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cc0dad0f498ff5458d626aa613b9ff4, type: 3}
 --- !u!4 &1546683508749536001 stripped
@@ -21477,6 +22437,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sideCeilingWall (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513746391778122812, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 1513746391778122813, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
         type: 3}
@@ -21533,6 +22498,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1513746391425005750, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cc0dad0f498ff5458d626aa613b9ff4, type: 3}
 --- !u!4 &1546683508738476858 stripped
@@ -21552,6 +22522,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sideWall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8058357926218137935, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 8058357926218137934, guid: 7ee1488be0b42cb4a80713128c110ec4,
         type: 3}
@@ -21608,6 +22583,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8058357927057879908, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 8058357926671410629, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ee1488be0b42cb4a80713128c110ec4, type: 3}
 --- !u!4 &8044007211726405339 stripped
@@ -21627,6 +22612,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: conerFloor (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406471492913208334, guid: 28e9639031c28ad478531f59547571b0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 5406471492912885996, guid: 28e9639031c28ad478531f59547571b0,
         type: 3}
@@ -21703,6 +22693,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sideWall (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 8058357926218137935, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 8058357926218137934, guid: 7ee1488be0b42cb4a80713128c110ec4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21758,6 +22753,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8058357927057879908, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 8058357926671410629, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ee1488be0b42cb4a80713128c110ec4, type: 3}
 --- !u!4 &8044007211709899458 stripped
@@ -21777,6 +22782,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sideWall (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8058357926218137935, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 8058357926218137934, guid: 7ee1488be0b42cb4a80713128c110ec4,
         type: 3}
@@ -21832,6 +22842,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8058357927057879908, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 8058357926671410629, guid: 7ee1488be0b42cb4a80713128c110ec4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ee1488be0b42cb4a80713128c110ec4, type: 3}
@@ -21942,6 +22962,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sideCeilingWall (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 1513746391778122812, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 1513746391778122813, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21997,6 +23022,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1513746391425005750, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cc0dad0f498ff5458d626aa613b9ff4, type: 3}
 --- !u!4 &1546683508571391982 stripped
@@ -22016,6 +23046,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: glassWall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5133196316516214948, guid: c524a07b73db8a5478f2af75107d9b59,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 5133196316516214949, guid: c524a07b73db8a5478f2af75107d9b59,
         type: 3}
@@ -22118,6 +23153,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sideCeilingWall (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1513746391778122812, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 1513746391778122813, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22173,6 +23213,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1513746391425005750, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cc0dad0f498ff5458d626aa613b9ff4, type: 3}
 --- !u!4 &1546683508371868094 stripped
@@ -22192,6 +23237,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sideCeilingWall (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513746391778122812, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 1513746391778122813, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
         type: 3}
@@ -22247,6 +23297,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513746391425005750, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cc0dad0f498ff5458d626aa613b9ff4, type: 3}
@@ -22322,6 +23377,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825682488957237961, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622952674202556402, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80fa2ace592c59741ba21822b7fee3e7, type: 3}
@@ -22672,6 +23737,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: conerFloor (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5406471492913208334, guid: 28e9639031c28ad478531f59547571b0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 5406471492912885996, guid: 28e9639031c28ad478531f59547571b0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22822,6 +23892,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 1.08
       objectReference: {fileID: 0}
+    - target: {fileID: 6825682488957237961, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 6825682488956900907, guid: 80fa2ace592c59741ba21822b7fee3e7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22836,6 +23911,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.035975
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622952674202556402, guid: 80fa2ace592c59741ba21822b7fee3e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80fa2ace592c59741ba21822b7fee3e7, type: 3}
@@ -22856,6 +23936,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: glassWall (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5133196316516214948, guid: c524a07b73db8a5478f2af75107d9b59,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 5133196316516214949, guid: c524a07b73db8a5478f2af75107d9b59,
         type: 3}
@@ -23003,6 +24088,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: conerFloor (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406471492913208334, guid: 28e9639031c28ad478531f59547571b0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 5406471492912885996, guid: 28e9639031c28ad478531f59547571b0,
         type: 3}
@@ -23153,6 +24243,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: conerFloor (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406471492913208334, guid: 28e9639031c28ad478531f59547571b0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 5406471492912885996, guid: 28e9639031c28ad478531f59547571b0,
         type: 3}
@@ -23389,6 +24484,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: conerFloor (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 5406471492913208334, guid: 28e9639031c28ad478531f59547571b0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 5406471492912885996, guid: 28e9639031c28ad478531f59547571b0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23464,6 +24564,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sideCeilingWall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1513746391778122812, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 1513746391778122813, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23519,6 +24624,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1513746391425005750, guid: 7cc0dad0f498ff5458d626aa613b9ff4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cc0dad0f498ff5458d626aa613b9ff4, type: 3}
 --- !u!4 &1546683508332921091 stripped
@@ -23538,6 +24648,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: glassWall (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5133196316516214948, guid: c524a07b73db8a5478f2af75107d9b59,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 5133196316516214949, guid: c524a07b73db8a5478f2af75107d9b59,
         type: 3}
@@ -23802,6 +24917,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sideWall
       objectReference: {fileID: 0}
+    - target: {fileID: 7515064846568877460, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 7515064846569059358, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23946,6 +25066,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sideWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 7515064846568877460, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 7515064846569059358, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
         type: 3}
@@ -24092,6 +25217,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sideWall
       objectReference: {fileID: 0}
+    - target: {fileID: 7515064846568877460, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 7515064846569059358, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -24236,6 +25366,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sideWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 7515064846568877460, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 7515064846569059358, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
         type: 3}
@@ -24382,6 +25517,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sideWall
       objectReference: {fileID: 0}
+    - target: {fileID: 7515064846568877460, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 7515064846569059358, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -24526,6 +25666,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sideWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 7515064846568877460, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 7515064846569059358, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
         type: 3}
@@ -24689,6 +25834,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sideWall
       objectReference: {fileID: 0}
+    - target: {fileID: 7515064846568877460, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 7515064846569059358, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -24833,6 +25983,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sideWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 7515064846568877460, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 7515064846569059358, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
         type: 3}
@@ -24979,6 +26134,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: conerWall1
       objectReference: {fileID: 0}
+    - target: {fileID: 7515064846568877460, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 7515064846569059358, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -25121,6 +26281,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sideFloor
       objectReference: {fileID: 0}
+    - target: {fileID: 5406471492913208334, guid: 28e9639031c28ad478531f59547571b0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 5406471492912885996, guid: 28e9639031c28ad478531f59547571b0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -25196,6 +26361,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: conerCeilingWall (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 7479320655920930091, guid: 65e7a1f9ee042ce48b53a1faa070e505,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 7479320655920930090, guid: 65e7a1f9ee042ce48b53a1faa070e505,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -25250,6 +26420,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479320655302643267, guid: 65e7a1f9ee042ce48b53a1faa070e505,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479320656106289569, guid: 65e7a1f9ee042ce48b53a1faa070e505,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65e7a1f9ee042ce48b53a1faa070e505, type: 3}
@@ -25367,6 +26547,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: conerWall1
       objectReference: {fileID: 0}
+    - target: {fileID: 7515064846568877460, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 7515064846569059358, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -25441,6 +26626,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sideWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 7515064846568877460, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 7515064846569059358, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
         type: 3}
@@ -25673,6 +26863,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sideFloor
       objectReference: {fileID: 0}
+    - target: {fileID: 5406471492913208334, guid: 28e9639031c28ad478531f59547571b0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 5406471492912885996, guid: 28e9639031c28ad478531f59547571b0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -25783,6 +26978,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sideFloor
       objectReference: {fileID: 0}
+    - target: {fileID: 5406471492913208334, guid: 28e9639031c28ad478531f59547571b0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 5406471492912885996, guid: 28e9639031c28ad478531f59547571b0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -25892,6 +27092,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sideFloor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406471492913208334, guid: 28e9639031c28ad478531f59547571b0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 5406471492912885996, guid: 28e9639031c28ad478531f59547571b0,
         type: 3}
@@ -26013,6 +27218,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: conerWall1
       objectReference: {fileID: 0}
+    - target: {fileID: 7515064846568877460, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 7515064846569059358, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -26088,6 +27298,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: conerFloor
       objectReference: {fileID: 0}
+    - target: {fileID: 5406471492913208334, guid: 28e9639031c28ad478531f59547571b0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 5406471492912885996, guid: 28e9639031c28ad478531f59547571b0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -26162,6 +27377,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: conerWall1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7515064846568877460, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 7515064846569059358, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
         type: 3}
@@ -26295,6 +27515,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: conerWall1
       objectReference: {fileID: 0}
+    - target: {fileID: 7515064846568877460, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 7515064846569059358, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -26369,6 +27594,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: conerFloor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406471492913208334, guid: 28e9639031c28ad478531f59547571b0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 5406471492912885996, guid: 28e9639031c28ad478531f59547571b0,
         type: 3}
@@ -26445,6 +27675,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: conerFloor
       objectReference: {fileID: 0}
+    - target: {fileID: 5406471492913208334, guid: 28e9639031c28ad478531f59547571b0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 5406471492912885996, guid: 28e9639031c28ad478531f59547571b0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -26520,6 +27755,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: conerWall1
       objectReference: {fileID: 0}
+    - target: {fileID: 7515064846568877460, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 7515064846569059358, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -26594,6 +27834,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: conerWall1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7515064846568877460, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 7515064846569059358, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
         type: 3}
@@ -26751,6 +27996,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: conerWall1
       objectReference: {fileID: 0}
+    - target: {fileID: 7515064846568877460, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 7515064846569059358, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -26825,6 +28075,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: conerWall1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7515064846568877460, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 7515064846569059358, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
         type: 3}
@@ -26964,6 +28219,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: conerWall1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7515064846568877460, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 7515064846569059358, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -27049,6 +28309,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: conerWall1
       objectReference: {fileID: 0}
+    - target: {fileID: 7515064846568877460, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 7515064846569059358, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -27123,6 +28388,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sideWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 7515064846568877460, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 7515064846569059358, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
         type: 3}
@@ -27269,6 +28539,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: glassWall
       objectReference: {fileID: 0}
+    - target: {fileID: 5133196316516214948, guid: c524a07b73db8a5478f2af75107d9b59,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 5133196316516214949, guid: c524a07b73db8a5478f2af75107d9b59,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -27277,7 +28552,7 @@ PrefabInstance:
     - target: {fileID: 5133196316516214949, guid: c524a07b73db8a5478f2af75107d9b59,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -74.95
+      value: -75.459
       objectReference: {fileID: 0}
     - target: {fileID: 5133196316516214949, guid: c524a07b73db8a5478f2af75107d9b59,
         type: 3}
@@ -27365,6 +28640,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: glassWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 5133196316516214948, guid: c524a07b73db8a5478f2af75107d9b59,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 5133196316516214949, guid: c524a07b73db8a5478f2af75107d9b59,
         type: 3}
@@ -27526,6 +28806,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: conerFloor
       objectReference: {fileID: 0}
+    - target: {fileID: 5406471492913208334, guid: 28e9639031c28ad478531f59547571b0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 5406471492912885996, guid: 28e9639031c28ad478531f59547571b0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -27601,6 +28886,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: glassWall
       objectReference: {fileID: 0}
+    - target: {fileID: 5133196316516214948, guid: c524a07b73db8a5478f2af75107d9b59,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 5133196316516214949, guid: c524a07b73db8a5478f2af75107d9b59,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -27609,7 +28899,7 @@ PrefabInstance:
     - target: {fileID: 5133196316516214949, guid: c524a07b73db8a5478f2af75107d9b59,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -74.931915
+      value: -75.459
       objectReference: {fileID: 0}
     - target: {fileID: 5133196316516214949, guid: c524a07b73db8a5478f2af75107d9b59,
         type: 3}
@@ -27698,6 +28988,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: glassWall
       objectReference: {fileID: 0}
+    - target: {fileID: 5133196316516214948, guid: c524a07b73db8a5478f2af75107d9b59,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 5133196316516214949, guid: c524a07b73db8a5478f2af75107d9b59,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -27706,7 +29001,7 @@ PrefabInstance:
     - target: {fileID: 5133196316516214949, guid: c524a07b73db8a5478f2af75107d9b59,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 5133196316516214949, guid: c524a07b73db8a5478f2af75107d9b59,
         type: 3}
@@ -27794,6 +29089,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: glassWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 5133196316516214948, guid: c524a07b73db8a5478f2af75107d9b59,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 5133196316516214949, guid: c524a07b73db8a5478f2af75107d9b59,
         type: 3}
@@ -27892,6 +29192,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: glassWall
       objectReference: {fileID: 0}
+    - target: {fileID: 5133196316516214948, guid: c524a07b73db8a5478f2af75107d9b59,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 5133196316516214949, guid: c524a07b73db8a5478f2af75107d9b59,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -27900,7 +29205,7 @@ PrefabInstance:
     - target: {fileID: 5133196316516214949, guid: c524a07b73db8a5478f2af75107d9b59,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -74.95
+      value: -75.459
       objectReference: {fileID: 0}
     - target: {fileID: 5133196316516214949, guid: c524a07b73db8a5478f2af75107d9b59,
         type: 3}
@@ -27989,6 +29294,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: glassWall
       objectReference: {fileID: 0}
+    - target: {fileID: 5133196316516214948, guid: c524a07b73db8a5478f2af75107d9b59,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 5133196316516214949, guid: c524a07b73db8a5478f2af75107d9b59,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -27997,7 +29307,7 @@ PrefabInstance:
     - target: {fileID: 5133196316516214949, guid: c524a07b73db8a5478f2af75107d9b59,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -74.95
+      value: -75.459
       objectReference: {fileID: 0}
     - target: {fileID: 5133196316516214949, guid: c524a07b73db8a5478f2af75107d9b59,
         type: 3}
@@ -28086,6 +29396,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: glassWall
       objectReference: {fileID: 0}
+    - target: {fileID: 5133196316516214948, guid: c524a07b73db8a5478f2af75107d9b59,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 5133196316516214949, guid: c524a07b73db8a5478f2af75107d9b59,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -28094,7 +29409,7 @@ PrefabInstance:
     - target: {fileID: 5133196316516214949, guid: c524a07b73db8a5478f2af75107d9b59,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -74.95
+      value: -75.459
       objectReference: {fileID: 0}
     - target: {fileID: 5133196316516214949, guid: c524a07b73db8a5478f2af75107d9b59,
         type: 3}
@@ -28182,6 +29497,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: conerWall1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7515064846568877460, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 7515064846569059358, guid: 14aad3b03a5677e4d955ec644c1cf7bb,
         type: 3}
