@@ -21,7 +21,7 @@ public class GameMgr : MonoBehaviour
     AsyncOperation async;
     Color color;
     void Start()
-    {   
+    {
         DontDestroyOnLoad(gameObject);
         screen = GameObject.Find("FadeCanvas").transform.Find("FadePanel").gameObject;
         screenImage = screen.GetComponent<Image>();
@@ -34,7 +34,7 @@ public class GameMgr : MonoBehaviour
     }
 
 
-     //새로하기 함수
+    //새로하기 함수
     public void NewGame()
     {
         //PlayerPrefs Stage에 Stage1저장
@@ -51,7 +51,7 @@ public class GameMgr : MonoBehaviour
     public void SaveClearData()
     {
         //현재 씬 이름 저장
-        PlayerPrefs.SetInt("Stage", PlayerPrefs.GetInt("Stage")+1);
+        PlayerPrefs.SetInt("Stage", PlayerPrefs.GetInt("Stage") + 1);
         stage = PlayerPrefs.GetInt("Stage");
     }
 
@@ -116,9 +116,10 @@ public class GameMgr : MonoBehaviour
         FinishText.SetActive(true);
         yield return new WaitForSeconds(4f);
         player = GameObject.Find("Plyer");
+        GameObject sc = FindObjectOfType<StageCtrl>().gameObject;
+        SceneManager.MoveGameObjectToScene(player, SceneManager.GetActiveScene());
+        SceneManager.MoveGameObjectToScene(sc, SceneManager.GetActiveScene());
+        SceneManager.MoveGameObjectToScene(gameObject, SceneManager.GetActiveScene());
         SceneManager.LoadScene("StartScene");
-        StartCoroutine("FadeOut");
-        Destroy(player);
-        Destroy(gameObject);
     }
 }
