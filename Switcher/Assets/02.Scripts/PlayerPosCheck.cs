@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerPosCheck : MonoBehaviour
 {
@@ -14,11 +15,23 @@ public class PlayerPosCheck : MonoBehaviour
     bool wallCheck;
     public GameObject posEffect;
     bool check;
+    bool canCheck;
+
+    public GameObject warningScreen;
+    public GameObject warningText;
+    public Image warningImage;
+    public Material posCheckMaterial;
+    Color color;
     // Start is called before the first frame update
     void Start()
     {
         touchMgr = GetComponent<TouchMgr>();
         timer = FindObjectOfType<Timer>();
+        warningImage = warningScreen.GetComponent<Image>();
+        color = posCheckMaterial.color;
+        color.a = 0;
+        posCheckMaterial.color = color;
+
     }
 
     // Update is called once per frame
@@ -32,9 +45,9 @@ public class PlayerPosCheck : MonoBehaviour
                 touchMgr.canFire = false;
                 check = true;
                 posEffect.SetActive(true);
+                StopCoroutine("WarningFadeOut");
+                StartCoroutine("WarningFadeIn");
             }
-            
-            
         }
         else if(dis< 2.1f && timer.chatFinish)
         {
@@ -43,8 +56,9 @@ public class PlayerPosCheck : MonoBehaviour
                 touchMgr.canFire = true;
                 check = false;
                 posEffect.SetActive(false);
+                StopCoroutine("WarningFadeIn");
+                StartCoroutine("WarningFadeOut");
             }
-            
         }
 
         if (OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger))
@@ -76,6 +90,35 @@ public class PlayerPosCheck : MonoBehaviour
             touchMgr.canFire = true;
         }
     }
+
+    public IEnumerator WarningFadeIn()
+    {
+        warningScreen.SetActive(true);
+        while (color.a < 0.8f)
+        {
+            color.a += 0.03f;
+            posCheckMaterial.color = color;
+            yield return new WaitForSeconds(0.02f);
+        }
+        warningText.SetActive(true);
+        //color.a = 0f;
+        //fadeMaterial.color = color;
+    }
+
+    public IEnumerator WarningFadeOut()
+    {
+        warningText.SetActive(false);
+        while (color.a > 0f)
+        {
+            color.a -= 0.03f;
+            posCheckMaterial.color = color;
+            yield return new WaitForSeconds(0.02f);
+        }
+        warningScreen.SetActive(false);
+
+    }
+
+
 
 
 }
