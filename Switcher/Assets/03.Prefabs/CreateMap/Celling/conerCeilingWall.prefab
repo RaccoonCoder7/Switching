@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 7479320655302432713}
   - component: {fileID: 7479320655305828971}
   - component: {fileID: 7479320655304330201}
+  - component: {fileID: 1534616588068986149}
   m_Layer: 0
   m_Name: conerWall2
   m_TagString: Untagged
@@ -158,6 +159,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &1534616588068986149
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7479320655302643267}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.000001, y: 4, z: 0.29866627}
+  m_Center: {x: 0, y: 2, z: 0.1493331}
 --- !u!1 &7479320655687315200
 GameObject:
   m_ObjectHideFlags: 0
