@@ -114,6 +114,7 @@ public class MoveDoor : MonoBehaviour
             {
                 particle[i].SetActive(!particle[i].activeSelf);
             }
+
         }
         iTween.MoveBy(gameObject, ht);
     }

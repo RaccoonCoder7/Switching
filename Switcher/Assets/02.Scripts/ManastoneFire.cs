@@ -30,7 +30,7 @@ public class ManastoneFire : MonoBehaviour
 
     private void Update()
     {
-        if (mc.manastone && mc.collisionEnterFl)
+        if (mc.manastone)
         {
             StartCoroutine("FireLoop");
         }

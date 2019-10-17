@@ -11,10 +11,6 @@ public class MagicCircle : MonoBehaviour
     // 마나스톤이 마법진에 몇개 들어왔는지 카운트
     private int inCount = 0;
 
-    // collisionEnter시 잠깐 활성
-    [HideInInspector]
-    public bool collisionEnterFl = false;
-
     private AudioSource audio;
     public AudioClip onClip;
     public AudioClip offClip;
@@ -43,7 +39,6 @@ public class MagicCircle : MonoBehaviour
             {
                 // 닿은 마나스톤을 저장
                 manastone = collision.gameObject;
-                collisionEnterFl = true;
                 //audio.clip = onClip;
                 //audio.Play();
                 particle.Play();
@@ -57,11 +52,6 @@ public class MagicCircle : MonoBehaviour
                 }
             }
         }
-    }
-
-    private void OnCollisionStay(Collision collision)
-    {
-        collisionEnterFl = false;
     }
 
     private void Update()
