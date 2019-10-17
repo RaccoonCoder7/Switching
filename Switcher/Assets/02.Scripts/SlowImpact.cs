@@ -30,6 +30,5 @@ public class SlowImpact : MonoBehaviour
             tMgr.slowTime = 7.0f;
             tMgr.slowEffect.SetActive(true);
         }
-        Destroy(gameObject);
     }
 }

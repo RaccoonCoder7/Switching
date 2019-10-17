@@ -6506,7 +6506,7 @@ PrefabInstance:
     - target: {fileID: 7531230592699910761, guid: d2233b2b034010444ae1271973c78a4f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.06
+      value: 0.519
       objectReference: {fileID: 0}
     - target: {fileID: 7531230592699910761, guid: d2233b2b034010444ae1271973c78a4f,
         type: 3}
@@ -6557,6 +6557,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7371169041171284194, guid: d2233b2b034010444ae1271973c78a4f,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 9.360102
+      objectReference: {fileID: 0}
+    - target: {fileID: 7371169041171284194, guid: d2233b2b034010444ae1271973c78a4f,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0.47993997
+      objectReference: {fileID: 0}
+    - target: {fileID: 7371169041171284194, guid: d2233b2b034010444ae1271973c78a4f,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -0.27819744
+      objectReference: {fileID: 0}
+    - target: {fileID: 7371169041171284194, guid: d2233b2b034010444ae1271973c78a4f,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 8.987901
       objectReference: {fileID: 0}
     - target: {fileID: 2035168760, guid: d2233b2b034010444ae1271973c78a4f, type: 3}
       propertyPath: changeNaviConer.Array.size

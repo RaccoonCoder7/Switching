@@ -17,6 +17,7 @@ public class PolygonFireProjectile : MonoBehaviour
 
     private BossState bossSt;
     public GameObject boss;
+    public GameObject stage6;
 
     void Start()
     {
@@ -32,7 +33,7 @@ public class PolygonFireProjectile : MonoBehaviour
         playerPos = new Vector3(camTr.position.x, camTr.position.y - 0.4f, camTr.position.z);
         if(!bossSt.isDeath && bossSt.deathCount != 2)
         {
-            projectile = Instantiate(projectiles, spawnPosition.position, Quaternion.identity, boss.transform);
+            projectile = Instantiate(projectiles, spawnPosition.position, Quaternion.identity, stage6.transform);
             projectile.transform.LookAt(playerPos);
             projectile.GetComponent<Rigidbody>().AddForce(projectile.transform.forward * speed);
         }
