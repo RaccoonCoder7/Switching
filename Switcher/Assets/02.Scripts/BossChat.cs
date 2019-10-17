@@ -17,7 +17,7 @@ public class BossChat : MonoBehaviour
     public Text bossText;
     bool bossCheck = false;
 
-    Chat chat;
+    public Chat chat;
 
 
     public int paragraphCnt;

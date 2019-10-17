@@ -94,14 +94,14 @@ public class MagicCircle : MonoBehaviour
                 audio.clip = offClip;
                 audio.Play();
                 particle.Stop();
-            }
-            for (int i = 0; i < changeNaviStraight.Length; i++)
-            {
-                changeNaviStraight[i].sprite = redNaviStraight;
-            }
-            for (int i = 0; i < changeNaviConer.Length; i++)
-            {
-                changeNaviConer[i].sprite = redNaviConer;
+                for (int i = 0; i < changeNaviStraight.Length; i++)
+                {
+                    changeNaviStraight[i].sprite = redNaviStraight;
+                }
+                for (int i = 0; i < changeNaviConer.Length; i++)
+                {
+                    changeNaviConer[i].sprite = redNaviConer;
+                }
             }
         }
     }

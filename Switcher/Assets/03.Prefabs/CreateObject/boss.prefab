@@ -5406,7 +5406,7 @@ MonoBehaviour:
     type: 3}
   spawnPosition: {fileID: 1893616071269501199}
   speed: 100
-  boss: {fileID: 1893616071685921482}
+  boss: {fileID: 1893616071685921483}
 --- !u!1 &1893616071270044773
 GameObject:
   m_ObjectHideFlags: 0

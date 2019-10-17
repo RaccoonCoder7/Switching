@@ -20,6 +20,8 @@ public class SlowImpact : MonoBehaviour
             laser.stopTime = 20.0f;
             laser.shootTime = 0.5f;
             laser.slowEffect.SetActive(true);
+            CircleBarLaser circleBarLaser = collision.gameObject.GetComponentInChildren<CircleBarLaser>();
+            circleBarLaser.goCheck = true;
         }
         else if (collision.collider.gameObject.layer.Equals(LayerMask.NameToLayer("PLAYER")))
         {
@@ -28,5 +30,6 @@ public class SlowImpact : MonoBehaviour
             tMgr.slowTime = 7.0f;
             tMgr.slowEffect.SetActive(true);
         }
+        Destroy(gameObject);
     }
 }

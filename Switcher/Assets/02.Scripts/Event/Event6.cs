@@ -13,6 +13,7 @@ public class Event6 : EventMgr
     public CircleBarLaser[] circleBarLaser;
     public bool clearCheck;
     public GameMgr gameMgr;
+    private GameObject player;
     
     void Start()
     {
@@ -21,6 +22,7 @@ public class Event6 : EventMgr
         gameMgr = FindObjectOfType<GameMgr>();
         bossChat.bossTextCount = 0;
         bossChat.paragraphCnt = 0;
+        bossChat.chat = chat;
         bossChatCanvas.SetActive(false);
         EventList[0] = new Deleg(EV1);
         EventList[1] = new Deleg(EV2);
@@ -28,6 +30,8 @@ public class Event6 : EventMgr
         EventList[3] = new Deleg(EV4);
         EventList[4] = new Deleg(EV5);
         EventList[5] = new Deleg(EV6);
+        player = GameObject.Find("Player");
+        player.GetComponent<Rigidbody>().isKinematic = true;
     }
     private void Update()
     {

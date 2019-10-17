@@ -15,22 +15,24 @@ public class PolygonFireProjectile : MonoBehaviour
     GameObject projectile;
     private Vector3 playerPos;
 
-    public BossState boss;
+    private BossState bossSt;
+    public GameObject boss;
 
     void Start()
     {
         camTr = Camera.main.GetComponent<Transform>();
         projectile = Instantiate(projectiles, spawnPosition.position, Quaternion.identity);
         Destroy(projectile);
+        bossSt = boss.GetComponent<BossState>();
     }
 
     public IEnumerator SlowFire()
     {
         yield return new WaitForSeconds(animDelayTime);
         playerPos = new Vector3(camTr.position.x, camTr.position.y - 0.4f, camTr.position.z);
-        if(!boss.isDeath && boss.deathCount != 2)
+        if(!bossSt.isDeath && bossSt.deathCount != 2)
         {
-            projectile = Instantiate(projectiles, spawnPosition.position, Quaternion.identity);
+            projectile = Instantiate(projectiles, spawnPosition.position, Quaternion.identity, boss.transform);
             projectile.transform.LookAt(playerPos);
             projectile.GetComponent<Rigidbody>().AddForce(projectile.transform.forward * speed);
         }
