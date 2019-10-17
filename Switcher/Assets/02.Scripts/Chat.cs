@@ -216,7 +216,13 @@ namespace MyDedlegate
             for (int i = 0; i < setText.Length + 1; i += 1)
             {
                 yield return new WaitForSeconds(0.02f);
+                if (i != 0 && setText.Substring(i - 1, 1) == "<")
+                {
+                    i = GetEndOfTag(setText, i);
+                    if (i == 0) Debug.LogError("getEndOfTag Error");
+                }
                 text.text = setText.Substring(0, i);
+
                 if (i % 3 == 0 && i > 1 && !setText.Substring(i - 1, 1).Equals(" "))
                 {
                     audio.PlayOneShot(chatClip);
@@ -224,6 +230,23 @@ namespace MyDedlegate
             }
             yield return new WaitForSeconds(0.2f);
             nowState = State.Next;
+        }
+
+        private int GetEndOfTag(string text, int i)
+        {
+            int count = 0;
+            for (int j = i; j < text.Length + 1; j++)
+            {
+                if (text.Substring(j, 1) == ">")
+                {
+                    count++;
+                    if (count == 2)
+                    {
+                        return j + 1;
+                    }
+                }
+            }
+            return 0;
         }
     }
 }
