@@ -14,7 +14,12 @@ public class Event6 : EventMgr
     public bool clearCheck;
     public GameMgr gameMgr;
     private GameObject player;
-    
+
+    private void Awake()
+    {
+        QualitySettings.SetQualityLevel(2, true);
+    }
+
     void Start()
     {
         base.Start();
