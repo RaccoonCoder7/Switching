@@ -10,6 +10,7 @@ public class PlayerPosCheck : MonoBehaviour
     public Transform playerPos;
     public Transform controllerPos;
     float dis;
+    Vector3 dir;
     TouchMgr touchMgr;
     Timer timer;
     bool wallCheck;
@@ -22,6 +23,8 @@ public class PlayerPosCheck : MonoBehaviour
     public Image warningImage;
     public Material posCheckMaterial;
     Color color;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +40,7 @@ public class PlayerPosCheck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        dis = Vector3.Distance(playerPos.position, controllerPos.position);
+        dis = Vector3.Distance(playerPos.position, controllerPos.position);   
         if (dis > 1.5f && timer.chatFinish)
         {
             if (!check)
@@ -63,7 +66,8 @@ public class PlayerPosCheck : MonoBehaviour
 
         if (OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger))
         {
-            ray = new Ray(playerPos.position, controllerPos.position);
+            dir = (controllerPos.position - playerPos.position);
+            ray = new Ray(playerPos.position, dir);
             if (Physics.Raycast(ray, out hit, dis, 1 << LayerMask.NameToLayer("WALL")))
             {
                 touchMgr.canFire = false;
@@ -82,11 +86,13 @@ public class PlayerPosCheck : MonoBehaviour
 
     void OnRaycast()
     {
-        ray = new Ray(playerPos.position, controllerPos.position);
-        Debug.Log("asdasd");
+        dir = (controllerPos.position - playerPos.position);
+        ray = new Ray(playerPos.localPosition, dir);
+        Debug.Log("STARTINVOKE");
         if(!Physics.Raycast(ray, out hit, dis, 1 << LayerMask.NameToLayer("WALL")))
         {
             CancelInvoke("OnRaycast");
+            Debug.Log("CANCELINVOKE");
             touchMgr.canFire = true;
         }
     }
