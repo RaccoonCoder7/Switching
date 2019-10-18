@@ -24,10 +24,6 @@ public class iTweenMgr : MonoBehaviour
 
     private bool isClick = false;
 
-    public ImageCtrl imageCtrl;
-    public TouchMgr touchMgr;
-    public TouchFinger touchFinger;
-
     private void Awake()
     {
         timer = FindObjectOfType<Timer>();
@@ -107,9 +103,6 @@ public class iTweenMgr : MonoBehaviour
                     if (!isClick)
                     {
                         chat.FadeHelper();
-                        touchMgr.ChangeMode(TouchMgr.SkillMode.switching);
-                        StartCoroutine(touchFinger.ChangeMaterial());
-                        imageCtrl.ChangeSprites(TouchMgr.SkillMode.switching);
                     }
                 }
             }
