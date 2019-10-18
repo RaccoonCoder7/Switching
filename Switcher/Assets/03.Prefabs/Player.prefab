@@ -8327,8 +8327,8 @@ MonoBehaviour:
   - {fileID: 7984074906347970849}
   shootClips:
   - {fileID: 8300000, guid: 52588ab9109faea40a38f3d904864734, type: 3}
-  - {fileID: 8300000, guid: ca2a086d076dd7a4f9cd9c175f774b6b, type: 3}
-  - {fileID: 8300000, guid: a7b5a4f9cd0368f4f8c8f01c71f8c5a6, type: 3}
+  - {fileID: 8300000, guid: 796afe68c352c594cb66d118267688ef, type: 3}
+  - {fileID: 8300000, guid: 2e7b714ea611b1040a940f6a9210fc2b, type: 3}
   - {fileID: 8300000, guid: 4135b81f06e543940ab7fe9e3edadd3d, type: 3}
   bombSpeed: 600
   laserRange: 20
@@ -28797,7 +28797,7 @@ PrefabInstance:
     - target: {fileID: 209649879, guid: 0a9c5b7e31a33a04593767cf9d4f9779, type: 3}
       propertyPath: chatClip
       value: 
-      objectReference: {fileID: 8300000, guid: c98466458b8e5a34080886fdf89bc516, type: 3}
+      objectReference: {fileID: 8300000, guid: 0c611245ce93bd6428c7b87dda44d3cf, type: 3}
     - target: {fileID: 6930493926833618601, guid: 0a9c5b7e31a33a04593767cf9d4f9779,
         type: 3}
       propertyPath: m_IsActive
