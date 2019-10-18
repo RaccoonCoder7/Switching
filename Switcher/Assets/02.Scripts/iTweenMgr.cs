@@ -22,6 +22,12 @@ public class iTweenMgr : MonoBehaviour
     public bool isEnable;
     public bool useEffect;
 
+    private bool isClick = false;
+
+    public ImageCtrl imageCtrl;
+    public TouchMgr touchMgr;
+    public TouchFinger touchFinger;
+
     private void Awake()
     {
         timer = FindObjectOfType<Timer>();
@@ -79,6 +85,16 @@ public class iTweenMgr : MonoBehaviour
         //조력자 소환
         if (timer.chatFinish)
         {
+            if (isClick && !chat.helpCheck)
+            {
+                isClick = false;
+            }
+
+            if (OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger) && chat.helpCheck)
+            {
+                isClick = true;
+            }
+
             if (OVRInput.GetUp(OVRInput.Button.SecondaryHandTrigger))
             {
                 if (!chat.helpCheck)
@@ -88,7 +104,13 @@ public class iTweenMgr : MonoBehaviour
                 }
                 else
                 {
-                    chat.FadeHelper();
+                    if (!isClick)
+                    {
+                        chat.FadeHelper();
+                        touchMgr.ChangeMode(TouchMgr.SkillMode.switching);
+                        StartCoroutine(touchFinger.ChangeMaterial());
+                        imageCtrl.ChangeSprites(TouchMgr.SkillMode.switching);
+                    }
                 }
             }
         }

@@ -1804,6 +1804,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 560191480, guid: a5e5289612409ec4aa0cc5e0f7ea81b0, type: 3}
+      propertyPath: touchMgr
+      value: 
+      objectReference: {fileID: 339286258322492866}
+    - target: {fileID: 560191480, guid: a5e5289612409ec4aa0cc5e0f7ea81b0, type: 3}
+      propertyPath: imageCtrl
+      value: 
+      objectReference: {fileID: 848703512}
+    - target: {fileID: 560191480, guid: a5e5289612409ec4aa0cc5e0f7ea81b0, type: 3}
+      propertyPath: touchFinger
+      value: 
+      objectReference: {fileID: 339286258322492865}
     - target: {fileID: 339286258322492866, guid: a5e5289612409ec4aa0cc5e0f7ea81b0,
         type: 3}
       propertyPath: laser
@@ -1817,6 +1829,30 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 339286258322492863}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &339286258322492865 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 256825804, guid: a5e5289612409ec4aa0cc5e0f7ea81b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 339286258322492863}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83a3d63c39cd8fa47982779d6f654b57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &339286258322492866 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3162601953509377411, guid: a5e5289612409ec4aa0cc5e0f7ea81b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 339286258322492863}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 779cd2cc02613bf4497e43e187da93e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5133809086686695554
 GameObject:
   m_ObjectHideFlags: 0

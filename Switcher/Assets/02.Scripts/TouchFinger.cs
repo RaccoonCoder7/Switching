@@ -26,6 +26,7 @@ public class TouchFinger : MonoBehaviour
         sphere = GetComponent<Collider>();
         sphere.enabled = false;
         audio = GetComponent<AudioSource>();
+        mat = green;
     }
 
     private void Update()
@@ -87,7 +88,7 @@ public class TouchFinger : MonoBehaviour
         return true;
     }
 
-    private IEnumerator ChangeMaterial()
+    public IEnumerator ChangeMaterial()
     {
         gun.material = white;
         yield return new WaitForSeconds(0.3f);
