@@ -10,6 +10,7 @@ public class Mirror : MonoBehaviour
     private int manaStoneLayer;
     private RigidbodyConstraints originRbConst;
     private RigidbodyConstraints movingRbConst;
+    private GameObject pullEffClone;
 
     public LineRenderer laser;
 
@@ -23,7 +24,7 @@ public class Mirror : MonoBehaviour
     }
 
     // 인력을 반사
-    public void ReflectRay(Vector3 hitPos, Vector3 direction)
+    public void ReflectRay(Vector3 hitPos, Vector3 direction, GameObject pullEffect)
     {
         laser.SetPosition(0, hitPos);
         if (!laser.enabled)
@@ -40,6 +41,13 @@ public class Mirror : MonoBehaviour
             if (!pullObjectRb)
             {
                 pullObjectRb = reflectHit.collider.gameObject.GetComponent<Rigidbody>();
+                if (!pullEffClone)
+                {
+                    pullEffClone = pullEffect;
+                }
+                pullEffClone.SetActive(true);
+                pullEffClone.transform.position = reflectHit.transform.position;
+                pullEffClone.transform.parent = reflectHit.collider.gameObject.transform;
                 pullObjectRb.constraints = movingRbConst;
             }
 
@@ -64,6 +72,12 @@ public class Mirror : MonoBehaviour
             if (pullObjectRb)
             {
                 pullObjectRb.constraints = originRbConst;
+                if (pullEffClone)
+                {
+                    pullEffClone.SetActive(false);
+                    pullEffClone.transform.parent = null;
+                    pullEffClone = null;
+                }
                 pullObjectRb.velocity = Vector3.zero;
                 pullObjectRb = null;
             }

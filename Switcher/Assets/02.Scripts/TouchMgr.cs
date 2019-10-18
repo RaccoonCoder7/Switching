@@ -238,32 +238,22 @@ public class TouchMgr : MonoBehaviour
 
                 if (hit.collider.gameObject.layer.Equals(manaStoneLayer))
                 {
-                    Debug.Log("1");
                     pointer.transform.position = hit.point;
                     pointer.transform.LookAt(cam.transform.position);
                     pointer.transform.position += pointer.transform.forward * 0.5f;
 
-                    Debug.Log("2");
                     if (!pullObjectRb)
                     {
-                        Debug.Log("3");
                         pullObjectRb = hit.collider.gameObject.GetComponent<Rigidbody>();
                         if (!pullEffClone)
                         {
-                            Debug.Log("4");
                             pullEffClone = Instantiate(pullEffect);
                         }
-                        Debug.Log("5");
                         pullEffClone.SetActive(true);
-                        Debug.Log("6");
                         pullEffClone.transform.position = hit.transform.position;
-                        // pullEffect.transform.localPosition = Vector3.zero;
                         pullEffClone.transform.parent = hit.collider.gameObject.transform;
-                        Debug.Log("7");
                         pullObjectRb.constraints = movingRbConst;
-                        Debug.Log("8");
                     }
-                    Debug.Log("9");
                     float distance = Vector3.Distance(hit.point, playerTr.position);
                     if (distance < 2.5f)
                     {
@@ -289,7 +279,11 @@ public class TouchMgr : MonoBehaviour
                     {
                         mirror = hit.collider.gameObject.GetComponent<Mirror>();
                     }
-                    mirror.ReflectRay(hit.point, direction);
+                    if (!pullEffClone)
+                    {
+                        pullEffClone = Instantiate(pullEffect);
+                    }
+                    mirror.ReflectRay(hit.point, direction, pullEffClone);
                     return;
                 }
                 else
