@@ -8,10 +8,11 @@ public class BombArea : MonoBehaviour
     private Transform playerTr;
     private TouchMgr touchMgr;
     private PlayerState playerState;
-    private Vector3 farthestPos;
-    private float maxDistance;
-    private List<Transform> objList = new List<Transform>();
-    private List<Vector3> objPosList = new List<Vector3>();
+    private Vector3 shortestPos;
+    private float minDistance = 10000f;
+    private Transform targetTr;
+    // private List<Transform> objList = new List<Transform>();
+    // private List<Vector3> objPosList = new List<Vector3>();
     private float diff = 0.82f;
 
     public enum teleportStyle
@@ -34,20 +35,21 @@ public class BombArea : MonoBehaviour
     {
         yield return new WaitForSeconds(0.6f);
         float waitTime = 0.2f;
-        if (maxDistance != 0)
+        if (!minDistance.Equals(10000f))
         {
-            farthestPos.y = farthestPos.y - diff;
+            shortestPos.y = shortestPos.y - diff;
             if (tpStyle.Equals(teleportStyle.teleport))
             {
-                for (int i = 0; i < objList.Count; i++)
-                {
-                    objList[i].position = objPosList[i];
-                }
-                playerTr.position = farthestPos;
+                // for (int i = 0; i < objList.Count; i++)
+                // {
+                //     objList[i].position = objPosList[i];
+                // }
+                targetTr.position = playerTr.position;
+                playerTr.position = shortestPos;
             }
             else if (tpStyle == teleportStyle.lerp)
             {
-                touchMgr.StartLerpAll(objList, objPosList, farthestPos);
+                touchMgr.StartLerp(targetTr, playerTr.position, shortestPos);
             }
             waitTime = 1f;
             playerState.DisableDmg(waitTime);
@@ -64,23 +66,24 @@ public class BombArea : MonoBehaviour
         {
             other.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
             Vector3 targetPos = other.transform.position;
-            Vector3 direction = targetPos - transform.position;
+            // Vector3 direction = targetPos - transform.position;
             float distance = Vector3.Distance(targetPos, transform.position);
-            Vector3 playerPos = playerTr.transform.position;
+            // Vector3 playerPos = playerTr.transform.position;
 
-            if (maxDistance < distance)
+            if (minDistance > distance)
             {
-                maxDistance = distance;
-                farthestPos = targetPos;
+                minDistance = distance;
+                shortestPos = targetPos;
+                targetTr = other.transform;
             }
 
-            float playerY = playerPos.y;
-            playerPos += direction;
-            playerPos.y = playerY;
+            // float playerY = playerPos.y;
+            // playerPos += direction;
+            // playerPos.y = playerY;
             // playerPos.y = playerPos.y + diff/2;
 
-            objList.Add(other.transform);
-            objPosList.Add(playerPos);
+            // objList.Add(other.transform);
+            // objPosList.Add(playerPos);
         }
     }
 }

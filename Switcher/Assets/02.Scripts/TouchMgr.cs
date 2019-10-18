@@ -22,6 +22,9 @@ public class TouchMgr : MonoBehaviour
     private float coolTime;
     private AudioSource audio;
     private Rigidbody rb;
+    private RigidbodyConstraints originRbConst;
+    private RigidbodyConstraints movingRbConst;
+    private GameObject pullEffClone;
 
     public SkillMode mode = SkillMode.chat;
     public enum SkillMode
@@ -34,6 +37,7 @@ public class TouchMgr : MonoBehaviour
     public GameObject translateBomb;
     public GameObject testTranslateBomb;
     public GameObject blur;
+    public GameObject pullEffect;
     public GameObject[] ring;
     public AudioClip[] shootClips;
     public float bombSpeed = 500.0f;
@@ -73,6 +77,12 @@ public class TouchMgr : MonoBehaviour
         audio = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
         slowEffect.SetActive(false);
+        originRbConst = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionX
+                        | RigidbodyConstraints.FreezePositionZ;
+        movingRbConst = RigidbodyConstraints.FreezeRotation;
+        pullEffClone = Instantiate(pullEffect);
+        pullEffClone.SetActive(false);
+
         for (int i = 0; i < ring.Length; i++)
         {
             ring[i].SetActive(false);
@@ -82,13 +92,13 @@ public class TouchMgr : MonoBehaviour
 
     void Update()
     {
-        if(slowTime > 0.0f)
+        if (slowTime > 0.0f)
         {
             slowTime -= Time.deltaTime;
             trBullet = 3.0f;
             if (slowTime <= 0.1f) trBullet = 10.0f;
         }
-        else if(slowEffect.activeSelf)
+        else if (slowEffect.activeSelf)
         {
             slowEffect.SetActive(false);
         }
@@ -166,7 +176,11 @@ public class TouchMgr : MonoBehaviour
 
                 if (hit.collider.gameObject.layer.Equals(manaStoneLayer))
                 {
-                    pullObjectRb = hit.collider.gameObject.GetComponent<Rigidbody>();
+                    if (!pullObjectRb)
+                    {
+                        pullObjectRb = hit.collider.gameObject.GetComponent<Rigidbody>();
+                        pullObjectRb.constraints = movingRbConst;
+                    }
                     Vector3 targetPos = pullObjectRb.transform.position;
                     Vector3 direction = new Vector3(targetPos.x, 0, targetPos.z)
                                         - new Vector3(playerTr.position.x, 0, playerTr.position.z);
@@ -224,11 +238,32 @@ public class TouchMgr : MonoBehaviour
 
                 if (hit.collider.gameObject.layer.Equals(manaStoneLayer))
                 {
+                    Debug.Log("1");
                     pointer.transform.position = hit.point;
                     pointer.transform.LookAt(cam.transform.position);
                     pointer.transform.position += pointer.transform.forward * 0.5f;
 
-                    pullObjectRb = hit.collider.gameObject.GetComponent<Rigidbody>();
+                    Debug.Log("2");
+                    if (!pullObjectRb)
+                    {
+                        Debug.Log("3");
+                        pullObjectRb = hit.collider.gameObject.GetComponent<Rigidbody>();
+                        if (!pullEffClone)
+                        {
+                            Debug.Log("4");
+                            pullEffClone = Instantiate(pullEffect);
+                        }
+                        Debug.Log("5");
+                        pullEffClone.SetActive(true);
+                        Debug.Log("6");
+                        pullEffClone.transform.position = hit.transform.position;
+                        // pullEffect.transform.localPosition = Vector3.zero;
+                        pullEffClone.transform.parent = hit.collider.gameObject.transform;
+                        Debug.Log("7");
+                        pullObjectRb.constraints = movingRbConst;
+                        Debug.Log("8");
+                    }
+                    Debug.Log("9");
                     float distance = Vector3.Distance(hit.point, playerTr.position);
                     if (distance < 2.5f)
                     {
@@ -330,6 +365,7 @@ public class TouchMgr : MonoBehaviour
     {
         if (pullObjectRb)
         {
+            pullObjectRb.constraints = originRbConst;
             pullObjectRb.velocity = Vector3.zero;
             pullObjectRb = null;
         }
@@ -337,6 +373,11 @@ public class TouchMgr : MonoBehaviour
         {
             mirror.ReflectRayOff();
             mirror = null;
+        }
+        if (pullEffClone)
+        {
+            pullEffClone.transform.parent = null;
+            pullEffClone.SetActive(false);
         }
     }
 
@@ -443,53 +484,53 @@ public class TouchMgr : MonoBehaviour
         rb.isKinematic = false;
     }
 
-    public void StartLerpAll(List<Transform> objList, List<Vector3> objPosList, Vector3 farthestPos)
-    {
-        StartCoroutine(LerpAndTeleportAll(objList, objPosList, farthestPos));
-    }
+    // public void StartLerpAll(List<Transform> objList, List<Vector3> objPosList, Vector3 farthestPos)
+    // {
+    //     StartCoroutine(LerpAndTeleportAll(objList, objPosList, farthestPos));
+    // }
 
-    private IEnumerator LerpAndTeleportAll(List<Transform> objList, List<Vector3> objPosList, Vector3 farthestPos)
-    {
-        int lerpFrame = 20;
-        float lerpSpeed = 0.3f;
-        Transform originPlayerTr = playerTr;
-        blur.SetActive(true);
-        rb.isKinematic = true;
+    // private IEnumerator LerpAndTeleportAll(List<Transform> objList, List<Vector3> objPosList, Vector3 farthestPos)
+    // {
+    //     int lerpFrame = 20;
+    //     float lerpSpeed = 0.3f;
+    //     Transform originPlayerTr = playerTr;
+    //     blur.SetActive(true);
+    //     rb.isKinematic = true;
 
-        for (int i = 0; i < lerpFrame; i++)
-        {
-            playerTr.position = Vector3.Lerp(playerTr.position, farthestPos, Time.deltaTime * lerpSpeed);
-            for (int j = 0; j < objList.Count; j++)
-            {
-                objList[j].position = Vector3.Lerp(objList[j].position, objPosList[j], Time.deltaTime * lerpSpeed);
-            }
-            yield return null;
-        }
+    //     for (int i = 0; i < lerpFrame; i++)
+    //     {
+    //         playerTr.position = Vector3.Lerp(playerTr.position, farthestPos, Time.deltaTime * lerpSpeed);
+    //         for (int j = 0; j < objList.Count; j++)
+    //         {
+    //             objList[j].position = Vector3.Lerp(objList[j].position, objPosList[j], Time.deltaTime * lerpSpeed);
+    //         }
+    //         yield return null;
+    //     }
 
-        playerTr.position = Vector3.Lerp(playerTr.position, farthestPos, 0.8f);
-        for (int i = 0; i < objList.Count; i++)
-        {
-            objList[i].position = Vector3.Lerp(objList[i].position, objPosList[i], 0.8f);
-        }
+    //     playerTr.position = Vector3.Lerp(playerTr.position, farthestPos, 0.8f);
+    //     for (int i = 0; i < objList.Count; i++)
+    //     {
+    //         objList[i].position = Vector3.Lerp(objList[i].position, objPosList[i], 0.8f);
+    //     }
 
-        lerpFrame = 40;
-        lerpSpeed = 5f;
-        for (int i = 0; i < lerpFrame; i++)
-        {
-            playerTr.position = Vector3.Lerp(playerTr.position, farthestPos, Time.deltaTime * lerpSpeed);
-            for (int j = 0; j < objList.Count; j++)
-            {
-                objList[j].position = Vector3.Lerp(objList[j].position, objPosList[j], Time.deltaTime * lerpSpeed);
-            }
-            yield return null;
-        }
+    //     lerpFrame = 40;
+    //     lerpSpeed = 5f;
+    //     for (int i = 0; i < lerpFrame; i++)
+    //     {
+    //         playerTr.position = Vector3.Lerp(playerTr.position, farthestPos, Time.deltaTime * lerpSpeed);
+    //         for (int j = 0; j < objList.Count; j++)
+    //         {
+    //             objList[j].position = Vector3.Lerp(objList[j].position, objPosList[j], Time.deltaTime * lerpSpeed);
+    //         }
+    //         yield return null;
+    //     }
 
-        playerTr.position = farthestPos;
-        for (int i = 0; i < objList.Count; i++)
-        {
-            objList[i].position = objPosList[i];
-        }
-        blur.SetActive(false);
-        rb.isKinematic = false;
-    }
+    //     playerTr.position = farthestPos;
+    //     for (int i = 0; i < objList.Count; i++)
+    //     {
+    //         objList[i].position = objPosList[i];
+    //     }
+    //     blur.SetActive(false);
+    //     rb.isKinematic = false;
+    // }
 }

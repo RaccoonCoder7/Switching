@@ -8,6 +8,8 @@ public class Mirror : MonoBehaviour
     private RaycastHit reflectHit;
     private Rigidbody pullObjectRb;
     private int manaStoneLayer;
+    private RigidbodyConstraints originRbConst;
+    private RigidbodyConstraints movingRbConst;
 
     public LineRenderer laser;
 
@@ -15,6 +17,9 @@ public class Mirror : MonoBehaviour
     {
         manaStoneLayer = 1 << LayerMask.NameToLayer("MANASTONE");
         laser.enabled = false;
+        originRbConst = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionX
+                        | RigidbodyConstraints.FreezePositionZ;
+        movingRbConst = RigidbodyConstraints.FreezeRotation;
     }
 
     // 인력을 반사
@@ -27,7 +32,7 @@ public class Mirror : MonoBehaviour
         }
 
         reflectRay = new Ray(hitPos, direction);
-        
+
         if (Physics.Raycast(reflectRay, out reflectHit, 12, manaStoneLayer))
         {
             laser.SetPosition(1, reflectHit.point);
@@ -35,6 +40,7 @@ public class Mirror : MonoBehaviour
             if (!pullObjectRb)
             {
                 pullObjectRb = reflectHit.collider.gameObject.GetComponent<Rigidbody>();
+                pullObjectRb.constraints = movingRbConst;
             }
 
             float distance = Vector3.Distance(reflectHit.point, transform.position);
@@ -57,6 +63,7 @@ public class Mirror : MonoBehaviour
             laser.SetPosition(1, hitPos + direction * 12);
             if (pullObjectRb)
             {
+                pullObjectRb.constraints = originRbConst;
                 pullObjectRb.velocity = Vector3.zero;
                 pullObjectRb = null;
             }
