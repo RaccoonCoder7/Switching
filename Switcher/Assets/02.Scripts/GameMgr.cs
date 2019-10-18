@@ -121,5 +121,6 @@ public class GameMgr : MonoBehaviour
         SceneManager.MoveGameObjectToScene(sc, SceneManager.GetActiveScene());
         SceneManager.MoveGameObjectToScene(gameObject, SceneManager.GetActiveScene());
         SceneManager.LoadScene("StartScene");
+        StartCoroutine("FadeOut");
     }
 }
