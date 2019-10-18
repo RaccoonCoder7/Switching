@@ -27,7 +27,7 @@ public class EventMgr : MonoBehaviour
         barrier[2] = player.transform.Find("SkillEffect3").gameObject;
         barrier[3] = player.transform.Find("SkillEffect4").gameObject;
         timer = FindObjectOfType<Timer>();
-        timer.text.color = Color.red;
+        timer.text.color = Color.white;
         timer.text.text = "00:00";
         touchMgr = player.GetComponent<TouchMgr>();
         ps = player.GetComponent<PlayerState>();
