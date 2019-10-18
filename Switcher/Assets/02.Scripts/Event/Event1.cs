@@ -78,7 +78,8 @@ public class Event1 : EventMgr // EventMgr을 상속받을것.
         arrow.SetActive(false);
 
         // 타이머시작
-        timer.StartTime();
+        //timer.StartTime();
+        timer.ChatFinish();
     }
 
     private IEnumerator FadeInOutBarrier()

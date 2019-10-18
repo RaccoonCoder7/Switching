@@ -850,7 +850,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerCanvas: {fileID: 1124691292}
-  timerPanel: []
+  timerPanel:
+  - {fileID: 268657949}
+  - {fileID: 449742510}
+  - {fileID: 1804333755}
+  - {fileID: 969549369}
   anim: {fileID: 560191481}
   buttonEffect: {fileID: 298625214969977135}
   buttons: []
