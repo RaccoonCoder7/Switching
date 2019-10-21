@@ -26,11 +26,8 @@ public class StartPanel : MonoBehaviour
             start = true;
             CancelInvoke("OnOffText");
             onOffText.SetActive(false);
-            startBtn.SetActive(true);
-            if (GameMgr.stage.Equals(0))
-            {
-                continueBtn.SetActive(false);
-            }
+            Invoke("ButtonOn",1f);
+            
         }
     }
 
@@ -45,6 +42,14 @@ public class StartPanel : MonoBehaviour
         {
             onOffText.SetActive(true);
             checkText = false;
+        }
+    }
+    void ButtonOn()
+    {
+        startBtn.SetActive(true);
+        if (GameMgr.stage.Equals(0))
+        {
+            continueBtn.SetActive(false);
         }
     }
 }
