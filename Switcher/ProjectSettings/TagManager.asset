@@ -13,6 +13,7 @@ TagManager:
   - LATTICE
   - GREEN
   - LASER
+  - SLOWBALL
   layers:
   - Default
   - TransparentFX

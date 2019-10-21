@@ -27,10 +27,6 @@ public class GameMgr : MonoBehaviour
         screenImage = screen.GetComponent<Image>();
         stage = PlayerPrefs.GetInt("Stage");
 
-        if (stage.Equals(0))
-        {
-            ctnBtn.SetActive(false);
-        }
     }
 
 
