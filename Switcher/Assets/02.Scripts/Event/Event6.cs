@@ -13,7 +13,6 @@ public class Event6 : EventMgr
     public CircleBarLaser[] circleBarLaser;
     public bool clearCheck;
     public GameMgr gameMgr;
-    private GameObject player;
 
     private void Awake()
     {
@@ -35,8 +34,6 @@ public class Event6 : EventMgr
         EventList[3] = new Deleg(EV4);
         EventList[4] = new Deleg(EV5);
         EventList[5] = new Deleg(EV6);
-        player = GameObject.Find("Player");
-        player.GetComponent<Rigidbody>().isKinematic = true;
     }
     private void Update()
     {

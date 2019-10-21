@@ -55,6 +55,13 @@ public class TouchMgr : MonoBehaviour
     // 슬로우 이펙트
     public GameObject slowEffect;
 
+    // 인력 머테리얼
+    public GameObject pullLaser;
+    public GameObject pullParticle;
+
+    // 밀고있는 척력 오브젝트
+    private GameObject pullObjectNow;
+
     void Start()
     {
         manaStoneLayer = LayerMask.NameToLayer("MANASTONE");
@@ -78,6 +85,8 @@ public class TouchMgr : MonoBehaviour
         pointer.SetActive(false);
         laser.enabled = false;
         wind.SetActive(false);
+        pullParticle.SetActive(false);
+        pullLaser.SetActive(false);
         playerTr = GameObject.Find("Player").transform;
         blur.SetActive(false);
         audio = GetComponent<AudioSource>();
@@ -109,8 +118,7 @@ public class TouchMgr : MonoBehaviour
             slowEffect.SetActive(false);
         }
 
-        if (!canFire) return;
-        //if (!canFire || ps.isDead) return;
+        if (!canFire || ps.isDead) return;
 
         switch (mode)
         {
@@ -118,7 +126,8 @@ public class TouchMgr : MonoBehaviour
                 OnSwitching();
                 break;
             case SkillMode.pull:
-                laser.SetColors(new Color(0, 138, 255), new Color(0, 138, 255));
+                //laser.SetColors(new Color(0, 138, 255), new Color(0, 138, 255));
+                pullLaser.SetActive(true);
                 OnPull();
                 break;
             case SkillMode.push:
@@ -170,7 +179,7 @@ public class TouchMgr : MonoBehaviour
             {
                 audio.Play();
             }
-            if (Physics.Raycast(ray, out hit, laserRange - 1))
+            if (Physics.Raycast(ray, out hit, laserRange - 1.5f))
             {
                 if (!pointer.activeSelf)
                 {
@@ -184,8 +193,9 @@ public class TouchMgr : MonoBehaviour
                 if (hit.collider.gameObject.layer.Equals(manaStoneLayer) ||
                     hit.collider.gameObject.layer.Equals(manaStoneCannonLayer))
                 {
-                    if (!pullObjectRb)
+                    if (!pullObjectRb || pullObjectNow != hit.collider.gameObject)
                     {
+                        pullObjectNow = hit.collider.gameObject;
                         pullObjectRb = hit.collider.gameObject.GetComponent<Rigidbody>();
                         pullObjectRb.constraints = movingRbConst;
                     }
@@ -241,7 +251,7 @@ public class TouchMgr : MonoBehaviour
                     pointer.SetActive(true);
                 }
                 float dist = hit.distance;
-                laser.enabled = true;
+                //laser.enabled = true;
                 laser.SetPosition(1, new Vector3(0, 0, dist));
 
                 if (hit.collider.gameObject.layer.Equals(manaStoneLayer) ||
@@ -315,12 +325,18 @@ public class TouchMgr : MonoBehaviour
             }
         }
 
+        if (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger) && !pullParticle.activeSelf)
+        {
+            pullParticle.SetActive(true);
+        }
+
         if (OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger))
         {
             audio.Stop();
             pointer.SetActive(false);
             laser.enabled = false;
             nullifyPullObj();
+            pullParticle.SetActive(false);
         }
     }
 
@@ -419,6 +435,10 @@ public class TouchMgr : MonoBehaviour
                 ring[0].SetActive(false);
                 ring[1].SetActive(false);
                 break;
+        }
+        if (pullLaser.activeSelf)
+        {
+            pullLaser.SetActive(false);
         }
         laser.enabled = false;
         wind.SetActive(false);
