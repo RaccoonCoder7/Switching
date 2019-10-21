@@ -115,12 +115,11 @@ public class GameMgr : MonoBehaviour
         }
         FinishText.SetActive(true);
         yield return new WaitForSeconds(4f);
-        player = GameObject.Find("Plyer");
+        player = GameObject.Find("Player");
         GameObject sc = FindObjectOfType<StageCtrl>().gameObject;
         SceneManager.MoveGameObjectToScene(player, SceneManager.GetActiveScene());
         SceneManager.MoveGameObjectToScene(sc, SceneManager.GetActiveScene());
         SceneManager.MoveGameObjectToScene(gameObject, SceneManager.GetActiveScene());
         SceneManager.LoadScene("StartScene");
-        StartCoroutine("FadeOut");
     }
 }
