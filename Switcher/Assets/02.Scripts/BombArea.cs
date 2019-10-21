@@ -34,6 +34,10 @@ public class BombArea : MonoBehaviour
     IEnumerator Translation()
     {
         yield return new WaitForSeconds(0.6f);
+        if (playerState.isDead)
+        {
+            Destroy(gameObject);
+        }
         float waitTime = 0.2f;
         if (!minDistance.Equals(10000f))
         {

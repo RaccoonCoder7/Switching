@@ -25,6 +25,7 @@ public class TouchMgr : MonoBehaviour
     private RigidbodyConstraints originRbConst;
     private RigidbodyConstraints movingRbConst;
     private GameObject pullEffClone;
+    private PlayerState ps;
 
     public SkillMode mode = SkillMode.chat;
     public enum SkillMode
@@ -59,8 +60,11 @@ public class TouchMgr : MonoBehaviour
         mirrorLayer = LayerMask.NameToLayer("MIRROR");
         cam = Camera.main;
         translateBullet = Instantiate(translateBullet);
+        ps.translateBullet = translateBullet;
         bulletRb = translateBullet.GetComponent<Rigidbody>();
+        ps = GetComponent<PlayerState>();
         translateBomb = Instantiate(translateBomb);
+        ps.translateBomb = translateBomb;
         bombRb = translateBomb.GetComponent<Rigidbody>();
         translateBomb.SetActive(false);
         testTranslateBomb = Instantiate(testTranslateBomb);
@@ -103,7 +107,7 @@ public class TouchMgr : MonoBehaviour
             slowEffect.SetActive(false);
         }
 
-        if (!canFire) return;
+        if (!canFire || ps.isDead) return;
 
         switch (mode)
         {

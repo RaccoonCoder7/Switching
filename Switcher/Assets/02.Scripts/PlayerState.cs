@@ -13,6 +13,8 @@ public class PlayerState : MonoBehaviour
     public AudioClip[] stateClips;
     public AudioClip newSkillClip;
     public GameObject barrier;
+    public GameObject translateBullet;
+    public GameObject translateBomb;
 
     void Start()
     {
@@ -42,6 +44,14 @@ public class PlayerState : MonoBehaviour
     public void PlayerDie()
     {
         isDead = true;
+        if (translateBullet.activeSelf)
+        {
+            translateBullet.SetActive(false);
+        }
+        if (translateBomb.activeSelf)
+        {
+            translateBomb.SetActive(false);
+        }
         audio.PlayOneShot(stateClips[1]);
         OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.RTouch);
         OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.LTouch);
