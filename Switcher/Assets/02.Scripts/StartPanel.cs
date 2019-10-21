@@ -5,16 +5,17 @@ using UnityEngine;
 public class StartPanel : MonoBehaviour
 {
 
-    Color color;
-    public GameObject startText;
-    public Material fadeMaterial;
-    public GameObject screen;
-    public GameObject logo;
+
+    public GameObject startBtn;
+    public GameObject continueBtn;
+    public GameObject onOffText;
     bool start;
+    bool checkText;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        InvokeRepeating("OnOffText", 0.5f, 0.5f);
     }
 
     // Update is called once per frame
@@ -23,21 +24,27 @@ public class StartPanel : MonoBehaviour
         if (OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger) && !start)
         {
             start = true;
-            StartCoroutine("StartFadeOut");
+            CancelInvoke("OnOffText");
+            onOffText.SetActive(false);
+            startBtn.SetActive(true);
+            if (GameMgr.stage.Equals(0))
+            {
+                continueBtn.SetActive(false);
+            }
         }
     }
 
-    public IEnumerator StartFadeOut()
+    void OnOffText()
     {
-        Color color = fadeMaterial.color;
-        while (color.a > 0f)
+        if (!checkText)
         {
-            color.a -= 0.03f;
-            fadeMaterial.color = color;
-            yield return new WaitForSeconds(0.02f);
+            onOffText.SetActive(false);
+            checkText = true;
         }
-        screen.SetActive(false);
-        logo.SetActive(false);
-        startText.SetActive(false);
+        else
+        {
+            onOffText.SetActive(true);
+            checkText = false;
+        }
     }
 }
