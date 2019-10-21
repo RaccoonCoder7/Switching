@@ -8383,6 +8383,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f891542f74afaf9449a651320996e9f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  originalColor: {r: 0, g: 1, b: 0.54901963, a: 1}
+  pressedColor: {r: 0.020069422, g: 0.38679248, b: 0.046917044, a: 1}
   laser: {fileID: 6047744250249843909}
   UISound: {fileID: 8300000, guid: 26653d7c6668e1f4885c3887435ecb9d, type: 3}
 --- !u!114 &339286258322492866

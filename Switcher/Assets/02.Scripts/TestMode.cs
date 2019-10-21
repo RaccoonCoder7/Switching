@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class TestMode : MonoBehaviour
@@ -16,6 +17,9 @@ public class TestMode : MonoBehaviour
     private GameObject chatCanvas;
     private iTweenMgr iTween;
 
+    Image img;
+    public Color originalColor;
+    public Color pressedColor;
 
     public LineRenderer laser;
     public AudioClip UISound;
@@ -53,10 +57,31 @@ public class TestMode : MonoBehaviour
             float dist = hit.distance;
             laser.SetPosition(1, new Vector3(0, 0, dist));
         }
-        if (OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger))
+        if (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger))
         {
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("START")))
             {
+                img = hit.transform.GetComponent<Image>();
+                img.color = pressedColor;
+                
+            }
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("CONTINUE")))
+            {
+                img = hit.transform.GetComponent<Image>();
+                img.color = pressedColor;
+            }
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("RETRY")))
+            {
+                img = hit.transform.GetComponent<Image>();
+                img.color = pressedColor;
+            }
+        }
+        if (OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger))
+        {
+            img.color = originalColor;
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("START")))
+            {
+                
                 StartCoroutine(StartGame(1));
             }
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("CONTINUE")))
