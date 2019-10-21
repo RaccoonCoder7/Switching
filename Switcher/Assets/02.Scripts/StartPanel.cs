@@ -51,5 +51,9 @@ public class StartPanel : MonoBehaviour
         {
             continueBtn.SetActive(false);
         }
+        else
+        {
+            continueBtn.SetActive(true);
+        }
     }
 }

@@ -47,6 +47,7 @@ namespace MyDedlegate
         }
         void Start()
         {
+            prevMode = TouchMgr.SkillMode.chat;
             helperTextList = "대화를 다시 보려면 오른손 검지버튼, 스테이지를 다시 시작하려면 다시하기버튼, 대화창을 끄려면 오른손 중지버튼을 누르세요.";
             gameMgr = FindObjectOfType<GameMgr>();
             audio = GetComponent<AudioSource>();
@@ -195,7 +196,15 @@ namespace MyDedlegate
         // 조력자를 없앰
         public void FadeHelper()
         {
-            touchMgr.ChangeMode(prevMode);
+            if(prevMode == TouchMgr.SkillMode.chat)
+            {
+                touchMgr.ChangeMode(TouchMgr.SkillMode.switching);
+            }
+            else
+            {
+                touchMgr.ChangeMode(prevMode);
+            }
+            
             textCount = continueCnt;
             gameObject.SetActive(false);
             helpCheck = false;

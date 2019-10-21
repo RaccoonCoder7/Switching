@@ -19,7 +19,7 @@ public class Event2 : EventMgr
     }
     private void Update()
     {
-        if (panelCheck && OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
+        if (panelCheck && OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger))
         {
             touchMgr.ChangeMode(TouchMgr.SkillMode.chat);
             StartCoroutine("PanelIn");
