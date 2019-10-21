@@ -62,9 +62,9 @@ public class TouchMgr : MonoBehaviour
         mirrorLayer = LayerMask.NameToLayer("MIRROR");
         cam = Camera.main;
         translateBullet = Instantiate(translateBullet);
+        ps = GetComponent<PlayerState>();
         ps.translateBullet = translateBullet;
         bulletRb = translateBullet.GetComponent<Rigidbody>();
-        ps = GetComponent<PlayerState>();
         translateBomb = Instantiate(translateBomb);
         ps.translateBomb = translateBomb;
         bombRb = translateBomb.GetComponent<Rigidbody>();
@@ -109,7 +109,8 @@ public class TouchMgr : MonoBehaviour
             slowEffect.SetActive(false);
         }
 
-        if (!canFire || ps.isDead) return;
+        if (!canFire) return;
+        //if (!canFire || ps.isDead) return;
 
         switch (mode)
         {

@@ -15,6 +15,7 @@ public class StartPanel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        QualitySettings.SetQualityLevel(2, true);
         InvokeRepeating("OnOffText", 0.5f, 0.5f);
     }
 
@@ -26,7 +27,7 @@ public class StartPanel : MonoBehaviour
             start = true;
             CancelInvoke("OnOffText");
             onOffText.SetActive(false);
-            Invoke("ButtonOn",1f);
+            Invoke("ButtonOn",1.5f);
             
         }
     }
@@ -47,11 +48,7 @@ public class StartPanel : MonoBehaviour
     void ButtonOn()
     {
         startBtn.SetActive(true);
-        if (GameMgr.stage.Equals(0))
-        {
-            continueBtn.SetActive(false);
-        }
-        else
+        if (!GameMgr.stage.Equals(0))
         {
             continueBtn.SetActive(true);
         }

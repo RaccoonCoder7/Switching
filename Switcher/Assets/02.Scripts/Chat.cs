@@ -188,7 +188,8 @@ namespace MyDedlegate
         {
             prevMode = touchMgr.mode;
             touchMgr.ChangeMode(TouchMgr.SkillMode.chat);
-            StartCoroutine(PlayLine(helperTextList));
+            //StartCoroutine(PlayLine(helperTextList));
+            text.text = helperTextList;
             textCount = continueCnt;
             helpCheck = true;
         }
@@ -196,9 +197,10 @@ namespace MyDedlegate
         // 조력자를 없앰
         public void FadeHelper()
         {
-            if(prevMode == TouchMgr.SkillMode.chat)
+            if(prevMode.Equals(TouchMgr.SkillMode.chat))
             {
                 touchMgr.ChangeMode(TouchMgr.SkillMode.switching);
+                touchMgr.canFire = true;
             }
             else
             {
