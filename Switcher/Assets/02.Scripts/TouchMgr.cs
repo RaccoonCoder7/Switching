@@ -16,6 +16,7 @@ public class TouchMgr : MonoBehaviour
     public bool canFire = true;
     private bool canFireTestBomb = true;
     private int manaStoneLayer;
+    private int manaStoneCannonLayer;
     private int mirrorLayer;
     private Rigidbody pullObjectRb;
     private Transform playerTr;
@@ -57,6 +58,7 @@ public class TouchMgr : MonoBehaviour
     void Start()
     {
         manaStoneLayer = LayerMask.NameToLayer("MANASTONE");
+        manaStoneCannonLayer = LayerMask.NameToLayer("MANASTONE_C");
         mirrorLayer = LayerMask.NameToLayer("MIRROR");
         cam = Camera.main;
         translateBullet = Instantiate(translateBullet);
@@ -178,7 +180,8 @@ public class TouchMgr : MonoBehaviour
                 pointer.transform.LookAt(cam.transform.position);
                 pointer.transform.position += pointer.transform.forward * 0.5f;
 
-                if (hit.collider.gameObject.layer.Equals(manaStoneLayer))
+                if (hit.collider.gameObject.layer.Equals(manaStoneLayer) ||
+                    hit.collider.gameObject.layer.Equals(manaStoneCannonLayer))
                 {
                     if (!pullObjectRb)
                     {
@@ -240,7 +243,8 @@ public class TouchMgr : MonoBehaviour
                 laser.enabled = true;
                 laser.SetPosition(1, new Vector3(0, 0, dist));
 
-                if (hit.collider.gameObject.layer.Equals(manaStoneLayer))
+                if (hit.collider.gameObject.layer.Equals(manaStoneLayer) ||
+                    hit.collider.gameObject.layer.Equals(manaStoneCannonLayer))
                 {
                     pointer.transform.position = hit.point;
                     pointer.transform.LookAt(cam.transform.position);

@@ -5,6 +5,7 @@ using UnityEngine;
 public class BombArea : MonoBehaviour
 {
     private int manaStoneLayer;
+    private int manaStoneCannonLayer;
     private Transform playerTr;
     private TouchMgr touchMgr;
     private PlayerState playerState;
@@ -24,6 +25,7 @@ public class BombArea : MonoBehaviour
     void Start()
     {
         manaStoneLayer = LayerMask.NameToLayer("MANASTONE");
+        manaStoneCannonLayer = LayerMask.NameToLayer("MANASTONE_C");
         playerTr = GameObject.Find("Player").transform;
         touchMgr = playerTr.GetComponent<TouchMgr>();
         playerState = playerTr.GetComponent<PlayerState>();
@@ -66,7 +68,7 @@ public class BombArea : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer.Equals(manaStoneLayer))
+        if (other.gameObject.layer.Equals(manaStoneLayer) || other.gameObject.layer.Equals(manaStoneCannonLayer))
         {
             other.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
             Vector3 targetPos = other.transform.position;
