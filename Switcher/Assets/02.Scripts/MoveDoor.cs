@@ -21,9 +21,9 @@ public class MoveDoor : MonoBehaviour
 
     private bool checkManstone = false;
 
-    public MeshRenderer meshRenderer;
-    public Material[] openTexture;
-    public Material[] closeTexture;
+    public SpriteRenderer exitSpriteRenderer;
+    public Sprite openTexture;
+    public Sprite closeTexture;
     public GameObject[] particle;
 
     void Start()
@@ -104,9 +104,9 @@ public class MoveDoor : MonoBehaviour
         ht.Add("easetype", iTween.EaseType.linear);
         //htOpen.Add("oncomplete", "CheckTriggerUp");
         audio.Play();
-        if (meshRenderer)
+        if (exitSpriteRenderer)
         {
-            meshRenderer.materials = openTexture;
+            exitSpriteRenderer.sprite = openTexture;
         }
         if (particle.Length > 0)
         {
@@ -136,9 +136,9 @@ public class MoveDoor : MonoBehaviour
         ht.Add("easetype", iTween.EaseType.linear);
         ht.Add("oncomplete", "CheckTriggerUp");
         audio.Play();
-        if (meshRenderer)
+        if (exitSpriteRenderer)
         {
-            meshRenderer.materials = closeTexture;
+            exitSpriteRenderer.sprite = closeTexture;
         }
         if (particle.Length > 0)
         {
