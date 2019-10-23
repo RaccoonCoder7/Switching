@@ -16,6 +16,7 @@ public class EventMgr : MonoBehaviour
     public TouchMgr touchMgr;
     protected PlayerState ps;
     PlayerPosCheck pps;
+    public GameObject playerAnchor;
 
     protected void Start()
     {
@@ -33,6 +34,7 @@ public class EventMgr : MonoBehaviour
         ps = player.GetComponent<PlayerState>();
         touchMgr.canFire = false;
         touchMgr.laser.SetColors(Color.green, Color.green);
+        //playerAnchor.transform.rotation = Quaternion.Euler(0, 0, 0);
 
         chat = FindObjectOfType<Chat>();
         EventList = chat.chatEventList;

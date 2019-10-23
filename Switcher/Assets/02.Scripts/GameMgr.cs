@@ -109,13 +109,17 @@ public class GameMgr : MonoBehaviour
             fadeMaterial.color = color;
             yield return new WaitForSeconds(0.02f);
         }
-        FinishText.SetActive(true);
-        yield return new WaitForSeconds(4f);
+        
+        
         player = GameObject.Find("Player");
         GameObject sc = FindObjectOfType<StageCtrl>().gameObject;
         SceneManager.MoveGameObjectToScene(player, SceneManager.GetActiveScene());
         SceneManager.MoveGameObjectToScene(sc, SceneManager.GetActiveScene());
         SceneManager.MoveGameObjectToScene(gameObject, SceneManager.GetActiveScene());
+        StageCtrl sctrl = FindObjectOfType<StageCtrl>();
+        Destroy(sctrl.stage.map);
+        FinishText.SetActive(true);
+        yield return new WaitForSeconds(4f);
         SceneManager.LoadScene("StartScene");
     }
 }

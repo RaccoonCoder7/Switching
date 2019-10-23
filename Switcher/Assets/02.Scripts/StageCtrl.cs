@@ -6,7 +6,7 @@ using MyDedlegate;
 
 public class StageCtrl : MonoBehaviour
 {
-    private NowStage stage;
+    public NowStage stage;
     private StageData sd;
     private GameMgr gameMgr;
     private AudioSource audio;
