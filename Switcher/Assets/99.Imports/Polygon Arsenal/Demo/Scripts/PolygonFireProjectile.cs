@@ -27,6 +27,14 @@ public class PolygonFireProjectile : MonoBehaviour
         bossSt = boss.GetComponent<BossState>();
     }
 
+    private void Update()
+    {
+        if (!boss && projectile)
+        {
+            Destroy(projectile);
+        }
+    }
+
     public IEnumerator SlowFire()
     {
         yield return new WaitForSeconds(animDelayTime);
