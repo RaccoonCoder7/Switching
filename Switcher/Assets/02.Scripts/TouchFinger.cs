@@ -32,9 +32,11 @@ public class TouchFinger : MonoBehaviour
     public Sprite lockSprite;
 
     public GameObject chatCanvas;
-    public GameObject[] Btns;
 
     Chat chat;
+
+    public bool stageCheck;
+    public bool fullBtn;
 
     void Start()
     {
@@ -120,8 +122,16 @@ public class TouchFinger : MonoBehaviour
                 }
                 if (btn1.fillAmount >= 1)
                 {
-                    btn1.fillAmount = 0;
-                    StartCoroutine(sc.ResetStage(null));
+                    if (!stageCheck)
+                    {
+                        btn1.fillAmount = 0;
+                        StartCoroutine(sc.ResetStage(null));
+                    }
+                    else
+                    {
+                        fullBtn = true;
+                    }
+                    
                 }
                 break;
             case "ShowText":
@@ -131,11 +141,15 @@ public class TouchFinger : MonoBehaviour
                 }
                 if (btn2.fillAmount >= 1)
                 {
-                    if (!chat.helpCheck)
+                    if (!chat.helpCheck && !stageCheck)
                     {
                         btn2.fillAmount = 0;
                         chatCanvas.SetActive(true);
                         chat.CallHelper();
+                    }
+                    else
+                    {
+                        fullBtn = true;
                     }
                 }
                 

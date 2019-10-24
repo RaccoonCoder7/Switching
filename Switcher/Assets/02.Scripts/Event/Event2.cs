@@ -7,11 +7,14 @@ public class Event2 : EventMgr
 {
     bool panelCheck;
     bool modeCheck;
+    bool btnCheck;
+    TouchFinger tf;
     // Start is called before the first frame update
     void Start()
     {
         base.Start();
-
+        tf = FindObjectOfType<TouchFinger>();
+        tf.stageCheck = true;
         EventList[0] = new Deleg(EV1);
         EventList[1] = new Deleg(EV2);
         EventList[2] = new Deleg(EV3);
@@ -31,6 +34,15 @@ public class Event2 : EventMgr
             CallChat();
             modeCheck = false;
             OffPanelEffect();
+        }
+        if(btnCheck && tf.fullBtn)
+        {
+            tf.stageCheck = false;
+            tf.fullBtn = false;
+            touchMgr.ChangeMode(TouchMgr.SkillMode.chat);
+            CallChat();
+            btnCheck = false;
+
         }
     }
 
