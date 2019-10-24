@@ -106,13 +106,6 @@ public class TestMode : MonoBehaviour
                     {
                         StartCoroutine(StartGame(gameMgr.GetPrevStageNum()));
                     }
-                    else if (hitLayer.Equals(retryBtnLayer))
-                    {
-                        if (!itMgr.isClick)
-                        {
-                            itMgr.chat.FadeHelper();
-                        }
-                    }
                 }
             }
         }

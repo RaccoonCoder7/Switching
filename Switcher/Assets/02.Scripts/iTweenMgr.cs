@@ -22,8 +22,6 @@ public class iTweenMgr : MonoBehaviour
     public bool isEnable;
     public bool useEffect;
 
-    public bool isClick = false;
-
     private void Awake()
     {
         timer = FindObjectOfType<Timer>();
@@ -76,24 +74,6 @@ public class iTweenMgr : MonoBehaviour
             if (!playing)
             {
                 MoveL();
-            }
-        }
-        //조력자 소환
-        if (timer.chatFinish)
-        {
-            if (isClick && !chat.helpCheck)
-            {
-                isClick = false;
-            }
-
-            if (OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger) && chat.helpCheck)
-            {
-                isClick = true;
-            }
-
-            if (OVRInput.GetUp(OVRInput.Button.SecondaryHandTrigger))
-            {
-                
             }
         }
     }
