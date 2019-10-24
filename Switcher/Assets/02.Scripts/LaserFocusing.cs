@@ -12,6 +12,7 @@ public class LaserFocusing : MonoBehaviour
     public Transform playerTr;
     private Vector3 playerPos;
     public Event6 ev;
+    public bool isLaserCtrl = false;
 
     private void Start()
     {
@@ -35,6 +36,7 @@ public class LaserFocusing : MonoBehaviour
     IEnumerator LaserMoveCheck()
     {
         canCtrl.Stop();
+        ev.touchMgr.laserCtrl.SetActive(false);
         while (!checkManstone)
         {
             // 원래 위치로 방향 전환
@@ -53,6 +55,7 @@ public class LaserFocusing : MonoBehaviour
     IEnumerator LaserNoMoveCheck()
     {
         canCtrl.Play();
+        ev.touchMgr.laserCtrl.SetActive(true);
         while (checkManstone)
         {
             if (OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger) &&
