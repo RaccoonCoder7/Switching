@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using MyDedlegate;
 
 public class TouchFinger : MonoBehaviour
 {
     private int skillButtonLayer;
     private TouchMgr touchMgr;
+    private StageCtrl sc;
     private Collider sphere;
     private AudioSource audio;
     private Material mat;
@@ -18,6 +21,20 @@ public class TouchFinger : MonoBehaviour
     public Material cyan;
     public AudioClip changeClip;
     public ImageCtrl imageCtrl;
+    float time;
+
+    public Image btn1;
+    public Image btn2;
+
+    public Image[] upImages;
+    public Image[] buttonImages;
+    public Sprite inactivateSprite;
+    public Sprite lockSprite;
+
+    public GameObject chatCanvas;
+    public GameObject[] Btns;
+
+    Chat chat;
 
     void Start()
     {
@@ -27,6 +44,10 @@ public class TouchFinger : MonoBehaviour
         sphere.enabled = false;
         audio = GetComponent<AudioSource>();
         mat = green;
+        chat = chatCanvas.GetComponent<Chat>();
+
+        sc = FindObjectOfType<StageCtrl>();
+
     }
 
     private void Update()
@@ -69,6 +90,11 @@ public class TouchFinger : MonoBehaviour
                     mode = TouchMgr.SkillMode.switchBomb;
                     mat = cyan;
                     break;
+                //case "Retry":
+                //    //btn = other.gameObject.transform.GetChild(1).GetComponent<Image>();
+                //    break;
+                //case "ShowText":
+                //    break;
             }
             if (!CheckModeIsChanged(mode)) return;
             audio.Play();
@@ -77,6 +103,62 @@ public class TouchFinger : MonoBehaviour
             touchMgr.ChangeMode(mode);
             imageCtrl.ChangeSprites(touchMgr.mode);
         }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (touchMgr.mode == TouchMgr.SkillMode.chat)
+        {
+            return;
+        }
+        switch (other.gameObject.name)
+        {
+            case "Retry":
+                if (btn1.fillAmount < 1)
+                {
+                    btn1.fillAmount += 0.5f * Time.deltaTime;
+                }
+                if (btn1.fillAmount >= 1)
+                {
+                    btn1.fillAmount = 0;
+                    StartCoroutine(sc.ResetStage(null));
+                }
+                break;
+            case "ShowText":
+                if (btn2.fillAmount < 1)
+                {
+                    btn2.fillAmount += 0.5f * Time.deltaTime;
+                }
+                if (btn2.fillAmount >= 1)
+                {
+                    if (!chat.helpCheck)
+                    {
+                        btn2.fillAmount = 0;
+                        chatCanvas.SetActive(true);
+                        chat.CallHelper();
+                    }
+                }
+                
+                break;
+        }
+
+    }
+        private void OnTriggerExit(Collider other)
+    {
+        if (touchMgr.mode == TouchMgr.SkillMode.chat)
+        {
+            return;
+        }
+        switch (other.gameObject.name)
+        {
+            case "Retry":
+                btn1.fillAmount = 0;
+                break;
+            case "ShowText":
+                btn2.fillAmount = 0;
+                break;
+        }
+
     }
 
     private bool CheckModeIsChanged(TouchMgr.SkillMode nowMode)
@@ -95,4 +177,46 @@ public class TouchFinger : MonoBehaviour
         audio.PlayOneShot(changeClip);
         gun.material = mat;
     }
+
+    public void ActiveTrueBtn()
+    {
+        for (int i = 0; i < 2; i++)
+        {
+            btn1.fillAmount = 0;
+            btn2.fillAmount = 0;
+            upImages[i].enabled = true;
+            buttonImages[i].sprite = inactivateSprite;
+            buttonImages[i].GetComponent<Collider>().enabled = true;
+        }
+    }
+
+    public void ActiveFalseBtn()
+    {
+        for (int i = 0; i < 2; i++)
+        {
+            upImages[i].enabled = false;
+            buttonImages[i].sprite = lockSprite;
+            buttonImages[i].GetComponent<Collider>().enabled = false;
+        }
+    }
+    //public IEnumerator PressedBtn(Image img)
+    //{
+    //    while (img.fillAmount < 1f)
+    //    {
+    //        img.fillAmount += 0.025f;
+    //        yield return new WaitForSeconds(0.05f);
+    //    }
+    //    //StartCoroutine(sc.ResetStage(null));
+    //}
+
+    //public IEnumerator OutBtn(Image img)
+    //{
+    //    while (img.fillAmount > 0f)
+    //    {
+    //        img.fillAmount -= 0.025f;
+    //        yield return new WaitForSeconds(0.05f);
+    //    }
+    //    //StartCoroutine(sc.ResetStage(null));
+    //}
+
 }

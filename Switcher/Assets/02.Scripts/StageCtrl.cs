@@ -71,39 +71,39 @@ public class StageCtrl : MonoBehaviour
 
     public IEnumerator ResetStage(AudioClip clip)
     {
-
         gameMgr.ChangeScreanImage();
         yield return StartCoroutine(gameMgr.FadeIn());
-
         // 오브젝트위치
         CreateMap(false);
-
         // 플레이어위치
         playerTr.position = stage.playerTr.position;
         playerTr.rotation = stage.playerTr.rotation;
-
         // 스테이지시간
         timer.ResetTime(stage.stageTime);
-
         // 조력자와의대화
         if (!chat.gameObject.activeSelf)
         {
             chat.gameObject.SetActive(true);
         }
         chat.ResetText();
+
+
         yield return new WaitForSeconds(2.0f);
         if (!ps)
         {
             ps = playerTr.GetComponent<PlayerState>();
         }
-        ps.isDead = false;
 
+        ps.isDead = false;
+        Debug.Log("7777777");
+        
         if (clip)
         {
             audio.PlayOneShot(clip);
         }
-
+        Debug.Log("8888888");
         yield return StartCoroutine(gameMgr.FadeOut());
+        Debug.Log("9999999");
     }
 
     public IEnumerator ClearStage()

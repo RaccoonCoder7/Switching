@@ -16,13 +16,13 @@ public class iTweenMgr : MonoBehaviour
     bool triggerDown;
     private StageCtrl sc;
     public GameObject chatCanvas;
-    Chat chat;
+    public Chat chat;
     Timer timer;
 
     public bool isEnable;
     public bool useEffect;
 
-    private bool isClick = false;
+    public bool isClick = false;
 
     private void Awake()
     {
@@ -93,18 +93,7 @@ public class iTweenMgr : MonoBehaviour
 
             if (OVRInput.GetUp(OVRInput.Button.SecondaryHandTrigger))
             {
-                if (!chat.helpCheck)
-                {
-                    chatCanvas.SetActive(true);
-                    chat.CallHelper();
-                }
-                else
-                {
-                    if (!isClick)
-                    {
-                        chat.FadeHelper();
-                    }
-                }
+                
             }
         }
     }

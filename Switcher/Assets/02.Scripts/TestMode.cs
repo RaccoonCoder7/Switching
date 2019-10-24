@@ -27,6 +27,7 @@ public class TestMode : MonoBehaviour
 
     public LineRenderer laser;
     public AudioClip UISound;
+    iTweenMgr itMgr;
 
     void Awake()
     {
@@ -36,6 +37,7 @@ public class TestMode : MonoBehaviour
         playerState.enabled = false;
         chatCanvas = transform.Find("ChatCanvas").gameObject;
         chatCanvas.SetActive(false);
+        itMgr = GetComponent<iTweenMgr>();
     }
 
     void Start()
@@ -106,7 +108,10 @@ public class TestMode : MonoBehaviour
                     }
                     else if (hitLayer.Equals(retryBtnLayer))
                     {
-                        StartCoroutine(sc.ResetStage(null));
+                        if (!itMgr.isClick)
+                        {
+                            itMgr.chat.FadeHelper();
+                        }
                     }
                 }
             }

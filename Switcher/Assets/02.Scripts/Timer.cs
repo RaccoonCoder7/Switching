@@ -23,11 +23,13 @@ public class Timer : MonoBehaviour
 
     private AudioSource audio;
     public AudioClip[] stateClips;
+    TouchFinger tf;
 
     void Start()
     {
         gameMgr = FindObjectOfType<GameMgr>();
         audio = GetComponent<AudioSource>();
+        tf = FindObjectOfType<TouchFinger>();
     }
 
     // 매개변수로 들어온 시간으로 패널의 시간을 재설정함
@@ -90,6 +92,7 @@ public class Timer : MonoBehaviour
         if (!PlayerPrefs.GetInt("Stage").Equals(6))
         {
             retryBtn.SetActive(true);
+            tf.ActiveTrueBtn();
             chatFinish = true;
         }
         
