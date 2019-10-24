@@ -40,6 +40,7 @@ public class TouchMgr : MonoBehaviour
     public GameObject testTranslateBomb;
     public GameObject blur;
     public GameObject pullEffect;
+    public List<GameObject> testBombs = new List<GameObject>();
     public GameObject[] ring;
     public AudioClip[] shootClips;
     public float bombSpeed = 500.0f;
@@ -78,9 +79,9 @@ public class TouchMgr : MonoBehaviour
         ps.translateBomb = translateBomb;
         bombRb = translateBomb.GetComponent<Rigidbody>();
         translateBomb.SetActive(false);
-        testTranslateBomb = Instantiate(testTranslateBomb);
-        testBombRb = testTranslateBomb.GetComponent<Rigidbody>();
-        testTranslateBomb.SetActive(false);
+        GameObject clone = Instantiate(testTranslateBomb);
+        Destroy(clone);
+        // testBombRb = testTranslateBomb.GetComponent<Rigidbody>();
         tb = translateBullet.GetComponent<TranslateBullet>();
         translateBullet.SetActive(false);
         pointer = GameObject.Find("Pointer");
@@ -149,18 +150,26 @@ public class TouchMgr : MonoBehaviour
         if (OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger))
         {
             if (!canFireTestBomb) return;
-            //TODO: 이곳을 Instantiate로 수정
-            testTranslateBomb.SetActive(true);
-            testTranslateBomb.transform.position = laser.transform.position;
-            testBombRb.velocity = Vector3.zero;
-            testBombRb.AddForce(laser.transform.forward * bombSpeed);
+            GameObject cloneTb = Instantiate(testTranslateBomb, laser.transform.position, laser.transform.rotation);
+            TranslateBomb tb = cloneTb.GetComponent<TranslateBomb>();
+            tb.touchMgr = this;
+            // testTranslateBomb.transform.position = laser.transform.position;
+            // testBombRb.velocity = Vector3.zero;
+            testBombs.Add(cloneTb);
+            cloneTb.GetComponent<Rigidbody>().AddForce(laser.transform.forward * bombSpeed);
             canFireTestBomb = false;
+            Debug.Log("turn2False!");
+            EnableFireTestBomb(0.5f);
         }
 
         if (OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger))
         {
+            for (int i = 0; i < testBombs.Count; i++)
+            {
+                Destroy(testBombs[i]);
+            }
+            testBombs = new List<GameObject>();
             audio.Play();
-            testTranslateBomb.SetActive(false);
             translateBomb.SetActive(true);
             translateBomb.transform.position = laser.transform.position;
             bombRb.velocity = Vector3.zero;
@@ -468,6 +477,7 @@ public class TouchMgr : MonoBehaviour
     private void change2CanFireTestBomb()
     {
         canFireTestBomb = true;
+        Debug.Log("turn2True!");
     }
 
     public void StartLerp(Transform objTr, Vector3 targetPos, Vector3 playerPos)

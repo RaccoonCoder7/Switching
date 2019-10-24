@@ -5,10 +5,10 @@ using UnityEngine;
 public class TranslateBomb : MonoBehaviour
 {
     private GameObject clone;
-    private TouchMgr touchMgr;
     private int skillButtonLayer;
     private int touchFingerLayer;
 
+    public TouchMgr touchMgr;
     public GameObject bombArea;
     public bool isTestBomb = false;
 
@@ -16,11 +16,10 @@ public class TranslateBomb : MonoBehaviour
     {
         skillButtonLayer = LayerMask.NameToLayer("SKILLBUTTON");
         touchFingerLayer = LayerMask.NameToLayer("TOUCHFINGER");
-        clone = Instantiate(bombArea);
-        Destroy(clone);
-        if (isTestBomb)
+        if (!isTestBomb)
         {
-            touchMgr = GameObject.Find("Player").GetComponent<TouchMgr>();
+            clone = Instantiate(bombArea);
+            Destroy(clone);
         }
     }
 
@@ -31,11 +30,14 @@ public class TranslateBomb : MonoBehaviour
         {
             return;
         }
-        GameObject area = Instantiate(bombArea, transform.position, transform.rotation);
+        // GameObject area = Instantiate(bombArea, transform.position, transform.rotation);
         if (isTestBomb)
         {
-            touchMgr.EnableFireTestBomb(1f);
-            Destroy(area, 0.8f);
+            touchMgr.testBombs.Remove(gameObject);
+        }
+        else
+        {
+            Instantiate(bombArea, transform.position, transform.rotation);
         }
         gameObject.SetActive(false);
     }
