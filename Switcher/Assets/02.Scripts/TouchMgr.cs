@@ -158,7 +158,6 @@ public class TouchMgr : MonoBehaviour
             testBombs.Add(cloneTb);
             cloneTb.GetComponent<Rigidbody>().AddForce(laser.transform.forward * bombSpeed);
             canFireTestBomb = false;
-            Debug.Log("turn2False!");
             EnableFireTestBomb(0.5f);
         }
 
@@ -477,7 +476,6 @@ public class TouchMgr : MonoBehaviour
     private void change2CanFireTestBomb()
     {
         canFireTestBomb = true;
-        Debug.Log("turn2True!");
     }
 
     public void StartLerp(Transform objTr, Vector3 targetPos, Vector3 playerPos)

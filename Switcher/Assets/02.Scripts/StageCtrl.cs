@@ -95,15 +95,12 @@ public class StageCtrl : MonoBehaviour
         }
 
         ps.isDead = false;
-        Debug.Log("7777777");
         
         if (clip)
         {
             audio.PlayOneShot(clip);
         }
-        Debug.Log("8888888");
         yield return StartCoroutine(gameMgr.FadeOut());
-        Debug.Log("9999999");
     }
 
     public IEnumerator ClearStage()
@@ -142,6 +139,7 @@ public class StageCtrl : MonoBehaviour
         {
             Destroy(stage.map);
         }
+        Debug.Log(stage.stageNum);
         stage.map = Instantiate(Maps[stage.stageNum - 1]);
         sd = stage.map.GetComponent<StageData>();
         stage.playerTr = sd.playerTr;
