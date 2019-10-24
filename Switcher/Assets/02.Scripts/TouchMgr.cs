@@ -62,6 +62,8 @@ public class TouchMgr : MonoBehaviour
     // 밀고있는 척력 오브젝트
     private GameObject pullObjectNow;
 
+    public GameObject laserCtrl;
+
     void Start()
     {
         manaStoneLayer = LayerMask.NameToLayer("MANASTONE");
