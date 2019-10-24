@@ -55,7 +55,7 @@ public class BombArea : MonoBehaviour
             }
             else if (tpStyle == teleportStyle.lerp)
             {
-                touchMgr.StartLerp(targetTr, playerTr.position, shortestPos);
+                touchMgr.StartLerp(targetTr, shortestPos, playerTr.position);
             }
             waitTime = 1f;
             playerState.DisableDmg(waitTime);

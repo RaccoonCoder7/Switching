@@ -90,6 +90,7 @@ public class TestMode : MonoBehaviour
                 if (hit.collider.tag.Equals("UIBUTTON"))
                 {
                     int hitLayer = hit.collider.gameObject.layer;
+                    audio.PlayOneShot(UISound);
                     if (hitLayer.Equals(UIButtonLayer))
                     {
                         hit.collider.gameObject.GetComponent<Button>().onClick.Invoke();
@@ -125,7 +126,6 @@ public class TestMode : MonoBehaviour
         {
             gameMgr.NewGame();
         }
-        audio.PlayOneShot(UISound);
         gameMgr.ChangeScreanImage();
         yield return StartCoroutine(gameMgr.FadeIn());
         yield return StartCoroutine(sc.CreateStageAsync(stageNum, true));

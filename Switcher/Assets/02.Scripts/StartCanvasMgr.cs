@@ -52,9 +52,15 @@ public class StartCanvasMgr : MonoBehaviour
             isStarted = true;
             StopCoroutine("BlinkText");
             onOffText.SetActive(false);
-            ShowPanels();
-            OnClickTP();
+            StartCoroutine("WaitAndShow");
         }
+    }
+
+    private IEnumerator WaitAndShow()
+    {
+        yield return new WaitForSeconds(1f);
+        ShowPanels();
+        OnClickTP();
     }
 
     private IEnumerator BlinkText()
