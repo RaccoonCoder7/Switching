@@ -112,6 +112,7 @@ public class StartCanvasMgr : MonoBehaviour
 
     public void OnClickStage(int stage)
     {
+        PlayerPrefs.SetInt("Stage", stage);
         tm.StartCoroutine(tm.StartGame(stage));
     }
 

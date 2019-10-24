@@ -92,11 +92,8 @@ public class TouchFinger : MonoBehaviour
                     mode = TouchMgr.SkillMode.switchBomb;
                     mat = cyan;
                     break;
-                //case "Retry":
-                //    //btn = other.gameObject.transform.GetChild(1).GetComponent<Image>();
-                //    break;
-                //case "ShowText":
-                //    break;
+                default:
+                    return;
             }
             if (!CheckModeIsChanged(mode)) return;
             audio.Play();

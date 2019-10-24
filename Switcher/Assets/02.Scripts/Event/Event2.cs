@@ -8,18 +8,20 @@ public class Event2 : EventMgr
     bool panelCheck;
     bool modeCheck;
     bool btnCheck;
-    TouchFinger tf;
-    // Start is called before the first frame update
+    // TouchFinger tf;
+
     void Start()
     {
         base.Start();
-        tf = FindObjectOfType<TouchFinger>();
+        // tf = FindObjectOfType<TouchFinger>();
         tf.stageCheck = true;
         EventList[0] = new Deleg(EV1);
         EventList[1] = new Deleg(EV2);
         EventList[2] = new Deleg(EV3);
         EventList[3] = new Deleg(EV4);
+        EventList[4] = new Deleg(EV5);
     }
+
     private void Update()
     {
         if (panelCheck && OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger))
@@ -35,14 +37,14 @@ public class Event2 : EventMgr
             modeCheck = false;
             OffPanelEffect();
         }
-        if(btnCheck && tf.fullBtn)
+        if (btnCheck && tf.fullBtn)
         {
             tf.stageCheck = false;
             tf.fullBtn = false;
             touchMgr.ChangeMode(TouchMgr.SkillMode.chat);
+            tf.ActiveFalseBtn();
             CallChat();
             btnCheck = false;
-
         }
     }
 
@@ -62,6 +64,12 @@ public class Event2 : EventMgr
         UsePanelEffect(1);
     }
     private void EV4()
+    {
+        touchMgr.ChangeMode(TouchMgr.SkillMode.switchBomb);
+        tf.ActiveTrueBtn();
+        btnCheck = true;
+    }
+    private void EV5()
     {
         touchMgr.ChangeMode(TouchMgr.SkillMode.switchBomb);
         timer.StartTime();

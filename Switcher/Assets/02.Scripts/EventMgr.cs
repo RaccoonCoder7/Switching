@@ -18,7 +18,7 @@ public class EventMgr : MonoBehaviour
     PlayerPosCheck pps;
     public GameObject playerAnchor;
 
-    TouchFinger tf;
+    protected TouchFinger tf;
 
     protected void Start()
     {

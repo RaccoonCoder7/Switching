@@ -83,7 +83,6 @@ public class BossChat : MonoBehaviour
                 //textCount++;
                 bossText.text = "";
                 bossTextCount++;
-                Debug.Log("PC: " + chat.paragraphCnt);
                 chat.gameObject.SetActive(true);
                 //chat.NextChat();
                 chat.paragraphCnt++;
