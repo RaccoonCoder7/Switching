@@ -1912,12 +1912,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8760492089078792585}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1070572268 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1277940276, guid: a5e5289612409ec4aa0cc5e0f7ea81b0,
-    type: 3}
-  m_PrefabInstance: {fileID: 339286258322492863}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1095805457 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 469584, guid: 2216270888a4ced48b33b7b5641611e6,
@@ -3949,11 +3943,6 @@ PrefabInstance:
       propertyPath: FinishText
       value: 
       objectReference: {fileID: 339286258322492864}
-    - target: {fileID: 2925036262141518582, guid: 72fc6bacdde32c645b8bae442ff3cba9,
-        type: 3}
-      propertyPath: canvas
-      value: 
-      objectReference: {fileID: 1070572268}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72fc6bacdde32c645b8bae442ff3cba9, type: 3}
 --- !u!1 &1977976919
