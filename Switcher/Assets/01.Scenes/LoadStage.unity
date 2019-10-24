@@ -198,6 +198,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pointer
       objectReference: {fileID: 0}
+    - target: {fileID: 6329189254342693735, guid: f24864ec1cc2e9342bd4443ce82de10f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6330028433645140787, guid: f24864ec1cc2e9342bd4443ce82de10f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -251,6 +256,21 @@ PrefabInstance:
     - target: {fileID: 6330028433645140787, guid: f24864ec1cc2e9342bd4443ce82de10f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6131049202415558433, guid: f24864ec1cc2e9342bd4443ce82de10f,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6130491314583178231, guid: f24864ec1cc2e9342bd4443ce82de10f,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6129504715980375761, guid: f24864ec1cc2e9342bd4443ce82de10f,
+        type: 3}
+      propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

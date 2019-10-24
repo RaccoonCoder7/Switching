@@ -48659,7 +48659,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7999185593898116471}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.787, y: 0.173, z: 0.025}
+  m_LocalPosition: {x: -4.24, y: 0.173, z: 0.025}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7999185594815667519}
@@ -81341,6 +81341,7 @@ MonoBehaviour:
   canCtrl: {fileID: 4370725337338557823}
   playerTr: {fileID: 7999185593898116468}
   ev: {fileID: -6061500236872997092}
+  isLaserCtrl: 0
 --- !u!1 &7999185594935009897
 GameObject:
   m_ObjectHideFlags: 0
@@ -99731,6 +99732,7 @@ MonoBehaviour:
   canCtrl: {fileID: 8457085282333941395}
   playerTr: {fileID: 7999185593898116468}
   ev: {fileID: -6061500236872997092}
+  isLaserCtrl: 0
 --- !u!1 &7999185595202655234
 GameObject:
   m_ObjectHideFlags: 0
@@ -117345,6 +117347,7 @@ MonoBehaviour:
   canCtrl: {fileID: 2134590116321716053}
   playerTr: {fileID: 7999185593898116468}
   ev: {fileID: -6061500236872997092}
+  isLaserCtrl: 0
 --- !u!1 &7999185595729041336
 GameObject:
   m_ObjectHideFlags: 0
@@ -124654,6 +124657,7 @@ MonoBehaviour:
   canCtrl: {fileID: 6859638711302366928}
   playerTr: {fileID: 7999185593898116468}
   ev: {fileID: -6061500236872997092}
+  isLaserCtrl: 0
 --- !u!1 &7999185595889464940
 GameObject:
   m_ObjectHideFlags: 0
@@ -141076,6 +141080,11 @@ PrefabInstance:
       propertyPath: stage6
       value: 
       objectReference: {fileID: 7999185594815667513}
+    - target: {fileID: 1893616071269501184, guid: f55aa0ef9d8a8e9489d22e6dd18b5fe6,
+        type: 3}
+      propertyPath: speed
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 1893616071685921495, guid: f55aa0ef9d8a8e9489d22e6dd18b5fe6,
         type: 3}
       propertyPath: m_UseGravity

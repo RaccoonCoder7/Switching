@@ -88,6 +88,11 @@ public class BossState : MonoBehaviour
             
             if(render.material.color.a <= 0)
             {
+                slowFire = GameObject.Find("PolygonFireProjectile").GetComponent<PolygonFireProjectile>();
+                if (slowFire.projectile)
+                {
+                    Destroy(slowFire.projectile);
+                }
                 ev.CallChat();
                 ev.touchMgr.ChangeMode(TouchMgr.SkillMode.chat);
                 Destroy(gameObject);

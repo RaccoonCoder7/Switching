@@ -12,7 +12,8 @@ public class PolygonFireProjectile : MonoBehaviour
     private float animDelayTime = 1.0f;
 
     private Transform camTr;
-    GameObject projectile;
+    [HideInInspector]
+    public GameObject projectile;
     private Vector3 playerPos;
 
     private BossState bossSt;
@@ -25,14 +26,6 @@ public class PolygonFireProjectile : MonoBehaviour
         projectile = Instantiate(projectiles, spawnPosition.position, Quaternion.identity);
         Destroy(projectile);
         bossSt = boss.GetComponent<BossState>();
-    }
-
-    private void Update()
-    {
-        if (!boss && projectile)
-        {
-            Destroy(projectile);
-        }
     }
 
     public IEnumerator SlowFire()
