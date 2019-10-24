@@ -147,6 +147,7 @@ public class TouchMgr : MonoBehaviour
         if (OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger))
         {
             if (!canFireTestBomb) return;
+            //TODO: 이곳을 Instantiate로 수정
             testTranslateBomb.SetActive(true);
             testTranslateBomb.transform.position = laser.transform.position;
             testBombRb.velocity = Vector3.zero;

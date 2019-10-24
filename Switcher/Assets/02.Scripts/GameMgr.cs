@@ -120,6 +120,7 @@ public class GameMgr : MonoBehaviour
         Destroy(sctrl.stage.map);
         FinishText.SetActive(true);
         yield return new WaitForSeconds(4f);
+        PlayerPrefs.SetInt("isCleared", 1);
         SceneManager.LoadScene("StartScene");
     }
 }

@@ -14,6 +14,7 @@ TagManager:
   - GREEN
   - LASER
   - SLOWBALL
+  - UIBUTTON
   layers:
   - Default
   - TransparentFX
@@ -39,7 +40,7 @@ TagManager:
   - MANASTONE_C
   - RHAND
   - WALL
-  - 
+  - UIBUTTON
   - 
   - 
   - 

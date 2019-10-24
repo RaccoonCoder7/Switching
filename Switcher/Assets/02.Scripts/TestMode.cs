@@ -16,8 +16,12 @@ public class TestMode : MonoBehaviour
     private StageCtrl sc;
     private GameObject chatCanvas;
     private iTweenMgr iTween;
+    private int startBtnLayer;
+    private int continueBtnLayer;
+    private int retryBtnLayer;
+    private int UIButtonLayer;
 
-    Image img;
+    private Image img;
     public Color originalColor;
     public Color pressedColor;
 
@@ -45,6 +49,12 @@ public class TestMode : MonoBehaviour
         playerState.enabled = false;
         sc = FindObjectOfType<StageCtrl>();
         testMode = this;
+        startBtnLayer = LayerMask.NameToLayer("START");
+        continueBtnLayer = LayerMask.NameToLayer("CONTINUE");
+        retryBtnLayer = LayerMask.NameToLayer("RETRY");
+        UIButtonLayer = LayerMask.NameToLayer("UIBUTTON");
+
+
         DontDestroyOnLoad(gameObject);
         laser.SetColors(Color.green, Color.green);
     }
@@ -59,38 +69,45 @@ public class TestMode : MonoBehaviour
         }
         if (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger))
         {
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("START")))
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity))
             {
-                img = hit.transform.GetComponent<Image>();
-                img.color = pressedColor;
-                
-            }
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("CONTINUE")))
-            {
-                img = hit.transform.GetComponent<Image>();
-                img.color = pressedColor;
-            }
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("RETRY")))
-            {
-                img = hit.transform.GetComponent<Image>();
-                img.color = pressedColor;
+                if (hit.collider.tag.Equals("UIBUTTON"))
+                {
+                    img = hit.transform.GetComponent<Image>();
+                    originalColor = img.color;
+                    img.color = pressedColor;
+                }
             }
         }
         if (OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger))
         {
-            img.color = originalColor;
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("START")))
+            if (img)
             {
-                
-                StartCoroutine(StartGame(1));
+                img.color = originalColor;
             }
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("CONTINUE")))
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity))
             {
-                StartCoroutine(StartGame(gameMgr.GetPrevStageNum()));
-            }
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("RETRY")))
-            {
-                StartCoroutine(sc.ResetStage(null));
+                if (hit.collider.tag.Equals("UIBUTTON"))
+                {
+                    int hitLayer = hit.collider.gameObject.layer;
+                    if (hitLayer.Equals(UIButtonLayer))
+                    {
+                        hit.collider.gameObject.GetComponent<Button>().onClick.Invoke();
+                        return;
+                    }
+                    if (hitLayer.Equals(startBtnLayer))
+                    {
+                        StartCoroutine(StartGame(1));
+                    }
+                    else if (hitLayer.Equals(continueBtnLayer))
+                    {
+                        StartCoroutine(StartGame(gameMgr.GetPrevStageNum()));
+                    }
+                    else if (hitLayer.Equals(retryBtnLayer))
+                    {
+                        StartCoroutine(sc.ResetStage(null));
+                    }
+                }
             }
         }
 
@@ -98,11 +115,11 @@ public class TestMode : MonoBehaviour
         // if (Input.GetMouseButtonUp(0))
         // {
         //     StartCoroutine(StartGame(1));
+        // PlayerPrefs.SetInt("isCleared", 1);
         // }
     }
 
-
-    private IEnumerator StartGame(int stageNum)
+    public IEnumerator StartGame(int stageNum)
     {
         if (stageNum.Equals(1))
         {
