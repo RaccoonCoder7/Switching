@@ -85,7 +85,8 @@ public class BossState : MonoBehaviour
                 anim.SetBool("realDeath", true);
                 render.material.color = new Color(1, 1, 1, timeA);
             }
-            else
+            
+            if(render.material.color.a <= 0)
             {
                 ev.CallChat();
                 ev.touchMgr.ChangeMode(TouchMgr.SkillMode.chat);

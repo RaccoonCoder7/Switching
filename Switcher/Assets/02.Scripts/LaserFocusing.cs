@@ -8,6 +8,10 @@ public class LaserFocusing : MonoBehaviour
     private Transform pointerTr;
     public MagicCircle[] mc;
     private bool checkManstone = false;
+    public ParticleSystem canCtrl;
+    public Transform playerTr;
+    private Vector3 playerPos;
+    public Event6 ev;
 
     private void Start()
     {
@@ -15,6 +19,8 @@ public class LaserFocusing : MonoBehaviour
         {
             StartCoroutine("LaserMoveCheck");
         }
+
+        playerPos = new Vector3(playerTr.position.x, playerTr.position.y, playerTr.position.z);
     }
 
     private void Update()
@@ -28,8 +34,10 @@ public class LaserFocusing : MonoBehaviour
     // 레이저가 움직일 조건을 갖췄는지 체크
     IEnumerator LaserMoveCheck()
     {
+        canCtrl.Stop();
         while (!checkManstone)
         {
+            // 원래 위치로 방향 전환
             for (int i = 0; i < mc.Length; i++)
             {
                 if (i == 0) checkManstone = true;
@@ -44,11 +52,22 @@ public class LaserFocusing : MonoBehaviour
     // 레이저가 안움직일 조건을 갖췄는지 체크
     IEnumerator LaserNoMoveCheck()
     {
+        canCtrl.Play();
         while (checkManstone)
         {
-            // laserFocusing 방향을 따라 회전
-            targetPosition = new Vector3(pointerTr.position.x - 1.0f, pointerTr.position.y - 1.0f, pointerTr.position.z - 1.0f);
-            transform.LookAt(targetPosition);
+            if (OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger) &&
+                ev.touchMgr.mode != TouchMgr.SkillMode.chat)
+            {
+                // laserFocusing 방향을 따라 회전
+                targetPosition = new Vector3(pointerTr.position.x - 1.0f, pointerTr.position.y - 1.0f, pointerTr.position.z - 1.0f);
+                transform.LookAt(targetPosition);
+            }
+            
+            if (OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger))
+            {
+                transform.LookAt(playerPos);
+            }
+
             for (int i = 0; i < mc.Length; i++)
             {
                 if (i == 0) checkManstone = true;
