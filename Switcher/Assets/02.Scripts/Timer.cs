@@ -25,6 +25,8 @@ public class Timer : MonoBehaviour
     public AudioClip[] stateClips;
     TouchFinger tf;
 
+    public GameObject warningText;
+
     void Start()
     {
         gameMgr = FindObjectOfType<GameMgr>();
@@ -60,7 +62,7 @@ public class Timer : MonoBehaviour
                 if (canvasCheck == false)
                 {
                     audio.PlayOneShot(stateClips[0]);
-                    gameMgr.StartCoroutine(gameMgr.FadeInOut());
+                    StartCoroutine(Warning("60"));
                 }
                 canvasCheck = true;
             }
@@ -72,7 +74,7 @@ public class Timer : MonoBehaviour
                 if (canvasCheck == false)
                 {
                     audio.PlayOneShot(stateClips[1]);
-                    gameMgr.StartCoroutine(gameMgr.FadeInOut());
+                    StartCoroutine(Warning("30"));
                 }
                 canvasCheck = true;
             }
@@ -101,5 +103,17 @@ public class Timer : MonoBehaviour
     {
         retryBtn.SetActive(false);
         chatFinish = false;
+    }
+    IEnumerator Warning(string s)
+    {
+
+        warningText.GetComponent<Text>().text = s + "초 남았습니다";
+        warningText.SetActive(true);
+        gameMgr.StartCoroutine(gameMgr.FadeInOut());
+        yield return new WaitForSeconds(1.0f);
+        gameMgr.StartCoroutine(gameMgr.FadeInOut());
+        yield return new WaitForSeconds(1.0f);
+        warningText.SetActive(false);
+
     }
 }

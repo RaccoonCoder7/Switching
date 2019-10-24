@@ -23,6 +23,8 @@ public class StageCtrl : MonoBehaviour
     public GameObject[] Maps;
     public AudioClip[] BGMClips;
 
+    TouchFinger tf;
+
     private void Start()
     {
         DontDestroyOnLoad(gameObject);
@@ -31,6 +33,7 @@ public class StageCtrl : MonoBehaviour
         audio = GetComponent<AudioSource>();
         playerTr = GameObject.Find("Player").transform;
         timer = imgCtrl.gameObject.GetComponent<Timer>();
+        tf = FindObjectOfType<TouchFinger>();
         // ps = playerTr.GetComponent<PlayerState>();
         // touchMgr = playerTr.GetComponent<TouchMgr>();
     }
@@ -85,6 +88,7 @@ public class StageCtrl : MonoBehaviour
         {
             chat.gameObject.SetActive(true);
         }
+        tf.ActiveTrueBtn();
         chat.ResetText();
 
 
@@ -130,6 +134,8 @@ public class StageCtrl : MonoBehaviour
         timer.ResetTime(stage.stageTime);
         playerTr.position = stage.playerTr.position;
         playerTr.rotation = stage.playerTr.rotation;
+
+        tf.ActiveFalseBtn();
     }
 
 

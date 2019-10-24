@@ -126,6 +126,7 @@ public class TouchFinger : MonoBehaviour
                     }
                     else
                     {
+                        ActiveFalseBtn();
                         fullBtn = true;
                     }
                     
@@ -146,6 +147,7 @@ public class TouchFinger : MonoBehaviour
                     }
                     else
                     {
+                        ActiveFalseBtn();
                         fullBtn = true;
                     }
                 }
@@ -207,6 +209,8 @@ public class TouchFinger : MonoBehaviour
         {
             upImages[i].enabled = false;
             buttonImages[i].sprite = lockSprite;
+            btn1.fillAmount = 0;
+            btn2.fillAmount = 0;
             buttonImages[i].GetComponent<Collider>().enabled = false;
         }
     }
