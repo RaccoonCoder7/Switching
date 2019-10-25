@@ -37,10 +37,7 @@ public class Event6 : EventMgr
     }
     private void Update()
     {
-        if (clearCheck)
-        {
 
-        }
     }
 
     private void EV1()

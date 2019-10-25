@@ -119,8 +119,11 @@ public class GameMgr : MonoBehaviour
         StageCtrl sctrl = FindObjectOfType<StageCtrl>();
         Destroy(sctrl.stage.map);
         FinishText.SetActive(true);
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(3f);
         PlayerPrefs.SetInt("isCleared", 1);
+        Color c = fadeMaterial.color;
+        c.a = 0;
+        fadeMaterial.color = c;
         SceneManager.LoadScene("StartScene");
     }
 }
