@@ -127,7 +127,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -223,6 +223,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GlowZoneYellow
       objectReference: {fileID: 0}
+    - target: {fileID: 198186038894740982, guid: 89a5880db63937c4db5ac8be1cce8406,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4424260359510160, guid: 89a5880db63937c4db5ac8be1cce8406, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -278,11 +283,6 @@ PrefabInstance:
     - target: {fileID: 4424260359510160, guid: 89a5880db63937c4db5ac8be1cce8406, type: 3}
       propertyPath: m_LocalScale.z
       value: 4.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 198186038894740982, guid: 89a5880db63937c4db5ac8be1cce8406,
-        type: 3}
-      propertyPath: playOnAwake
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198858673508939998, guid: 89a5880db63937c4db5ac8be1cce8406,
         type: 3}

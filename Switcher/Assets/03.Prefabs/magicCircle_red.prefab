@@ -126,6 +126,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GlowZoneRed
       objectReference: {fileID: 0}
+    - target: {fileID: 198355545756671134, guid: 70d59fac261e86f489f55b465d666b26,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4656526324291700, guid: 70d59fac261e86f489f55b465d666b26, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -181,11 +186,6 @@ PrefabInstance:
     - target: {fileID: 4656526324291700, guid: 70d59fac261e86f489f55b465d666b26, type: 3}
       propertyPath: m_LocalScale.z
       value: 4.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 198355545756671134, guid: 70d59fac261e86f489f55b465d666b26,
-        type: 3}
-      propertyPath: playOnAwake
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198406097408145908, guid: 70d59fac261e86f489f55b465d666b26,
         type: 3}
