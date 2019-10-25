@@ -714,6 +714,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   touchMgr: {fileID: 0}
+  playerAnchor: {fileID: 0}
 --- !u!1 &2630021400494479022
 GameObject:
   m_ObjectHideFlags: 0
@@ -5708,7 +5709,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -7621,6 +7622,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 841655382232482485, guid: 9d0c382da32dacf41a459e1c5dbbfd58,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 48
+      objectReference: {fileID: 0}
     - target: {fileID: 884066912203181763, guid: 9d0c382da32dacf41a459e1c5dbbfd58,
         type: 3}
       propertyPath: m_Height
@@ -7635,11 +7641,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Center.z
       value: 0.029665692
-      objectReference: {fileID: 0}
-    - target: {fileID: 841655382232482485, guid: 9d0c382da32dacf41a459e1c5dbbfd58,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 48
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d0c382da32dacf41a459e1c5dbbfd58, type: 3}
@@ -13524,6 +13525,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6853326437256499355, guid: ec5268c0d6f62ef46b58c2b032d2d377,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec5268c0d6f62ef46b58c2b032d2d377, type: 3}

@@ -463,7 +463,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   touchMgr: {fileID: 0}
   playerAnchor: {fileID: 0}
-  darkColor: {r: 0, g: 0.06708599, b: 0.1509434, a: 1}
 --- !u!1 &33500085112141386
 GameObject:
   m_ObjectHideFlags: 0
@@ -9425,7 +9424,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -27132,6 +27131,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6853326437256499355, guid: ec5268c0d6f62ef46b58c2b032d2d377,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec5268c0d6f62ef46b58c2b032d2d377, type: 3}
