@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3042439122120959561}
   - component: {fileID: 841655382232482485}
-  - component: {fileID: 884066912203181763}
+  - component: {fileID: 7115057080888991548}
+  - component: {fileID: 8725154334961466186}
   m_Layer: 8
   m_Name: manaStone_R
   m_TagString: RED
@@ -50,8 +51,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
---- !u!136 &884066912203181763
-CapsuleCollider:
+--- !u!65 &7115057080888991548
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -60,10 +61,21 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.4037331
-  m_Height: 1.5013791
-  m_Direction: 2
-  m_Center: {x: 0.0007677078, y: 0.0038579702, z: 0.05237806}
+  serializedVersion: 2
+  m_Size: {x: 0.7414099, y: 0.7629495, z: 1.5407332}
+  m_Center: {x: 0.0011517452, y: 0.0021262583, z: 0.03394824}
+--- !u!114 &8725154334961466186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7439693098561205665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f351c807027867c478550cc3cb00814a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4995756110532293393
 PrefabInstance:
   m_ObjectHideFlags: 0

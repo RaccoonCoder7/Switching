@@ -690,7 +690,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!114 &1277940279
 MonoBehaviour:
@@ -6714,6 +6714,7 @@ MonoBehaviour:
   blur: {fileID: 6047744249842925198}
   pullEffect: {fileID: 2837963011912759551, guid: 76e18c995fa35a44485390a02287f908,
     type: 3}
+  testBombs: []
   ring:
   - {fileID: 9127668730261680501}
   - {fileID: 7984074906347970849}
@@ -16583,7 +16584,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2014597121022855065
 RectTransform:
   m_ObjectHideFlags: 0
@@ -27219,7 +27220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4209619327906312, guid: 4fbfef7c85393bf49abebf02c7056691, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4209619327906312, guid: 4fbfef7c85393bf49abebf02c7056691, type: 3}
       propertyPath: m_LocalPosition.y
@@ -27227,7 +27228,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4209619327906312, guid: 4fbfef7c85393bf49abebf02c7056691, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 5.4
       objectReference: {fileID: 0}
     - target: {fileID: 4209619327906312, guid: 4fbfef7c85393bf49abebf02c7056691, type: 3}
       propertyPath: m_LocalRotation.x
@@ -27271,7 +27272,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4209619327906312, guid: 4fbfef7c85393bf49abebf02c7056691, type: 3}
       propertyPath: m_LocalScale.z
-      value: 25.716455
+      value: 20.747007
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fbfef7c85393bf49abebf02c7056691, type: 3}
@@ -28490,16 +28491,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2161175058916687314}
     m_Modifications:
-    - target: {fileID: 7963488599537914703, guid: ab13f4b483b784842a018d3b84c0ac8e,
-        type: 3}
-      propertyPath: m_Name
-      value: ChangeCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 7963488599537914703, guid: ab13f4b483b784842a018d3b84c0ac8e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7963488599537914700, guid: ab13f4b483b784842a018d3b84c0ac8e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -28605,11 +28596,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 7963488598177071556, guid: ab13f4b483b784842a018d3b84c0ac8e,
+    - target: {fileID: 7963488599537914703, guid: ab13f4b483b784842a018d3b84c0ac8e,
         type: 3}
-      propertyPath: m_IsActive
-      value: 1
+      propertyPath: m_Name
+      value: ChangeCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7963488598083443466, guid: ab13f4b483b784842a018d3b84c0ac8e,
+        type: 3}
+      propertyPath: chatCanvas
+      value: 
+      objectReference: {fileID: 6727509008175141198}
     - target: {fileID: 7963488599730135468, guid: ab13f4b483b784842a018d3b84c0ac8e,
         type: 3}
       propertyPath: retryBtn
@@ -28620,11 +28616,6 @@ PrefabInstance:
       propertyPath: warningText
       value: 
       objectReference: {fileID: 4939517188195585474}
-    - target: {fileID: 7963488598083443466, guid: ab13f4b483b784842a018d3b84c0ac8e,
-        type: 3}
-      propertyPath: chatCanvas
-      value: 
-      objectReference: {fileID: 6727509008175141198}
     - target: {fileID: 5602396197086768727, guid: ab13f4b483b784842a018d3b84c0ac8e,
         type: 3}
       propertyPath: m_Name
@@ -28635,15 +28626,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShowTextIcon
       objectReference: {fileID: 0}
-    - target: {fileID: 1535549251607154672, guid: ab13f4b483b784842a018d3b84c0ac8e,
-        type: 3}
-      propertyPath: m_Name
-      value: RetryIcon
-      objectReference: {fileID: 0}
     - target: {fileID: 1206821409493706118, guid: ab13f4b483b784842a018d3b84c0ac8e,
         type: 3}
       propertyPath: m_Name
       value: RetryImage
+      objectReference: {fileID: 0}
+    - target: {fileID: 1535549251607154672, guid: ab13f4b483b784842a018d3b84c0ac8e,
+        type: 3}
+      propertyPath: m_Name
+      value: RetryIcon
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab13f4b483b784842a018d3b84c0ac8e, type: 3}
