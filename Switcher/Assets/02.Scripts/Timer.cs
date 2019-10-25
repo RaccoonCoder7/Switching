@@ -44,7 +44,10 @@ public class Timer : MonoBehaviour
     public void StartTime()
     {
         ChatFinish();
-        StartCoroutine("SetTime");
+        if (text.text.Equals("00:00"))
+        {
+            StartCoroutine("SetTime");
+        }
     }
 
     private IEnumerator SetTime()

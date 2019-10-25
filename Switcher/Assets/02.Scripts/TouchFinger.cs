@@ -49,7 +49,6 @@ public class TouchFinger : MonoBehaviour
         chat = chatCanvas.GetComponent<Chat>();
 
         sc = FindObjectOfType<StageCtrl>();
-
     }
 
     private void Update()
@@ -115,13 +114,13 @@ public class TouchFinger : MonoBehaviour
             case "Retry":
                 if (btn1.fillAmount < 1)
                 {
+                    btn2.fillAmount = 0;
                     btn1.fillAmount += 0.5f * Time.deltaTime;
                 }
                 if (btn1.fillAmount >= 1)
                 {
                     if (!stageCheck)
                     {
-                        btn1.fillAmount = 0;
                         StartCoroutine(sc.ResetStage(null));
                     }
                     else
@@ -135,6 +134,7 @@ public class TouchFinger : MonoBehaviour
             case "ShowText":
                 if (btn2.fillAmount < 1)
                 {
+                    btn1.fillAmount = 0;
                     btn2.fillAmount += 0.5f * Time.deltaTime;
                 }
                 if (btn2.fillAmount >= 1)

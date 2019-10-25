@@ -40,6 +40,8 @@ namespace MyDedlegate
 
         AudioSource audio;
 
+        public Timer timer;
+
         enum State
         {
             Next,
@@ -70,18 +72,10 @@ namespace MyDedlegate
             laser.enabled = true;
             if (OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger))
             {
-                //if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("RETRY")))
-                //{
-                //    laser.enabled = false;
-                //    StartCoroutine(sc.ResetStage(null));
-                //}
-                //else
-                //{
-                //    NextText();
-                //}
                 if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("RETRY")))
                 {
                     FadeHelper();
+                    timer.StartTime();
                 }
                 else
                 {
