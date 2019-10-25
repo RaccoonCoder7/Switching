@@ -80033,6 +80033,7 @@ MonoBehaviour:
   - {fileID: 7999185595010320246}
   clearCheck: 0
   gameMgr: {fileID: 0}
+  brightColor: {r: 0.3921569, g: 0.45098042, b: 0.5411765, a: 1}
 --- !u!1 &7999185594818604219
 GameObject:
   m_ObjectHideFlags: 0
