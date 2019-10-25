@@ -41,7 +41,7 @@ public class StartCanvasMgr : MonoBehaviour
         continueBtn.SetActive(false);
         tpStylePanel.SetActive(false);
         selectStagePanel.SetActive(false);
-        PlayerPrefs.SetInt("isCleared", 1); // TODO: 테스트코드
+        // PlayerPrefs.SetInt("isCleared", 1); // TODO: 테스트코드
         StartCoroutine("BlinkText");
     }
 
