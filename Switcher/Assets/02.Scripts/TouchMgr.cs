@@ -284,7 +284,8 @@ public class TouchMgr : MonoBehaviour
                         pullEffClone.transform.parent = hit.collider.gameObject.transform;
                         pullObjectRb.constraints = movingRbConst;
                     }
-                    float distance = Vector3.Distance(hit.point, playerTr.position);
+                    float distance = Vector3.Distance(hit.collider.gameObject.transform.position, 
+                        playerTr.position);
                     if (distance < 2.5f)
                     {
                         pullObjectRb.velocity = Vector3.zero;
