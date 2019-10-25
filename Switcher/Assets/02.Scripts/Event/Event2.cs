@@ -8,12 +8,12 @@ public class Event2 : EventMgr
     bool panelCheck;
     bool modeCheck;
     bool btnCheck;
-    // TouchFinger tf;
+    TouchFinger tf;
 
     void Start()
     {
         base.Start();
-        // tf = FindObjectOfType<TouchFinger>();
+        tf = FindObjectOfType<TouchFinger>();
         tf.stageCheck = true;
         EventList[0] = new Deleg(EV1);
         EventList[1] = new Deleg(EV2);

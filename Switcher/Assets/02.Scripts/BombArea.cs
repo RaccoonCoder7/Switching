@@ -35,7 +35,7 @@ public class BombArea : MonoBehaviour
     // 전체 전이
     IEnumerator Translation()
     {
-        yield return new WaitForSeconds(0.6f);
+        yield return new WaitForSeconds(0.75f);
         if (playerState.isDead)
         {
             Destroy(gameObject);
@@ -62,7 +62,7 @@ public class BombArea : MonoBehaviour
         }
         touchMgr.EnableFire(waitTime);
         touchMgr.EnableFireTestBomb(waitTime);
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.05f);
         Destroy(gameObject);
     }
 

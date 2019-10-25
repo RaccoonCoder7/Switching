@@ -18,7 +18,7 @@ public class EventMgr : MonoBehaviour
     PlayerPosCheck pps;
     public GameObject playerAnchor;
 
-    protected TouchFinger tf;
+    // protected TouchFinger tf;
 
     protected void Start()
     {
@@ -36,7 +36,7 @@ public class EventMgr : MonoBehaviour
         ps = player.GetComponent<PlayerState>();
         touchMgr.canFire = false;
         touchMgr.laser.SetColors(Color.green, Color.green);
-        //tf = FindObjectOfType<TouchFinger>();
+        // tf = FindObjectOfType<TouchFinger>();
         //tf.ActiveFalseBtn();
         //playerAnchor.transform.rotation = Quaternion.Euler(0, 0, 0);
 
