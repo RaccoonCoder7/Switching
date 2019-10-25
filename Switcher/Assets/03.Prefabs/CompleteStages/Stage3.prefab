@@ -15089,7 +15089,7 @@ PrefabInstance:
     - target: {fileID: 1267957136132181878, guid: 43224387693454748b2671d0b3bbae6c,
         type: 3}
       propertyPath: speed
-      value: 600
+      value: 655
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43224387693454748b2671d0b3bbae6c, type: 3}
@@ -18767,7 +18767,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 4.3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4971252144238085035, guid: 5f0e4457d4841d24b95b20e3dc1ea019, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5f0e4457d4841d24b95b20e3dc1ea019, type: 3}
 --- !u!23 &1986525084977734214 stripped
 MeshRenderer:
