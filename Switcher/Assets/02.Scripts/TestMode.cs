@@ -20,6 +20,7 @@ public class TestMode : MonoBehaviour
     private int continueBtnLayer;
     private int retryBtnLayer;
     private int UIButtonLayer;
+    private bool isStarted;
 
     private Image img;
     public Color originalColor;
@@ -53,7 +54,7 @@ public class TestMode : MonoBehaviour
         testMode = this;
         startBtnLayer = LayerMask.NameToLayer("START");
         continueBtnLayer = LayerMask.NameToLayer("CONTINUE");
-        retryBtnLayer = LayerMask.NameToLayer("RETRY");
+        retryBtnLayer = 1 << LayerMask.NameToLayer("RETRY");
         UIButtonLayer = LayerMask.NameToLayer("UIBUTTON");
 
 
@@ -64,62 +65,83 @@ public class TestMode : MonoBehaviour
     void Update()
     {
         ray = new Ray(laser.transform.position, laser.transform.forward);
-        if (Physics.Raycast(ray, out hit, 16.0f))
+        if (isStarted)
         {
-            float dist = hit.distance;
-            laser.SetPosition(1, new Vector3(0, 0, dist));
-        }
-        if (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger))
-        {
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+            if (Physics.Raycast(ray, out hit, 5.0f, retryBtnLayer))
             {
-                if (hit.collider.tag.Equals("UIBUTTON"))
-                {
-                    img = hit.transform.GetComponent<Image>();
-                    originalColor = img.color;
-                    img.color = pressedColor;
-                }
+                float dist = hit.distance;
+                laser.SetPosition(1, new Vector3(0, 0, dist));
+            }
+            else
+            {
+                laser.SetPosition(1, new Vector3(0, 0, 5));
             }
         }
-        if (OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger))
+        else
         {
-            if (img)
+            if (Physics.Raycast(ray, out hit, 12.0f))
             {
-                img.color = originalColor;
+                float dist = hit.distance;
+                laser.SetPosition(1, new Vector3(0, 0, dist));
             }
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+            else
             {
-                if (hit.collider.tag.Equals("UIBUTTON"))
+                laser.SetPosition(1, new Vector3(0, 0, 12));
+            }
+            if (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger))
+            {
+                if (Physics.Raycast(ray, out hit, Mathf.Infinity))
                 {
-                    int hitLayer = hit.collider.gameObject.layer;
-                    audio.PlayOneShot(UISound);
-                    if (hitLayer.Equals(UIButtonLayer))
+                    if (hit.collider.tag.Equals("UIBUTTON"))
                     {
-                        hit.collider.gameObject.GetComponent<Button>().onClick.Invoke();
-                        return;
-                    }
-                    if (hitLayer.Equals(startBtnLayer))
-                    {
-                        StartCoroutine(StartGame(1));
-                    }
-                    else if (hitLayer.Equals(continueBtnLayer))
-                    {
-                        StartCoroutine(StartGame(gameMgr.GetPrevStageNum()));
+                        img = hit.transform.GetComponent<Image>();
+                        originalColor = img.color;
+                        img.color = pressedColor;
                     }
                 }
             }
-        }
+            if (OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger))
+            {
+                if (img)
+                {
+                    img.color = originalColor;
+                }
+                if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+                {
+                    if (hit.collider.tag.Equals("UIBUTTON"))
+                    {
+                        int hitLayer = hit.collider.gameObject.layer;
+                        audio.PlayOneShot(UISound);
+                        if (hitLayer.Equals(UIButtonLayer))
+                        {
 
-        // TODO: 테스트용 코드 지우기
-        // if (Input.GetMouseButtonUp(0))
-        // {
-        //     StartCoroutine(StartGame(1));
-        // PlayerPrefs.SetInt("isCleared", 1);
-        // }
+                            hit.collider.gameObject.GetComponent<Button>().onClick.Invoke();
+                            return;
+                        }
+                        if (hitLayer.Equals(startBtnLayer))
+                        {
+                            StartCoroutine(StartGame(1));
+                        }
+                        else if (hitLayer.Equals(continueBtnLayer))
+                        {
+                            StartCoroutine(StartGame(gameMgr.GetPrevStageNum()));
+                        }
+                    }
+                }
+            }
+
+            // TODO: 테스트용 코드 지우기
+            // if (Input.GetMouseButtonUp(0))
+            // {
+            //     StartCoroutine(StartGame(1));
+            // PlayerPrefs.SetInt("isCleared", 1);
+            // }
+        }
     }
 
     public IEnumerator StartGame(int stageNum)
     {
+        isStarted = true;
         if (stageNum.Equals(1))
         {
             gameMgr.NewGame();

@@ -140,6 +140,7 @@ public class TouchMgr : MonoBehaviour
                 OnSwitchBomb();
                 break;
             case SkillMode.chat:
+                laser.SetPosition(1, new Vector3(0, 0, 5));
                 laser.SetColors(Color.green, Color.green);
                 return;
         }
