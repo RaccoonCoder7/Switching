@@ -8,6 +8,7 @@ public class Event2 : EventMgr
     bool panelCheck;
     bool modeCheck;
     bool btnCheck;
+    bool isEffectOn;
     TouchFinger tf;
 
     private GameObject smallRing;
@@ -40,15 +41,34 @@ public class Event2 : EventMgr
             modeCheck = false;
             OffPanelEffect();
         }
-        if (btnCheck && tf.fullBtn)
+        if (btnCheck)
         {
-            tf.stageCheck = false;
-            tf.fullBtn = false;
-            smallRing.SetActive(false);
-            touchMgr.ChangeMode(TouchMgr.SkillMode.chat);
-            tf.ActiveFalseBtn();
-            CallChat();
-            btnCheck = false;
+            if (tf.fullBtn)
+            {
+                tf.stageCheck = false;
+                tf.fullBtn = false;
+                smallRing.SetActive(false);
+                touchMgr.ChangeMode(TouchMgr.SkillMode.chat);
+                tf.ActiveFalseBtn();
+                CallChat();
+                btnCheck = false;
+                return;
+            }
+            if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger))
+            {
+                if (!isEffectOn)
+                {
+                    isEffectOn = true;
+                    StartCoroutine("EffectOn");
+                }
+                return;
+            }
+            if (OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger))
+            {
+                isEffectOn = false;
+                StopCoroutine("EffectOn");
+                smallRing.SetActive(false);
+            }
         }
     }
 
@@ -70,7 +90,6 @@ public class Event2 : EventMgr
     private void EV4()
     {
         touchMgr.ChangeMode(TouchMgr.SkillMode.switchBomb);
-        smallRing.SetActive(true);
         tf.ActiveTrueBtn();
         btnCheck = true;
         tf.stageCheck = true;
@@ -95,6 +114,12 @@ public class Event2 : EventMgr
     {
         yield return new WaitForSeconds(1.0f);
         CallChat();
+    }
+
+    private IEnumerator EffectOn()
+    {
+        yield return new WaitForSeconds(0.8f);
+        smallRing.SetActive(true);
     }
 
 }

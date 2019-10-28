@@ -60,6 +60,11 @@ public class TouchFinger : MonoBehaviour
         else
         {
             sphere.enabled = false;
+            if (btn1.fillAmount > 0 || btn2.fillAmount > 0)
+            {
+                btn1.fillAmount = 0;
+                btn2.fillAmount = 0;
+            }
         }
     }
 
@@ -128,7 +133,7 @@ public class TouchFinger : MonoBehaviour
                         ActiveFalseBtn();
                         fullBtn = true;
                     }
-                    
+
                 }
                 break;
             case "ShowText":
@@ -152,12 +157,12 @@ public class TouchFinger : MonoBehaviour
                         fullBtn = true;
                     }
                 }
-                
+
                 break;
         }
 
     }
-        private void OnTriggerExit(Collider other)
+    private void OnTriggerExit(Collider other)
     {
         if (touchMgr.mode == TouchMgr.SkillMode.chat)
         {

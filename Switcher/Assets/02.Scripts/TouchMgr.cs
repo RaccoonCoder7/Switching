@@ -199,7 +199,7 @@ public class TouchMgr : MonoBehaviour
                 float dist = hit.distance;
                 pointer.transform.position = hit.point;
                 pointer.transform.LookAt(cam.transform.position);
-                pointer.transform.position += pointer.transform.forward * 0.5f;
+                pointer.transform.position += pointer.transform.forward * 0.2f;
 
                 if (hit.collider.gameObject.layer.Equals(manaStoneLayer) ||
                     hit.collider.gameObject.layer.Equals(manaStoneCannonLayer))
@@ -270,7 +270,7 @@ public class TouchMgr : MonoBehaviour
                 {
                     pointer.transform.position = hit.point;
                     pointer.transform.LookAt(cam.transform.position);
-                    pointer.transform.position += pointer.transform.forward * 0.5f;
+                    pointer.transform.position += pointer.transform.forward * 0.2f;
 
                     if (!pullObjectRb)
                     {
@@ -301,7 +301,7 @@ public class TouchMgr : MonoBehaviour
                 {
                     pointer.transform.position = hit.point;
                     pointer.transform.LookAt(cam.transform.position);
-                    pointer.transform.position += pointer.transform.forward * 0.5f;
+                    pointer.transform.position += pointer.transform.forward * 0.2f;
 
                     Vector3 incoming = hit.point - laser.transform.position;
                     Vector3 normal = hit.normal;
@@ -366,7 +366,7 @@ public class TouchMgr : MonoBehaviour
                 float dist = hit.distance;
                 pointer.transform.position = hit.point;
                 pointer.transform.LookAt(cam.transform.position);
-                pointer.transform.position += pointer.transform.forward * 0.5f;
+                pointer.transform.position += pointer.transform.forward * 0.2f;
             }
             else
             {
