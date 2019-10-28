@@ -160,7 +160,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.Company.DevelopBN
+    Android: com.Company.DevelopSM3
     Standalone: com.oculus.UnitySample
   buildNumber: {}
   AndroidBundleVersionCode: 1
@@ -405,6 +405,9 @@ PlayerSettings:
     m_Devices:
     - Oculus
   - m_BuildTarget: XboxOne
+    m_Enabled: 1
+    m_Devices: []
+  - m_BuildTarget: Facebook
     m_Enabled: 1
     m_Devices: []
   m_BuildTargetEnableVuforiaSettings: []

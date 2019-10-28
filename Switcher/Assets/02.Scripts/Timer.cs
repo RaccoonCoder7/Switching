@@ -94,12 +94,10 @@ public class Timer : MonoBehaviour
 
     public void ChatFinish()
     {
-        if (!PlayerPrefs.GetInt("Stage").Equals(6))
-        {
-            retryBtn.SetActive(true);
-            tf.ActiveTrueBtn();
-            chatFinish = true;
-        }
+        retryBtn.SetActive(true);
+        tf.ActiveTrueBtn();
+        chatFinish = true;
+        
         
     }
     public void ChatFinishReset()

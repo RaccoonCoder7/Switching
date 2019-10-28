@@ -88,7 +88,9 @@ public class StageCtrl : MonoBehaviour
         {
             chat.gameObject.SetActive(true);
         }
+        Debug.Log("StageCtrl Active True");
         tf.ActiveTrueBtn();
+        Debug.Log("StageCtrl Active True2");
         chat.ResetText();
 
 
@@ -135,7 +137,9 @@ public class StageCtrl : MonoBehaviour
         playerTr.position = stage.playerTr.position;
         playerTr.rotation = stage.playerTr.rotation;
 
+        Debug.Log("StageCtrl Active True3");
         tf.ActiveFalseBtn();
+        Debug.Log("StageCtrl Active True4");
     }
 
 

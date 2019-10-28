@@ -139,6 +139,7 @@ public class TouchFinger : MonoBehaviour
                 }
                 if (btn2.fillAmount >= 1)
                 {
+                    Debug.Log(chat.helpCheck + "    " + stageCheck);
                     if (!chat.helpCheck && !stageCheck)
                     {
                         btn2.fillAmount = 0;
@@ -214,24 +215,5 @@ public class TouchFinger : MonoBehaviour
             buttonImages[i].GetComponent<Collider>().enabled = false;
         }
     }
-    //public IEnumerator PressedBtn(Image img)
-    //{
-    //    while (img.fillAmount < 1f)
-    //    {
-    //        img.fillAmount += 0.025f;
-    //        yield return new WaitForSeconds(0.05f);
-    //    }
-    //    //StartCoroutine(sc.ResetStage(null));
-    //}
-
-    //public IEnumerator OutBtn(Image img)
-    //{
-    //    while (img.fillAmount > 0f)
-    //    {
-    //        img.fillAmount -= 0.025f;
-    //        yield return new WaitForSeconds(0.05f);
-    //    }
-    //    //StartCoroutine(sc.ResetStage(null));
-    //}
 
 }

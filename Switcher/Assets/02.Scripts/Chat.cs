@@ -37,6 +37,7 @@ namespace MyDedlegate
         public ImageCtrl imageCtrl;
         public Deleg[] chatEventList = new Deleg[6];
         public AudioClip chatClip;
+        public GameObject reBtn;
 
         AudioSource audio;
 
@@ -163,14 +164,24 @@ namespace MyDedlegate
             {
                 audio.Play();
 
+                if (timer.chatFinish)
+                {
+                    reBtn.SetActive(false);
+                }
+
                 //불러온 텍스트중 false가 있으면 아래 실행
                 if (textList[textCount].Equals("false"))
                 {
+                    if (timer.chatFinish)
+                    {
+                        reBtn.SetActive(true);
+                    }
                     text.text = "";
                     textCount++;
                     chatEventList[paragraphCnt]();
                     gameObject.SetActive(false);
                     helpCheck = false;
+                    
                 }
                 //불러온 텍스트중 clear가 있으면 아래 실행
                 else if (textList[textCount].Equals("clear"))

@@ -14,7 +14,6 @@ public class Event2 : EventMgr
     {
         base.Start();
         tf = FindObjectOfType<TouchFinger>();
-        tf.stageCheck = true;
         EventList[0] = new Deleg(EV1);
         EventList[1] = new Deleg(EV2);
         EventList[2] = new Deleg(EV3);
@@ -68,6 +67,7 @@ public class Event2 : EventMgr
         touchMgr.ChangeMode(TouchMgr.SkillMode.switchBomb);
         tf.ActiveTrueBtn();
         btnCheck = true;
+        tf.stageCheck = true;
     }
     private void EV5()
     {
