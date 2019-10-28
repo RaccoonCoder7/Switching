@@ -769,6 +769,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4971252144240306873, guid: 5f0e4457d4841d24b95b20e3dc1ea019,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.797
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971252144240306873, guid: 5f0e4457d4841d24b95b20e3dc1ea019,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.669
+      objectReference: {fileID: 0}
     - target: {fileID: 73905087028786877, guid: 5f0e4457d4841d24b95b20e3dc1ea019,
         type: 3}
       propertyPath: mc.Array.data[0]
@@ -784,6 +794,12 @@ PrefabInstance:
       propertyPath: particle.Array.data[1]
       value: 
       objectReference: {fileID: 5293970018321941693}
+    - target: {fileID: 261387630869064336, guid: 5f0e4457d4841d24b95b20e3dc1ea019,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fc0ecd975be29cf44abf86a02d394680,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f0e4457d4841d24b95b20e3dc1ea019, type: 3}
 --- !u!4 &755552660176260398 stripped

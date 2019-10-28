@@ -15,6 +15,7 @@ public class PlayerState : MonoBehaviour
     public GameObject barrier;
     public GameObject translateBullet;
     public GameObject translateBomb;
+    public GameObject translateSlowBullet;
 
     void Start()
     {
@@ -47,6 +48,10 @@ public class PlayerState : MonoBehaviour
         if (translateBullet.activeSelf)
         {
             translateBullet.SetActive(false);
+        }
+        if (translateSlowBullet.activeSelf)
+        {
+            translateSlowBullet.SetActive(false);
         }
         if (translateBomb.activeSelf)
         {

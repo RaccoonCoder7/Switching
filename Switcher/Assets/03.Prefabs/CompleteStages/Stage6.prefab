@@ -80033,7 +80033,6 @@ MonoBehaviour:
   - {fileID: 7999185595010320246}
   clearCheck: 0
   gameMgr: {fileID: 0}
-  brightColor: {r: 0.3921569, g: 0.45098042, b: 0.5411765, a: 1}
 --- !u!1 &7999185594818604219
 GameObject:
   m_ObjectHideFlags: 0
@@ -81343,6 +81342,8 @@ MonoBehaviour:
   playerTr: {fileID: 7999185593898116468}
   ev: {fileID: -6061500236872997092}
   isLaserCtrl: 0
+  whiteVer: {fileID: 2100000, guid: 4a83ba15a53163c418068c51525c8703, type: 2}
+  blackVer: {fileID: 2100000, guid: e4546d05e0090f04da00bff611f19d35, type: 2}
 --- !u!1 &7999185594935009897
 GameObject:
   m_ObjectHideFlags: 0
@@ -99734,6 +99735,8 @@ MonoBehaviour:
   playerTr: {fileID: 7999185593898116468}
   ev: {fileID: -6061500236872997092}
   isLaserCtrl: 0
+  whiteVer: {fileID: 2100000, guid: 4a83ba15a53163c418068c51525c8703, type: 2}
+  blackVer: {fileID: 2100000, guid: e4546d05e0090f04da00bff611f19d35, type: 2}
 --- !u!1 &7999185595202655234
 GameObject:
   m_ObjectHideFlags: 0
@@ -117349,6 +117352,8 @@ MonoBehaviour:
   playerTr: {fileID: 7999185593898116468}
   ev: {fileID: -6061500236872997092}
   isLaserCtrl: 0
+  whiteVer: {fileID: 2100000, guid: 4a83ba15a53163c418068c51525c8703, type: 2}
+  blackVer: {fileID: 2100000, guid: e4546d05e0090f04da00bff611f19d35, type: 2}
 --- !u!1 &7999185595729041336
 GameObject:
   m_ObjectHideFlags: 0
@@ -124659,6 +124664,8 @@ MonoBehaviour:
   playerTr: {fileID: 7999185593898116468}
   ev: {fileID: -6061500236872997092}
   isLaserCtrl: 0
+  whiteVer: {fileID: 2100000, guid: 4a83ba15a53163c418068c51525c8703, type: 2}
+  blackVer: {fileID: 2100000, guid: e4546d05e0090f04da00bff611f19d35, type: 2}
 --- !u!1 &7999185595889464940
 GameObject:
   m_ObjectHideFlags: 0

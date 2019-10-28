@@ -43,6 +43,7 @@ public class TouchMgr : MonoBehaviour
     public List<GameObject> testBombs = new List<GameObject>();
     public GameObject[] ring;
     public AudioClip[] shootClips;
+    public GameObject translateSlowBullet;
     public float bombSpeed = 500.0f;
 
     // 레이져 사거리(인력, 척력) 조정
@@ -65,6 +66,11 @@ public class TouchMgr : MonoBehaviour
 
     public GameObject laserCtrl;
 
+    private Rigidbody bulletRbSlow;
+    private TranslateBullet tbSlow;
+    private Rigidbody bulletRbOrig;
+    private TranslateBullet tbOrig;
+
     void Start()
     {
         manaStoneLayer = LayerMask.NameToLayer("MANASTONE");
@@ -72,9 +78,13 @@ public class TouchMgr : MonoBehaviour
         mirrorLayer = LayerMask.NameToLayer("MIRROR");
         cam = Camera.main;
         translateBullet = Instantiate(translateBullet);
+        translateSlowBullet = Instantiate(translateSlowBullet);
         ps = GetComponent<PlayerState>();
         ps.translateBullet = translateBullet;
+        ps.translateSlowBullet = translateSlowBullet;
         bulletRb = translateBullet.GetComponent<Rigidbody>();
+        bulletRbOrig = translateBullet.GetComponent<Rigidbody>();
+        bulletRbSlow = translateSlowBullet.GetComponent<Rigidbody>();
         translateBomb = Instantiate(translateBomb);
         ps.translateBomb = translateBomb;
         bombRb = translateBomb.GetComponent<Rigidbody>();
@@ -83,7 +93,10 @@ public class TouchMgr : MonoBehaviour
         Destroy(clone);
         // testBombRb = testTranslateBomb.GetComponent<Rigidbody>();
         tb = translateBullet.GetComponent<TranslateBullet>();
+        tbOrig = translateBullet.GetComponent<TranslateBullet>();
+        tbSlow = translateSlowBullet.GetComponent<TranslateBullet>();
         translateBullet.SetActive(false);
+        translateSlowBullet.SetActive(false);
         pointer = GameObject.Find("Pointer");
         pointer.SetActive(false);
         laser.enabled = false;
@@ -114,7 +127,10 @@ public class TouchMgr : MonoBehaviour
         {
             slowTime -= Time.deltaTime;
             trBullet = 3.0f;
-            if (slowTime <= 0.1f) trBullet = 10.0f;
+            if (slowTime <= 0.1f)
+            {
+                trBullet = 10.0f;
+            }
         }
         else if (slowEffect.activeSelf)
         {
@@ -380,16 +396,31 @@ public class TouchMgr : MonoBehaviour
         if (OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger))
         {
             audio.Play();
-            translateBullet.SetActive(true);
-            translateBullet.transform.position = laser.transform.position;
-            Vector3 direction = pointer.transform.position - laser.transform.position;
-            direction = direction.normalized;
-            bulletRb.velocity = direction * trBullet;
-            //bulletRb.velocity = direction * 8f;
-            tb.shootPos = laser.transform.position;
-            pointer.SetActive(false);
-            tb.DoActiveFalse();
-            canFire = false;
+            if (slowTime > 0.0f)
+            {
+                translateSlowBullet.SetActive(true);
+                translateSlowBullet.transform.position = laser.transform.position;
+                Vector3 direction = pointer.transform.position - laser.transform.position;
+                direction = direction.normalized;
+                bulletRbSlow.velocity = direction * trBullet;
+                tbSlow.shootPos = laser.transform.position;
+                pointer.SetActive(false);
+                tbSlow.DoActiveFalse();
+                canFire = false;
+            }
+            else if (slowTime <= 0.1f)
+            {
+                translateBullet.SetActive(true);
+                translateBullet.transform.position = laser.transform.position;
+                Vector3 direction = pointer.transform.position - laser.transform.position;
+                direction = direction.normalized;
+                bulletRb.velocity = direction * trBullet;
+                //bulletRb.velocity = direction * 8f;
+                tb.shootPos = laser.transform.position;
+                pointer.SetActive(false);
+                tb.DoActiveFalse();
+                canFire = false;
+            }
         }
     }
 

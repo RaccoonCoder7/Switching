@@ -160,7 +160,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.Company.DevelopSM3
+    Android: com.Company.DevelopBN
     Standalone: com.oculus.UnitySample
   buildNumber: {}
   AndroidBundleVersionCode: 1
@@ -647,17 +647,17 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLWasmStreaming: 0
   scriptingDefineSymbols:
-    1: FD_GLASS
+    1: FD_GLASS;UNITY_POST_PROCESSING_STACK_V2
     4: FD_GLASS
-    7: FD_GLASS
-    13: FD_GLASS
+    7: FD_GLASS;UNITY_POST_PROCESSING_STACK_V2
+    13: FD_GLASS;UNITY_POST_PROCESSING_STACK_V2
     14: FD_GLASS
-    19: FD_GLASS
-    21: FD_GLASS
-    25: FD_GLASS
-    26: FD_GLASS
-    27: FD_GLASS
-    28: FD_GLASS
+    19: FD_GLASS;UNITY_POST_PROCESSING_STACK_V2
+    21: FD_GLASS;UNITY_POST_PROCESSING_STACK_V2
+    25: FD_GLASS;UNITY_POST_PROCESSING_STACK_V2
+    26: FD_GLASS;UNITY_POST_PROCESSING_STACK_V2
+    27: FD_GLASS;UNITY_POST_PROCESSING_STACK_V2
+    28: FD_GLASS;UNITY_POST_PROCESSING_STACK_V2
   platformArchitecture: {}
   scriptingBackend: {}
   il2cppCompilerConfiguration: {}
