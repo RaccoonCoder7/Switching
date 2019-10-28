@@ -186,7 +186,6 @@ MonoBehaviour:
   chatCanvas: {fileID: 6727509008175141198}
   stageCheck: 0
   fullBtn: 0
-  timer: {fileID: 1124691294}
 --- !u!82 &8301773956772842256
 AudioSource:
   m_ObjectHideFlags: 0
@@ -28501,6 +28500,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2161175058916687314}
     m_Modifications:
+    - target: {fileID: 7963488599537914703, guid: ab13f4b483b784842a018d3b84c0ac8e,
+        type: 3}
+      propertyPath: m_Name
+      value: ChangeCanvas
+      objectReference: {fileID: 0}
     - target: {fileID: 7963488599537914700, guid: ab13f4b483b784842a018d3b84c0ac8e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -28606,16 +28610,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 7963488599537914703, guid: ab13f4b483b784842a018d3b84c0ac8e,
-        type: 3}
-      propertyPath: m_Name
-      value: ChangeCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 7963488598083443466, guid: ab13f4b483b784842a018d3b84c0ac8e,
-        type: 3}
-      propertyPath: chatCanvas
-      value: 
-      objectReference: {fileID: 6727509008175141198}
     - target: {fileID: 7963488599730135468, guid: ab13f4b483b784842a018d3b84c0ac8e,
         type: 3}
       propertyPath: retryBtn
@@ -28636,16 +28630,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShowTextIcon
       objectReference: {fileID: 0}
-    - target: {fileID: 1206821409493706118, guid: ab13f4b483b784842a018d3b84c0ac8e,
-        type: 3}
-      propertyPath: m_Name
-      value: RetryImage
-      objectReference: {fileID: 0}
     - target: {fileID: 1535549251607154672, guid: ab13f4b483b784842a018d3b84c0ac8e,
         type: 3}
       propertyPath: m_Name
       value: RetryIcon
       objectReference: {fileID: 0}
+    - target: {fileID: 1206821409493706118, guid: ab13f4b483b784842a018d3b84c0ac8e,
+        type: 3}
+      propertyPath: m_Name
+      value: RetryImage
+      objectReference: {fileID: 0}
+    - target: {fileID: 7963488598083443466, guid: ab13f4b483b784842a018d3b84c0ac8e,
+        type: 3}
+      propertyPath: chatCanvas
+      value: 
+      objectReference: {fileID: 6727509008175141198}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab13f4b483b784842a018d3b84c0ac8e, type: 3}
 --- !u!114 &3162601952082178807 stripped
@@ -28836,6 +28835,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5445823596444263948, guid: 282e00cc59e82bb4f966212cdbf49017,
+        type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5445823596444263948, guid: 282e00cc59e82bb4f966212cdbf49017,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 5045141560598820643, guid: 282e00cc59e82bb4f966212cdbf49017,
         type: 3}
