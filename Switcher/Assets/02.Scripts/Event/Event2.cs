@@ -10,10 +10,14 @@ public class Event2 : EventMgr
     bool btnCheck;
     TouchFinger tf;
 
+    private GameObject smallRing;
+
     void Start()
     {
         base.Start();
         tf = FindObjectOfType<TouchFinger>();
+        tf.stageCheck = true;
+        smallRing = timer.transform.Find("smallRing").gameObject;
         EventList[0] = new Deleg(EV1);
         EventList[1] = new Deleg(EV2);
         EventList[2] = new Deleg(EV3);
@@ -40,6 +44,7 @@ public class Event2 : EventMgr
         {
             tf.stageCheck = false;
             tf.fullBtn = false;
+            smallRing.SetActive(false);
             touchMgr.ChangeMode(TouchMgr.SkillMode.chat);
             tf.ActiveFalseBtn();
             CallChat();
@@ -65,6 +70,7 @@ public class Event2 : EventMgr
     private void EV4()
     {
         touchMgr.ChangeMode(TouchMgr.SkillMode.switchBomb);
+        smallRing.SetActive(true);
         tf.ActiveTrueBtn();
         btnCheck = true;
         tf.stageCheck = true;
