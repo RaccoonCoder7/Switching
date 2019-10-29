@@ -76,8 +76,6 @@ public class StageCtrl : MonoBehaviour
     public IEnumerator ResetStage(AudioClip clip)
     {
         //playerOVR.transform.rotation = Quaternion.Euler(0, 0, 0);
-        OVRManager.display.RecenterPose();
-        OVRPlugin.GetReorientHMDOnControllerRecenter();
         gameMgr.ChangeScreanImage();
         yield return StartCoroutine(gameMgr.FadeIn());
         // 오브젝트위치
@@ -102,7 +100,7 @@ public class StageCtrl : MonoBehaviour
         }
 
         ps.isDead = false;
-        
+
         if (clip)
         {
             audio.PlayOneShot(clip);
@@ -130,8 +128,6 @@ public class StageCtrl : MonoBehaviour
     private void StartStage()
     {
         //playerOVR.transform.rotation = Quaternion.Euler(0, 0, 0);
-        OVRManager.display.RecenterPose();
-        OVRPlugin.GetReorientHMDOnControllerRecenter();
 
         if (!audio.isPlaying)
         {
