@@ -17,6 +17,7 @@ public class GameMgr : MonoBehaviour
     public Material blackMaterial;
     public GameObject FinishText;
     public GameObject player;
+    public bool fadeChk;
 
     AsyncOperation async;
     Color color;
@@ -53,6 +54,7 @@ public class GameMgr : MonoBehaviour
 
     public IEnumerator FadeIn()
     {
+        fadeChk = false;
         screen.SetActive(true);
         Color color = fadeMaterial.color;
         while (color.a < 1f)
@@ -78,7 +80,9 @@ public class GameMgr : MonoBehaviour
         screen.SetActive(false);
         logo.SetActive(false);
         FinishText.SetActive(false);
+        fadeChk = true;
         Timer.canvasCheck = false;
+
     }
     public IEnumerator FadeInOut()
     {

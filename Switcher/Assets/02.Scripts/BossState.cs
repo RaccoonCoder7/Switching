@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MyDedlegate;
 
 public class BossState : MonoBehaviour
 {
@@ -42,6 +43,7 @@ public class BossState : MonoBehaviour
 
     public Event6 ev;
 
+    Chat chat;
     void Start()
     {
         camTr = Camera.main.GetComponent<Transform>();
@@ -49,6 +51,7 @@ public class BossState : MonoBehaviour
         render = transform.GetChild(1).GetComponent<Renderer>();
         audio = GetComponent<AudioSource>();
         ev = FindObjectOfType<Event6>();
+        chat = FindObjectOfType<Chat>();
     }
 
     void Update()
@@ -94,6 +97,7 @@ public class BossState : MonoBehaviour
                     Destroy(slowFire.projectile);
                 }
                 ev.CallChat();
+                chat.reBtn.SetActive(false);
                 ev.touchMgr.ChangeMode(TouchMgr.SkillMode.chat);
                 Destroy(gameObject);
             }
