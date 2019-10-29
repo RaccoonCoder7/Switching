@@ -17,7 +17,6 @@ public class Event2 : EventMgr
     {
         base.Start();
         tf = FindObjectOfType<TouchFinger>();
-        tf.stageCheck = true;
         smallRing = timer.transform.Find("smallRing").gameObject;
         EventList[0] = new Deleg(EV1);
         EventList[1] = new Deleg(EV2);

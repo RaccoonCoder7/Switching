@@ -51,7 +51,7 @@ namespace MyDedlegate
         void Start()
         {
             prevMode = TouchMgr.SkillMode.chat;
-            helperTextList = "대화를 다시 보려면 오른손 검지버튼, 스테이지를 다시 시작하려면 다시하기버튼, 대화창을 끄려면 오른손 중지버튼을 누르세요.";
+            helperTextList = "대화를 다시 보려면 오른손 검지버튼, 대화창을 끄려면 스킵하기버튼을 누르세요.";
             gameMgr = FindObjectOfType<GameMgr>();
             audio = GetComponent<AudioSource>();
             sc = FindObjectOfType<StageCtrl>();
@@ -80,6 +80,10 @@ namespace MyDedlegate
                 }
                 else
                 {
+                    if (timer.chatFinish)
+                    {
+                        reBtn.SetActive(false);
+                    }
                     NextText();
                 }
             }
@@ -197,10 +201,7 @@ namespace MyDedlegate
                 {
                     StartCoroutine(PlayLine(textList[textCount]));
                     textCount++;
-                    if (timer.chatFinish)
-                    {
-                        reBtn.SetActive(false);
-                    }
+                    
                 }
             }
         }
@@ -221,12 +222,15 @@ namespace MyDedlegate
         {
             if(prevMode.Equals(TouchMgr.SkillMode.chat))
             {
+                imageCtrl.ChangeSprites(TouchMgr.SkillMode.switching);
                 touchMgr.ChangeMode(TouchMgr.SkillMode.switching);
                 touchMgr.canFire = true;
             }
             else
             {
+                imageCtrl.ChangeSprites(prevMode);
                 touchMgr.ChangeMode(prevMode);
+                touchMgr.canFire = true;
             }
             
             textCount = continueCnt;

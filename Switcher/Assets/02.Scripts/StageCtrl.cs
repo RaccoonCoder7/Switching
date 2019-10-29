@@ -93,9 +93,7 @@ public class StageCtrl : MonoBehaviour
             chat.gameObject.SetActive(true);
         }
         tf.ActiveTrueBtn();
-        Debug.Log("aaaaaaaa"+chat.textCount);
         chat.ResetText();
-        Debug.Log("aaaaaaaa" + chat.textCount);
 
         yield return new WaitForSeconds(2.0f);
         if (!ps)

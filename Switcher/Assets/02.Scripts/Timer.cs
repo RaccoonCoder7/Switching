@@ -87,7 +87,7 @@ public class Timer : MonoBehaviour
             }
 
             yield return new WaitForSeconds(1.0f);
-            if (clearCheck)
+            if (!clearCheck)
             {
                 leftTime--;
             }
@@ -105,8 +105,6 @@ public class Timer : MonoBehaviour
         retryBtn.SetActive(true);
         tf.ActiveTrueBtn();
         chatFinish = true;
-        
-        
     }
     public void ChatFinishReset()
     {

@@ -131,7 +131,6 @@ public class TouchFinger : MonoBehaviour
                     }
                     else
                     {
-                        Debug.Log(stageCheck);
                         ActiveFalseBtn();
                         fullBtn = true;
                     }
@@ -146,7 +145,6 @@ public class TouchFinger : MonoBehaviour
                 }
                 if (btn2.fillAmount >= 1)
                 {
-                    Debug.Log(chat.helpCheck + "    " + stageCheck);
                     if (!chat.helpCheck && !stageCheck)
                     {
                         btn2.fillAmount = 0;
