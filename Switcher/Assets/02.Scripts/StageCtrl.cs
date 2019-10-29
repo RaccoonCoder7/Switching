@@ -16,6 +16,7 @@ public class StageCtrl : MonoBehaviour
     private PlayerState ps;
     public TouchMgr touchMgr;
     public Chat chat;
+    public GameObject playerOVR;
     // private Rigidbody playerRb;
     // private PlayerState ps;
 
@@ -74,6 +75,9 @@ public class StageCtrl : MonoBehaviour
 
     public IEnumerator ResetStage(AudioClip clip)
     {
+        //playerOVR.transform.rotation = Quaternion.Euler(0, 0, 0);
+        OVRManager.display.RecenterPose();
+        OVRPlugin.GetReorientHMDOnControllerRecenter();
         gameMgr.ChangeScreanImage();
         yield return StartCoroutine(gameMgr.FadeIn());
         // 오브젝트위치
@@ -88,11 +92,10 @@ public class StageCtrl : MonoBehaviour
         {
             chat.gameObject.SetActive(true);
         }
-        Debug.Log("StageCtrl Active True");
         tf.ActiveTrueBtn();
-        Debug.Log("StageCtrl Active True2");
+        Debug.Log("aaaaaaaa"+chat.textCount);
         chat.ResetText();
-
+        Debug.Log("aaaaaaaa" + chat.textCount);
 
         yield return new WaitForSeconds(2.0f);
         if (!ps)
@@ -128,6 +131,10 @@ public class StageCtrl : MonoBehaviour
 
     private void StartStage()
     {
+        //playerOVR.transform.rotation = Quaternion.Euler(0, 0, 0);
+        OVRManager.display.RecenterPose();
+        OVRPlugin.GetReorientHMDOnControllerRecenter();
+
         if (!audio.isPlaying)
         {
             audio.Play();
@@ -136,10 +143,7 @@ public class StageCtrl : MonoBehaviour
         timer.ResetTime(stage.stageTime);
         playerTr.position = stage.playerTr.position;
         playerTr.rotation = stage.playerTr.rotation;
-
-        Debug.Log("StageCtrl Active True3");
         tf.ActiveFalseBtn();
-        Debug.Log("StageCtrl Active True4");
     }
 
 

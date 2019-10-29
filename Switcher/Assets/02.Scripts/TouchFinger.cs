@@ -126,10 +126,12 @@ public class TouchFinger : MonoBehaviour
                 {
                     if (!stageCheck)
                     {
+                        btn1.fillAmount = 0;
                         StartCoroutine(sc.ResetStage(null));
                     }
                     else
                     {
+                        Debug.Log(stageCheck);
                         ActiveFalseBtn();
                         fullBtn = true;
                     }

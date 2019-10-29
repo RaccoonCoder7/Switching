@@ -25,7 +25,7 @@ namespace MyDedlegate
         List<string> textList;
         string textFile;
         string helperTextList;
-        int textCount;
+        public int textCount;
         int continueCnt;
         public int paragraphCnt;
         State nowState;
@@ -127,6 +127,10 @@ namespace MyDedlegate
         // 텍스트를 처음부터 다시 보여주도록 함
         public void ResetText()
         {
+            if (timer.chatFinish)
+            {
+                reBtn.SetActive(true);
+            }
             continueCnt = 0;
             textCount = 0;
             paragraphCnt = 0;
@@ -138,6 +142,10 @@ namespace MyDedlegate
         // 텍스트를 리소스에서 로드하여 저장함
         public void TextSet(string str)
         {
+            if (timer.chatFinish)
+            {
+                reBtn.SetActive(true);
+            }
             continueCnt = 0;
             textCount = 0;
             paragraphCnt = 0;
@@ -164,10 +172,7 @@ namespace MyDedlegate
             {
                 audio.Play();
 
-                if (timer.chatFinish)
-                {
-                    reBtn.SetActive(false);
-                }
+                
 
                 //불러온 텍스트중 false가 있으면 아래 실행
                 if (textList[textCount].Equals("false"))
@@ -192,6 +197,10 @@ namespace MyDedlegate
                 {
                     StartCoroutine(PlayLine(textList[textCount]));
                     textCount++;
+                    if (timer.chatFinish)
+                    {
+                        reBtn.SetActive(false);
+                    }
                 }
             }
         }

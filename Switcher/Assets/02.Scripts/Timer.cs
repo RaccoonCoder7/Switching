@@ -27,6 +27,8 @@ public class Timer : MonoBehaviour
 
     public GameObject warningText;
 
+    bool clearCheck;
+
     void Start()
     {
         gameMgr = FindObjectOfType<GameMgr>();
@@ -37,12 +39,14 @@ public class Timer : MonoBehaviour
     // 매개변수로 들어온 시간으로 패널의 시간을 재설정함
     public void ResetTime(int time)
     {
+        
         StopCoroutine("SetTime");
         leftTime = time;
     }
 
     public void StartTime()
     {
+        clearCheck = false;
         ChatFinish();
         if (text.text.Equals("00:00"))
         {
@@ -83,7 +87,11 @@ public class Timer : MonoBehaviour
             }
 
             yield return new WaitForSeconds(1.0f);
-            leftTime--;
+            if (clearCheck)
+            {
+                leftTime--;
+            }
+            
         }
         if (!ps)
         {
@@ -102,6 +110,7 @@ public class Timer : MonoBehaviour
     }
     public void ChatFinishReset()
     {
+        clearCheck = true;
         retryBtn.SetActive(false);
         chatFinish = false;
     }
