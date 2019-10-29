@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MT_Basic_Turret_C
+  m_Name: MT_Basic_Turret_Red_Tak
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION _FLICKERING_ON _METALLICGLOSSMAP _NORMALMAP
   m_LightmapFlags: 2
@@ -68,7 +68,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: 23c312060e40a684d92b5019231c50b8, type: 3}
+        m_Texture: {fileID: 2800000, guid: f581c5f4cc8100448859b58a16ac056b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Emissive:
@@ -80,7 +80,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: ef48e06915b69994f913286d35186a84, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7fbf0e7b466fcb4449db2389af310a1f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetalSmoothness:
@@ -196,7 +196,7 @@ Material:
     - Vector1_E111C4D0: 0
     - _AlphaClip: 0
     - _Blend: 0
-    - _Brightness: 1
+    - _Brightness: 2
     - _BumpScale: 1
     - _Continuous: 0
     - _Continuousflickering: 0
@@ -212,8 +212,8 @@ Material:
     - _Float1: 0.9034211
     - _Fresnel: 0
     - _Fresnelfall: 1
-    - _Fresnelfalloff: 1
-    - _GlossMapScale: 1
+    - _Fresnelfalloff: 1.61
+    - _GlossMapScale: 0.553
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
@@ -240,12 +240,12 @@ Material:
     - Color_CD847D8E: {r: 0, g: 1.6386833, b: 2.6082377, a: 0}
     - Color_D5189F39: {r: 0.6901961, g: 0.49901488, b: 0.33333334, a: 1}
     - _3: {r: 0.6981132, g: 0.5566645, b: 0.4511392, a: 0}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.745283, g: 0.2917853, b: 0.2917853, a: 1}
     - _Color0: {r: 7.7653, g: 0.7419075, b: 0, a: 0}
-    - _EmissionColor: {r: 9.537255, g: 0.3137255, b: 0, a: 1}
+    - _EmissionColor: {r: 4.8900895, g: 0.11533229, b: 0.30965334, a: 1}
     - _Emissivecolor: {r: 2, g: 0.38431373, b: 0, a: 0}
     - _Fresnelcolor: {r: 0.47695047, g: 2.1185474, b: 0, a: 0}
-    - _Paintedcolor: {r: 0.2264151, g: 0, b: 0.107784666, a: 1}
+    - _Paintedcolor: {r: 0.20207363, g: 0.18325028, b: 0.5471698, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Tint: {r: 0.6981132, g: 0.5566645, b: 0.4511392, a: 0}
     - _Tintcoloroverlaymode: {r: 0.6981132, g: 0.5566645, b: 0.4511392, a: 0}

@@ -20,6 +20,9 @@ public class ManastoneFire : MonoBehaviour
     public GameObject cannonMSFix;
     private GameObject cannonMS;
     private AudioSource audio;
+
+    // 발사 이펙트
+    public ParticleSystem explosionParticle;
     
     void Start()
     {
@@ -42,6 +45,7 @@ public class ManastoneFire : MonoBehaviour
         if (!cannonMS)
         {
             audio.Play();
+            explosionParticle.Play();
             cannonMS = Instantiate(cannonMSFix, gameObject.transform);
             rig = cannonMS.GetComponent<Rigidbody>();
             rig.AddRelativeForce(Vector3.up * speed);
