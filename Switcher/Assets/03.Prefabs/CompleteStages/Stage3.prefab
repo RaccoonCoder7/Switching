@@ -8898,37 +8898,37 @@ PrefabInstance:
     - target: {fileID: 7938580459792976292, guid: 4ffb2a508c28fdb498bbbc2e70b06590,
         type: 3}
       propertyPath: playOnAwake
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7950089202735726424, guid: 4ffb2a508c28fdb498bbbc2e70b06590,
         type: 3}
       propertyPath: playOnAwake
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7938616363846825276, guid: 4ffb2a508c28fdb498bbbc2e70b06590,
         type: 3}
       propertyPath: playOnAwake
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7950063284866526998, guid: 4ffb2a508c28fdb498bbbc2e70b06590,
         type: 3}
       propertyPath: playOnAwake
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7938640209928003308, guid: 4ffb2a508c28fdb498bbbc2e70b06590,
         type: 3}
       propertyPath: playOnAwake
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7950776886984891562, guid: 4ffb2a508c28fdb498bbbc2e70b06590,
         type: 3}
       propertyPath: playOnAwake
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7949995886357201932, guid: 4ffb2a508c28fdb498bbbc2e70b06590,
         type: 3}
       propertyPath: playOnAwake
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ffb2a508c28fdb498bbbc2e70b06590, type: 3}
