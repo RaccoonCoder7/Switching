@@ -71,6 +71,8 @@ public class TouchMgr : MonoBehaviour
     private Rigidbody bulletRbOrig;
     private TranslateBullet tbOrig;
 
+    private int layerMask;
+
     void Start()
     {
         manaStoneLayer = LayerMask.NameToLayer("MANASTONE");
@@ -119,6 +121,7 @@ public class TouchMgr : MonoBehaviour
             ring[i].SetActive(false);
         }
         ChangeMode(TouchMgr.SkillMode.chat);
+        layerMask = (-1) - (1 << LayerMask.NameToLayer("SKILLBUTTON"));  // SKILLBUTTON 레이어만 제외하고 충돌 체크함
     }
 
     void Update()
@@ -207,7 +210,7 @@ public class TouchMgr : MonoBehaviour
             {
                 audio.Play();
             }
-            if (Physics.Raycast(ray, out hit, laserRange - 1.5f))
+            if (Physics.Raycast(ray, out hit, laserRange - 1.5f, layerMask))
             {
                 if (!pointer.activeSelf)
                 {
@@ -272,7 +275,7 @@ public class TouchMgr : MonoBehaviour
                 audio.Play();
             }
             ray = new Ray(laser.transform.position, laser.transform.forward);
-            if (Physics.Raycast(ray, out hit, laserRange))
+            if (Physics.Raycast(ray, out hit, laserRange, layerMask))
             {
                 if (!pointer.activeSelf)
                 {
@@ -374,7 +377,7 @@ public class TouchMgr : MonoBehaviour
         if (OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger))
         {
             ray = new Ray(laser.transform.position, laser.transform.forward);
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
             {
                 if (!pointer.activeSelf)
                 {
