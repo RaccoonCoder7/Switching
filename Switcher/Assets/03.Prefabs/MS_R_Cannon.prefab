@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 868476450895333282}
   - component: {fileID: 3286415947970028382}
   - component: {fileID: 2127565077}
-  - component: {fileID: 2561005718034346717}
+  - component: {fileID: -7378480506839961116}
   m_Layer: 8
   m_Name: MS_R_Cannon
   m_TagString: RED
@@ -63,8 +63,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f351c807027867c478550cc3cb00814a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!65 &2561005718034346717
-BoxCollider:
+--- !u!136 &-7378480506839961116
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -73,9 +73,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.7414099, y: 0.7629495, z: 1.5407332}
-  m_Center: {x: 0.0011517452, y: 0.0021262583, z: 0.03394824}
+  m_Radius: 0.41800785
+  m_Height: 1.5428271
+  m_Direction: 2
+  m_Center: {x: -0.0011275365, y: 0.016905759, z: 0.026638234}
 --- !u!1001 &7161257009347449594
 PrefabInstance:
   m_ObjectHideFlags: 0

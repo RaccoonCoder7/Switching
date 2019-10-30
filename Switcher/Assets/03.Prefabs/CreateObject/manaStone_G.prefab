@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1660175795506527954}
   - component: {fileID: 1660175795506527956}
   - component: {fileID: 6547103361948199164}
+  - component: {fileID: -8419494101300215409}
   m_Layer: 8
   m_Name: manaStone_G
   m_TagString: GREEN
@@ -64,6 +65,18 @@ CapsuleCollider:
   m_Height: 0.03046692
   m_Direction: 2
   m_Center: {x: 0.00026886284, y: 0.00021707657, z: 0.0009478114}
+--- !u!114 &-8419494101300215409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660175795506527959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6d776b05dd27524a85e96fbd95cfe39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2004259347881724696
 GameObject:
   m_ObjectHideFlags: 0

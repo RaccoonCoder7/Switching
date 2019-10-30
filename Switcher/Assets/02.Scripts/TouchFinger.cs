@@ -59,11 +59,14 @@ public class TouchFinger : MonoBehaviour
         }
         else
         {
-            sphere.enabled = false;
-            if (btn1.fillAmount > 0 || btn2.fillAmount > 0)
+            if (sphere.enabled)
             {
-                btn1.fillAmount = 0;
-                btn2.fillAmount = 0;
+                sphere.enabled = false;
+                if (btn1.fillAmount > 0 || btn2.fillAmount > 0)
+                {
+                    btn1.fillAmount = 0;
+                    btn2.fillAmount = 0;
+                }
             }
         }
     }

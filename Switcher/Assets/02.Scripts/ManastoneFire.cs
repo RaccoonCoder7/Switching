@@ -5,7 +5,7 @@ using UnityEngine;
 public class ManastoneFire : MonoBehaviour
 {
     private Rigidbody rig;
-    
+
     // 연결되있는 마법진
     public MagicCircle mc;
 
@@ -23,7 +23,7 @@ public class ManastoneFire : MonoBehaviour
 
     // 발사 이펙트
     public ParticleSystem explosionParticle;
-    
+
     void Start()
     {
         audio = GetComponent<AudioSource>();
@@ -59,6 +59,7 @@ public class ManastoneFire : MonoBehaviour
         yield return new WaitForSeconds(liveTime);
         if (cannonMS)
         {
+            cannonMS.GetComponent<TimerManastone>().BeforeDestroy();
             Destroy(cannonMS);
             cannonMS = null;
         }

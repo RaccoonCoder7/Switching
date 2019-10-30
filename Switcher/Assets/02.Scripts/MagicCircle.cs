@@ -5,11 +5,10 @@ using UnityEngine;
 public class MagicCircle : MonoBehaviour
 {
     // 대포에서 생성할 마나스톤
-    [HideInInspector]
     public GameObject manastone;
 
     // 마나스톤이 마법진에 몇개 들어왔는지 카운트
-    private int inCount = 0;
+    public int inCount = 0;
 
     private AudioSource audio;
     public AudioClip onClip;
@@ -39,10 +38,10 @@ public class MagicCircle : MonoBehaviour
             {
                 // 닿은 마나스톤을 저장
                 manastone = collision.gameObject;
-                //audio.clip = onClip;
-                //audio.Play();
+                audio.clip = onClip;
+                audio.Play();
                 particle.Play();
-                for (int i =0; i < changeNaviStraight.Length; i++)
+                for (int i = 0; i < changeNaviStraight.Length; i++)
                 {
                     changeNaviStraight[i].sprite = greenNaviStraight;
                 }
@@ -56,18 +55,10 @@ public class MagicCircle : MonoBehaviour
 
     private void Update()
     {
-        if (!manastone)
+        if (inCount == 0)
         {
-            inCount = 0;
-            particle.Stop();
-            for (int i = 0; i < changeNaviStraight.Length; i++)
-            {
-                changeNaviStraight[i].sprite = redNaviStraight;
-            }
-            for (int i = 0; i < changeNaviConer.Length; i++)
-            {
-                changeNaviConer[i].sprite = redNaviConer;
-            }
+            manastone = null;
+            EffectOff();
         }
     }
 
@@ -81,18 +72,23 @@ public class MagicCircle : MonoBehaviour
             if (inCount == 0)
             {
                 manastone = null;
-                audio.clip = offClip;
-                audio.Play();
-                particle.Stop();
-                for (int i = 0; i < changeNaviStraight.Length; i++)
-                {
-                    changeNaviStraight[i].sprite = redNaviStraight;
-                }
-                for (int i = 0; i < changeNaviConer.Length; i++)
-                {
-                    changeNaviConer[i].sprite = redNaviConer;
-                }
+                EffectOff();
             }
+        }
+    }
+
+    private void EffectOff()
+    {
+        audio.clip = offClip;
+        audio.Play();
+        particle.Stop();
+        for (int i = 0; i < changeNaviStraight.Length; i++)
+        {
+            changeNaviStraight[i].sprite = redNaviStraight;
+        }
+        for (int i = 0; i < changeNaviConer.Length; i++)
+        {
+            changeNaviConer[i].sprite = redNaviConer;
         }
     }
 }

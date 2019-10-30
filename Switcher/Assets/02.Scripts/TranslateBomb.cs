@@ -33,7 +33,10 @@ public class TranslateBomb : MonoBehaviour
         // GameObject area = Instantiate(bombArea, transform.position, transform.rotation);
         if (isTestBomb)
         {
-            touchMgr.testBombs.Remove(gameObject);
+            if (touchMgr)
+            {
+                touchMgr.testBombs.Remove(gameObject);
+            }
         }
         else
         {

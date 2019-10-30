@@ -131,11 +131,11 @@ public class TestMode : MonoBehaviour
             }
 
             // TODO: 테스트용 코드 지우기
-            // if (Input.GetMouseButtonUp(0))
-            // {
-            //     StartCoroutine(StartGame(1));
-            // PlayerPrefs.SetInt("isCleared", 1);
-            // }
+            if (Input.GetMouseButtonUp(0))
+            {
+                StartCoroutine(StartGame(1));
+                // PlayerPrefs.SetInt("isCleared", 1);
+            }
         }
     }
 

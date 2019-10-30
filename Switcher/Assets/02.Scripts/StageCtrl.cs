@@ -110,6 +110,7 @@ public class StageCtrl : MonoBehaviour
 
     public IEnumerator ClearStage()
     {
+        touchMgr.canFire = false;
         gameMgr.SaveClearData();
         gameMgr.ChangeScreanImage();
         yield return StartCoroutine(gameMgr.FadeIn());
@@ -147,7 +148,6 @@ public class StageCtrl : MonoBehaviour
         {
             Destroy(stage.map);
         }
-        Debug.Log(stage.stageNum);
         stage.map = Instantiate(Maps[stage.stageNum - 1]);
         sd = stage.map.GetComponent<StageData>();
         stage.playerTr = sd.playerTr;

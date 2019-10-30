@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9134895695284281440}
   - component: {fileID: 6868948631151183004}
   - component: {fileID: 8271099889510954711}
-  - component: {fileID: 1664394218672148111}
+  - component: {fileID: 5511737594582897187}
   m_Layer: 21
   m_Name: MS_B_Cannon
   m_TagString: BLUE
@@ -63,19 +63,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f351c807027867c478550cc3cb00814a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!65 &1664394218672148111
-BoxCollider:
+--- !u!136 &5511737594582897187
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3729640249387987848}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a368ef70a138bc349950f4a339b637e8, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.7414099, y: 0.7629495, z: 1.5407332}
-  m_Center: {x: 0.0011517452, y: 0.0021262583, z: 0.03394824}
+  m_Radius: 0.41800785
+  m_Height: 1.5428271
+  m_Direction: 2
+  m_Center: {x: -0.0011275365, y: 0.016905759, z: 0.026638234}
 --- !u!1001 &306244852699235659
 PrefabInstance:
   m_ObjectHideFlags: 0

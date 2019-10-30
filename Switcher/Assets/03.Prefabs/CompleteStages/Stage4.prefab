@@ -68725,7 +68725,7 @@ MonoBehaviour:
   mc: {fileID: 7761576323155362650}
   liveTime: 9
   DeathTime: 10
-  speed: 802
+  speed: 724
   cannonMSFix: {fileID: 3729640249387987848, guid: ab761875bc29386428dd0dc6eb817769,
     type: 3}
   explosionParticle: {fileID: 2513889552926462465}
