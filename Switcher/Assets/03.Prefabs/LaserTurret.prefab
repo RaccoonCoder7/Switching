@@ -48,9 +48,9 @@ MonoBehaviour:
   beam: {fileID: 191804, guid: a0110e851f5bca741b552c4d37384f5f, type: 3}
   shootTime: 5
   stopTime: 1
+  timer: 0
   boss: {fileID: 0}
   slowEffect: {fileID: 0}
-  audioMixer: {fileID: 24100000, guid: 1dd706bb85d8aef4e83a6229dbd62c36, type: 2}
 --- !u!65 &1788232711
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -62,8 +62,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.83451295, y: 0.98005503, z: 4.285557}
-  m_Center: {x: -0.013683005, y: 1.2282184, z: 1.119005}
+  m_Size: {x: 0.83451295, y: 0.9800549, z: 4.6388626}
+  m_Center: {x: -0.013682997, y: 1.2282192, z: 1.2956609}
 --- !u!1001 &4334553004505921660
 PrefabInstance:
   m_ObjectHideFlags: 0
