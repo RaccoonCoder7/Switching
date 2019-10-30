@@ -15,7 +15,7 @@ public class LaserFocusing : MonoBehaviour
     public bool isLaserCtrl = false;
     public Material whiteVer;
     public Material blackVer;
-    private Material myMaterial;
+    private Material[] myMaterial = new Material[1];
 
     private void Start()
     {
@@ -25,7 +25,7 @@ public class LaserFocusing : MonoBehaviour
         }
 
         playerPos = new Vector3(playerTr.position.x, playerTr.position.y, playerTr.position.z);
-        myMaterial = GetComponent<Material>();
+        myMaterial = gameObject.GetComponent<Renderer>().materials;
     }
 
     private void Update()
@@ -41,7 +41,9 @@ public class LaserFocusing : MonoBehaviour
     {
         canCtrl.Stop();
         ev.touchMgr.laserCtrl.SetActive(false);
-        myMaterial = blackVer;
+        myMaterial[0] = blackVer;
+        gameObject.GetComponent<Renderer>().materials = myMaterial;
+
         while (!checkManstone)
         {
             // 원래 위치로 방향 전환
@@ -61,7 +63,9 @@ public class LaserFocusing : MonoBehaviour
     {
         canCtrl.Play();
         ev.touchMgr.laserCtrl.SetActive(true);
-        myMaterial = whiteVer;
+        myMaterial[0] = whiteVer;
+        gameObject.GetComponent<Renderer>().materials = myMaterial;
+
         while (checkManstone)
         {
             if (OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger) &&
