@@ -88,19 +88,19 @@ public class BossState : MonoBehaviour
                 anim.SetBool("realDeath", true);
                 render.material.color = new Color(1, 1, 1, timeA);
             }
-        }
-
-        if (render.material.color.a <= 0)
-        {
-            slowFire = GameObject.Find("PolygonFireProjectile").GetComponent<PolygonFireProjectile>();
-            if (slowFire.projectile)
+            
+            if(render.material.color.a <= 0)
             {
-                Destroy(slowFire.projectile);
+                slowFire = GameObject.Find("PolygonFireProjectile").GetComponent<PolygonFireProjectile>();
+                if (slowFire.projectile)
+                {
+                    Destroy(slowFire.projectile);
+                }
+                ev.CallChat();
+                chat.reBtn.SetActive(false);
+                ev.touchMgr.ChangeMode(TouchMgr.SkillMode.chat);
+                Destroy(gameObject);
             }
-            ev.CallChat();
-            chat.reBtn.SetActive(false);
-            ev.touchMgr.ChangeMode(TouchMgr.SkillMode.chat);
-            Destroy(gameObject);
         }
     }
 
