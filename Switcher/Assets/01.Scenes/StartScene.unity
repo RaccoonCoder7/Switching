@@ -4188,12 +4188,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8760492088504082601}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &2078646581 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2161175058916637698, guid: a5e5289612409ec4aa0cc5e0f7ea81b0,
-    type: 3}
-  m_PrefabInstance: {fileID: 339286258322492863}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2090910425 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 439240, guid: 548a40efc092c6f408cc4d1691b171cc,
@@ -4449,11 +4443,6 @@ PrefabInstance:
       propertyPath: imgCtrl
       value: 
       objectReference: {fileID: 848703512}
-    - target: {fileID: 6737130693935950113, guid: 3eaad4eeaf6e76d4291a13f734a9167c,
-        type: 3}
-      propertyPath: centerEye
-      value: 
-      objectReference: {fileID: 2078646581}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3eaad4eeaf6e76d4291a13f734a9167c, type: 3}
 --- !u!1001 &8760492087724629139

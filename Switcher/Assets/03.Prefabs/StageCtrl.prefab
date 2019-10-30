@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   touchMgr: {fileID: 0}
   chat: {fileID: 0}
+  playerOVR: {fileID: 0}
   imgCtrl: {fileID: 0}
   Maps:
   - {fileID: 5157298692902050670, guid: 13888266d522d13478a24065b9d53ffe, type: 3}
@@ -55,9 +56,9 @@ MonoBehaviour:
   - {fileID: 33500084923903734, guid: a7042360ff2f336418bbacdd89fc290f, type: 3}
   - {fileID: 7999185594815667513, guid: 3125c1e137532cb4a890fa21ab2d63d8, type: 3}
   BGMClips:
-  - {fileID: 8300000, guid: e038bba54f71ef542b0a60b0497460b5, type: 3}
-  - {fileID: 8300000, guid: 3da25ec24b45a5248b2811fe5b7e4258, type: 3}
-  - {fileID: 8300000, guid: cc3d7292256221545a728be7c24662a9, type: 3}
+  - {fileID: 8300000, guid: 782b129aadb995b43a5c22e089d8840f, type: 3}
+  - {fileID: 8300000, guid: 1a38ae047e7fc664db301a3a5ef74671, type: 3}
+  - {fileID: 8300000, guid: e729290d781e15a479e2ccdcda87ac92, type: 3}
 --- !u!82 &6737130693935950115
 AudioSource:
   m_ObjectHideFlags: 0
