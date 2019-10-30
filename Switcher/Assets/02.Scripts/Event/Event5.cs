@@ -7,10 +7,6 @@ public class Event5 : EventMgr
 {
     bool modeCheck;
 
-    private void Awake()
-    {
-        QualitySettings.SetQualityLevel(4, true);
-    }
     // Start is called before the first frame update
     void Start()
     {
