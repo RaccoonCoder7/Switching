@@ -23,6 +23,7 @@ public class Event6 : EventMgr
         bossChat.paragraphCnt = 0;
         bossChat.chat = chat;
         bossChatCanvas.SetActive(false);
+        chat.bossStart = false;
         EventList[0] = new Deleg(EV1);
         EventList[1] = new Deleg(EV2);
         EventList[2] = new Deleg(EV3);

@@ -44,6 +44,8 @@ namespace MyDedlegate
 
         public Timer timer;
 
+        public bool bossStart;
+
 
 
         enum State
@@ -80,6 +82,14 @@ namespace MyDedlegate
                 {
                     FadeHelper();
                     timer.StartTime();
+                    if (sc.stage.stageNum.Equals(6) && !bossStart)
+                    {
+                        bossStart = true;
+                        paragraphCnt = 4;
+                        continueCnt = 7;
+                        textCount = 14;
+                        chatEventList[paragraphCnt]();
+                    }
                 }
                 else
                 {
