@@ -82,6 +82,8 @@ namespace MyDedlegate
                 {
                     FadeHelper();
                     timer.StartTime();
+                    textCount = GetLastParagraph();
+                    continueCnt = textCount;
                     if (sc.stage.stageNum.Equals(6) && !bossStart)
                     {
                         bossStart = true;
@@ -104,6 +106,20 @@ namespace MyDedlegate
 
                 }
             }
+        }
+
+        private int GetLastParagraph()
+        {
+            List<int> falseArr = new List<int>();
+            for (int i = 0; i < textList.Count; i++)
+            {
+                if (textList[i].Equals("false"))
+                {
+                    falseArr.Add(i);
+                }
+            }
+            if(falseArr.Count < 2) return 0;
+            return falseArr[falseArr.Count-2] + 1;
         }
 
         // 첫 번째 파라미터: 컨트롤러. (0: 왼손, 1: 오른손)
