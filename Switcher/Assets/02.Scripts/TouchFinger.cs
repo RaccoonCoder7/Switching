@@ -11,7 +11,7 @@ public class TouchFinger : MonoBehaviour
     private StageCtrl sc;
     private Collider sphere;
     private AudioSource audio;
-    private Material mat;
+    public Material mat;
 
     public MeshRenderer gun;
     public Material white;

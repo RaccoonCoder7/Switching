@@ -92,6 +92,7 @@ public class StageCtrl : MonoBehaviour
         }
         tf.ActiveTrueBtn();
         chat.ResetText();
+        tf.gun.material = tf.green;
 
         yield return new WaitForSeconds(2.0f);
         if (!ps)
