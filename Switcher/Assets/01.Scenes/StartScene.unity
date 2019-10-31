@@ -4443,6 +4443,12 @@ PrefabInstance:
       propertyPath: imgCtrl
       value: 
       objectReference: {fileID: 848703512}
+    - target: {fileID: 6737130693935950113, guid: 3eaad4eeaf6e76d4291a13f734a9167c,
+        type: 3}
+      propertyPath: Maps.Array.data[0]
+      value: 
+      objectReference: {fileID: 5157298692902050670, guid: 13888266d522d13478a24065b9d53ffe,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3eaad4eeaf6e76d4291a13f734a9167c, type: 3}
 --- !u!1001 &8760492087724629139
