@@ -23,6 +23,7 @@ public class Event2 : EventMgr
         EventList[2] = new Deleg(EV3);
         EventList[3] = new Deleg(EV4);
         EventList[4] = new Deleg(EV5);
+        touchMgr.canFire = false;
     }
 
     private void Update()

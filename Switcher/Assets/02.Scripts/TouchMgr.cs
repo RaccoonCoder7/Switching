@@ -121,7 +121,11 @@ public class TouchMgr : MonoBehaviour
             ring[i].SetActive(false);
         }
         ChangeMode(TouchMgr.SkillMode.chat);
-        layerMask = (-1) - (1 << LayerMask.NameToLayer("SKILLBUTTON"));  // SKILLBUTTON 레이어만 제외하고 충돌 체크함
+
+        // SKILLBUTTON, PLAYER 레이어만 제외하고 충돌 체크함
+        layerMask = ((1 << LayerMask.NameToLayer("PLAYER")) | 
+            (1 << LayerMask.NameToLayer("SKILLBUTTON")));
+        layerMask = ~layerMask;
     }
 
     void Update()

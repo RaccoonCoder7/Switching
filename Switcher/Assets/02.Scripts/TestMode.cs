@@ -30,6 +30,8 @@ public class TestMode : MonoBehaviour
     public AudioClip UISound;
     iTweenMgr itMgr;
 
+    private int layerMask;
+
     void Awake()
     {
         touchMgr = GetComponent<TouchMgr>();
@@ -54,9 +56,17 @@ public class TestMode : MonoBehaviour
         testMode = this;
         startBtnLayer = LayerMask.NameToLayer("START");
         continueBtnLayer = LayerMask.NameToLayer("CONTINUE");
-        retryBtnLayer = 1 << LayerMask.NameToLayer("RETRY");
+        retryBtnLayer = (1 << LayerMask.NameToLayer("RETRY")) & 
+            (((-1) - (1 << LayerMask.NameToLayer("PLAYER"))) | 
+            ((-1) - (1 << LayerMask.NameToLayer("SKILLBUTTON"))));
         UIButtonLayer = LayerMask.NameToLayer("UIBUTTON");
 
+
+
+        // SKILLBUTTON, PLAYER 레이어만 제외하고 충돌 체크함
+        layerMask = ((1 << LayerMask.NameToLayer("PLAYER")) |
+            (1 << LayerMask.NameToLayer("SKILLBUTTON")));
+        layerMask = ~layerMask;
 
         DontDestroyOnLoad(gameObject);
         laser.SetColors(Color.green, Color.green);
@@ -79,7 +89,7 @@ public class TestMode : MonoBehaviour
         }
         else
         {
-            if (Physics.Raycast(ray, out hit, 12.0f))
+            if (Physics.Raycast(ray, out hit, 12.0f, layerMask))
             {
                 float dist = hit.distance;
                 laser.SetPosition(1, new Vector3(0, 0, dist));
@@ -90,7 +100,7 @@ public class TestMode : MonoBehaviour
             }
             if (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger))
             {
-                if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+                if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
                 {
                     if (hit.collider.tag.Equals("UIBUTTON"))
                     {
@@ -106,7 +116,7 @@ public class TestMode : MonoBehaviour
                 {
                     img.color = originalColor;
                 }
-                if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+                if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
                 {
                     if (hit.collider.tag.Equals("UIBUTTON"))
                     {
