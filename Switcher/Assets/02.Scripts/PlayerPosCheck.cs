@@ -41,7 +41,7 @@ public class PlayerPosCheck : MonoBehaviour
     void Update()
     {
         dis = Vector3.Distance(playerPos.position, controllerPos.position);   
-        if (dis > 1.5f && timer.chatFinish)
+        if (dis > 1.5f)
         {
             if (!check)
             {
@@ -52,7 +52,7 @@ public class PlayerPosCheck : MonoBehaviour
                 StartCoroutine("WarningFadeIn");
             }
         }
-        else if(dis< 1.5f && timer.chatFinish)
+        else if(dis< 1.5f)
         {
             if (check)
             {
