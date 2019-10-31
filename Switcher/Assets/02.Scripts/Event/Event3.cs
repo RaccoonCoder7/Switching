@@ -19,6 +19,7 @@ public class Event3 : EventMgr
     {
         if (modeCheck && touchMgr.mode.Equals(TouchMgr.SkillMode.pull))
         {
+            chat.prevMode = touchMgr.mode;
             touchMgr.ChangeMode(TouchMgr.SkillMode.chat);
             OffPanelEffect();
             CallChat();

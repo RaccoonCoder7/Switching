@@ -35,6 +35,7 @@ public class Event2 : EventMgr
         }
         if (modeCheck && touchMgr.mode.Equals(TouchMgr.SkillMode.switchBomb))
         {
+            chat.prevMode = touchMgr.mode;
             touchMgr.ChangeMode(TouchMgr.SkillMode.chat);
             CallChat();
             modeCheck = false;
@@ -47,6 +48,7 @@ public class Event2 : EventMgr
                 tf.stageCheck = false;
                 tf.fullBtn = false;
                 smallRing.SetActive(false);
+                chat.prevMode = touchMgr.mode;
                 touchMgr.ChangeMode(TouchMgr.SkillMode.chat);
                 tf.ActiveFalseBtn();
                 CallChat();
