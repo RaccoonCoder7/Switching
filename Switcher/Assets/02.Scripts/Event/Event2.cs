@@ -96,7 +96,7 @@ public class Event2 : EventMgr
     }
     private void EV5()
     {
-        touchMgr.ChangeMode(TouchMgr.SkillMode.switchBomb);
+        touchMgr.ChangeMode(chat.prevMode);
         timer.StartTime();
         touchMgr.canFire = true;
     }

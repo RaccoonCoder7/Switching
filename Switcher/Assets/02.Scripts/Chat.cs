@@ -32,7 +32,7 @@ namespace MyDedlegate
         State nowState;
         private StageCtrl sc;
         public TouchMgr touchMgr;
-        private TouchMgr.SkillMode prevMode;
+        public TouchMgr.SkillMode prevMode;
         public Text text;
         public bool helpCheck = false;
         public ImageCtrl imageCtrl;

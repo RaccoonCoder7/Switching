@@ -90,7 +90,7 @@ public class StageCtrl : MonoBehaviour
         {
             chat.gameObject.SetActive(true);
         }
-        tf.ActiveTrueBtn();
+        tf.ActiveFalseBtn();
         chat.ResetText();
         tf.gun.material = tf.green;
 

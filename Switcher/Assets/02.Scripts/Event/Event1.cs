@@ -74,7 +74,7 @@ public class Event1 : EventMgr // EventMgr을 상속받을것.
 
     private void EV6()
     {
-        touchMgr.ChangeMode(TouchMgr.SkillMode.switching);
+        touchMgr.ChangeMode(chat.prevMode);
         arrow.SetActive(false);
 
         // 타이머시작

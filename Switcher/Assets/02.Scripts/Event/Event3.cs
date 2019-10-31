@@ -39,7 +39,7 @@ public class Event3 : EventMgr
     }
     private void EV3()
     {
-        touchMgr.ChangeMode(TouchMgr.SkillMode.pull);
+        touchMgr.ChangeMode(chat.prevMode);
         timer.StartTime();
         touchMgr.canFire = true;
     }
