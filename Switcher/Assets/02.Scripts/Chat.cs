@@ -101,7 +101,7 @@ namespace MyDedlegate
                     {
                         NextText();
                     }
-                    
+
                 }
             }
         }
@@ -155,6 +155,7 @@ namespace MyDedlegate
             continueCnt = 0;
             textCount = 0;
             paragraphCnt = 0;
+            timer.endText = false;
             prevMode = TouchMgr.SkillMode.switching;
             imageCtrl.ChangeSprites(TouchMgr.SkillMode.switching);
             touchMgr.ChangeMode(TouchMgr.SkillMode.chat);
@@ -171,6 +172,7 @@ namespace MyDedlegate
             continueCnt = 0;
             textCount = 0;
             paragraphCnt = 0;
+            timer.endText = false;
             imageCtrl.ChangeSprites(TouchMgr.SkillMode.switching);
             prevMode = TouchMgr.SkillMode.switching;
             //touchMgr.ChangeMode(TouchMgr.SkillMode.chat);
@@ -195,7 +197,7 @@ namespace MyDedlegate
             {
                 audio.Play();
 
-                
+
 
                 //불러온 텍스트중 false가 있으면 아래 실행
                 if (textList[textCount].Equals("false"))
@@ -206,10 +208,19 @@ namespace MyDedlegate
                     }
                     text.text = "";
                     textCount++;
-                    chatEventList[paragraphCnt]();
-                    gameObject.SetActive(false);
+                    if (!timer.chatFinish || !timer.endText)
+                    {
+                        chatEventList[paragraphCnt]();
+                    }
+                    else
+                    {
+                        imageCtrl.ChangeSprites(prevMode);
+                        touchMgr.ChangeMode(prevMode);
+                        touchMgr.canFire = true;
+                    }
                     helpCheck = false;
-                    
+                    gameObject.SetActive(false);
+
                 }
                 //불러온 텍스트중 clear가 있으면 아래 실행
                 else if (textList[textCount].Equals("clear"))
@@ -220,7 +231,7 @@ namespace MyDedlegate
                 {
                     StartCoroutine(PlayLine(textList[textCount]));
                     textCount++;
-                    
+
                 }
             }
         }
@@ -239,7 +250,7 @@ namespace MyDedlegate
         // 조력자를 없앰
         public void FadeHelper()
         {
-            if(prevMode.Equals(TouchMgr.SkillMode.chat))
+            if (prevMode.Equals(TouchMgr.SkillMode.chat))
             {
                 imageCtrl.ChangeSprites(TouchMgr.SkillMode.switching);
                 touchMgr.ChangeMode(TouchMgr.SkillMode.switching);
@@ -251,10 +262,10 @@ namespace MyDedlegate
                 touchMgr.ChangeMode(prevMode);
                 touchMgr.canFire = true;
             }
-            
+
             textCount = continueCnt;
-            gameObject.SetActive(false);
             helpCheck = false;
+            gameObject.SetActive(false);
         }
 
         //다음 대화를 진행할 때 부르는 메소드

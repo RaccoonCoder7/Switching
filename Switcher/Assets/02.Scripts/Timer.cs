@@ -18,6 +18,7 @@ public class Timer : MonoBehaviour
     public GameObject stick;
 
     public bool chatFinish;
+    public bool endText;
 
     public GameObject retryBtn;
 
@@ -105,6 +106,7 @@ public class Timer : MonoBehaviour
         retryBtn.SetActive(true);
         tf.ActiveTrueBtn();
         chatFinish = true;
+        endText = true;
     }
     public void ChatFinishReset()
     {
