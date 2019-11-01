@@ -88,11 +88,9 @@ public class PlayerPosCheck : MonoBehaviour
     {
         dir = (controllerPos.position - playerPos.position);
         ray = new Ray(playerPos.localPosition, dir);
-        Debug.Log("STARTINVOKE");
         if(!Physics.Raycast(ray, out hit, dis, 1 << LayerMask.NameToLayer("WALL")))
         {
             CancelInvoke("OnRaycast");
-            Debug.Log("CANCELINVOKE");
             touchMgr.canFire = true;
         }
     }

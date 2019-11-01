@@ -302,7 +302,6 @@ namespace MyDedlegate
                 if (i != 0 && setText.Substring(i - 1, 1) == "<")
                 {
                     i = GetEndOfTag(setText, i);
-                    if (i == 0) Debug.LogError("getEndOfTag Error");
                 }
                 text.text = setText.Substring(0, i);
 
