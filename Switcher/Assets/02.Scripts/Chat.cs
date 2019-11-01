@@ -111,14 +111,14 @@ namespace MyDedlegate
         private int GetLastParagraph()
         {
             List<int> falseArr = new List<int>();
-            for (int i = 0; i < textList.Count; i++)
+            for (int i = 0; i < textList.Count -1; i++)
             {
                 if (textList[i].Equals("false"))
                 {
                     falseArr.Add(i);
                 }
             }
-            if(falseArr.Count < 2) return 0;
+            if (falseArr.Count < 2) return 0;
             return falseArr[falseArr.Count-2] + 1;
         }
 
