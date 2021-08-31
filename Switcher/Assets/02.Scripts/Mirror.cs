@@ -11,6 +11,8 @@ public class Mirror : MonoBehaviour
     private RigidbodyConstraints originRbConst;
     private RigidbodyConstraints movingRbConst;
     private GameObject pullEffClone;
+    private VRCSDK2.VRC_MirrorReflection reflectionModule;
+    private static Transform playerTr;
 
     public LineRenderer laser;
 
@@ -21,6 +23,28 @@ public class Mirror : MonoBehaviour
         originRbConst = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionX
                         | RigidbodyConstraints.FreezePositionZ;
         movingRbConst = RigidbodyConstraints.FreezeRotation;
+
+        if (playerTr == null)
+        {
+            playerTr = FindObjectOfType<TouchMgr>().transform;
+        }
+        if (reflectionModule == null)
+        {
+            reflectionModule = GetComponent<VRCSDK2.VRC_MirrorReflection>();
+        }
+    }
+
+    void Update()
+    {
+        if (playerTr)
+        {
+            var dist = Vector3.Distance(transform.position, playerTr.position);
+            bool enable = dist < 25f;
+            if (reflectionModule.enabled != enable)
+            {
+                reflectionModule.enabled = enable;
+            }
+        }
     }
 
     // 인력을 반사
@@ -45,7 +69,6 @@ public class Mirror : MonoBehaviour
                 {
                     pullEffClone = pullEffect;
                 }
-                pullEffClone.SetActive(true);
                 pullEffClone.transform.position = reflectHit.transform.position;
                 pullEffClone.transform.parent = reflectHit.collider.gameObject.transform;
                 pullObjectRb.constraints = movingRbConst;

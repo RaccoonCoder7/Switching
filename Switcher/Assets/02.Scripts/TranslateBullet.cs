@@ -17,6 +17,7 @@ public class TranslateBullet : MonoBehaviour
     private AudioSource audio;
     private float diff = 0.82f;
     private GameObject clone;
+    // private bool isReflected;
 
     public float speed = 10.0f;
     public Vector3 shootPos;
@@ -46,11 +47,21 @@ public class TranslateBullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+        Debug.Log("!!! " + other.collider.name);
+        // if (isReflected)
+        // {
+        //     Debug.Log("!!! Cancel");
+        //     return;
+        // }
+
         if (other.gameObject.layer.Equals(mirrorLayer))
         {
+            // StartCoroutine(ReflectDelay());
             Vector3 incoming = transform.position - shootPos;
+            Debug.Log("!!! " + other.contacts[0].thisCollider.name);
             Vector3 normal = other.contacts[0].normal;
             Vector3 direction = Vector3.Reflect(incoming, normal).normalized;
+            Debug.Log("!!! " + direction.x + "/" + direction.y + "/" + direction.z);
             rb.velocity = direction * 8f;
             audio.Play();
             return;
@@ -104,4 +115,11 @@ public class TranslateBullet : MonoBehaviour
         touchMgr.EnableFire(0f);
         gameObject.SetActive(false);
     }
+
+    // private IEnumerator ReflectDelay()
+    // {
+    //     isReflected = true;
+    //     yield return new WaitForSeconds(0.1f);
+    //     isReflected = false;
+    // }
 }

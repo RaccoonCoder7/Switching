@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 406928}
   - component: {fileID: 10820152}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 19974010}
   - component: {fileID: 8279212}
   - component: {fileID: 3548733872536356409}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: BeamLaserStartOrange
   m_TagString: LASER
   m_Icon: {fileID: 0}
@@ -4950,7 +4950,7 @@ GameObject:
   - component: {fileID: 477326}
   - component: {fileID: 19803856}
   - component: {fileID: 19909856}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Rings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9630,7 +9630,7 @@ GameObject:
   - component: {fileID: 468582}
   - component: {fileID: 19882810}
   - component: {fileID: 19928126}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: MuzzleSide
   m_TagString: Untagged
   m_Icon: {fileID: 0}

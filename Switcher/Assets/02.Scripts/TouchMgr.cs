@@ -26,6 +26,7 @@ public class TouchMgr : MonoBehaviour
     private RigidbodyConstraints originRbConst;
     private RigidbodyConstraints movingRbConst;
     private GameObject pullEffClone;
+    private GameObject mirrorPullEffClone;
     private PlayerState ps;
 
     public SkillMode mode = SkillMode.chat;
@@ -334,11 +335,11 @@ public class TouchMgr : MonoBehaviour
                     {
                         mirror = hit.collider.gameObject.GetComponent<Mirror>();
                     }
-                    if (!pullEffClone)
+                    if (!mirrorPullEffClone)
                     {
-                        pullEffClone = Instantiate(pullEffect);
+                        mirrorPullEffClone = Instantiate(pullEffect);
                     }
-                    mirror.ReflectRay(hit.point, direction, pullEffClone);
+                    mirror.ReflectRay(hit.point, direction, mirrorPullEffClone);
                     return;
                 }
                 else

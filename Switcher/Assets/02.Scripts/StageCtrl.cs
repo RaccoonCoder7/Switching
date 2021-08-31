@@ -16,9 +16,7 @@ public class StageCtrl : MonoBehaviour
     private PlayerState ps;
     public TouchMgr touchMgr;
     public Chat chat;
-    public GameObject playerOVR;
-    // private Rigidbody playerRb;
-    // private PlayerState ps;
+    public Transform playerCameraRig;
 
     public ImageCtrl imgCtrl;
     public GameObject[] Maps;

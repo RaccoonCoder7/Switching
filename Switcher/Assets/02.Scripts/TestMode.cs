@@ -77,7 +77,7 @@ public class TestMode : MonoBehaviour
         ray = new Ray(laser.transform.position, laser.transform.forward);
         if (isStarted)
         {
-            if (Physics.Raycast(ray, out hit, 5.0f, retryBtnLayer))
+            if (Physics.Raycast(ray, out hit, 5.0f, layerMask))
             {
                 float dist = hit.distance;
                 laser.SetPosition(1, new Vector3(0, 0, dist));
