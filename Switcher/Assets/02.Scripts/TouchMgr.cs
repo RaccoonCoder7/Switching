@@ -26,7 +26,6 @@ public class TouchMgr : MonoBehaviour
     private RigidbodyConstraints originRbConst;
     private RigidbodyConstraints movingRbConst;
     private GameObject pullEffClone;
-    private GameObject mirrorPullEffClone;
     private PlayerState ps;
 
     public SkillMode mode = SkillMode.chat;
@@ -124,7 +123,7 @@ public class TouchMgr : MonoBehaviour
         ChangeMode(TouchMgr.SkillMode.chat);
 
         // SKILLBUTTON, PLAYER 레이어만 제외하고 충돌 체크함
-        layerMask = ((1 << LayerMask.NameToLayer("PLAYER")) | 
+        layerMask = ((1 << LayerMask.NameToLayer("PLAYER")) |
             (1 << LayerMask.NameToLayer("SKILLBUTTON")));
         layerMask = ~layerMask;
     }
@@ -309,7 +308,7 @@ public class TouchMgr : MonoBehaviour
                         pullEffClone.transform.parent = hit.collider.gameObject.transform;
                         pullObjectRb.constraints = movingRbConst;
                     }
-                    float distance = Vector3.Distance(hit.collider.gameObject.transform.position, 
+                    float distance = Vector3.Distance(hit.collider.gameObject.transform.position,
                         playerTr.position);
                     if (distance < 2.5f)
                     {
@@ -335,12 +334,11 @@ public class TouchMgr : MonoBehaviour
                     {
                         mirror = hit.collider.gameObject.GetComponent<Mirror>();
                     }
-                    if (!mirrorPullEffClone)
+                    if (!pullEffClone)
                     {
-                        mirrorPullEffClone = Instantiate(pullEffect);
+                        pullEffClone = Instantiate(pullEffect);
                     }
-                    mirror.ReflectRay(hit.point, direction, mirrorPullEffClone);
-                    return;
+                    mirror.ReflectRay(hit.point, direction, pullEffClone);
                 }
                 else
                 {

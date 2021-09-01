@@ -89,7 +89,7 @@ namespace MyDedlegate
                         bossStart = true;
                         paragraphCnt = 4;
                         continueCnt = 7;
-                        textCount = 14;
+                        textCount = 16;
                         chatEventList[paragraphCnt]();
                     }
                 }

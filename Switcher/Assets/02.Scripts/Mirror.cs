@@ -69,6 +69,7 @@ public class Mirror : MonoBehaviour
                 {
                     pullEffClone = pullEffect;
                 }
+                pullEffClone.SetActive(true);
                 pullEffClone.transform.position = reflectHit.transform.position;
                 pullEffClone.transform.parent = reflectHit.collider.gameObject.transform;
                 pullObjectRb.constraints = movingRbConst;
