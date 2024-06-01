@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e030a32f864d0214ab3fedba0b13ec2c, type: 3}
+  m_Name: Box
+  m_EditorClassIdentifier: 
+  rightHandObjPosition: {x: 0.0154, y: -0.0887, z: -0.0772}
+  rightHandObjRotation: {x: 0, y: 0, z: 0}
+  leftHandObjPosition: {x: 0.0193, y: -0.0919, z: -0.0823}
+  leftHandObjRotation: {x: 33.471, y: -2.029, z: 0}
+  useAnimationProfile: 1
+  rightHandProfile:
+    grip: 1
+    index: 1
+    thumb: 1
+    gripPercentage: 0.252
+    indexPercentage: 0.252
+    thumbState: 0
+    thumbPercentage: 0.157
+    staticPose: 0
+    pose: 0
+  leftHandProfile:
+    grip: 1
+    index: 1
+    thumb: 1
+    gripPercentage: 0.252
+    indexPercentage: 0.252
+    thumbState: 0
+    thumbPercentage: 0.157
+    staticPose: 0
+    pose: 0

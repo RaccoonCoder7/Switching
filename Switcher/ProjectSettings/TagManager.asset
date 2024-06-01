@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - MIRROR
+  - MAGICCIRCLE
+  - RED
+  - BLUE
+  - YELLOW
+  - TURRET
+  - LATTICE
+  - GREEN
+  - LASER
+  - SLOWBALL
+  - UIBUTTON
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - MANASTONE
+  - MAGICCIRCLE
+  - MIRROR
+  - BOSS
+  - TURRET
+  - START
+  - CONTINUE
+  - SKILLBUTTON
+  - TOUCHFINGER
+  - ABILITY
+  - PLAYER
+  - RETRY
+  - BARRIER
+  - MANASTONE_C
+  - RHAND
+  - WALL
+  - UIBUTTON
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
